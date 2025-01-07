@@ -1,0 +1,25 @@
+// フッター
+.c-footer{
+	width: 100vw;
+	height: auto;
+	background: $main-color--b;
+	padding: 5px;
+	@include max(768){padding: 10px;}
+
+	&-wrapper{
+		width: 95%;
+		height: auto;
+		margin: 0 auto;
+		box-sizing: border-box;
+		transition: padding .3s;
+		@include min(500){width: 85%;}
+		@include min(768){width: 82.5%;}
+		@include min(1600){max-width: 1120px;}
+	}
+	&.-bg-color01{background: $site-color01;}
+	&.-bg-color02{background: $site-color02;}
+	&.-bg-color03{background: $site-color03;}
+	&.-bg-white  {background: $main-color--w;}
+	&.-bg-gray   {background: $main-color--gray;}
+
+}

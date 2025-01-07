@@ -1,0 +1,58 @@
+// 投稿関係
+
+.c-post{
+    &--link{
+        position: relative;
+        top: 0;
+        display: block;
+        will-change: transform;
+        transition: all .3s;
+        .imgBox,
+        .c-thumbnail--picter,
+        .c-thumbnail--title,
+        .c-thumbnail--subTitle,
+        .c-thumbnail--cover,
+        .c-thumbnail--cover__text{
+            will-change: transform;
+            transition: all .3s;
+        }
+        &:hover{
+            top: .5rem;
+            .imgBox               {transform: scale(1.005);}
+            .c-thumbnail--picter  {transform: translate(-50%, -50%) scale(.98);}
+            .c-thumbnail--cover   {
+                opacity: 1;
+                z-index: 2;
+            }
+            .c-thumbnail--cover__text   {opacity: 1;}
+        }
+    }
+    &--title{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    // 記事 > カテゴリー
+    &--category{
+        &__lists{// ul
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        &__item{ // li
+            width: auto;
+            padding: 3px 5px 2px;
+            margin-right: 5px;
+            background: $main-color--w;
+            border: 1px solid $site-color03;
+            border-radius: 3px;
+            p{
+                color: $site-color03;
+                font-size: clamp(.8rem, 1.2vw, 1rem);
+                font-weight: bold;
+                white-space: nowrap;
+            }
+        }
+    }
+}

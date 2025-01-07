@@ -1,0 +1,75 @@
+
+@keyframes sc-header-gap {// headerの縦位置
+    0%   {padding: 40px 0px 10px;}
+    100% {padding: 20px 0px 10px;}
+}
+@keyframes sc-headerLogo-gap {// ロゴの大きさ
+    0%   {padding-right: 0;}
+    100% {padding-right: 20px;}
+}
+@keyframes sc-headerBg-gap {// ページ上部の影
+    0%   {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.453), #00000000);
+        opacity: 0;
+    }
+    100% {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.229), #00000000);
+        opacity: 1;
+    }
+}
+@keyframes sc-headerNav-gap {// header > ナビゲーション
+    to {
+        height: 40px;
+        background: #fff;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        // overflow: hidden;
+    }
+}
+@keyframes sc-headerNavContact-gap {// header > ナビゲーション > Contact
+    to {
+        border-radius: 0 30px 30px 0;
+    }
+}
+
+
+.is-scroll{// bodyタグ
+    .c-header{
+        &::after{
+            animation: sc-headerBg-gap linear both;
+            animation-range: contain 30% contain 60%;
+            animation-timeline: scroll();
+            will-change: transform;
+
+        }
+        &-wrapper{
+            animation: sc-headerLogo-gap linear both;
+            animation-range: contain 30% contain 60%;
+            animation-timeline: scroll();
+            will-change: transform;
+
+            @include min(768){
+                animation: sc-header-gap linear both;
+                animation-range: contain 30% contain 60%;
+                animation-timeline: scroll();
+                will-change: transform;
+
+            }
+
+            .c-navAreaBox{
+                // .-pageLink{
+                //     animation: sc-headerNav-gap linear both;
+                //     animation-range: contain 30% contain 35%;
+                //     animation-timeline: view();
+                //     will-change: transform;
+                // }
+                .-contact{
+                    animation: sc-headerNavContact-gap linear both;
+                    animation-range: contain 30% contain 35%;
+                    animation-timeline: view();
+                    will-change: transform;
+                }
+            }
+        }
+    }
+}

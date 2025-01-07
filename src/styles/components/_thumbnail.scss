@@ -1,0 +1,114 @@
+// サムネイル関係
+
+.c-thumbnail{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    .imgBox{
+        width: 100%;
+        height: auto;
+        img{aspect-ratio: 16 / 9;}
+    }
+    // 共通
+    &--mark{// 画像左上
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 50%;
+        z-index: 1;
+    }
+    &--picter{// 人の写真
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 95%;
+        z-index: -1;
+    }
+    &--cover{// 半透明背景
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: auto;
+        opacity: .2;
+        &__text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            color: $main-color--w;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: .2rem;
+            opacity: 0;
+        }
+    }
+    &--title{// タイトル
+        position: absolute;
+        z-index: 1;
+        span{
+            font-family: $f-gothic01;
+            text-shadow: 1px 1px 3px $main-color--w;
+            padding: 1% 3%;
+            line-height: 1.5;
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .3));
+            @include max(500){
+                line-height: 1.5;
+            }
+
+            // ３行以降省略
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    }
+    &--subTitle{// サブタイトル
+        position: absolute;
+        font-family: $f-gothic01;
+        text-shadow: 1px 1px 1px $main-color--w;
+        z-index: 1;
+    }
+
+    &.-interview{
+        .c-thumbnail{
+            &--title{
+                top: 35%;
+                left: 5%;
+                width: 60%;
+                @include max(1000){top: 41%;}
+            }
+            &--subTitle{
+                top: 25%;
+                left: 5%;
+
+                @include min(500){top: 32%;}
+                @include min(768){top: 25%;}
+            }
+        }
+    }
+    &.-news{
+        .c-thumbnail{
+            &--title{
+                top: 45%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                text-align: center;
+            }
+            &--subTitle{
+                top: 35%;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+        }
+    }
+}
