@@ -1,15 +1,8 @@
 // font-family(ローカル)
-@font-face {// 英文フォント01
-    font-family: "e-font01";
-    src: url("../../fonts/en/BebasNeue-Regular.ttf")            format("truetype");
-}
+
 @font-face {// 英文フォント02
     font-family: "e-font02";
     src: url("../../fonts/en/impact.ttf")                       format("truetype");
-}
-@font-face {// 英文フォント03
-    font-family: "e-font03";
-    src: url("../../fonts/en/EBGaramond-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {// 英文フォント04
     font-family: "e-font04";
@@ -34,9 +27,9 @@
 $f-mincho:    mincho-font01; // 明朝体01
 $f-gothic01:  gothic-font01; // ゴシック体01
 $f-gothic02:  gothic-font02; // ゴシック体02
-$f-e01:       e-font01;      // 英文フォント01
+// $f-e01:       e-font01;      // 英文フォント01
 $f-e02:       e-font02;      // 英文フォント02
-$f-e03:       e-font03;      // 英文フォント03
+// $f-e03:       e-font03;      // 英文フォント03
 $f-e04:       e-font04;      // 英文フォント04
 // $f-d01:       d-font01;      // デザインフォント01
 
@@ -142,9 +135,9 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
     // フォントファミリー(ローカルフォント)
     &.-f-mincho01{font-family: mincho-font01;}// しっぽり
     &.-f-gothic01{font-family: gothic-font01;}// セザンヌ
-    &.-f-En01{font-family: e-font01;}         // BebasNeue
+    // &.-f-En01{font-family: e-font01;}         // BebasNeue
     &.-f-En02{font-family: e-font02;}         // impact
-    &.-f-En03{font-family: e-font03;}         // garamond
+    // &.-f-En03{font-family: e-font03;}         // garamond
     &.-f-En04{font-family: e-font04;}         // Roboto
 
     // 色
