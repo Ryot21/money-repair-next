@@ -56,6 +56,174 @@ export default function Home() {
             </ul>
         </div>
       </div>
+
+      {/* ご利用者インタビュー */}
+      <div id="sc02" className={"c-contents pdt10 pdt20s mgb5s"}>
+          <div className={"c-contents--inner"}>
+              <h2 className={"c-contents--title -interview -ls-1 -en-color03 pdb3 pdb5s"}>ご利用者インタビュー</h2>
+              <div className={"c-post mgb3 mgb10s"}>
+                  <ul className={"c-flex -col2M1_3 -jc-sb -h-top"}>
+                      {/* 1 */}
+                      <li className={"flexItem_M mgb10s"}>
+                          <a className={"c-post--link"} href="">
+                              {/* バナー画像 */}
+                              <div className={"c-thumbnail -interview mgb3 mgb3s"}>
+                                  <div className={"imgBox"}>
+                                    <Image
+                                      src="/images/item/interview/interview-thumbnail.png"
+                                      alt="企業1"
+                                      width={480}
+                                      height={320}
+                                    />
+                                  </div>
+                                  <div className={"c-thumbnail--cover"}>
+                                      <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
+                                  </div>
+                                  <div className={"c-thumbnail--mark"}>
+                                    <Image
+                                      src="/images/item/interview/interview-mark.svg"
+                                      alt="マネーリペア | ご利用者インタビュー"
+                                      width={186}
+                                      height={16}
+                                    />
+                                  </div>
+                                  <div className={"c-thumbnail--picter"}>
+                                    <Image
+                                      src="/images/item/480-320.png"
+                                      alt="お客様との写真"
+                                      width={480}
+                                      height={320}
+                                    />
+                                  </div>
+                                  <p className={"c-thumbnail--title"}><span className={"s-M -s20 -b -color03 -ls-1"}>タイトルタイトルタイトルタイトル</span></p>
+                                  <p className={"c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1"}>サブタイトルサブタイトル</p>
+                              </div>
+                              {/* テキストエリア */}
+                              <div className={"c-date mgb2 mgb1s"}>
+                                  <ul className={"c-date__lists c-flex -col2"}>
+                                      <li className={"c-date__item"}><p className={"s-M -s16 -left -b -ls-2"}>2024.11.18</p></li>
+                                      <li className={"c-date__item"}>
+                                          <ul className={"c-post--category__lists c-flex -h-cen"}>
+                                              <li className={"c-post--category__item"}><p>#カテゴリー01</p></li>
+                                              <li className={"c-post--category__item"}><p>#カテゴリー01</p></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>こんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかった</h3>
+                          </a>
+                      </li>
+                      {/* 2 */}
+                      <li className={"flexItem"}>
+                          <a className={"c-post--link"} href="">
+                              {/* バナー画像 */}
+                              <div className={"c-thumbnail -interview mgb3 mgb3s"}>
+                                  <div className={"imgBox"}>
+                                    <Image
+                                      src="/images/item/interview/interview-thumbnail.png"
+                                      alt="企業1"
+                                      width={480}
+                                      height={320}
+                                    />
+                                  </div>
+                                  <div className={"c-thumbnail--cover"}>
+                                      <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
+                                  </div>
+                                  <div className={"c-thumbnail--mark"}>
+                                    <Image
+                                      src="/images/item/interview/interview-mark.svg"
+                                      alt="マネーリペア | ご利用者インタビュー"
+                                      width={186}
+                                      height={16}
+                                    />
+                                  </div>
+                                  <div className={"c-thumbnail--picter"}>
+                                    <Image
+                                      src="/images/item/480-320.png"
+                                      alt="お客様との写真"
+                                      width={480}
+                                      height={320}
+                                    />
+                                  </div>
+                                  <p className={"c-thumbnail--title"}><span className={"s-M -b -color03 -ls-1"}>タイトルタイトルタイトルタイトル</span></p>
+                                  <p className={"c-thumbnail--subTitle s-SS -b -color03 -ls-1"}>サブタイトルサブタイトル</p>
+                              </div>
+                              {/* テキストエリア */}
+                              <div className={"c-date mgb2 mgb1s"}>
+                                  <ul className={"c-date__lists c-flex -col2"}>
+                                      <li className={"c-date__item"}><p className={"s-M -s16 -left -b -ls-2"}>2024.11.18</p></li>
+                                      <li className={"c-date__item"}>
+                                          <ul className={"c-post--category__lists c-flex -h-cen"}>
+                                              <li className={"c-post--category__item"}><p>#カテゴリー01</p></li>
+                                              <li className={"c-post--category__item"}><p>#カテゴリー01</p></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>こんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかった</h3>
+                          </a>
+                      </li>
+                      {/* 3 */}
+                      <li className={"flexItem"}>
+                          <a className={"c-post--link"} href="">
+                              {/* バナー画像 */}
+                              <div className={"c-thumbnail -interview mgb3 mgb3s"}>
+                                  <div className={"imgBox"}>
+                                    <Image
+                                      src="/images/item/interview/interview-thumbnail.png"
+                                      alt="企業1"
+                                      width={480}
+                                      height={320}
+                                    />
+                                  </div>
+                                  <div className={"c-thumbnail--cover"}>
+                                      <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
+                                  </div>
+                                  <div className={"c-thumbnail--mark"}>
+                                    <Image
+                                      src="/images/item/interview/interview-mark.svg"
+                                      alt="マネーリペア | ご利用者インタビュー"
+                                      width={186}
+                                      height={16}
+                                    />
+                                  </div>
+                                  <div className={"c-thumbnail--picter"}>
+                                    <Image
+                                      src="/images/item/480-320.png"
+                                      alt="お客様との写真"
+                                      width={480}
+                                      height={320}
+                                    />
+                                  </div>
+                                  <p className={"c-thumbnail--title"}><span className={"s-M -b -color03 -ls-1"}>タイトルタイトルタイトルタイトル</span></p>
+                                  <p className={"c-thumbnail--subTitle s-SS -b -color03 -ls-1"}>サブタイトルサブタイトル</p>
+                              </div>
+                              {/* テキストエリア */}
+                              <div className={"c-date mgb2 mgb1s"}>
+                                  <ul className={"c-date__lists c-flex -col2"}>
+                                      <li className={"c-date__item"}><p className={"s-M -s16 -left -b -ls-2"}>2024.11.18</p></li>
+                                      <li className={"c-date__item"}>
+                                          <ul className={"c-post--category__lists c-flex -h-cen"}>
+                                              <li className={"c-post--category__item"}><p>#カテゴリー01</p></li>
+                                              <li className={"c-post--category__item"}><p>#カテゴリー01</p></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>こんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかった</h3>
+                          </a>
+                      </li>
+
+                  </ul>
+              </div>
+              <div className={"c-contents--btnArea"}>
+                  <a className={"c-link -btn -center s-M -s14 -b -ls-2"} href="">すべて見る</a>
+              </div>
+          </div>
+      </div>
+
+
+
     </main>
   );
 }
