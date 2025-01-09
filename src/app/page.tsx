@@ -3,6 +3,8 @@ import Image  from "next/image";
 
 import MainVisual from "@/components/MainVisual";
 import LogoSwiper from "@/components/Swiper/Logo";
+import ContactBottom from "@/components/Contact/Bottom"
+
 
 export default function Home() {
   return (
@@ -223,7 +225,7 @@ export default function Home() {
       </div>
 
       {/* お役立ち情報 */}
-      <div id="sc03" className={"c-contents pdt10 pdt20s mgb5s"}>
+      <div id="sc03" className={"c-contents pdt10 pdt20s mgb10 mgb20s"}>
           <div className={"c-contents--inner"}>
               <h2 className={"c-contents--title -news -ls-1 -en-color03 pdb3 pdb5s"}>お役立ち情報</h2>
               <div className={"c-post mgb3 mgb10s"}>
@@ -386,6 +388,9 @@ export default function Home() {
               </div>
           </div>
       </div>
+
+      {/* お問い合わせ */}
+      <ContactBottom />
 
     </main>
   );

@@ -35,10 +35,18 @@ export default function RootLayout({
       </head>
       {/* <body className={`${geistSans.variable} ${geistMono.variable}`}> */}
       <body className={"p-top is-scroll"}>
+
+        {/* ヘッダー */}
         <Header />
+
+        {/* ハンバーガーメニュー */}
         <HamburgerNav />
+
         {children}
+
+        {/* フッター */}
         <Footer />
+
       </body>
     </html>
   );
