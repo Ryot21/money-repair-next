@@ -231,6 +231,7 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
         &.-s16{@include max(768){font-size: 1.6rem;}}
         &.-s18{@include max(768){font-size: 1.8rem;}}
         &.-s20{@include max(768){font-size: 2rem;}}
+        &.-s24{@include max(768){font-size: 2.4rem;}}
 }
 
 // ナビゲーション
