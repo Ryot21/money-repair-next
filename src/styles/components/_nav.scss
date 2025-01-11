@@ -163,15 +163,14 @@
 					position: relative;
 					display: inline-block;
 					margin: 0 auto;
-					padding: 1rem 4.5rem 1rem 1.5rem;
 					text-align: center;
 					svg{
 						position: absolute;
 						top: 50%;
 						transform: translateY(-50%);
 						right: 10%;
-						width:  25px;
-						height: 25px;
+						width: 18px;
+						height: 18px;
 						path,rect{
 							fill: $main-color--w;
 							will-change: transform;
@@ -182,6 +181,7 @@
 				&.-cv01{// cvボタン01
 					background: $site-color02;
 					border: 1px solid $site-color02;
+					a{padding: .65rem 3.5rem .5rem 1.5rem;}
 					&:hover{
 						background: $main-color--w;
 						a{
@@ -195,6 +195,7 @@
 						background: $main-color--red;
 						border: 1px solid $main-color--red;
 						margin-left: 2%;
+						a{padding: .65rem 4rem .5rem 1.5rem;}
 						&:hover{
 							background: $main-color--w;
 							a{

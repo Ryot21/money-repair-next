@@ -128,6 +128,26 @@
         .cvItem{
             width: 100%;
             @include min(500){width: 40%;}
+            &:nth-child(1){
+                a{
+                    background: $site-color02;
+                    border: 1px solid $site-color02;
+                    &:hover{
+                        color: $site-color02 !important;
+                        background: $main-color--w;
+                    }
+                }
+            }
+            &:nth-child(2){
+                a{
+                    background: $main-color--red;
+                    border: 1px solid $main-color--red;
+                    &:hover{
+                        color: $main-color--red !important;
+                        background: $main-color--w;
+                    }
+                }
+            }
         }// li
     }
     // footer関係
