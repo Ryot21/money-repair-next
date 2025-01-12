@@ -3,7 +3,7 @@ import Image  from "next/image";
 import Script from "next/script";
 import "@/styles/globals.scss";
 
-export default function MainVisual() {
+export default function TopMainVisual() {
     return (
         <div className={"c-contents -imgBg -fv -top"}>
 
