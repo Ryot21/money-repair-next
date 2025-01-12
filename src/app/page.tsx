@@ -1,67 +1,18 @@
 import Image from "next/image";
+
+// コンポーネント
 import MainVisual from "@/components/MainVisual";
 import LogoSlider from "@/components/Slider/Logo";
 import ContactBottom from "@/components/Contact/Bottom";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
 
+// 投稿関係
+import InterviewList from "@/components/Parts/PostList/Interview";
+
 // 型定義
-type Interview = {
-  id: string; // ID
-  company: string; // 企業名
-  date: string; // 更新日（yyyy/mm/dd）
-  mainTitle: string; // メインタイトル
-  subTitle: string; // サブタイトル
+import { Interview, Information } from "@/libs/microcms";
+import InformationList from "@/components/Parts/PostList/Infomation";
 
-  category: {
-    // カテゴリー
-    name: string;
-  };
-
-  client: {
-    // 取引先情報
-    name: string; // __取引先名
-    address: string; // __住所
-    logo: string; // __企業ロゴ
-    link: string; // __URL
-  };
-
-  article: string; // 本文
-  publishedAt: string; // 更新日
-  createdAt: string; // 作成日
-};
-type Information = {
-  id: string; // ID
-  date: string; // 更新日（yyyy/mm/dd）
-  mainTitle: string; // メインタイトル
-  subTitle: string; // サブタイトル
-  category: {
-    name: string; // カテゴリー
-  };
-  captionLists: {
-    // 見出しリスト
-    captionTitle01: string;
-    captionTitle02: string;
-    captionTitle03: string;
-    captionTitle04: string;
-    captionTitle05: string;
-  };
-  poster: {
-    // 投稿者
-    name: string;
-    officialPosition: string;
-    description: string;
-    profilePicture: string;
-    url: string;
-  };
-  read: string; // 導入文
-  article: string; // 本文
-  ctaOnOff: boolean; // CTA切り替え
-
-  publishedAt: string; // 更新日
-  createdAt: string; // 作成日
-};
-
-// ダミーデータ
 const interviewData: { contents: Interview[] } = {
   contents: [
     {
@@ -220,8 +171,8 @@ const informationwData: { contents: Information[] } = {
 
 export default function Home() {
   // 表示件数を絞る
-  const interviewDataSlice = interviewData.contents.slice(0, 1);
-  const informationDataSlice = informationwData.contents.slice(0, 3);
+  const interviewSliceData   = interviewData.contents.slice(0, 3);
+  const informationSliceData = informationwData.contents.slice(0, 3);
 
   return (
     <main>
@@ -295,81 +246,7 @@ export default function Home() {
 
           {/* 投稿リスト */}
           <div className={"c-post mgb5 mgb10s"}>
-            <ul className={"c-flex -col2M1_3 -jc-sb -h-top"}>
-              {interviewDataSlice.map((article) => (
-                <li key={article.id} className={"flexItem_M mgb3 mgb10s"}>
-                  <a className={"c-post--link"} href="">
-                    {/* バナー画像 */}
-                    <div className={"c-thumbnail -interview mgb3 mgb3s"}>
-                      <div className={"imgBox"}>
-                        <Image
-                          src="/images/item/interview/interview-thumbnail.png"
-                          alt="企業1"
-                          width={480}
-                          height={320}
-                        />
-                      </div>
-                      <div className={"c-thumbnail--cover"}>
-                        <span className={"c-thumbnail--cover__text"}>
-                          詳細を見る
-                        </span>
-                      </div>
-                      <div className={"c-thumbnail--mark"}>
-                        <Image
-                          src="/images/item/interview/interview-mark.svg"
-                          alt="マネーリペア | ご利用者インタビュー"
-                          width={186}
-                          height={16}
-                        />
-                      </div>
-                      <div className={"c-thumbnail--picter"}>
-                        <Image
-                          src="/images/item/480-320.png"
-                          alt="お客様との写真"
-                          width={480}
-                          height={320}
-                        />
-                      </div>
-                      <p className={"c-thumbnail--title"}>
-                        <span className={"s-M -s20 -b -color03 -ls-1"}>
-                          {article.mainTitle}
-                        </span>
-                      </p>
-                      <p
-                        className={
-                          "c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1"
-                        }
-                      >
-                        {article.subTitle}
-                      </p>
-                    </div>
-                    {/* テキストエリア */}
-                    <div className={"c-date mgb2 mgb1s"}>
-                      <ul className={"c-date__lists c-flex -col2"}>
-                        <li className={"c-date__item"}>
-                          <p className={"s-M -s16 -left -b -ls-2"}>
-                            {article.date}
-                          </p>
-                        </li>
-                        <li className={"c-date__item"}>
-                          <ul
-                            className={"c-post--category__lists c-flex -h-cen"}
-                          >
-                            <li className={"c-post--category__item"}>
-                              <p>#{article.category.name}</p>
-                            </li>
-                            {/* <li className={"c-post--category__item"}><p>#カテゴリー01</p></li> */}
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>
-                      {article.mainTitle}
-                    </h3>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <InterviewList interview={interviewSliceData} />
           </div>
 
           {/* ボタン */}
@@ -391,80 +268,7 @@ export default function Home() {
 
           {/* 投稿リスト */}
           <div className={"c-post mgb3 mgb10s"}>
-            <ul className={"c-flex -col2M1_3 -jc-sb -h-top"}>
-              {informationDataSlice.map((article) => (
-                <li key={article.id} className={"flexItem_M mgb5 mgb10s"}>
-                  <a className={"c-post--link"} href="">
-                    {/* バナー画像 */}
-                    <div className={"c-thumbnail -news mgb3 mgb3s"}>
-                      <div className={"imgBox"}>
-                        <Image
-                          src="/images/item/news/news-thumbnail.png"
-                          alt="企業1"
-                          width={480}
-                          height={320}
-                        />
-                      </div>
-                      <div className={"c-thumbnail--cover"}>
-                        <span className={"c-thumbnail--cover__text"}>
-                          詳細を見る
-                        </span>
-                      </div>
-                      <div className={"c-thumbnail--mark"}>
-                        <Image
-                          src="/images/item/news/news-mark.svg"
-                          alt="マネーリペア | お役立ち情報"
-                          width={186}
-                          height={16}
-                        />
-                      </div>
-                      <div className={"c-thumbnail--picter"}>
-                        <Image
-                          src="/images/item/480-320.png"
-                          alt="お客様との写真"
-                          width={480}
-                          height={320}
-                        />
-                      </div>
-                      <p className={"c-thumbnail--title"}>
-                        <span className={"s-M -s20 -b -color03 -ls-1"}>
-                          {article.mainTitle}
-                        </span>
-                      </p>
-                      <p
-                        className={
-                          "c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1"
-                        }
-                      >
-                        {article.subTitle}
-                      </p>
-                    </div>
-                    {/* テキストエリア */}
-                    <div className={"c-date mgb2 mgb1s"}>
-                      <ul className={"c-date__lists c-flex -col2"}>
-                        <li className={"c-date__item"}>
-                          <p className={"s-M -s16 -left -b -ls-2"}>
-                            {article.date}
-                          </p>
-                        </li>
-                        <li className={"c-date__item"}>
-                          <ul
-                            className={"c-post--category__lists c-flex -h-cen"}
-                          >
-                            <li className={"c-post--category__item"}>
-                              <p>#{article.category.name}</p>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>
-                      {article.mainTitle}
-                    </h3>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <InformationList information={informationSliceData} />
           </div>
 
           {/* ボタン */}
