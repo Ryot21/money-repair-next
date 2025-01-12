@@ -1,5 +1,7 @@
 import Image from "next/image";
 import "@/styles/globals.scss";
+import Date from "@/components/Parts/Date";
+import Category from "@/components/Parts/Category";
 import { Interview } from "@/libs/microcms";
 
 type Props = {
@@ -59,14 +61,15 @@ export default function InterviewList({ interview }: Props) {
             <div className={"c-date mgb2 mgb1s"}>
               <ul className={"c-date__lists c-flex -col2"}>
                 <li className={"c-date__item"}>
-                  <p className={"s-M -s16 -left -b -ls-2"}>{article.date}</p>
+                  <p className={"s-M -s16 -left -b -ls-2"}>
+                    <Date date={article.publishedAt ?? article.createdAt} />
+                  </p>
                 </li>
                 <li className={"c-date__item"}>
                   <ul className={"c-post--category__lists c-flex -h-cen"}>
                     <li className={"c-post--category__item"}>
-                      <p>#{article.category.name}</p>
+                        <Category category={article.category} />
                     </li>
-                    {/* <li className={"c-post--category__item"}><p>#カテゴリー01</p></li> */}
                   </ul>
                 </li>
               </ul>

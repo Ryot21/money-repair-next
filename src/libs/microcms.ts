@@ -1,4 +1,9 @@
 
+// カテゴリー
+export type Category = {
+  name: string;
+};
+
 // ご利用者インタビュー
 export type Interview = {
     id: string;        // ID
@@ -19,6 +24,7 @@ export type Interview = {
     publishedAt: string; // 更新日
     createdAt: string;   // 作成日
 };
+
 // お役立ち情報
 export type Information = {
   id: string; // ID
