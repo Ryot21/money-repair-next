@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import type { Category } from "@/libs/microcms";
 import "@/styles/globals.scss";
 
@@ -8,6 +8,6 @@ type Props = {
 
 export default function Category({ category } : Props) {
     return (
-            <a href="">#{category.name}</a>
+        <Link href="">#{category.name}</Link>
     );
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "@/styles/globals.scss";
 
 export default function HamburgerNav() {
@@ -11,42 +12,42 @@ export default function HamburgerNav() {
             <div className={"c-hb-nav__content"}>
                 <ul className={"c-hb-nav__lists"}>
                     <li className={"hbNavItem "}>
-                        <a className={"-active"} href="/"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>TOP</span></a>
+                        <Link className={"-active"} href="/"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>TOP</span></Link>
                     </li>
                     <li className={"hbNavItem "}>
-                        <a className={""} href="service.html"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>マネーリペアの特徴</span></a>
+                        <Link className={""} href="/service"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>マネーリペアの特徴</span></Link>
                     </li>
                     <li className={"hbNavItem c-borderBtm -dotted "}>
-                        <a className={"mgb5 mgb5s"} href="archive-interview.html"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>ご利用者の声</span></a>
+                        <Link className={"mgb5 mgb5s"} href="archive-interview.html"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>ご利用者の声</span></Link>
                         <ul className={"c-flex -col2 -jc-end"}>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
                         </ul>
                     </li>
                     <li className={"hbNavItem c-borderBtm -dotted "}>
-                        <a className={"mgb5 mgb5s"} href="archive-information.html"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>お役立ち情報</span></a>
+                        <Link className={"mgb5 mgb5s"} href="archive-information.html"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>お役立ち情報</span></Link>
                         <ul className={"c-flex -col2 -jc-end"}>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
-                            <li className={"flexItem mgb5 mgb5s"}><a className={"s-M -s14 -b -white -center"} href="">カテゴリー01</a></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
+                            <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
                         </ul>
                     </li>
                     <li className={"hbNavItem "}>
-                        <a className={""} href="contact.html">
+                        <Link className={""} href="contact.html">
                             <span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>資料請求</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={"hbNavItem "}>
-                        <a className={""} href="contact.html">
+                        <Link className={""} href="contact.html">
                             <span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>お問い合わせ</span>
-                        </a>
+                        </Link>
                     </li>
 
                 </ul>

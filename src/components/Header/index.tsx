@@ -1,6 +1,7 @@
 // "use client";
 
 import Image  from "next/image";
+import Link from "next/link";
 import IconButtonLink from "@/components/Parts/Button/IconButton";
 import "@/styles/globals.scss";
 
@@ -13,14 +14,14 @@ export default function Header() {
                     {/* Header > ロゴ */}
                     <li className={"headerItem flexItem -logoArea"}>
                         <div className={"logo"}>
-                            <a className={"c-link -img"} href="https://money-repair.jp">
+                            <Link href="/" className={"c-link -img"}>
                                 <Image 
                                     src="images/logo/mp/money-repair-logo_black.svg"
                                     alt="福利厚生で金融教育するならマネーリペア"
                                     width={200}
                                     height={50}
                                 />
-                            </a>
+                            </Link>
                         </div>
                     </li>
                     {/* Header > ナビゲーション */}
@@ -33,35 +34,35 @@ export default function Header() {
                                         <ul className={"c-hnav-lists"}>
                                             {/* 特徴 */}
                                             <li className={"hnavItem"}>
-                                                <a className={"c-hnav--link s-M -b -ls-3 -ws-n"} href="service.html">特徴</a>
+                                                <Link className={"c-hnav--link s-M -b -ls-3 -ws-n"} href="/service">特徴</Link>
                                             </li>
                                             {/* ご利用者の声 */}
                                             <li className={"hnavItem archiveItem"}>
-                                                <a className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="archive-interview.html">ご利用者の声</a>
+                                                <Link className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="archive-interview.html">ご利用者の声</Link>
                                                 {/* ドロップダウンメニュー */}
                                                 <div className={"c-hnav--dropdown"}>
                                                     <ul className={"c-hnav--archiveLists"}>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             {/* お役立ち情報 */}
                                             <li className={"hnavItem archiveItem"}>
-                                                <a className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="archive-information.html">お役立ち情報</a>
+                                                <Link className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="archive-information.html">お役立ち情報</Link>
                                                 {/* ドロップダウンメニュー */}
                                                 <div className={"c-hnav--dropdown"}>
                                                     <ul className={"c-hnav--archiveLists"}>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
-                                                        <li className={"archiveItem"}><a href="" className={"c-link s-S -b"}>#カテゴリー01</a></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                        <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
                                                     </ul>
                                                 </div>
                                             </li>
