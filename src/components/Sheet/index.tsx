@@ -1,5 +1,6 @@
 // 共通レイアウト
 import SingleMainVisual from "@/components/MainVisual/single";
+import ContactBottom from "@/components/Contact/Bottom";
 
 type Props = {
     children: React.ReactNode;
@@ -19,6 +20,9 @@ export default function Sheet({ children, title, customClass }: Props) {
                     {children}
                 </div>
             </div>
+
+            {/* お問い合わせ */}
+            <ContactBottom />
         </main>
     );
 }
