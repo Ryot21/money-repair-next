@@ -48,10 +48,10 @@
 
     // コンテンツタイトル > 英語表記
     &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
-    &.-news     {&::before{content: "Information"; white-space: nowrap;}}   //お役立ち情報
-    &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}       //お役立ち情報
-    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}       //お役立ち情報
-    &.-point    {&::before{content: "POINT"; white-space: nowrap;}}         //お役立ち情報
+    &.-news     {&::before{content: "Information"; white-space: nowrap;}}//お役立ち情報
+    &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}//お問い合わせ
+    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}//資料請求
+    &.-point    {&::before{content: "POINT"; white-space: nowrap;}}//特徴
 
     // 画像
     .imgBox{
@@ -97,11 +97,13 @@
         }
 
     }
-    &.-service    {&::before{content: "FEATURE";}}
-    &.-interview  {&::before{content: "USER INTERVIEW";}}
-    &.-information{&::before{content: "INFORMATION";}}
-    &.-contact    {&::before{content: "CONTACT";}}
-    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}       //お役立ち情報
+    &.-service    {&::before{content: "- FEATURE -";}}
+    &.-interview  {&::before{content: "- USER INTERVIEW -";}}
+    &.-information{&::before{content: "- INFORMATION -";}}
+    &.-member     {&::before{content: "- MEMBER -";}}
+    &.-contact    {&::before{content: "- CONTACT -";}}
+    &.-contact02  {&::before{content: "- REQUEST FOR INFORMATION -"; white-space: nowrap;}}
+    &.-notFound   {&::before{content: "- 404 NOT FOUND -"; white-space: nowrap;}}//エラーページ
 
 }
 
