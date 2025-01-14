@@ -1,4 +1,7 @@
+// 投稿リスト > ご利用者の声
+
 import Image from "next/image";
+import Link from "next/link";
 import "@/styles/globals.scss";
 import Date from "@/components/Parts/Date";
 import Category from "@/components/Parts/Category";
@@ -16,7 +19,7 @@ export default function InterviewList({ interview }: Props) {
     <ul className={"c-flex -col2M1_3 -jc-sb -h-top"}>
       {interview.map((article) => (
         <li key={article.id} className={"flexItem_M mgb3 mgb10s"}>
-          <a className={"c-post--link"} href="">
+          <Link href={`/interview/${article.id}`} className={"c-post--link"}>
             {/* バナー画像 */}
             <div className={"c-thumbnail -interview mgb3 mgb3s"}>
               <div className={"imgBox"}>
@@ -77,7 +80,7 @@ export default function InterviewList({ interview }: Props) {
             <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>
               {article.mainTitle}
             </h3>
-          </a>
+          </Link>
         </li>
       ))}
       ;

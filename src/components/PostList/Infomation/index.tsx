@@ -1,4 +1,7 @@
+// 投稿リスト > お役立ち情報
+
 import Image from "next/image";
+import Link from "next/link";
 import "@/styles/globals.scss";
 import Date from "@/components/Parts/Date";
 import Category from "@/components/Parts/Category";
@@ -16,7 +19,7 @@ export default function InformationList({ information }: Props) {
     <ul className={"c-flex -col2M1_3 -jc-sb -h-top"}>
         {information.map((article) => (
             <li key={article.id} className={"flexItem_M mgb5 mgb10s"}>
-                <a className={"c-post--link"} href="">
+                <Link href={`/information/${article.id}`} className={"c-post--link"}>
                     {/* バナー画像 */}
                     <div className={"c-thumbnail -news mgb3 mgb3s"}>
                         <div className={"imgBox"}>
@@ -81,7 +84,7 @@ export default function InformationList({ information }: Props) {
                     <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>
                         {article.mainTitle}
                     </h3>
-                </a>
+                </Link>
             </li>
         ))}
     </ul>
