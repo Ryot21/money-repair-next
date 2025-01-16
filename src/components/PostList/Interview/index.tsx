@@ -1,24 +1,26 @@
 // 投稿リスト > ご利用者の声
-
 import Image from "next/image";
 import Link from "next/link";
 import "@/styles/globals.scss";
+// import styles from "./index.module.scss";
+
 import Date from "@/components/Parts/Date";
 import Category from "@/components/Parts/Category";
 import { Interview } from "@/libs/microcms";
 
 type Props = {
-  interview: Interview[];
+  contents: Interview[];
 };
 
-export default function InterviewList({ interview }: Props) {
-  if (interview.length === 0) {
+export default function InterviewList({ contents }: Props) {
+
+  if (contents.length === 0) {
     return <p>記事がありません。</p>;
   }
   return (
-    <ul className={"c-flex -col2M1_3 -jc-sb -h-top"}>
-      {interview.map((article) => (
-        <li key={article.id} className={"flexItem_M mgb3 mgb10s"}>
+    <ul className={`c-post--lists c-flex -col2M1_3 -jc-st -h-top`}>
+      {contents.map((article) => (
+        <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb10s"}>
           <Link href={`/interview/${article.id}`} className={"c-post--link"}>
             {/* バナー画像 */}
             <div className={"c-thumbnail -interview mgb3 mgb3s"}>
@@ -42,21 +44,28 @@ export default function InterviewList({ interview }: Props) {
                 />
               </div>
               <div className={"c-thumbnail--picter"}>
-                <Image
-                  src="/images/item/480-320.png"
-                  alt="お客様との写真"
-                  width={480}
-                  height={320}
-                />
+                {article.thumbnail ? (
+                  <Image
+                      src={article.thumbnail.url}
+                      alt="お客様との写真"
+                      width={480}
+                      height={320}
+                  />
+                ) : (
+                    <Image
+                        src="/images/item/480-320.png"
+                        alt="お客様との写真"
+                        width={480}
+                        height={320}
+                    />
+                )}
               </div>
               <p className={"c-thumbnail--title"}>
                 <span className={"s-M -s20 -b -color03 -ls-1"}>
                   {article.mainTitle}
                 </span>
               </p>
-              <p
-                className={"c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1"}
-              >
+              <p className={"c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1"}>
                 {article.subTitle}
               </p>
             </div>
@@ -64,9 +73,7 @@ export default function InterviewList({ interview }: Props) {
             <div className={"c-date mgb2 mgb1s"}>
               <ul className={"c-date__lists c-flex -col2"}>
                 <li className={"c-date__item"}>
-                  <p className={"s-M -s16 -left -b -ls-2"}>
-                    <Date date={article.publishedAt ?? article.createdAt} />
-                  </p>
+                    <Date date={article.date} />
                 </li>
                 <li className={"c-date__item"}>
                   <ul className={"c-post--category__lists c-flex -h-cen"}>
@@ -82,8 +89,9 @@ export default function InterviewList({ interview }: Props) {
             </h3>
           </Link>
         </li>
+
+        
       ))}
-      ;
     </ul>
   );
 }

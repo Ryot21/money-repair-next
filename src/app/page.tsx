@@ -1,183 +1,32 @@
 import Image from "next/image";
 
 // コンポーネント
-import MainVisual from "@/components/MainVisual";
+import TopMainVisual from "@/components/MainVisual/Top";
 import LogoSlider from "@/components/Slider/Logo";
 import ContactBottom from "@/components/Contact/Bottom";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
 
 // 投稿関係
-import InterviewList from "@/components/Parts/PostList/Interview";
+import { getInterviewsList, getInformationList } from "@/libs/microcms";
+import { INTERVIEW_PAGE_LIST_LIMIT, INFORMATION_TOP_LIST_LIMIT } from "@/constants";
+import InterviewList from "@/components/PostList/Interview";
+import InformationList from "@/components/PostList/Information";
 
-// 型定義
-import { Interview, Information } from "@/libs/microcms";
-import InformationList from "@/components/Parts/PostList/Infomation";
 
-const interviewData: { contents: Interview[] } = {
-  contents: [
-    {
-      id: "1",
-      company: "株式会社1",
-      date: "2025/01/11",
-      mainTitle: "メインタイトル01メインタイトル01メインタイトル01",
-      subTitle: "サブタイトル01サブタイトル01サブタイトル01",
-      category: {
-        name: "カテゴリー01",
-      },
-      client: {
-        name: "株式会社1",
-        address: "東京都千代田区",
-        logo: "string",
-        link: "https://~~~",
-      },
-      article: "本文",
+export default async function Home() {
 
-      publishedAt: "2025/01/11",
-      createdAt: "2025/01/11",
-    },
-    {
-      id: "2",
-      company: "株式会社2",
-      date: "2025/01/11",
-      mainTitle: "メインタイトル02メインタイトル02メインタイトル02",
-      subTitle: "サブタイトル02サブタイトル02サブタイトル02",
-      category: {
-        name: "カテゴリー02",
-      },
-      client: {
-        name: "株式会社2",
-        address: "東京都千代田区",
-        logo: "string",
-        link: "https://~~~",
-      },
-      article: "本文",
-
-      publishedAt: "2025/01/11",
-      createdAt: "2025/01/11",
-    },
-    {
-      id: "3",
-      company: "株式会社3",
-      date: "2025/01/11",
-      mainTitle: "メインタイトル03メインタイトル03メインタイトル03",
-      subTitle: "サブタイトル03サブタイトル03サブタイトル03",
-      category: {
-        name: "カテゴリー03",
-      },
-      client: {
-        name: "株式会社1",
-        address: "東京都千代田区",
-        logo: "string",
-        link: "https://~~~",
-      },
-      article: "本文",
-
-      publishedAt: "2025/01/11",
-      createdAt: "2025/01/11",
-    },
-  ],
-};
-const informationwData: { contents: Information[] } = {
-  contents: [
-    {
-      id: "1",
-      date: "2025/01/11",
-      mainTitle: "メインタイトル01メインタイトル01メインタイトル01",
-      subTitle: "サブタイトル01サブタイトル01サブタイトル01",
-      category: {
-        name: "カテゴリー01",
-      },
-      captionLists: {
-        captionTitle01: "見出しタイトル01見出しタイトル01",
-        captionTitle02: "見出しタイトル02見出しタイトル02",
-        captionTitle03: "見出しタイトル03見出しタイトル03",
-        captionTitle04: "見出しタイトル04見出しタイトル04",
-        captionTitle05: "見出しタイトル05見出しタイトル05",
-      },
-      poster: {
-        name: "投稿者01",
-        officialPosition: "代表取締役社長",
-        description: "説明文が入ります。説明文が入ります。説明文が入ります。",
-        profilePicture: "画像URL",
-        url: "https://~~~",
-      },
-      read: "リード文",
-      article: "本文",
-      ctaOnOff: true,
-
-      publishedAt: "2025/01/11",
-      createdAt: "2025/01/11",
-    },
-    {
-      id: "2",
-      date: "2025/01/11",
-      mainTitle: "メインタイトル02メインタイトル02メインタイトル02",
-      subTitle: "サブタイトル02サブタイトル02サブタイトル02",
-      category: {
-        name: "カテゴリー02",
-      },
-      captionLists: {
-        captionTitle01: "見出しタイトル01見出しタイトル01",
-        captionTitle02: "見出しタイトル02見出しタイトル02",
-        captionTitle03: "見出しタイトル03見出しタイトル03",
-        captionTitle04: "見出しタイトル04見出しタイトル04",
-        captionTitle05: "見出しタイトル05見出しタイトル05",
-      },
-      poster: {
-        name: "投稿者02",
-        officialPosition: "保険事業部",
-        description: "説明文が入ります。説明文が入ります。説明文が入ります。",
-        profilePicture: "画像URL",
-        url: "https://~~~",
-      },
-      read: "リード文",
-      article: "本文",
-      ctaOnOff: true,
-
-      publishedAt: "2025/01/11",
-      createdAt: "2025/01/11",
-    },
-    {
-      id: "3",
-      date: "2025/01/11",
-      mainTitle: "メインタイトル03メインタイトル03メインタイトル03",
-      subTitle: "サブタイトル03サブタイトル03サブタイトル03",
-      category: {
-        name: "カテゴリー03",
-      },
-      captionLists: {
-        captionTitle01: "見出しタイトル01見出しタイトル01",
-        captionTitle02: "見出しタイトル02見出しタイトル02",
-        captionTitle03: "見出しタイトル03見出しタイトル03",
-        captionTitle04: "見出しタイトル04見出しタイトル04",
-        captionTitle05: "見出しタイトル05見出しタイトル05",
-      },
-      poster: {
-        name: "投稿者03",
-        officialPosition: "不動産事業部",
-        description: "説明文が入ります。説明文が入ります。説明文が入ります。",
-        profilePicture: "画像URL",
-        url: "https://~~~",
-      },
-      read: "リード文",
-      article: "本文",
-      ctaOnOff: true,
-
-      publishedAt: "2025/01/11",
-      createdAt: "2025/01/11",
-    },
-  ],
-};
-
-export default function Home() {
   // 表示件数を絞る
-  const interviewSliceData   = interviewData.contents.slice(0, 3);
-  const informationSliceData = informationwData.contents.slice(0, 3);
+  const interviewData = await getInterviewsList({
+    limit: INTERVIEW_PAGE_LIST_LIMIT,
+  });
+  const informationData = await getInformationList({
+    limit: INFORMATION_TOP_LIST_LIMIT,
+  });
 
   return (
     <main>
       {/* メインビジュアル */}
-      <MainVisual />
+      <TopMainVisual />
 
       {/* 導入企業ロゴ */}
       <div id="logoSection" className={"c-contents pdt5 pdt10s mgb5s"}>
@@ -236,17 +85,13 @@ export default function Home() {
       <div id="sc02" className={"c-contents pdt10 pdt20s mgb5s"}>
         <div className={"c-contents--inner"}>
           {/* タイトル */}
-          <h2
-            className={
-              "c-contents--title -interview -ls-1 -en-color03 pdb3 pdb5s"
-            }
-          >
+          <h2 className={"c-contents--title -interview -ls-1 -en-color03 pdb3 pdb5s"}>
             ご利用者インタビュー
           </h2>
 
           {/* 投稿リスト */}
           <div className={"c-post mgb5 mgb10s"}>
-            <InterviewList interview={interviewSliceData} />
+            <InterviewList contents={interviewData.contents} />
           </div>
 
           {/* ボタン */}
@@ -268,7 +113,7 @@ export default function Home() {
 
           {/* 投稿リスト */}
           <div className={"c-post mgb3 mgb10s"}>
-            <InformationList information={informationSliceData} />
+            <InformationList contents={informationData.contents} />
           </div>
 
           {/* ボタン */}

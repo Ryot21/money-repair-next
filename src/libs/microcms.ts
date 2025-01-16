@@ -7,7 +7,6 @@ import type {
 } from "microcms-js-sdk";
 
 
-
 // 【 型定義 】
 export type Client = {// 投稿者
   name:        string;        // 取引先企業名
