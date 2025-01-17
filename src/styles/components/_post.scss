@@ -1,6 +1,31 @@
 // 投稿関係
 
 .c-post{
+    // 記事 > リスト
+    &--lists{// ul
+
+    }
+    &--item{// li
+        @include min(768){
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(7){// 1列目
+                margin-right: 1%;
+            }
+            &:nth-child(2),
+            &:nth-child(5),
+            &:nth-child(8){// 2列目
+                margin-left: .5%;
+                margin-right: .5%;
+            }
+            &:nth-child(3),
+            &:nth-child(6),
+            &:nth-child(9){// 3列目
+                margin-left: 1%;
+            }
+        }
+
+    }
     &--link{
         position: relative;
         top: 0;

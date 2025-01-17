@@ -5,17 +5,18 @@ import ContactBottom from "@/components/Contact/Bottom";
 type Props = {
     children: React.ReactNode;
     title: string;
-    customClass?: string;
+    mvClass?: string;
+    contentClass?: string;
 }
 
-export default function Sheet({ children, title, customClass }: Props) {
+export default function Sheet({ children, title, mvClass, contentClass }: Props) {
     return (
         <main>
             {/* メインビジュアル */}
-            <SingleMainVisual title={title} customClass={customClass}/>
+            <SingleMainVisual title={title} mvClass={mvClass}/>
 
             {/* コンテンツ */}
-            <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
+            <div className={`c-contents pdt5 pdt10s pdb5 pdb10s ${contentClass || ''} `} >
                 <div className="c-contents--inner">
                     {children}
                 </div>

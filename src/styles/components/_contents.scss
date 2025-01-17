@@ -5,6 +5,10 @@
 }
 
 .c-contents{
+	&.-min1200{
+		@include min(500){min-height: 1200px;}
+	}
+
 	&.-bg-color01{background: $site-color01;}
 	&.-bg-color02{background: $site-color02;}
 	&.-bg-color03{background: $site-color03;}
