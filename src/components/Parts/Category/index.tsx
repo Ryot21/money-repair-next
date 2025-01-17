@@ -1,13 +1,20 @@
-import Link from "next/link";
+
 import type { Category } from "@/libs/microcms";
 import "@/styles/globals.scss";
 
 type Props = {
-    category: Category;
+    category: Category[];
 }
 
 export default function Category({ category } : Props) {
+    // console.log(category[0].name)
+
     return (
-        <Link href="">#{category.name}</Link>
+        // <p>#{category.name}</p>
+        <>
+            { category.map((item, index) => (
+                <p key={index}># {item.name}</p>
+            ))}
+        </>
     );
 }
