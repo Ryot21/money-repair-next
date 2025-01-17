@@ -75,7 +75,8 @@ export default function InformationList({ contents }: Props) {
                     <div className={"c-date mgb2 mgb1s"}>
                         <ul className={"c-date__lists c-flex -col2"}>
                         <li className={"c-date__item"}>
-                            <Date date={article.date} />
+                            {/* <Date date={article.date} /> */}
+                            <Date date={article.publishedAt ?? article.createdAt} />
                         </li>
                         <li className={"c-date__item"}>
                             <ul className={"c-post--category__lists c-flex -h-cen"}>
