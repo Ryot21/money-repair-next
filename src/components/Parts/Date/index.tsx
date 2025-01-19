@@ -8,7 +8,7 @@ type Props = {
 
 export default function Date({ date } : Props) {
     return (
-        <p className={`s-M -s16 -left -b -ls-2 ${styles.time}`}>
+        <time dateTime={formatDate(date)} className={`s-M -s16 -left -b -ls-2 ${styles.time}`}>
             <Image
                 src="/images/SVG/clock.svg"
                 alt="時計"
@@ -16,6 +16,6 @@ export default function Date({ date } : Props) {
                 height={12}
             />
             <span className={"s-M -s16 -left -b -ls-2"}>{formatDate(date)}</span>
-        </p>
+        </time>
     );
 }
