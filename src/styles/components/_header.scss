@@ -1,7 +1,7 @@
 // ヘッダー
 .c-header{
 	position: relative;
-	width: auto;
+	width: 100%;
 	height: auto;
 	padding: 0;
 	box-sizing: border-box;
@@ -17,10 +17,13 @@
 		z-index: -1;
 	}
 	&.-fixed{//固定
-		position: sticky;
-		top: 0;
+		position: fixed;
+		top: 10px;
 		left: 0;
 		z-index: 999;
+		@include min(500){
+			top: 25px;
+		}
 	}
 	&-wrapper{
 		width: 50%;
@@ -43,11 +46,11 @@
 
 		.headerItem{// li
             &.-logoArea{// ロゴ
-                width: 100%;
+                width: 75%;
                 @include max(500){margin-left: 10%;}
-                @include min(400){width: 90%;}
+                @include min(400){width: 70%;}
                 @include min(500){
-					width: 20%;
+					width: 18%;
 				}
                 @include min(1200){max-width: 180px;}
             }

@@ -5,7 +5,7 @@ export default function Page(){
     return(
         <div>
             {/* マネーリペアとは */}
-            <div className={"c-contents--introduction pdt5 pdt10s mgb5s"}>
+            <div className={"c-contents--introduction  pdt10s mgb5s"}>
                 {/* <lottie-player
                     id="lottie-scroll-trigger"
                     className={"lottie--logo"}
@@ -15,9 +15,6 @@ export default function Page(){
                 </lottie-player> */}
                 <h2 className={"c-contents--title -b-btm mgb5 mgb10s"}>
                     マネーリペア<span>とは</span>
-                    {/* <div className={imgBox">
-                        <img src="images/SVG/money-repair-toha.svg" alt="マネーリペアとは">
-                    </div> */}
                 </h2>
                 <p className={"s-ML -s12 -center -ls-2 -lh-2"}>
                     金融のプロが貴社の従業員に対して<span className={"s-ML -s14 -b"}>金融リテラシーの向上</span>金融リテラシーの向上を支援し、<br className={"tb-pc"} />

@@ -82,23 +82,49 @@ const client = createClient({
 });
 
 // 【 データ取得 】
-// ご利用者の声リスト
-export const getInterviewsList = async (queries?: MicroCMSQueries) => {
-  const listData = await client.getList<Interview>({
-    endpoint: "interview",
-    queries,
-  });
-  return listData;
-};
-// お役立ち情報リスト
-export const getInformationList = async (queries?: MicroCMSQueries) => {
+// お役立ち情報
+export const getInformationList = async (queries?: MicroCMSQueries) => {// 一覧
   const listData = await client.getList<Information>({
     endpoint: "information",
     queries,
   });
   return listData;
 }
-// 投稿者リスト
+export const getInformationDetail = async (// 詳細
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Information>({
+    endpoint: "information",
+    contentId,
+    queries,
+  });
+  return detailData;
+};
+
+
+// ご利用者の声
+export const getInterviewsList = async (queries?: MicroCMSQueries) => {// 一覧
+  const listData = await client.getList<Interview>({
+    endpoint: "interview",
+    queries,
+  });
+  return listData;
+};
+export const getInterviewsDetail = async (// 詳細
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Interview>({
+    endpoint: "interview",
+    contentId,
+    queries,
+  });
+  return detailData;
+};
+
+
+// 投稿者_リスト
 export const getPosterList = async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<Poster>({
     endpoint: "poster",

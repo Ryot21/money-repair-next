@@ -5,7 +5,7 @@ import PageButtonLink from "@/components/Parts/Button/PageButton";
 export default function NotFound() {
   return (
     <main>
-      <SingleMainVisual title="ページが見つかりませんでした" customClass="-notFound"/>
+      <SingleMainVisual title="ページが見つかりませんでした" mvClass="-notFound"/>
       <div className="c-contents--inner pdt10 pdt10s pdb20 pdb20s">
         <p className="s-ML -s14 -center -ls-2 -lh-1_5 mgb1 mgb3s">指定されたURLのページは存在しません。<br />URLを再度ご確認ください。</p>
         <p className="s-SS -s10 -center -ls-2 -lh-1_5 mgb5 mgb10s">The page with specified URL does not exist.</p>
