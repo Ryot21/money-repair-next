@@ -3,12 +3,12 @@ import Image from "next/image";
 // コンポーネント
 import TopMainVisual from "@/components/MainVisual/Top";
 import LogoSlider from "@/components/Slider/Logo";
-import ContactBottom from "@/components/Contact/Bottom";
+import ContactBottom from "@/features/Contact/Bottom";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
 
 // 投稿関係
 import { getInterviewsList, getInformationList } from "@/libs/microcms";
-import { INTERVIEW_PAGE_LIST_LIMIT, INFORMATION_TOP_LIST_LIMIT } from "@/constants";
+import { INTERVIEW_TOP_LIST_LIMIT, INFORMATION_TOP_LIST_LIMIT } from "@/constants";
 import InterviewList from "@/components/PostList/Interview";
 import InformationList from "@/components/PostList/Information";
 
@@ -17,7 +17,7 @@ export default async function Home() {
 
   // 表示件数を絞る
   const interviewData = await getInterviewsList({
-    limit: INTERVIEW_PAGE_LIST_LIMIT,
+    limit: INTERVIEW_TOP_LIST_LIMIT,
   });
   const informationData = await getInformationList({
     limit: INFORMATION_TOP_LIST_LIMIT,

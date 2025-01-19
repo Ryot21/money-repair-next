@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import "./globals.scss";
+
 import "@/styles/globals.scss";
-import Header from "@/components/Header";
-import HamburgerNav from "@/components/HamburgerNav";
-import Footer from "@/components/Footer";
+import Header from "@/features/Header";
+import HamburgerNav from "@/features/HamburgerNav";
+import Footer from "@/features/Footer";
 
 
 // const geistSans = Geist({

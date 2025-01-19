@@ -1,6 +1,6 @@
 // 共通レイアウト
 import SingleMainVisual from "@/components/MainVisual/single";
-import ContactBottom from "@/components/Contact/Bottom";
+import ContactBottom from "@/features/Contact/Bottom";
 
 type Props = {
     children: React.ReactNode;

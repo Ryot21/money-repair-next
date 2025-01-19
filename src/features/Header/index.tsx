@@ -38,7 +38,7 @@ export default function Header() {
                                             </li>
                                             {/* ご利用者の声 */}
                                             <li className={"hnavItem archiveItem"}>
-                                                <Link className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="archive-interview.html">ご利用者の声</Link>
+                                                <Link className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="/interview">ご利用者の声</Link>
                                                 {/* ドロップダウンメニュー */}
                                                 <div className={"c-hnav--dropdown"}>
                                                     <ul className={"c-hnav--archiveLists"}>
@@ -53,7 +53,7 @@ export default function Header() {
                                             </li>
                                             {/* お役立ち情報 */}
                                             <li className={"hnavItem archiveItem"}>
-                                                <Link className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="archive-information.html">お役立ち情報</Link>
+                                                <Link className={"c-hnav--link -archive s-M -b -ls-3 -ws-n"} href="/information">お役立ち情報</Link>
                                                 {/* ドロップダウンメニュー */}
                                                 <div className={"c-hnav--dropdown"}>
                                                     <ul className={"c-hnav--archiveLists"}>

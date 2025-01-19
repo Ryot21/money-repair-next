@@ -1,4 +1,4 @@
-import Link from "next/link";
+ import Link from "next/link";
 import "@/styles/globals.scss";
 
 export default function HamburgerNav() {
@@ -18,7 +18,7 @@ export default function HamburgerNav() {
                         <Link className={""} href="/service"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>マネーリペアの特徴</span></Link>
                     </li>
                     <li className={"hbNavItem c-borderBtm -dotted "}>
-                        <Link className={"mgb5 mgb5s"} href="archive-interview.html"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>ご利用者の声</span></Link>
+                        <Link className={"mgb5 mgb5s"} href="/interview"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>ご利用者の声</span></Link>
                         <ul className={"c-flex -col2 -jc-end"}>
                             <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
                             <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
@@ -29,7 +29,7 @@ export default function HamburgerNav() {
                         </ul>
                     </li>
                     <li className={"hbNavItem c-borderBtm -dotted "}>
-                        <Link className={"mgb5 mgb5s"} href="archive-information.html"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>お役立ち情報</span></Link>
+                        <Link className={"mgb5 mgb5s"} href="/information"><span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>お役立ち情報</span></Link>
                         <ul className={"c-flex -col2 -jc-end"}>
                             <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
                             <li className={"flexItem mgb5 mgb5s"}><Link className={"s-M -s14 -b -white -center"} href="">カテゴリー01</Link></li>
@@ -40,12 +40,12 @@ export default function HamburgerNav() {
                         </ul>
                     </li>
                     <li className={"hbNavItem "}>
-                        <Link className={""} href="contact.html">
+                        <Link className={""} href="/download">
                             <span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>資料請求</span>
                         </Link>
                     </li>
                     <li className={"hbNavItem "}>
-                        <Link className={""} href="contact.html">
+                        <Link className={""} href="/contact">
                             <span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>お問い合わせ</span>
                         </Link>
                     </li>
