@@ -5,7 +5,7 @@ import "@/styles/globals.scss";
 // import styles from "./index.module.scss"
 
 import Date from "@/components/Parts/Date";
-import Category from "@/components/Parts/Category";
+import { Category } from "@/components/Parts/Category";
 import { Information } from "@/libs/microcms";
 
 type Props = {
