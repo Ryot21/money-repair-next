@@ -1,5 +1,4 @@
 import { createClient } from "microcms-js-sdk";
-
 import type {
   MicroCMSQueries,
   MicroCMSImage,
@@ -65,6 +64,10 @@ export type Information = {// お役立ち情報
   createdAt:        string;   // 作成日
 } & MicroCMSListContent;
 
+export type Params = {
+  slug: string;
+}
+
 
 
 // 【 参照エラーチェック 】
@@ -102,6 +105,14 @@ export const getInformationDetail = async (// 詳細
   return detailData;
 };
 
+// カテゴリー
+export const getCategoryList = async (queries?: MicroCMSQueries) => {// 一覧
+  const listData = await client.getList<Category>({
+    endpoint: "information_category",
+    queries,
+  });
+  return listData;
+};
 
 // ご利用者の声
 export const getInterviewsList = async (queries?: MicroCMSQueries) => {// 一覧
@@ -122,6 +133,8 @@ export const getInterviewsDetail = async (// 詳細
   });
   return detailData;
 };
+
+
 
 
 // 投稿者_リスト
