@@ -34,7 +34,7 @@ export default function Article ({ data }: Props) {
                     </ul>
                     {/* タイトル */}
                     <h1>{data.mainTitle}</h1>
-                    <Date date={data.publishedAt ?? data.createdAt}/>
+                    <Date date={data.publishedAt || data.createdAt}/>
                 </div>
                 {/* 2. バナー */}
                 <div className={"c-thumbnail -news"}>

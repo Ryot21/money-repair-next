@@ -13,6 +13,8 @@ type Props = {
 };
 
 export default function InformationList({ contents }: Props) {
+
+    console.log(contents)
   if (contents.length === 0) {
     return <p>記事がありません。</p>;
   }
@@ -76,7 +78,7 @@ export default function InformationList({ contents }: Props) {
                         <ul className={"c-date__lists c-flex -col2"}>
                         <li className={"c-date__item"}>
                             {/* <Date date={article.date} /> */}
-                            <Date date={article.publishedAt ?? article.createdAt} />
+                            <Date date={article.publishedAt || article.createdAt} />
                         </li>
                         <li className={"c-date__item"}>
                             <ul className={"c-post--category__lists c-flex -h-cen"}>

@@ -74,7 +74,7 @@ export default function InterviewList({ contents }: Props) {
               <ul className={"c-date__lists c-flex -col2"}>
                 <li className={"c-date__item"}>
                     {/* <Date date={article.date} /> */}
-                    <Date date={article.publishedAt ?? article.createdAt} />
+                    <Date date={article.publishedAt || article.createdAt} />
                 </li>
                 <li className={"c-date__item"}>
                   <ul className={"c-post--category__lists c-flex -h-cen"}>
