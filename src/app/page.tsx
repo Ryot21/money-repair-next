@@ -9,8 +9,8 @@ import PageButtonLink from "@/components/Parts/Button/PageButton";
 // 投稿関係
 import { getInterviewsList, getInformationList } from "@/libs/microcms";
 import { INTERVIEW_TOP_LIST_LIMIT, INFORMATION_TOP_LIST_LIMIT } from "@/constants";
-import InterviewList from "@/components/PostList/Interview";
-import InformationList from "@/components/PostList/Information";
+import InterviewList from "@/features/PostList/Interview";
+import InformationList from "@/features/PostList/Information";
 
 
 export default async function Home() {

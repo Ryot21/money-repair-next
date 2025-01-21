@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Poster } from "@/libs/microcms";
+import type { Poster } from "@/libs/microcms";
 
 type Props = {
     poster: Poster[];
