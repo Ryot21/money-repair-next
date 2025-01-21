@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Information } from "@/libs/microcms";
 import Date from "@/components/Parts/Date";
-import { CategoryLink } from "@/components/Parts/Category";
+import CategoryLink from "@/components/Parts/Category/Link";
 import Poster from "@/components/Parts/Poster";
 
 type Props = {
