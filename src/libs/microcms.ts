@@ -9,9 +9,10 @@ import type {
 // 【 型定義 】
 export type Client = {// 投稿者
     name:        string;        // 取引先企業名
+    icon:        MicroCMSImage; // アイコン
     address:     string;        // 住所
     description: string;        // 企業説明
-    logo:        MicroCMSImage; // ロゴ
+    logo?:       MicroCMSImage; // ロゴ
     url:         string;        // URL
 } & MicroCMSListContent;
 
