@@ -1,5 +1,5 @@
-import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 import Link from "next/link";
+import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 
 type Props = {
     totalCount: number;

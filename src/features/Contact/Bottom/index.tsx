@@ -1,6 +1,5 @@
 import Image from "next/image";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
-import "@/styles/globals.scss";
 
 export default function ContactBottom() {
   return (

@@ -1,5 +1,4 @@
- import Link from "next/link";
-import "@/styles/globals.scss";
+import Link from "next/link";
 
 export default function HamburgerNav() {
     return (
