@@ -1,27 +1,37 @@
-
-import { getInformationCategoryDetail, getInformationList } from "@/libs/microcms";
-import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 import { notFound } from "next/navigation";
+import { getInformationCategoryDetail, getInformationList } from "@/libs/microcms";
 import InformationList from "@/features/PostList/Information";
-import Category from "@/components/Parts/Category";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
+import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 
 type Props = {
     params: {
         id: string;
-    };
-};
+        current: string;
+    }
+}
+export default async function Page({ params }: Props ) {
+    const current = parseInt(params.current, 10);
 
-export default async function Page({ params } : Props){
-        const category = await getInformationCategoryDetail(params.id).catch(notFound);
+    if (Number.isNaN(current) || current < 1) {
+        notFound();
+    }
 
-        const { contents : information, totalCount } = await getInformationList({
-                filters: `category[equals]${category.id}`,
-                limit: INFORMATION_PAGE_LIST_LIMIT,
-        });
+    const category =  await getInformationCategoryDetail(params.id).catch(notFound);
+
+    const { contents: information, totalCount } = await getInformationList({
+        filters: `category[equals]${category.id}`,
+        limit: INFORMATION_PAGE_LIST_LIMIT,
+        offset: INFORMATION_PAGE_LIST_LIMIT * (current -1),
+    });
+
+    if (information.length === 0){
+        notFound();
+    }
 
     return (
+
         <>
             {/* 導入部分 */}
             <div className={"c-contents pdt2 pdt10s pdb5 pdb10s"}>
@@ -33,20 +43,16 @@ export default async function Page({ params } : Props){
                     </p>
                 </div>
             </div>
-
             {/* カテゴリ一覧 */}
-            {/* article = information or interview */}
             <CategoryList article="information" />
-
             {/* 記事一覧 */}
             <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
-                <p><Category category={category}/>の一覧</p>
-                <InformationList contents={information} />
+                <InformationList contents={ information }/>
             </div>
-
             {/* ページネーション */}
             <Pagination
                 totalCount={totalCount}
+                current={current}
                 basePath={`/information/category/${category.id}`}
             />
         </>

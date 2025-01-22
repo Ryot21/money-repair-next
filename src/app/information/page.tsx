@@ -4,11 +4,12 @@ import { getInformationList } from "@/libs/microcms";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 import InformationList from "@/features/PostList/Information"
 import CategoryList from "@/components/Parts/Category/List";
+import Pagination from "@/components/Parts/pagination";
 
 export default async function Page(){
 
     // 表示件数を絞る
-    const informationData = await getInformationList({
+    const { contents: information, totalCount } = await getInformationList({
         limit: INFORMATION_PAGE_LIST_LIMIT,
     });
 
@@ -29,8 +30,13 @@ export default async function Page(){
             <CategoryList article="information" />
             {/* 記事一覧 */}
             <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
-                <InformationList contents={ informationData.contents }/>
+                <InformationList contents={ information }/>
             </div>
+            {/* ページネーション */}
+            <Pagination
+                totalCount={totalCount}
+                basePath={`/information`}
+            />
         </>
     )
 }
