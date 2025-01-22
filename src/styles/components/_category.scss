@@ -57,6 +57,7 @@
         border: 1px solid $site-color03;
         margin-right: 5px;
         border-radius: 3px;
+        overflow: hidden;
         @include max(768){
             margin-bottom: 10px;
         }
@@ -72,6 +73,13 @@
             &:hover{
                 color: $main-color--w;
                 background: $site-color03;
+            }
+            &.active{
+                font-size: 1.2rem;
+                font-weight: bold;
+                background: $main-color--yellow;
+                padding: 3px 10px;
+                pointer-events: none;
             }
         }
     }

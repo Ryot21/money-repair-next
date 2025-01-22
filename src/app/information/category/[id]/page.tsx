@@ -1,9 +1,7 @@
-
-import { getInformationCategoryDetail, getInformationList } from "@/libs/microcms";
+import { getInformationCategoryDetail, getInformationList, getInformationCategoryList } from "@/libs/microcms";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 import { notFound } from "next/navigation";
 import InformationList from "@/features/PostList/Information";
-import Category from "@/components/Parts/Category";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
@@ -15,6 +13,7 @@ type Props = {
 
 export default async function Page({ params } : Props){
         const category = await getInformationCategoryDetail(params.id).catch(notFound);
+        const categories = await getInformationCategoryList();
 
         const { contents : information, totalCount } = await getInformationList({
                 filters: `category[equals]${category.id}`,
@@ -36,11 +35,14 @@ export default async function Page({ params } : Props){
 
             {/* カテゴリ一覧 */}
             {/* article = information or interview */}
-            <CategoryList article="information" />
+            <CategoryList 
+                article="information" 
+                currentCategoryId={params.id}
+                categories={categories}
+            />
 
             {/* 記事一覧 */}
             <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
-                <p><Category category={category}/>の一覧</p>
                 <InformationList contents={information} />
             </div>
 

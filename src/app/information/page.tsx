@@ -1,6 +1,5 @@
-
 // コンポーネント
-import { getInformationList } from "@/libs/microcms";
+import { getInformationList, getInformationCategoryList } from "@/libs/microcms";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 import InformationList from "@/features/PostList/Information"
 import CategoryList from "@/components/Parts/Category/List";
@@ -12,6 +11,7 @@ export default async function Page(){
     const { contents: information, totalCount } = await getInformationList({
         limit: INFORMATION_PAGE_LIST_LIMIT,
     });
+    const categories = await getInformationCategoryList();
 
     return (
         
@@ -27,7 +27,10 @@ export default async function Page(){
                 </div>
             </div>
             {/* カテゴリ一覧 */}
-            <CategoryList article="information" />
+            <CategoryList 
+                article="information"
+                categories={categories}
+            />
             {/* 記事一覧 */}
             <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
                 <InformationList contents={ information }/>

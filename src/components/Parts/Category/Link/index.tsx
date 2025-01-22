@@ -1,21 +1,24 @@
-import type { Category } from "@/libs/microcms";
 import Link from "next/link";
-import "@/styles/globals.scss";
+import type { Category } from "@/libs/microcms";
 
-type CategoryLinkProps = {
-    category: Category,
-    article: string,// information or interview
-    customClass: string
-}
+// import "@/styles/globals.scss";
+type Props = {
+  category: Category;
+  article: string;
+  customClass: string;
+  isActive?: boolean; // activeかどうかを判定するプロパティを追加
+};
 
 // 【リンク表示】
-export default function CategoryLink({ category, article, customClass } : CategoryLinkProps) {
-    return (
-        <Link
-            href={`/${article}/category/${category.id}`}
-            className={customClass}
-        >
-            # {category.name}
-        </Link>
-    );
-}
+const CategoryLink = ({ category, article, customClass, isActive }: Props) => {
+  return (
+    <Link
+      href={`/${article}/category/${category.id}`}
+      className={`${customClass} ${isActive ? "active" : ""}`}
+    >
+      {category.name}
+    </Link>
+  );
+};
+
+export default CategoryLink;

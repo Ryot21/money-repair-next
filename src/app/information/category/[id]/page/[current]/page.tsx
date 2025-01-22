@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getInformationCategoryDetail, getInformationList } from "@/libs/microcms";
+import { getInformationCategoryDetail, getInformationList, getInformationCategoryList } from "@/libs/microcms";
 import InformationList from "@/features/PostList/Information";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
@@ -19,13 +19,13 @@ export default async function Page({ params }: Props ) {
     }
 
     const category =  await getInformationCategoryDetail(params.id).catch(notFound);
+    const categories = await getInformationCategoryList();
 
     const { contents: information, totalCount } = await getInformationList({
         filters: `category[equals]${category.id}`,
         limit: INFORMATION_PAGE_LIST_LIMIT,
         offset: INFORMATION_PAGE_LIST_LIMIT * (current -1),
     });
-
     if (information.length === 0){
         notFound();
     }
@@ -44,7 +44,12 @@ export default async function Page({ params }: Props ) {
                 </div>
             </div>
             {/* カテゴリ一覧 */}
-            <CategoryList article="information" />
+            {/* article = information or interview */}
+            <CategoryList
+                article="information"
+                currentCategoryId={category.id}
+                categories={categories}
+            />
             {/* 記事一覧 */}
             <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
                 <InformationList contents={ information }/>

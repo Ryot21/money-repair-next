@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getInformationList } from "@/libs/microcms";
+import { getInformationList, getInformationCategoryList } from "@/libs/microcms";
 import InformationList from "@/features/PostList/Information";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants"
 import CategoryList from "@/components/Parts/Category/List";
@@ -26,7 +26,7 @@ export default async function Page({ params }: Props) {
     if (information.length === 0){
         notFound();
     }
-
+    const categories = await getInformationCategoryList();
     return (
 
         <>
@@ -41,7 +41,10 @@ export default async function Page({ params }: Props) {
                 </div>
             </div>
             {/* カテゴリ一覧 */}
-            <CategoryList article="information" />
+            <CategoryList
+                article="information"
+                categories={categories}
+            />
             {/* 記事一覧 */}
             <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
                 <InformationList contents={ information }/>
