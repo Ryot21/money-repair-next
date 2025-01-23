@@ -249,6 +249,8 @@
 .pdl8s  {@include max(768){padding-left: 8% !important;}}
 .pdl9s  {@include max(768){padding-left: 9% !important;}}
 .pdl10s  {@include max(768){padding-left: 10% !important;}}
+.pdl15s  {@include max(768){padding-left: 15% !important;}}
+.pdl20s  {@include max(768){padding-left: 20% !important;}}
 
 // 768px以上
 .pdl0  {@include min(768){padding-left: 0  !important;}}

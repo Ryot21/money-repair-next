@@ -1,7 +1,10 @@
 // 一覧ページ > カテゴリー関係
 .c-category{
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
+    @include min(500){
+        width: 85%;
+    }
 
     &__box,
     &__lists{// ul
@@ -31,7 +34,7 @@
                 text-align: center;
                 letter-spacing: 0.2rem;
                 white-space: nowrap;
-                padding: 11px 20px;
+                padding: 5px 20px;
                 @include min(768){
                     font-size: 1.2rem;
                     padding: 11px 15px 11px 20px;
