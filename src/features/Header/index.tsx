@@ -1,11 +1,14 @@
-// "use client";
-
-import Image  from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import IconButtonLink from "@/components/Parts/Button/IconButton";
+import type { Category } from "@/libs/microcms";
+import { getInterviewCategoryList, getInformationCategoryList } from "@/libs/microcms";
 
+export default async function Header() {
+  // カテゴリー情報を取得
+  const interviewCategories = await getInterviewCategoryList();
+  const informationCategories = await getInformationCategoryList();
 
-export default function Header() {
   return (
     <header id="js-header" className={"c-header -fixed"}>
         <div className={"c-header-wrapper"}>
@@ -41,12 +44,16 @@ export default function Header() {
                                             {/* ドロップダウンメニュー */}
                                             <div className={"c-hnav--dropdown"}>
                                                 <ul className={"c-hnav--archiveLists"}>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                    {interviewCategories.contents.map((category: Category) => (
+                                                        <li key={category.id} className={"archiveItem"}>
+                                                        <Link 
+                                                            href={`/interview/category/${category.id}`} 
+                                                            className={"c-link s-S -b"}
+                                                        >
+                                                            # {category.name}
+                                                        </Link>
+                                                        </li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                         </li>
@@ -56,12 +63,16 @@ export default function Header() {
                                             {/* ドロップダウンメニュー */}
                                             <div className={"c-hnav--dropdown"}>
                                                 <ul className={"c-hnav--archiveLists"}>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
-                                                    <li className={"archiveItem"}><Link href="" className={"c-link s-S -b"}>#カテゴリー01</Link></li>
+                                                {informationCategories.contents.map((category: Category) => (
+                                                    <li key={category.id} className={"archiveItem"}>
+                                                    <Link 
+                                                        href={`/information/category/${category.id}`} 
+                                                        className={"c-link s-S -b -ls-3 -ws-n"}
+                                                    >
+                                                        # {category.name}
+                                                    </Link>
+                                                    </li>
+                                                ))}
                                                 </ul>
                                             </div>
                                         </li>
