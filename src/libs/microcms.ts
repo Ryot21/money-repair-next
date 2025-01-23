@@ -29,17 +29,23 @@ export type Category = {// カテゴリー
 } & MicroCMSListContent;
 
 export type Interview = {// ご利用者インタビュー
-    id:          string;   // ID
-    company:     string;   // 企業名
-    date:        string;   // 更新日（yyyy/mm/dd）
-    thumbnail?:  MicroCMSImage; // サムネイル
-    mainTitle:   string;   // メインタイトル
-    subTitle:    string;   // サブタイトル
-    category:    Category; // カテゴリー
-    client:      Client;   // 取引先情報
-    article:     string;   // 本文
-    publishedAt: string;   // 更新日
-    createdAt:   string;   // 作成日
+    id:             string;        // ID
+    company:        string;        // 企業名
+    date:           string;        // 更新日（yyyy/mm/dd）
+    thumbnail:      MicroCMSImage; // サムネイル
+    mainTitle:      string;        // メインタイトル
+    subTitle:       string;        // サブタイトル
+    category:       Category;      // カテゴリー
+    client:         Client;        // 取引先情報
+    article1Body:   string;        // 本文1
+    article1Image:  MicroCMSImage; // 本文1
+    article2Title:  string;        // 本文2_見出し
+    article2Body:   string;        // 本文2
+    article2Image:  MicroCMSImage; // 本文2
+    article3Title?: string;        // 本文3_見出し
+    article3Body?:  string;        // 本文3
+    publishedAt:    string;        // 更新日
+    createdAt:      string;        // 作成日
 } & MicroCMSListContent;
 
 export type Information = {// お役立ち情報

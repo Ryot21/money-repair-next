@@ -8,7 +8,7 @@ type Props = {
 
 export default function Client({ client }: Props) {
     return (
-        <div className={"c-card -t01 w50 w100s -right"}>
+        <div className={"c-card -t01 w80 w100s"}>
             {client.map((item, index) => (
                 <ul key={index} className={"c-card-lists"}>
                     {/* プロフィール画像 */}
