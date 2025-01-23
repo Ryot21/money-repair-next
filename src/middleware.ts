@@ -1,31 +1,33 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// ミドルウェア関数
 export function middleware(request: NextRequest) {
-    // リクエストの URL を取得
     const pathname = request.nextUrl.pathname;
-
-    // パスに基づいてページタイプを判定
+    const pathSegments = pathname.split('/').filter(Boolean);
+    const section = pathSegments[0]; // 'information' または 'interview'
+    
     let pageType = 'top';
 
-    if (pathname.startsWith('/information')) {
-    pageType = 'single';
+    if (['/information', '/interview'].some(path => pathname.startsWith(path))) {
+        if (pathSegments[1] === 'category' || pathname.includes('/page/')) {
+            pageType = 'archive';
+        } else if (pathSegments.length === 2) {
+            // 記事詳細ページの場合
+            pageType = `single -${section}`;
+        } else {
+            pageType = 'archive';
+        }
     } else if (pathname.startsWith('/contact')) {
-    pageType = 'contact';
+        pageType = 'contact';
     } else if (pathname === '/') {
-    pageType = 'top';
+        pageType = 'top';
     }
 
-    // リスポンスのヘッダーにフラグを追加
     const response = NextResponse.next();
     response.headers.set('x-page-type', pageType);
-
     return response;
 }
 
-// ミドルウェアがどのパスに適用されるか設定
 export const config = {
-    matcher: '/:path*', // すべてのパスに適用
+    matcher: '/:path*',
 };
-

@@ -14,21 +14,22 @@ export default function PageTypeWrapper({
 
   useEffect(() => {
     let pageType = "top";
-    const archivePaths = ["/information", "/interview", "/news"];
-    
-    if (archivePaths.some(path => pathname.startsWith(path))) {
+    const archivePaths = ["/information", "/interview"];
+
+    if (archivePaths.some((path) => pathname.startsWith(path))) {
       // パスを分割して解析
-      const pathSegments = pathname.split('/').filter(Boolean);
-      
+      const pathSegments = pathname.split("/").filter(Boolean);
+      const section = pathSegments[0]; // 'information' または 'interview'
+
       // カテゴリーページまたはページネーションを含むパスかチェック
-      if (pathSegments[1] === 'category' || pathname.includes('/page/')) {
+      if (pathSegments[1] === "category" || pathname.includes("/page/")) {
         // カテゴリーページまたはページネーションページの場合
         pageType = "archive";
       } else if (pathSegments.length === 2) {
         // 記事詳細ページの場合（例：/information/123）
-        pageType = "single";
+        pageType = `single -${section}`; // 例：'single -information'
       } else {
-        // それ以外のケース（トップページなど）
+        // それ以外のケース
         pageType = "archive";
       }
     } else if (pathname.startsWith("/contact")) {
