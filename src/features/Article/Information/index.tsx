@@ -198,7 +198,7 @@ export default function Article ({ data }: Props) {
                 </div>
                 {/* 9. 別記事紹介 */}
                 <div className={"p-single--articleArea"}>
-                    <h2><CategoryLink category={data.category} />に関する記事はこちら</h2>
+                    <h2><CategoryLink category={data.category} article="information"/>に関する記事はこちら</h2>
                     <ul className={"c-flex -article-lists -jc-sb"}>
                         <li className={"articleItem"}>
                             <Link href="single-information.html" className={"c-post--link"}>

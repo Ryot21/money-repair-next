@@ -66,7 +66,6 @@
 	&.-fv{//ファーストビュー
 		position: relative;
 		&.-top{// TOP
-			position: relative;
 			.imgBox{
 				height: 90vh;
 				max-height: 950px !important;
@@ -284,10 +283,9 @@
 			}
 		}
 		&.-single{// 下層ページ
-			position: relative;
 			.imgBox{
 				width: 100lvw;
-				height: 25vh;
+				height: 35vh;
 				max-height: 300px !important;
 				background: $main-color--Lgray;
 				background-position: 50% 50%;
