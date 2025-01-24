@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import "@/styles/globals.scss";
 import PageTypeWrapper from "@/components/PageTypeWrapper"
+import ScrollToTop from "@/components/ScrollToTop";
 import Header from "@/features/Header";
 import HamburgerNav from "@/features/HamburgerNav";
 import Footer from "@/features/Footer";
@@ -33,14 +34,12 @@ export default async function RootLayout({
       </head>
       <body className={`${bodyClass} is-scroll`}>
         <PageTypeWrapper initialPageType={initialPageType}>
+          <ScrollToTop />
           {/* ヘッダー */}
           <Header />
-
           {/* ハンバーガーメニュー */}
           <HamburgerNav />
-
           {children}
-
           {/* フッター */}
           <Footer />
         </PageTypeWrapper>

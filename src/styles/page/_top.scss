@@ -6,9 +6,6 @@ body{
 	@include min(768){animation: fadeAnime 2s forwards;}
 
 	main{
-		display: contents;
-		position: absolute;
-		top: 0;
 		width: 100%;
 	}
 }
