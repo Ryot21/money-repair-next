@@ -1,35 +1,29 @@
-import { notFound } from "next/navigation";
-import { getInformationList, getInformationCategoryList } from "@/libs/microcms";
-import InformationList from "@/features/PostList/Information";
+import {
+    getInformationList,
+    getInformationCategoryList,
+} from "@/libs/microcms";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
+import InformationList from "@/features/PostList/Information";
 import SearchField from "@/components/Parts/SearchField";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-    params: {
-        current: string;
+    searchParams: {
+        q?: string;
     }
 }
 
-export default async function Page({ params }: Props) {
-    const current = parseInt(params.current, 10);
-
-    if (Number.isNaN(current) || current < 1) {
-        notFound();
-    }
+export default async function Page({ searchParams }: Props) {
 
     const { contents: information, totalCount } = await getInformationList({
         limit: INFORMATION_PAGE_LIST_LIMIT,
-        offset: INFORMATION_PAGE_LIST_LIMIT * (current -1),
+        q: searchParams.q,
     });
-
-    if (information.length === 0){
-        notFound();
-    }
     const categories = await getInformationCategoryList();
-    return (
 
+
+    return (
         <>
             {/* 導入部分 */}
             <div className={"c-contents pdt2 pdt5s pdb5 pdb15s"}>
@@ -58,14 +52,10 @@ export default async function Page({ params }: Props) {
             />
             {/* 記事一覧 */}
             <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
-                <InformationList contents={ information }/>
+                <InformationList contents={information} />
             </div>
             {/* ページネーション */}
-            <Pagination
-                totalCount={totalCount}
-                current={current}
-                basePath={`/information`}
-            />
+            <Pagination totalCount={totalCount} basePath={`/information/search`} />
         </>
     )
 }

@@ -5,6 +5,7 @@ import type { Information } from "@/libs/microcms";
 import Date from "@/components/Parts/Date";
 import CategoryLink from "@/components/Parts/Category/Link";
 import Poster from "@/components/Parts/Poster";
+import SearchField from "@/components/Parts/SearchField";
 
 type Props = {
     data : Information;
@@ -321,14 +322,9 @@ export default function Article ({ data }: Props) {
             <li className={"singleItem"}>
                 <div className={"c-sideber"}>
                     {/* 検索窓 */}
-                    {/* <div className={"c-sideber--search"}>
-                        <form method="get" id="search" action="">
-                            <input  id="sbox1" name="search" type="text" placeholder="キーワードを入力" />
-                            <button id="sbtn1" type="submit" value="検索">検索</button>
-                        </form>
-                    </div> */}
+                    <SearchField />
                     {/* 目次 */}
-                    <div className={"tb-pc c-card -t03 mgb10 mgb10s"}>
+                    <div className={"tb-pc c-card -t03 mgt10 mgb10 mgb10s"}>
                         <h2>目次</h2>
                         <ul className={"c-card-lists -h2-lists"}>
                             <li className={"c-card-item"}>

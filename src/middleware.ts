@@ -9,10 +9,10 @@ export function middleware(request: NextRequest) {
     let pageType = 'top';
 
     if (['/information', '/interview'].some(path => pathname.startsWith(path))) {
-        if (pathSegments[1] === 'category' || pathname.includes('/page/')) {
+        if (pathSegments[1] === 'category' || pathname.includes('/page/') || 
+            (pathname.startsWith('/information/search'))) {
             pageType = 'archive';
         } else if (pathSegments.length === 2) {
-            // 記事詳細ページの場合
             pageType = `single -${section}`;
         } else {
             pageType = 'archive';

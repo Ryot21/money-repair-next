@@ -6,7 +6,7 @@ type Props = {
 
 export default function RootLayout({ children } : Props) {
     return (
-        <Sheet title="お役立ち情報" mvClass="-information" contentClass="-min1200">
+        <Sheet title="お役立ち情報" mvClass="-information" contentClass="">
             {children}
         </Sheet>
     )

@@ -22,8 +22,8 @@ export default function PageTypeWrapper({
       const section = pathSegments[0]; // 'information' または 'interview'
 
       // カテゴリーページまたはページネーションを含むパスかチェック
-      if (pathSegments[1] === "category" || pathname.includes("/page/")) {
-        // カテゴリーページまたはページネーションページの場合
+      if (pathSegments[1] === "category" || pathname.includes("/page/") || (pathname.startsWith("/information/search"))) {
+        // カテゴリーページ、ページネーション、または検索ページの場合
         pageType = "archive";
       } else if (pathSegments.length === 2) {
         // 記事詳細ページの場合（例：/information/123）
