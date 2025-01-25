@@ -127,15 +127,8 @@
 		}
 	}
 	&--intro{
-
 		margin-top: 10%;
-		p,a,span{
-			font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-			letter-spacing: .2rem;
-			line-height: 2;
-		}
 		// 個別設定
-		span{font-weight: bold;}
 		a{
 			position: relative;
 			color: $site-color02;
@@ -159,19 +152,123 @@
 		}
 	}
 
+	// 記事内_共通
+	&.-interview,
+	&.-information{
+		.p-single{
+			&--intro,
+			&--detail{
+				// テキスト
+				p,span,a,li{
+					font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+					font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+					letter-spacing: .1rem;
+					line-height: 2;
+				}
+				ul,ol{
+					border: 1px dotted $site-color03;
+					margin: 10px 0 20px;
+					padding: 10px 10px 10px 20px;
+					border-radius: 5px;
+					li{
+						font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+						letter-spacing: .2rem;
+						line-height: 2;
+					}
+				}
+				// リスト
+				ul{// ドット付
+					li{
+						list-style: circle;
+						list-style-position: inside;
+					}
+				}
+				ol{// 番号付
+					padding-left: 20px;
+					li{
+						list-style: auto;
+						list-style-position: inside;
+					}
+				}
+				// 引用
+				blockquote {
+					position: relative;
+					padding: 5px 10px 5px 32px;
+					margin: 40px 0 40px 20px;
+					box-sizing: border-box;
+					font-style: italic;
+					background: #f3f3f3;
+					box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+					&::before {
+						display: inline-block;
+						position: absolute;
+						top: 10px;
+						left: -15px;
+						width: 15px;
+						height: 15px;
+						padding: 5px 8px 5px 5px;
+						text-align: center;
+						content: url(/images/SVG/tag.svg);
+						color: #FFF;
+						font-size: 14px; /* 必要に応じて調整 */
+						line-height: 15px; /* サイズに合わせて調整 */
+						background: #92d4ff;
+						border-radius: 0 2px 2px 0;
+						box-shadow: 0 2px 2px rgba(26, 26, 26, 0.14);
+						font-weight: 900;
+					}
+					&::after {
+						position: absolute;
+						content: '';
+						top: 35px;
+						left: -15px;
+						border: none;
+						border-bottom: solid 8px transparent;
+						border-right: solid 15px $site-color03;
+					}
+					p {
+						position: relative;
+						padding: 0;
+						margin: 10px 0;
+						z-index: 3;
+						line-height: 1.7;
+					}
+					cite {
+						display: block;
+						text-align: right;
+						color: #888888;
+						font-size: 0.9em;
+					}
+				}
+				// 画像
+				figure{
+					margin: 5% 0;
+					@include min(500){
+						margin-top: 5%;
+						margin-bottom: 5%;
+					}
+					img{
+						border-radius: 5px;
+						overflow: hidden;
+					}
+					figcaption{
+						padding-top: 5px;
+						text-align: right;
+						letter-spacing: .2rem;
+
+					}
+				}
+			}
+		}
+	}
 	// お客様の声
 	&.-interview{
+		.c-contents--inner.-card {
+			@include min(768){padding: 7% 5% 5%;}
+		}
 		.p-single{
 			&--detail{
-				p{
-					font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-					letter-spacing: .2rem;
-					line-height: 2;
-					// margin-bottom: 1%;
-					@include min(500){line-height: 2;}
-				}
 				.man{
-					font-size: clamp(1.2rem, 1.5vw, 1.6rem);
 					font-weight: bold;
 					letter-spacing: .2rem;
 					&.man01{color: $main-color--b;}
@@ -236,6 +333,10 @@
 							}
 						}
 					}
+					p{
+						margin-bottom: 2%;
+						@include min(500){margin-bottom: 1%;}
+					}
 				}
 			}
 			&--company{
@@ -271,16 +372,12 @@
 					letter-spacing: .2rem;
 					padding-bottom: 10px;
 				}
-				a{
-		
-				}
 			}
 			&--post{
 				border: 1px solid $main-color--Dgray;
 			}
 		}
 	}
-
 	// お役立ち情報
 	&.-information{
 		.p-single{
@@ -296,23 +393,20 @@
 			}
 			&--detail{
 				margin-top: 10%;
+				margin-bottom: 10%;
 
 				// --- 共通 ---
 				h2,h3,h4,h5,h6{
 					font-weight: bold;
 					letter-spacing: .2rem;
 					line-height: 1.5;
-				}
-				p,a,span{
-					font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-					letter-spacing: .2rem;
-					line-height: 2;
+					margin-top: 10%;
 				}
 				// 個別設定
 				p{
-					margin-bottom: 7.5%;
+					margin-bottom: 5%;
 					@include min(500){
-						margin-bottom: 5%;
+						margin-bottom: 2.5%;
 					}
 				}
 				span{font-weight: bold;}
