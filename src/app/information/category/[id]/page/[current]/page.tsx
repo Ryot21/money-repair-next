@@ -7,19 +7,22 @@ import Pagination from "@/components/Parts/pagination";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 
 type Props = {
-    params: {
+    params: Promise<{
         id: string;
         current: string;
-    }
+    }>;
 }
 export default async function Page({ params }: Props ) {
-    const current = parseInt(params.current, 10);
+    // paramsを非同期で取得
+    const { id, current: currentParam } = await params;
+    
+    const current = parseInt(currentParam, 10);
 
     if (Number.isNaN(current) || current < 1) {
         notFound();
     }
 
-    const category =  await getInformationCategoryDetail(params.id).catch(notFound);
+    const category = await getInformationCategoryDetail(id).catch(notFound);
     const categories = await getInformationCategoryList();
 
     const { contents: information, totalCount } = await getInformationList({
@@ -27,6 +30,7 @@ export default async function Page({ params }: Props ) {
         limit: INFORMATION_PAGE_LIST_LIMIT,
         offset: INFORMATION_PAGE_LIST_LIMIT * (current -1),
     });
+
     if (information.length === 0){
         notFound();
     }

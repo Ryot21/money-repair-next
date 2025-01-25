@@ -10,13 +10,16 @@ import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 export default async function Page({ params }: Props) {
-  const category = await getInterviewCategoryDetail(params.id).catch(
+  // paramsを非同期で取得
+  const { id } = await params;
+
+  const category = await getInterviewCategoryDetail(id).catch(
     notFound
   );
   const categories = await getInterviewCategoryList();
@@ -51,7 +54,7 @@ export default async function Page({ params }: Props) {
       {/* article = information or interview */}
       <CategoryList
         article="interview"
-        currentCategoryId={params.id}
+        currentCategoryId={id}
         categories={categories}
       />
 

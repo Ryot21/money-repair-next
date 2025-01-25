@@ -6,19 +6,23 @@ import Pagination from "@/components/Parts/pagination";
 import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
 
 type Props = {
-    params: {
+    params: Promise<{
         id: string;
         current: string;
-    }
+    }>;
 }
+
 export default async function Page({ params }: Props ) {
-    const current = parseInt(params.current, 10);
+    // paramsを非同期で取得
+    const { id, current: currentParam } = await params;
+    
+    const current = parseInt(currentParam, 10);
 
     if (Number.isNaN(current) || current < 1) {
         notFound();
     }
 
-    const category =  await getInterviewCategoryDetail(params.id).catch(notFound);
+    const category = await getInterviewCategoryDetail(id).catch(notFound);
     const categories = await getInterviewCategoryList();
 
     const { contents: interview, totalCount } = await getInterviewsList({
@@ -26,6 +30,7 @@ export default async function Page({ params }: Props ) {
         limit: INTERVIEW_PAGE_LIST_LIMIT,
         offset: INTERVIEW_PAGE_LIST_LIMIT * (current -1),
     });
+
     if (interview.length === 0){
         notFound();
     }
@@ -54,7 +59,7 @@ export default async function Page({ params }: Props ) {
             {/* カテゴリ一覧 */}
             {/* article = information or interview */}
             <CategoryList
-                article="information"
+                article="interview"
                 currentCategoryId={category.id}
                 categories={categories}
             />

@@ -17,7 +17,10 @@ type Props = {
 };
 
 export default async function Page({ params }: Props) {
-  const category = await getInformationCategoryDetail(params.id).catch(
+  // paramsを非同期で取得
+  const { id } = await params;
+
+  const category = await getInformationCategoryDetail(id).catch(
     notFound
   );
   const categories = await getInformationCategoryList();
@@ -53,7 +56,7 @@ export default async function Page({ params }: Props) {
       {/* article = information or interview */}
       <CategoryList
         article="information"
-        currentCategoryId={params.id}
+        currentCategoryId={id}
         categories={categories}
       />
 

@@ -6,13 +6,15 @@ import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-    params: {
+    params: Promise<{
         current: string;
-    }
+    }>;
 }
 
 export default async function Page({ params }: Props) {
-    const current = parseInt(params.current, 10);
+    // paramsを非同期で取得
+    const { current: currentParam } = await params;
+    const current = parseInt(currentParam, 10);
 
     if (Number.isNaN(current) || current < 1) {
         notFound();
@@ -26,7 +28,9 @@ export default async function Page({ params }: Props) {
     if (interview.length === 0){
         notFound();
     }
+
     const categories = await getInterviewCategoryList();
+
     return (
 
         <>
