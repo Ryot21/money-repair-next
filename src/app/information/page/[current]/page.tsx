@@ -7,14 +7,14 @@ import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-    params: Promise<{
+    params: {
         current: string;
-    }>;
-}
+    };
+};
 
 export default async function Page({ params }: Props) {
     // paramsを非同期で取得
-    const { current: currentParam } = await params;
+    const { current: currentParam } = params;
     const current = parseInt(currentParam, 10);
 
     if (Number.isNaN(current) || current < 1) {

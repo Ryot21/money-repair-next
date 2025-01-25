@@ -4,8 +4,12 @@ import { getInformationDetail } from "@/libs/microcms";
 import Article from "@/features/Article/Information";
 
 type Props = {
-    params: Promise<{ slug: string }>;
-    searchParams: Promise<{ dk?: string }>;
+    params: {
+        slug: string;
+    };
+    searchParams: {
+        dk?: string;
+    };
 };
 
 // メタデータの生成
@@ -32,8 +36,8 @@ export default async function Page({
     searchParams,
 }: Props) {
     // paramsとsearchParamsを非同期で取得
-    const { slug } = await params;
-    const { dk: draftKey } = await searchParams;
+    const { slug } = params;
+    const { dk: draftKey } = searchParams;
     
     const data = await getInformationDetail(slug, {
         draftKey,

@@ -9,14 +9,14 @@ import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-    searchParams: Promise<{
+    searchParams: {
         q?: string;
-    }>;
-}
+    };
+};
 
 export default async function Page({ searchParams }: Props) {
     // searchParamsを非同期で取得
-    const { q } = await searchParams;
+    const { q } = searchParams;
 
     const { contents: information, totalCount } = await getInformationList({
         limit: INFORMATION_PAGE_LIST_LIMIT,

@@ -7,14 +7,15 @@ import Pagination from "@/components/Parts/pagination";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 
 type Props = {
-    params: Promise<{
+    params: {
         id: string;
         current: string;
-    }>;
-}
+    };
+};
+
 export default async function Page({ params }: Props ) {
     // paramsを非同期で取得
-    const { id, current: currentParam } = await params;
+    const { id, current: currentParam } = params;
     
     const current = parseInt(currentParam, 10);
 

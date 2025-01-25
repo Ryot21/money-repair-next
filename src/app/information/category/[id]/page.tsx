@@ -17,7 +17,6 @@ type Props = {
 };
 
 export default async function Page({ params }: Props) {
-  // paramsを非同期で取得
   const { id } = params;
 
   const category = await getInformationCategoryDetail(id).catch(
