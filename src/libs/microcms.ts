@@ -63,7 +63,7 @@ export type Information = {// お役立ち情報
         captionTitle05: string;
     };
     poster:           Poster;   // 投稿者
-    read:             string;   // 導入文
+    read?:            string;   // 導入文
     article:          string;   // 本文
     ctaOnOff:         boolean;  // CTA切り替え
 

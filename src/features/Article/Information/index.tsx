@@ -6,6 +6,7 @@ import Date from "@/components/Parts/Date";
 import CategoryLink from "@/components/Parts/Category/Link";
 import Poster from "@/components/Parts/Poster";
 import SearchField from "@/components/Parts/SearchField";
+import TableOfContents from "@/components/Parts/TableOfContents";
 
 type Props = {
     data : Information;
@@ -74,7 +75,7 @@ export default function Article ({ data }: Props) {
                     <p className={"c-thumbnail--subTitle s-M -b -color03 -ls-1"}>{data.subTitle}</p>
                 </div>
                 {/* 3. お悩み */}
-                <div className={"c-card -t04 mgt10 mgt15s"}>
+                <div className={"c-card -t04 mgt15 mgt15s"}>
                     {data.captionLists &&
                         <ul className={"c-card-lists"}>
                             <li className={"c-card-item"}>
@@ -110,45 +111,7 @@ export default function Article ({ data }: Props) {
                 >
                 </div>
                 {/* 5. 目次 */}
-                <div className={"sp c-card -t03 mgb10 mgb10s"}>
-                    <h2>目次</h2>
-                    {data.captionLists &&
-                        <ul className={"c-card-lists -h2-lists"}>
-                            <li className={"c-card-item"}>
-                                <Link href="#detail01" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle01}</Link>
-                            </li>
-                            {data.captionLists.captionTitle02 && 
-                                <li className={"c-card-item"}>
-                                    <Link href="#detail02" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle02}</Link>
-                                    {/* 表示されたリッチエディタ内に「h3」がある場合に表示させたい */}
-                                    {/* <ul className={"c-card-lists -h3-lists"}>
-                                        <li className={"c-card-item"}>
-                                            <Link href="#detail02-01" className={"c-link -mokuji -ls-1 -lh-1_5"}>h3タグh3タグh3タグh3タグh3タグh3タグh3タグh3タグ</Link>
-                                        </li>
-                                        <li className={"c-card-item"}>
-                                            <Link href="#detail02-02" className={"c-link -mokuji -ls-1 -lh-1_5"}>h3タグh3タグh3タグ</Link>
-                                        </li>
-                                    </ul> */}
-                                </li>
-                            }
-                            {data.captionLists.captionTitle03 && 
-                                <li className={"c-card-item"}>
-                                    <Link href="#detail03" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle03}</Link>
-                                </li>
-                            }
-                            {data.captionLists.captionTitle04 && 
-                                <li className={"c-card-item"}>
-                                    <Link href="#detail04" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle04}</Link>
-                                </li>
-                            }
-                            {data.captionLists.captionTitle05 && 
-                                <li className={"c-card-item"}>
-                                    <Link href="#detail05" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle05}</Link>
-                                </li>
-                            }
-                        </ul>
-                    }
-                </div>
+                <TableOfContents content={data.article} />
                 {/* 6. コンテンツ */}
                 <div
                     className={"p-single--detail -info"}
@@ -324,31 +287,7 @@ export default function Article ({ data }: Props) {
                     {/* 検索窓 */}
                     <SearchField />
                     {/* 目次 */}
-                    <div className={"tb-pc c-card -t03 mgt10 mgb10 mgb10s"}>
-                        <h2>目次</h2>
-                        <ul className={"c-card-lists -h2-lists"}>
-                            <li className={"c-card-item"}>
-                                <Link href="#detail01" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>h2タグh2タグh2タグh2タグ</Link>
-                            </li>
-                            <li className={"c-card-item"}>
-                                <Link href="#detail02" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>h2タグh2タグh2タグh2タグh2タグ</Link>
-                                <ul className={"c-card-lists -h3-lists"}>
-                                    <li className={"c-card-item"}>
-                                        <Link href="#detail02-01" className={"c-link -mokuji -ls-1 -lh-1_5"}>h3タグh3タグh3タグh3タグh3タグh3タグh3タグh3タグ</Link>
-                                    </li>
-                                    <li className={"c-card-item"}>
-                                        <Link href="#detail02-02" className={"c-link -mokuji -ls-1 -lh-1_5"}>h3タグh3タグh3タグ</Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className={"c-card-item"}>
-                                <Link href="#detail03" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>h2タグh2タグh2タグ</Link>
-                            </li>
-                            <li className={"c-card-item"}>
-                                <Link href="#detail03" className={"c-link -mokuji -b -ls-1 -lh-1_5"}>h2タグh2タグh2タグ</Link>
-                            </li>
-                        </ul>
-                    </div>
+                    <TableOfContents content={data.article} isSidebar={true} />
                     {/* cta */}
                     <div className={"c-sideber--ctaArea mgb15 mgt7s mgb10s"}>
                         <h2 className={"c-sideber--title -contact -en-color03 -b-btm mgb5"}>
