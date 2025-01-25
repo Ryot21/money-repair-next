@@ -5,32 +5,43 @@ import Article from "@/features/Article/Information";
 
 // 型定義
 type Props = {
-  params: { slug: string };
-  searchParams: { dk?: string };
+    params: Promise<{ slug: string }>;
+    searchParams: Promise<{ dk?: string }>;
 };
 
 // メタデータの生成
-export async function generateMetadata({
-  params,
-  searchParams,
+export async function generateMetadata({ 
+    params, 
+    searchParams 
 }: Props): Promise<Metadata> {
-  const data = await getInformationDetail(params.slug, {
-    draftKey: searchParams.dk,
-  }).catch(notFound);
+    // paramsとsearchParamsを非同期で取得
+    const { slug } = await params;
+    const { dk: draftKey } = await searchParams;
 
-  return {
-    title: data.mainTitle,
-    // その他のメタデータ
-  };
+    const data = await getInformationDetail(slug, {
+        draftKey,
+    }).catch(notFound);
+
+    return {
+        title: data.mainTitle,
+        // その他のメタデータ
+    };
 }
 
 // Pageコンポーネント
-export default async function Page({ params, searchParams }: Props) {
-  const data = await getInformationDetail(params.slug, {
-    draftKey: searchParams.dk,
-  }).catch(notFound);
-
-  return <Article data={data} />;
+export default async function Page({ 
+    params,
+    searchParams,
+}: Props) {
+    // paramsとsearchParamsを非同期で取得
+    const { slug } = await params;
+    const { dk: draftKey } = await searchParams;
+    
+    const data = await getInformationDetail(slug, {
+        draftKey,
+    }).catch(notFound);
+    
+    return <Article data={data} />;
 }
 
 // 動的レンダリングを強制
