@@ -10,14 +10,13 @@ import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-  params: Promise<{
+  params: {
     id: string;
-  }>;
+  };
 };
 
 export default async function Page({ params }: Props) {
-  // paramsを非同期で取得
-  const { id } = await params;
+  const { id } = params;  // awaitは不要
 
   const category = await getInterviewCategoryDetail(id).catch(
     notFound
