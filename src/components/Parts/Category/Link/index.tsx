@@ -16,7 +16,7 @@ const CategoryLink = ({ category, article, customClass, isActive }: Props) => {
       href={`/${article}/category/${category.id}`}
       className={`${customClass} ${isActive ? "active" : ""}`}
     >
-      {category.name}
+      # {category.name}
     </Link>
   );
 };
