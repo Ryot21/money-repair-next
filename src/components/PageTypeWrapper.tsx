@@ -13,7 +13,8 @@ export default function PageTypeWrapper({
   const pathname = usePathname();
 
   useEffect(() => {
-    let pageType = "top";
+    // let pageType = "top";
+    let pageType = initialPageType;
     const archivePaths = ["/information", "/interview"];
 
     if (archivePaths.some((path) => pathname.startsWith(path))) {
@@ -39,7 +40,7 @@ export default function PageTypeWrapper({
     }
 
     document.body.className = `p-${pageType} is-scroll`;
-  }, [pathname]);
+  }, [pathname, initialPageType]);
 
   return <>{children}</>;
 }
