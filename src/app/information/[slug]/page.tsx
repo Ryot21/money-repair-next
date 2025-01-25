@@ -3,26 +3,16 @@ import { notFound } from "next/navigation";
 import { getInformationDetail } from "@/libs/microcms";
 import Article from "@/features/Article/Information";
 
-type Props = {
-    params: {
-        slug: string;
-    };
-    searchParams: {
-        dk?: string;
-    };
-};
-
 // メタデータの生成
 export async function generateMetadata({ 
     params, 
     searchParams 
-}: Props): Promise<Metadata> {
-    // paramsとsearchParamsを非同期で取得
-    const { slug } = await params;
-    const { dk: draftKey } = await searchParams;
-    
-    const data = await getInformationDetail(slug, {
-        draftKey,
+}: {
+    params: { slug: string };
+    searchParams: { dk?: string };
+}): Promise<Metadata> {
+    const data = await getInformationDetail(params.slug, {
+        draftKey: searchParams.dk,
     }).catch(notFound);
 
     return {
@@ -31,11 +21,14 @@ export async function generateMetadata({
     };
 }
 
+// Pageコンポーネントの型定義を直接インラインで行う
 export default async function Page({ 
     params,
     searchParams,
-}: Props) {
-    // paramsとsearchParamsを非同期で取得
+}: {
+    params: { slug: string };
+    searchParams: { dk?: string };
+}) {
     const { slug } = params;
     const { dk: draftKey } = searchParams;
     
