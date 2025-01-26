@@ -1,48 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getPosterList } from "@/libs/microcms";
 
-// コンポーネント
-// import LogoSlider from "@/components/Slider/Logo";
-// import ContactBottom from "@/components/Contact/Bottom";
 
-const data = {
-    contents: [
-        {
-            id: "1",
-            name: "江本 一郎",
-            officialPosition: "代表取締役社長",
-            description: "皆さまの価値観に合ったライフデザインを提供し、人生100年の時代をより豊かに過ごせるよう、お子様、お孫様へと世代を超えた金融のトータルサポートを提供していきます。",
-            profilePicture: "/images/profile/emoto-20241219.png",
-            url: "https://impreme.jp/",
-        },
-        {
-            id: "2",
-            name: "石橋 拓也",
-            officialPosition: "保険事業部",
-            description: "前職にて保険活用のノウハウを学び、現在は税務の知識も加えたオリジナルのご提案で、お客様の「オカネの悩み」に応えます。",
-            profilePicture: "/images/profile/ishibashi-20241219.png",
-            url: "https://impreme.jp/"
-        },
-        {
-            id: "3",
-            name: "関根 大輔",
-            officialPosition: "不動産事業部",
-            description: "不動産部門ではマイホームから投資用不動産など土地や建物の売買などを行なっております。結婚、出産、相続などライフステージの変化に合わせて不動産売却、購入のサポートを致します。",
-            profilePicture: "/images/profile/sekine-20241219.png",
-            url: "https://impreme.jp/",
-        },
-        {
-            id: "4",
-            name: "マエダ リョウタ",
-            officialPosition: "マーケティング事業部",
-            description: "都内のWEB制作会社でキャリアをスタートし、不動産会社のLPやポータルサイト開発を経て、2024年10月より株式会社インプレームでフロントエンジニア兼WEBマーケターとして勤務しています。多彩な経験を活かし、ビジネスニーズに応じた効果的なWEB戦略を提案し、ユーザーに響くデザインを制作。お客様のビジネスをさらに輝かせるお手伝いをいたします。",
-            profilePicture: "/images/profile/maeda-20241219.png",
-            url: "https://impreme.jp/",
-        },
-    ],
-}
+export default async function Page(){
 
-export default function Page(){
+    const data = await getPosterList();
+
     return(
         <>
             {data.contents.length === 0 ? (
@@ -58,7 +22,7 @@ export default function Page(){
                                     <li className={"c-card-item"}>
                                         <div className="imgBox">
                                             <Image 
-                                                src={member.profilePicture}
+                                                src={member.image.url}
                                                 alt={member.name}
                                                 width={150}
                                                 height={150}
@@ -79,9 +43,9 @@ export default function Page(){
                                 </ul>
                             </div>
                         </li>
-                    ))};
+                    ))}
                 </ul>
-            )};
+            )}
         </>
     );
 }
