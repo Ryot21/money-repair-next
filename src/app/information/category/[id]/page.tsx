@@ -11,13 +11,15 @@ import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
+
 export default async function Page({ params }: Props) {
-  const { id } = params;
+  // paramsを非同期で取得
+  const { id } = await params;
 
   const category = await getInformationCategoryDetail(id).catch(
     notFound
@@ -72,3 +74,6 @@ export default async function Page({ params }: Props) {
     </>
   );
 }
+
+// 動的レンダリングを強制
+export const dynamic = "force-dynamic";
