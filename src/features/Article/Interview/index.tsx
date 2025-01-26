@@ -78,7 +78,7 @@ export default function Article ({ data }: Props) {
                             height={320}
                         />
                     </div>
-                    <div className="detail01" dangerouslySetInnerHTML={{__html: data.article1Body}}>
+                    <div className="detail01" dangerouslySetInnerHTML={{__html: data.article1Body || ""}}>
                     </div>
 
                     {/* 写真２枚目 */}
@@ -92,7 +92,7 @@ export default function Article ({ data }: Props) {
                     </div>
                     <div className="detail02">
                         <h2><span>{data.article2Title}</span></h2>
-                        <div dangerouslySetInnerHTML={{__html: data.article2Body}}>
+                        <div dangerouslySetInnerHTML={{__html: data.article2Body || ""}}>
                         </div>
                     </div>
 
@@ -100,7 +100,7 @@ export default function Article ({ data }: Props) {
                     {data.article3Title && data.article3Body && (
                         <div className="detail03">
                             <h2><span>{data.article3Title}</span></h2>
-                            <div dangerouslySetInnerHTML={{__html: data.article3Body}}>
+                            <div dangerouslySetInnerHTML={{__html: data.article3Body || ""}}>
                             </div>
                         </div>
                     )}

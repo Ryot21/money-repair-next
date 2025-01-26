@@ -107,7 +107,7 @@ export default function Article ({ data }: Props) {
                 {/* 4. 導入文 */}
                 <div
                     className={"p-single--intro"}
-                    dangerouslySetInnerHTML={{__html: data.read}}
+                    dangerouslySetInnerHTML={{__html: data.read || ""}}
                 >
                 </div>
                 {/* 5. 目次 */}
@@ -115,7 +115,7 @@ export default function Article ({ data }: Props) {
                 {/* 6. コンテンツ */}
                 <div
                     className={"p-single--detail -info"}
-                    dangerouslySetInnerHTML={{__html: data.article}}
+                    dangerouslySetInnerHTML={{__html: data.article || ""}}
                 >
                 </div>
                 {/* 7. 投稿者 */}
