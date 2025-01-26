@@ -1,9 +1,8 @@
 import { NextResponse, NextRequest } from 'next/server';
 
-// Basic認証のクレデンシャルを環境変数から取得して分解
-const CREDENTIALS = process.env.BASIC_AUTH_CREDENTIALS?.split(':') || [];
-const BASIC_AUTH_USER = CREDENTIALS[0];
-const BASIC_AUTH_PASSWORD = CREDENTIALS[1];
+// Basic認証のクレデンシャルを環境変数から直接取得
+const BASIC_AUTH_USER = process.env.BASIC_AUTH_USER;
+const BASIC_AUTH_PASSWORD = process.env.BASIC_AUTH_PASSWORD;
 
 export function middleware(request: NextRequest) {
     // Basic認証のチェック
