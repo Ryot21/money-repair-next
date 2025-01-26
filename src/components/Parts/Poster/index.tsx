@@ -8,6 +8,7 @@ type PosterProps = {
 
 export default function Poster({ poster }: PosterProps) {
     const posters = Array.isArray(poster) ? poster : [poster];
+    
     return (
         <>
            {posters.map((poster, index) => (
