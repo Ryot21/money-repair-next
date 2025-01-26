@@ -7,15 +7,15 @@ import Pagination from "@/components/Parts/pagination";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 
 type Props = {
-    params: {
+    params: Promise<{
         id: string;
         current: string;
-    };
+    }>;
 };
 
-export default async function Page({ params }: Props ) {
+export default async function Page({ params }: Props) {
     // paramsを非同期で取得
-    const { id, current: currentParam } = params;
+    const { id, current: currentParam } = await params;
     
     const current = parseInt(currentParam, 10);
 
@@ -79,3 +79,6 @@ export default async function Page({ params }: Props ) {
         </>
     )
 }
+
+// 動的レンダリングを強制
+export const dynamic = "force-dynamic";
