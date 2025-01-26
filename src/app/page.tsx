@@ -12,6 +12,8 @@ import { INTERVIEW_TOP_LIST_LIMIT, INFORMATION_TOP_LIST_LIMIT } from "@/constant
 import InterviewList from "@/features/PostList/Interview";
 import InformationList from "@/features/PostList/Information";
 
+// ISR
+export const revalidate = 600;
 
 export default async function Home() {
 

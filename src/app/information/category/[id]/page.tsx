@@ -10,6 +10,9 @@ import SearchField from "@/components/Parts/SearchField";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
+// ISR
+export const revalidate = 600;
+
 type Props = {
   params: Promise<{
     id: string;
@@ -74,6 +77,3 @@ export default async function Page({ params }: Props) {
     </>
   );
 }
-
-// 動的レンダリングを強制
-export const dynamic = "force-dynamic";
