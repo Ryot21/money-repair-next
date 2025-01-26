@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { getInformationDetail } from "@/libs/microcms";
 import Article from "@/features/Article/Information";
 
+// SSR
+export const dynamic = "force-dynamic";
+
 // 型定義
 type Props = {
     params: Promise<{ slug: string }>;
@@ -43,6 +46,3 @@ export default async function Page({
     
     return <Article data={data} />;
 }
-
-// 動的レンダリングを強制
-export const dynamic = "force-dynamic";

@@ -8,6 +8,9 @@ import SearchField from "@/components/Parts/SearchField";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
+// SSR
+export const dynamic = "force-dynamic";
+
 type Props = {
     searchParams: Promise<{
         q?: string;
@@ -62,6 +65,3 @@ export default async function Page({ searchParams }: Props) {
         </>
     )
 }
-
-// 動的レンダリングを強制
-export const dynamic = "force-dynamic";
