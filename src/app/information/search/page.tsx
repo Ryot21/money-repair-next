@@ -9,14 +9,15 @@ import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
 type Props = {
-    searchParams: {
+    searchParams: Promise<{
         q?: string;
-    };
+    }>;
 };
+
 
 export default async function Page({ searchParams }: Props) {
     // searchParamsを非同期で取得
-    const { q } = searchParams;
+    const { q } = await searchParams;
 
     const { contents: information, totalCount } = await getInformationList({
         limit: INFORMATION_PAGE_LIST_LIMIT,
@@ -61,3 +62,6 @@ export default async function Page({ searchParams }: Props) {
         </>
     )
 }
+
+// 動的レンダリングを強制
+export const dynamic = "force-dynamic";
