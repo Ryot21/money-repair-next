@@ -9,8 +9,10 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
     return (
-        <Sheet title="メンバー" customClass="-member">
-            {children}
-        </Sheet>
-    );
+        <main>
+            <Sheet title="メンバー" mvClass="-member">
+                {children}
+            </Sheet>
+        </main>
+    )
 }
