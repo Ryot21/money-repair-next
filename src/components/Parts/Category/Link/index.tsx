@@ -5,7 +5,7 @@ import type { Category } from "@/libs/microcms";
 type Props = {
   category: Category;
   article: string;
-  customClass: string;
+  customClass?: string;
   isActive?: boolean; // activeかどうかを判定するプロパティを追加
 };
 
