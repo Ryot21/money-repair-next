@@ -110,6 +110,11 @@ export const getInformationCategoryDetail = async (// 詳細
         endpoint: "information_categories",
         contentId,
         queries,
+        customRequestInit: {
+            next: {
+                revalidate: queries?.draftKey === undefined ? 60 : 0,
+            },
+        },
     });
     return detailData;
 }
@@ -129,6 +134,11 @@ export const getInterviewCategoryDetail = async (// 詳細
         endpoint: "interview_categories",
         contentId,
         queries,
+        customRequestInit: {
+            next: {
+                revalidate: queries?.draftKey === undefined ? 60 : 0,
+            },
+        },
     });
     return detailData;
 }
@@ -148,6 +158,11 @@ export const getInformationDetail = async (// 詳細
         endpoint: "information",
         contentId,
         queries,
+        customRequestInit: {
+            next: {
+                revalidate: queries?.draftKey === undefined ? 60 : 0,
+            },
+        },
     });
     return detailData;
 };
@@ -167,6 +182,11 @@ export const getInterviewsDetail = async (// 詳細
         endpoint: "interview",
         contentId,
         queries,
+        customRequestInit: {
+            next: {
+                revalidate: queries?.draftKey === undefined ? 60 : 0,
+            },
+        },
     });
     return detailData;
 };

@@ -5,9 +5,6 @@ import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
-// ISR
-export const revalidate = 600;
-
 type Props = {
   params: Promise<{
     current: string;

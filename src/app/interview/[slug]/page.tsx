@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import { getInterviewsDetail } from "@/libs/microcms";
 import Article from "@/features/Article/Interview";
 
-// SSR
-export const dynamic = "force-dynamic";
+// SSR（microcms.tsに記述　通常時ISR＋プレビュー時SSR）
 
 type Props = {
     params: Promise<{slug: string;}>;

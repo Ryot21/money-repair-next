@@ -9,9 +9,6 @@ import InterviewList from "@/features/PostList/Interview";
 import CategoryList from "@/components/Parts/Category/List";
 import Pagination from "@/components/Parts/pagination";
 
-// ISR
-export const revalidate = 600;
-
 type Props = {
   params: Promise<{
     id: string;

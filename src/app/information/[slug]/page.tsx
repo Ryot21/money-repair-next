@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import { getInformationDetail } from "@/libs/microcms";
 import Article from "@/features/Article/Information";
 
-// SSR
-export const dynamic = "force-dynamic";
+// SSR（microcms.tsに記述　通常時ISR＋プレビュー時SSR）
 
 // 型定義
 type Props = {
