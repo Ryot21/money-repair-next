@@ -1,10 +1,43 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
+
+// Basic認証のクレデンシャルを環境変数から取得して分解
+const CREDENTIALS = process.env.BASIC_AUTH_CREDENTIALS?.split(':') || [];
+const BASIC_AUTH_USER = CREDENTIALS[0];
+const BASIC_AUTH_PASSWORD = CREDENTIALS[1];
 
 export function middleware(request: NextRequest) {
+    // Basic認証のチェック
+    if (process.env.NODE_ENV === 'production') {  // 本番環境のみBasic認証を有効化
+        const basicAuth = request.headers.get('authorization');
+        
+        if (basicAuth) {
+            const authValue = basicAuth.split(' ')[1];
+            const [user, pwd] = atob(authValue).split(':');
+
+            if (user === BASIC_AUTH_USER && pwd === BASIC_AUTH_PASSWORD) {
+                // 認証成功：既存の処理を続行
+                return handleExistingMiddleware(request);
+            }
+        }
+
+        // 認証失敗時のレスポンス
+        return new NextResponse('Authentication required', {
+            status: 401,
+            headers: {
+                'WWW-Authenticate': 'Basic realm="Secure Area"',
+            },
+        });
+    }
+
+    // 開発環境では既存の処理のみ実行
+    return handleExistingMiddleware(request);
+}
+
+// 既存のミドルウェア処理を関数として分離
+function handleExistingMiddleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
     const pathSegments = pathname.split('/').filter(Boolean);
-    const section = pathSegments[0]; // 'information' または 'interview'
+    const section = pathSegments[0];
     
     let pageType = 'top';
 
