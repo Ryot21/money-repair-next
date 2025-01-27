@@ -7,6 +7,7 @@ import CategoryLink from "@/components/Parts/Category/Link";
 import Poster from "@/components/Parts/Poster";
 import SearchField from "@/components/Parts/SearchField";
 import TableOfContents from "@/components/Parts/TableOfContents";
+import Recommend from "@/components/Parts/Recommend";
 
 type Props = {
     data : Information;
@@ -121,45 +122,7 @@ export default function Article ({ data }: Props) {
                 {/* 7. 投稿者 */}
                 <Poster poster={data.poster} />
                 {/* 8. 内部リンク */}
-                <div className={"c-card -t02"}>
-                    <Link href="" className="">
-                        <ul className={"c-card-lists"}>
-                            <li className={"c-card-item"}>
-                                <div className={"c-thumbnail -news mgb3 mgb3s"}>
-                                    <div className={"imgBox"}>
-                                        <Image
-                                            src="/images/item/news/news-thumbnail.png"
-                                            alt="企業1"
-                                            width={241}
-                                            height={135}
-                                        />
-                                    </div>
-                                    <div className={"c-thumbnail--mark"}>
-                                        <Image
-                                            src="/images/item/news/news-mark.svg"
-                                            alt="マネーリペア | ご利用者インタビュー"
-                                            width={181}
-                                            height={20}
-                                        />
-                                    </div>
-                                    <div className={"c-thumbnail--picter"}>
-                                        <Image
-                                            src="/images/item/480-320.png"
-                                            alt="お客様との写真"
-                                            width={241}
-                                            height={160}
-                                        />
-                                    </div>
-                                </div>
-                            </li>
-                            <li className={"c-card-item"}>
-                                <time dateTime="">2024/12/16</time>
-                                <h5>記事タイトル記事タイトル記事タイトル</h5>
-                                <p>導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。導入文はここに入ります。</p>
-                            </li>
-                        </ul>
-                    </Link>
-                </div>
+                <Recommend data={data} />
                 {/* 9. 別記事紹介 */}
                 <div className={"p-single--articleArea"}>
                     <h2><CategoryLink category={data.category} article="information"/>に関する記事はこちら</h2>

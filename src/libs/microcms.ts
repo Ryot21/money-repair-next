@@ -28,6 +28,16 @@ export type Category = {// カテゴリー
     name: string;
 } & MicroCMSListContent;
 
+export type Recommend = {// 合わせて読みたい記事
+    id:          string;
+    thumbnail?:  MicroCMSImage;
+    mainTitle:   string;
+    read?:       string;
+    url:         string;
+    publishedAt: string;
+    createdAt:   string;
+} & MicroCMSListContent;
+
 export type Interview = {// ご利用者インタビュー
     id:             string;        // ID
     company:        string;        // 企業名
@@ -65,6 +75,7 @@ export type Information = {// お役立ち情報
     poster:           Poster;   // 投稿者
     read?:            string;   // 導入文
     article:          string;   // 本文
+    recommend?:       Recommend;// 合わせて読みたい記事
     ctaOnOff:         boolean;  // CTA切り替え
 
     publishedAt:      string;   // 更新日

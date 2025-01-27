@@ -165,25 +165,36 @@
                 time{
                 }
                 h5 {
-                    font-size: 1.6rem;
+                    font-size: clamp(1.4rem, 1.5vw, 2rem);
                     font-weight: bold;
-                    letter-spacing: 0.2rem;
+                    letter-spacing: 0.1rem;
                     line-height: 1.2;
-                    padding: 5px 0 2px;
-                    @include min(500){
-                        padding: 10px 0 5px;
-                    }
-                }
-                p {
-                    font-size: 1.2rem;
-                    line-height: 1.5;
-                    letter-spacing: 0.2rem;
-                    // ３行以降省略
+                    padding: 5px 0 2px !important;
+                    // 1行以降省略
                     display: -webkit-box;
                     text-overflow: ellipsis;
                     -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
+                    -webkit-line-clamp: 2;
                     overflow: hidden;
+
+                    @include min(500){
+                        padding: 5px 0 5px !important;
+                        -webkit-line-clamp: 1;
+                    }
+                }
+            }
+            .c-card--intro{
+                // ３行以降省略
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                p,span,a,li{
+                    font-size: clamp(1rem, 1.5vw, 1.4rem);
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    line-height: 1.5;
+                    letter-spacing: 0.2rem;
                 }
             }
         }
