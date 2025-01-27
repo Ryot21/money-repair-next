@@ -383,7 +383,7 @@
 		.p-single{
 			&--title{
 				margin-bottom: 10%;
-				@include min(500){margin-bottom: 5%;}
+				@include min(500){margin-bottom: 7%;}
 				time{
 					bottom: -20px;
 					@include min(500){
