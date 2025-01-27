@@ -177,6 +177,30 @@ export const getInformationDetail = async (// 詳細
     });
     return detailData;
 };
+export const getInformationsByCategory = async (categoryId: string, currentId: string) => {// カテゴリーに関する記事
+    const response = await client.getList<Information>({
+        endpoint: "information",
+        queries: {
+            limit: 2,
+            filters: `category[equals]${categoryId}[and]id[not_equals]${currentId}`,
+            orders: '-updatedAt,-publishedAt', // 更新日と公開日の両方でソート
+        },
+    });
+    // 公開日と更新日を比較して新しい方の日付でソート
+    const sortedContents = response.contents.sort((a, b) => {
+        const aDate = new Date(Math.max(
+        new Date(a.publishedAt || 0).getTime(),
+        new Date(a.updatedAt || 0).getTime()
+        ));
+        const bDate = new Date(Math.max(
+        new Date(b.publishedAt || 0).getTime(),
+        new Date(b.updatedAt || 0).getTime()
+        ));
+        return bDate.getTime() - aDate.getTime();
+    });
+
+    return sortedContents;
+};
 // ご利用者の声
 export const getInterviewsList = async (queries?: MicroCMSQueries) => {// 一覧
     const listData = await client.getList<Interview>({

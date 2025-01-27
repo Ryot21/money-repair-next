@@ -8,12 +8,21 @@ import Poster from "@/components/Parts/Poster";
 import SearchField from "@/components/Parts/SearchField";
 import TableOfContents from "@/components/Parts/TableOfContents";
 import Recommend from "@/components/Parts/Recommend";
+import { getInformationsByCategory } from "@/libs/microcms";
+import RecommendCategory from "@/components/Parts/Recommend/category";
 
 type Props = {
     data : Information;
 }
 
-export default function Article ({ data }: Props) {
+export default async function Article ({ data }: Props) {
+
+    // 別記事紹介 データ取得部分
+    const relatedArticles = await getInformationsByCategory(
+        data.category.id,
+        data.id
+    );
+
     return (
         <ul className={"c-flex -single-lists -jc-sb"}>
             {/* 記事コンテンツ */}
@@ -121,128 +130,13 @@ export default function Article ({ data }: Props) {
                 </div>
                 {/* 7. 投稿者 */}
                 <Poster poster={data.poster} />
-                {/* 8. 内部リンク */}
+                {/* 8. ピックアップ */}
                 <Recommend data={data} />
-                {/* 9. 別記事紹介 */}
-                <div className={"p-single--articleArea"}>
-                    <h2><CategoryLink category={data.category} article="information"/>に関する記事はこちら</h2>
-                    <ul className={"c-flex -article-lists -jc-sb"}>
-                        <li className={"articleItem"}>
-                            <Link href="single-information.html" className={"c-post--link"}>
-                                {/* バナー風画像 */}
-                                <div className={"c-thumbnail -news mgb3 mgb3s"}>
-                                    <div className={"imgBox"}>
-                                        <Image
-                                            src="/images/item/news/news-thumbnail.png"
-                                            alt="企業1"
-                                            width={415}
-                                            height={233}
-                                        />
-                                    </div>
-                                    <div className={"c-thumbnail--cover"}>
-                                        <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
-                                    </div>
-                                    <div className={"c-thumbnail--mark"}>
-                                        <Image
-                                            src="/images/item/news/news-mark.svg"
-                                            alt="マネーリペア | ご利用者インタビュー"
-                                            width={207}
-                                            height={24}
-                                        />
-                                    </div>
-                                    <div className={"c-thumbnail--picter"}>
-                                        <Image
-                                            src="/images/item/480-320.png"
-                                            alt="お客様との写真"
-                                            width={415}
-                                            height={277}
-                                        />
-                                    </div>
-                                    <p className={"c-thumbnail--title"}>
-                                        <span className={"s-M -b -color03 -ls-1"}>タイトルタイトルタイトルタイトル</span>
-                                    </p>
-                                    <p className={"c-thumbnail--subTitle s-SS -b -color03 -ls-1"}>サブタイトルサブタイトル</p>
-                                </div>
-                                {/* テキストエリア */}
-                                <div className={"c-date mgb2 mgb1s"}>
-                                    <ul className={"c-date__lists c-flex -col2"}>
-                                        <li className={"c-date__item"}>
-                                            <p className="s-M -s16 -left -b -ls-2">2024.11.18</p>
-                                        </li>
-                                        <li className={"c-date__item"}>
-                                            <ul className={"c-post--category__lists c-flex -h-cen"}>
-                                                <li className={"c-post--category__item"}>
-                                                    <p>#カテゴリー01</p>
-                                                </li>
-                                                <li className={"c-post--category__item"}>
-                                                    <p>#カテゴリー01</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h3 className={"c-post--title s-M -s14 -left -b -ls-1"}>こんな福利厚生今までなかった...</h3>
-                            </Link>
-                        </li>
-                        <li className={"articleItem"}>
-                            <Link href="single-information.html" className={"c-post--link"}>
-                                {/* バナー風画像 */}
-                                <div className={"c-thumbnail -news mgb3 mgb3s"}>
-                                    <div className={"imgBox"}>
-                                        <Image
-                                            src="/images/item/news/news-thumbnail.png"
-                                            alt="企業1"
-                                            width={415}
-                                            height={233}
-                                        />
-                                    </div>
-                                    <div className={"c-thumbnail--cover"}>
-                                        <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
-                                    </div>
-                                    <div className={"c-thumbnail--mark"}>
-                                        <Image
-                                            src="/images/item/news/news-mark.svg"
-                                            alt="マネーリペア | ご利用者インタビュー"
-                                            width={207}
-                                            height={24}
-                                        />
-                                    </div>
-                                    <div className={"c-thumbnail--picter"}>
-                                        <Image
-                                            src="/images/item/480-320.png"
-                                            alt="お客様との写真"
-                                            width={415}
-                                            height={277}
-                                        />
-                                    </div>
-                                    <p className={"c-thumbnail--title"}>
-                                        <span className={"s-M -b -color03 -ls-1"}>タイトルタイトルタイトルタイトル</span>
-                                    </p>
-                                    <p className={"c-thumbnail--subTitle s-SS -b -color03 -ls-1"}>サブタイトルサブタイトル</p>
-                                </div>
-                                {/* テキストエリア */}
-                                <div className={"c-date mgb2 mgb1s"}>
-                                    <ul className={"c-date__lists c-flex -col2"}>
-                                        <li className={"c-date__item"}>
-                                            <p className="s-M -s16 -left -b -ls-2">2024.11.18</p>
-                                        </li>
-                                        <li className={"c-date__item"}>
-                                            <ul className={"c-post--category__lists c-flex -h-cen"}>
-                                                <li className={"c-post--category__item"}>
-                                                    <p>#カテゴリー01</p>
-                                                </li>
-                                                <li className={"c-post--category__item"}>
-                                                    <p>#カテゴリー01</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h3 className={"c-post--title s-M -s14 -left -b -ls-1"}>こんな福利厚生今までなかった...</h3>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+                {/* 9. 同カテゴリー > 別記事紹介 */}
+                <RecommendCategory 
+                    currentArticle={data} 
+                    relatedArticles={relatedArticles}
+                />
             </li>
             {/* サイドバー */}
             <li className={"singleItem"}>
