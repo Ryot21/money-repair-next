@@ -73,16 +73,12 @@ export default async function Article ({ data }: Props) {
                         {data.thumbnail && (
                             <Image
                                 src={data.thumbnail?.url}
-                                alt="お客様との写真"
+                                alt={data.mainTitle}
                                 width={856}
                                 height={570}
                             />
                         )}
-
                     </div>
-                    <p className={"c-thumbnail--title"}>
-                        <span className={"s-L -b -color03 -ls-1"}>{data.mainTitle}</span></p>
-                    <p className={"c-thumbnail--subTitle s-M -b -color03 -ls-1"}>{data.subTitle}</p>
                 </div>
                 {/* 3. お悩み */}
                 <div className={"c-card -t04 mgt15 mgt15s"}>

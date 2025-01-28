@@ -377,6 +377,17 @@
 				border: 1px solid $main-color--Dgray;
 			}
 		}
+		.c-thumbnail{
+			&--picter{// 人の写真
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 99%;
+				height: 99%;
+				z-index: -1;
+			}
+		}
 	}
 	// お役立ち情報
 	&.-information{

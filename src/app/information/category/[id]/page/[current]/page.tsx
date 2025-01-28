@@ -67,7 +67,7 @@ export default async function Page({ params }: Props) {
                 categories={categories}
             />
             {/* 記事一覧 */}
-            <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
+            <div className="c-contents pdt5 pdt10s pdb2">
                 <InformationList contents={ information }/>
             </div>
             {/* ページネーション */}

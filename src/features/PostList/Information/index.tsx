@@ -16,7 +16,7 @@ export default function InformationList({ contents }: Props) {
   return (
     <ul className={`c-post--lists c-flex -col2M1_3 -jc-st -h-top`}>
       {contents.map((article) => (
-        <li key={article.id} className={"c-post--item flexItem_M mgb5 mgb10s"}>
+        <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb10s"}>
           <Link href={`/information/${article.id}`} className={"c-post--link"}>
             {/* バナー画像 */}
             <div className={"c-thumbnail -news mgb3 mgb3s"}>
@@ -43,7 +43,7 @@ export default function InformationList({ contents }: Props) {
                 {article.thumbnail ? (
                   <Image
                     src={article.thumbnail.url}
-                    alt="お客様との写真"
+                    alt={article.mainTitle}
                     width={480}
                     height={320}
                   />
@@ -56,16 +56,6 @@ export default function InformationList({ contents }: Props) {
                   />
                 )}
               </div>
-              <p className={"c-thumbnail--title"}>
-                <span className={"s-M -s20 -b -color03 -ls-1"}>
-                  {article.mainTitle}
-                </span>
-              </p>
-              <p
-                className={"c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1"}
-              >
-                {article.subTitle}
-              </p>
             </div>
             {/* テキストエリア */}
             <div className={"c-date mgb2 mgb1s"}>
@@ -82,7 +72,7 @@ export default function InformationList({ contents }: Props) {
                 </li>
               </ul>
             </div>
-            <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>
+            <h3 className={"c-post--title s-ML -s16 -left -b -ls-1"}>
               {article.mainTitle}
             </h3>
           </Link>

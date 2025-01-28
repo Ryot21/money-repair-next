@@ -34,7 +34,7 @@ export default function Article ({ data }: Props) {
                     <div className="c-thumbnail--picter">
                         <Image
                             src={data.thumbnail.url}
-                            alt="お客様との写真"
+                            alt={data.mainTitle}
                             width={678}
                             height={452}
                         />

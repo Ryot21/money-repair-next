@@ -216,6 +216,7 @@
     &.-single-lists{
         .singleItem{
             border-radius: 8px;
+            z-index: -1;
             &:nth-child(1){
                 background: $main-color--w;
                 padding: 5%;

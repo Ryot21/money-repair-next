@@ -44,7 +44,7 @@ export default function InterviewList({ contents }: Props) {
                 {article.thumbnail ? (
                   <Image
                     src={article.thumbnail.url}
-                    alt="お客様との写真"
+                    alt={article.mainTitle}
                     width={480}
                     height={320}
                   />
@@ -84,7 +84,7 @@ export default function InterviewList({ contents }: Props) {
                 </li>
               </ul>
             </div>
-            <h3 className={"c-post--title s-M -s16 -left -b -ls-1"}>
+            <h3 className={"c-post--title s-ML -s16 -left -b -ls-1"}>
               {article.mainTitle}
             </h3>
           </Link>
