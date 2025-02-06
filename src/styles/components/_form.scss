@@ -298,7 +298,13 @@
             padding: 15px 30px;
             border-radius: 50px;
             border: none;
-            opacity: .5;
+            cursor: pointer;
+            opacity: 1;
+            // 非活性時のスタイル
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.5;
+            }
         }
     }
 
