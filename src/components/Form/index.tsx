@@ -10,6 +10,11 @@ import { useSearchParams } from 'next/navigation';
 type Props = {
     customClass: string;
 }
+// 状態の型定義
+type ContactState = {
+    status: "success" | "error";
+    message: string;
+  } | null;
 
 // 【バリデーション関数】
 const validatePhoneNumber = (phoneNumber: string) => {
@@ -40,12 +45,13 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactForm({ customClass }: Props) {
+    // useActionStateの型を明示的に指定
+    const [state, formAction] = useActionState<ContactState, FormData>(createContactDate, null);
 
     // パラメーター取得
     const searchParams = useSearchParams();
     const type = searchParams.get('type');
 
-    const [state, formAction] = useActionState(createContactDate, null);
     const [formData, setFormData] = useState({
         purpose: type === 'download' ? '資料請求' : type === 'contact' ? 'お問い合わせ' : '',
         company: "",
@@ -62,7 +68,7 @@ export default function ContactForm({ customClass }: Props) {
     });
 
     const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     ) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -72,42 +78,42 @@ export default function ContactForm({ customClass }: Props) {
 
         // 電話番号のフォーマット
         if (name === "phone") {
-        let formattedValue = value.replace(/[^\d]/g, "");
-        if (formattedValue.length > 2) {
-            if (formattedValue.startsWith("0")) {
-            if (
-                ["090", "080", "070", "050"].some((prefix) =>
-                formattedValue.startsWith(prefix)
-                )
-            ) {
-                formattedValue = formattedValue.replace(
-                /^(\d{3})(\d{4})(\d{4}).*/,
-                "$1-$2-$3"
-                );
-            } else if (
-                ["03", "04", "06"].some((prefix) =>
-                formattedValue.startsWith(prefix)
-                )
-            ) {
-                formattedValue = formattedValue.replace(
-                /^(\d{2})(\d{4})(\d{4}).*/,
-                "$1-$2-$3"
-                );
-            } else {
-                formattedValue = formattedValue.replace(
-                /^(\d{3,4})(\d{2,3})(\d{4}).*/,
-                "$1-$2-$3"
-                );
+            let formattedValue = value.replace(/[^\d]/g, "");
+            if (formattedValue.length > 2) {
+                if (formattedValue.startsWith("0")) {
+                    if (
+                        ["090", "080", "070", "050"].some((prefix) =>
+                        formattedValue.startsWith(prefix)
+                        )
+                    ) {
+                        formattedValue = formattedValue.replace(
+                        /^(\d{3})(\d{4})(\d{4}).*/,
+                        "$1-$2-$3"
+                        );
+                    } else if (
+                        ["03", "04", "06"].some((prefix) =>
+                        formattedValue.startsWith(prefix)
+                        )
+                    ) {
+                        formattedValue = formattedValue.replace(
+                        /^(\d{2})(\d{4})(\d{4}).*/,
+                        "$1-$2-$3"
+                        );
+                    } else {
+                        formattedValue = formattedValue.replace(
+                        /^(\d{3,4})(\d{2,3})(\d{4}).*/,
+                        "$1-$2-$3"
+                        );
+                    }
+                }
             }
+            if (formattedValue.length > 13) {
+                formattedValue = formattedValue.slice(0, 13);
             }
-        }
-        if (formattedValue.length > 13) {
-            formattedValue = formattedValue.slice(0, 13);
-        }
-        setFormData((prev) => ({
-            ...prev,
-            phone: formattedValue,
-        }));
+            setFormData((prev) => ({
+                ...prev,
+                phone: formattedValue,
+            }));
         }
     };
 
@@ -300,8 +306,8 @@ export default function ContactForm({ customClass }: Props) {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            cols="30"
-                            rows="10"
+                            cols={30}
+                            rows={10}
                             placeholder="お問い合わせ内容を入力してください。"
                         />
                         </td>

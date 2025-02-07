@@ -6,17 +6,17 @@ type ContactState = {
 } | null;
 
 export async function createContactDate(
-  _prevState: ContactState,
-  formData: FormData
-) {
-  const rawFormData = {
-    purpose: formData.get("purpose") as string, // 目的
-    company: formData.get("company") as string, // 会社名
-    name: formData.get("name") as string, // ご担当者名
-    phone: formData.get("phone") as string, // 電話番号
-    email: formData.get("email") as string, // メールアドレス
-    message: formData.get("message") as string, // お問い合わせ
-  };
+    _prevState: ContactState | null,
+    formData: FormData
+  ): Promise<ContactState> {
+    const rawFormData = {
+      purpose: formData.get("purpose") as string,
+      company: formData.get("company") as string,
+      name: formData.get("name") as string,
+      phone: formData.get("phone") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+    };
   if (!rawFormData.purpose) {
     return {
       status: "error",
