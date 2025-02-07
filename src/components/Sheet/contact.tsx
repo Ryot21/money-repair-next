@@ -1,18 +1,21 @@
 // 共通レイアウト
-import SingleMainVisual from "@/components/MainVisual/single";
+import ContactMainVisual from "@/components/MainVisual/single/contact";
 
 type Props = {
     children: React.ReactNode;
-    title: string;
     mvClass?: string;
+    customClass?: string;
     contentClass?: string;
 }
 
-export default function ContactSheet({ children, title, mvClass, contentClass }: Props) {
+export default function ContactSheet({ children, mvClass, customClass, contentClass }: Props) {
+
+
+    
     return (
         <main>
             {/* メインビジュアル */}
-            <SingleMainVisual title={title} mvClass={mvClass}/>
+            <ContactMainVisual mvClass={mvClass} customClass={customClass}/>
 
             {/* コンテンツ */}
             <div className={`c-contents pdt5 pdt10s pdb5 pdb10s ${contentClass || ''} `} >

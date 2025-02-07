@@ -6,7 +6,7 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
     return (
-        <ContactSheet title="お問い合わせ" mvClass="-contact">
+        <ContactSheet mvClass="-contact">
             {children}
         </ContactSheet>
     )

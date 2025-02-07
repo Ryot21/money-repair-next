@@ -53,12 +53,12 @@ export default async function HamburgerNav() {
                         </ul>
                     </li>
                     <li className={"hbNavItem "}>
-                        <Link className={""} href="/download">
+                        <Link className={""} href="/contact?type=download">
                             <span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>資料請求</span>
                         </Link>
                     </li>
                     <li className={"hbNavItem "}>
-                        <Link className={""} href="/contact">
+                        <Link className={""} href="/contact?type=contact">
                             <span className={"s-ML -s20 -b -white -ls-2 pdr5 pdr4s"}>お問い合わせ</span>
                         </Link>
                     </li>
