@@ -2,13 +2,19 @@
 
 export async function createContactDate(_prevState: any, formData: FormData) {
     const rawFormData = {
+        purpose: formData.get("purpose") as string,// 目的
         company: formData.get("company") as string,// 会社名
         name:    formData.get("name") as string,// ご担当者名
         phone:   formData.get("phone") as string,// 電話番号
         email:   formData.get("email") as string,// メールアドレス
         message: formData.get("message") as string,// お問い合わせ
     };
-
+    if (!rawFormData.purpose) {
+        return {
+            status: "error",
+            message: "目的を選択してください。",
+        };
+    }
     if (!rawFormData.company) {
         return {
             status: "error",
@@ -51,11 +57,15 @@ export async function createContactDate(_prevState: any, formData: FormData) {
                 body: JSON.stringify({
                     fields: [
                         {
-                            name: "company",
-                            value: rawFormData.company,
+                            name: "purpose",
+                            value: rawFormData.purpose,
                         },
                         {
-                            name: "manager_name",
+                            name: "company",
+                            value: rawFormData.company,
+                            },
+                        {
+                            name: "manager_name",       
                             value: rawFormData.name,
                         },
                         {
