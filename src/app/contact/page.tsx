@@ -30,7 +30,7 @@ export default function Page(){
             {/* お問い合わせフォーム */}
             <div className="c-contents mgb10 mgb20s">
                 <div className="c-contents--inner -bg-white -card">
-                    <ContactForm />
+                    <ContactForm customClass="-page" />
                 </div>
             </div>
         </>

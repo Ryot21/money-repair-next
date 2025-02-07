@@ -56,12 +56,13 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
             bottom: -3px;
             left: 50%;
             transform: translateX(-50%);
-            height: 10px;
+            height: 1px;
             width: 95%;
             z-index: -1;
         }
         &.-y{&::after{background: $main-color--yellow;}}
         &.-o{&::after{background: $main-color--orange;}}
+        &.-color03{&::after{background: $site-color03;}}
     }
 
     // ----- 位置関係 -----
@@ -141,9 +142,10 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
     &.-f-En04{font-family: e-font04;}         // Roboto
 
     // 色
-    &.-white{color: $main-color--w !important;}
-    &.-black{color: $main-color--b !important;}
-    &.-red  {color: $main-color--red !important;}
+    &.-white {color: $main-color--w !important;}
+    &.-black {color: $main-color--b !important;}
+    &.-gray  {color: $main-color--gray !important;}
+    &.-red   {color: $main-color--red !important;}
     &.-yellow{color: $main-color--yellow !important;}
 
     &.-color01{color: $site-color01 !important;}

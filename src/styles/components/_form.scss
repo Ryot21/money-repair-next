@@ -59,6 +59,7 @@
                     border: none;
                 }
                 input[type="text"],
+                select,
                 textarea {
                     display: block;
                     width: 480px;
@@ -77,15 +78,20 @@
                         color: #ccc;
                     }
                     @include max(500){
+                        &#purpose,
                         &#company,
                         &#name,
                         &#email,
-                        &#tel,
+                        &#phone,
                         &#message{
                             width: 100% !important;
                         }
                     }
                     @include min(500){
+                        &#purpose{// 目的
+                            width: 65%;
+                            max-width: 170px;
+                        }
                         &#company{// 会社名
                             width: 75%;
                             max-width: 300px;
@@ -98,7 +104,7 @@
                             width: 80%;
                             max-width: 300px;
                         }
-                        &#tel{// 電話番号
+                        &#phone{// 電話番号
                             width: 45%;
                             max-width: 150px;
                         }
@@ -340,9 +346,9 @@
             td{
                 padding: 0 0 10px;
                 input[type="text"],
+                select,
                 textarea {
                     display: block;
-                    width: 480px;
                     background: #f8f8f8;
                     font-size: clamp(1.2rem, 1.5vw, 1.4rem);
                     padding: 10px 15px;
@@ -357,10 +363,11 @@
                     &::placeholder{
                         color: #ccc;
                     }
+                    &#purpose,
                     &#company,
                     &#name,
                     &#email,
-                    &#tel,
+                    &#phone,
                     &#message{
                         width: 100% !important;
                     }
@@ -379,6 +386,13 @@
             }
         }
         // 個人情報の取り扱いについて
+        .pITitle{
+            margin-bottom: 3% !important;
+        }
+        .pIText{
+            font-size: 1.2rem;
+            margin-bottom: 3% !important;
+        }
         .c-form{
             &--privacyPolicy{
                 width: 100%;
