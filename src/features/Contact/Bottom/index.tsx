@@ -40,7 +40,7 @@ export default function ContactBottom() {
               >
                 <span className={"-f-gothic01 -b"}>お役立ち資料</span>はこちら
               </p>
-              <PageButtonLink href="/download">資料ダウンロード</PageButtonLink>
+              <PageButtonLink href="/contact?type=download">資料請求</PageButtonLink>
             </li>
             <li className={"cvItem"}>
               <p
@@ -50,7 +50,7 @@ export default function ContactBottom() {
               >
                 お気軽にお問い合わせ下さい。
               </p>
-              <PageButtonLink href="/contact">お問い合わせ</PageButtonLink>
+              <PageButtonLink href="/contact?type=contact">お問い合わせ</PageButtonLink>
             </li>
           </ul>
         </div>
