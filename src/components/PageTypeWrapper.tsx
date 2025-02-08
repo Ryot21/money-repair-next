@@ -1,8 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
+// ページタイプを管理するコンポーネント
 export default function PageTypeWrapper({
   children,
   initialPageType,
@@ -11,24 +12,29 @@ export default function PageTypeWrapper({
   initialPageType: string;
 }) {
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // let pageType = "top";
+    setMounted(true);
     let pageType = initialPageType;
     const archivePaths = ["/information", "/interview"];
 
     if (archivePaths.some((path) => pathname.startsWith(path))) {
       // パスを分割して解析
       const pathSegments = pathname.split("/").filter(Boolean);
-      const section = pathSegments[0]; // 'information' または 'interview'
+      const section = pathSegments[0];
 
       // カテゴリーページまたはページネーションを含むパスかチェック
-      if (pathSegments[1] === "category" || pathname.includes("/page/") || (pathname.startsWith("/information/search"))) {
+      if (
+        pathSegments[1] === "category" ||
+        pathname.includes("/page/") ||
+        pathname.startsWith("/information/search")
+      ) {
         // カテゴリーページ、ページネーション、または検索ページの場合
         pageType = "archive";
       } else if (pathSegments.length === 2) {
         // 記事詳細ページの場合（例：/information/123）
-        pageType = `single -${section}`; // 例：'single -information'
+        pageType = `single -${section}`;
       } else {
         // それ以外のケース
         pageType = "archive";
@@ -39,8 +45,16 @@ export default function PageTypeWrapper({
       pageType = "top";
     }
 
-    document.body.className = `p-${pageType} is-scroll`;
+    // React 19の改善されたハイドレーション対策として
+    requestAnimationFrame(() => {
+      document.body.className = `p-${pageType} is-scroll`;
+    });
   }, [pathname, initialPageType]);
 
-  return <>{children}</>;
+  // 初期レンダリング時はサーバーサイドの状態を維持
+  if (!mounted) {
+    return <div data-page-type={initialPageType}>{children}</div>;
+  }
+
+  return <div>{children}</div>;
 }
