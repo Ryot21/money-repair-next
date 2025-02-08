@@ -143,11 +143,12 @@
                 &:nth-child(1){width: 35%;}
                 &:nth-child(2){width: 58%;}
                 @include min(500){
-                    &:nth-child(1){width: 30%;}
-                    &:nth-child(2){width: 67%;}
+                    &:nth-child(1){width: 29%;}
+                    &:nth-child(2){width: 69%;}
                 }
                 // 画像
                 .c-thumbnail{
+                    border-radius: 3px;
                     &--mark{width: 75%;}
                 }
                 // テキスト
@@ -179,7 +180,7 @@
 
                     @include min(500){
                         padding: 5px 0 8px !important;
-                        -webkit-line-clamp: 1;
+                        // -webkit-line-clamp: 1;
                     }
                 }
             }
@@ -205,9 +206,6 @@
         background: $main-color--w;
         border: 1px solid $site-color03;
         border-radius: 5px;
-        @include max(500){
-            margin-top: 8%;
-        }
         h2{
             font-size: clamp(1.6rem, 2vw, 2rem);
             color: $main-color--w;

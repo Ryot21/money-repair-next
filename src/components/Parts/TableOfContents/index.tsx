@@ -58,7 +58,7 @@ export default function TableOfContents({ content, isSidebar = false }: TableOfC
     }, [content]);
 
     const containerClass = isSidebar 
-        ? "tb-pc c-card -t03 mgt10 mgb10 mgb10s"
+        ? "c-card -t03 mgt10 mgb10 mgb10s"
         : "sp c-card -t03 mgb10 mgb10s";
 
     return (

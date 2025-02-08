@@ -33,13 +33,16 @@
         will-change: transform;
         transition: all .3s;
         .imgBox,
-        .c-thumbnail--picter,
-        .c-thumbnail--title,
-        .c-thumbnail--subTitle,
-        .c-thumbnail--cover,
-        .c-thumbnail--cover__text{
-            will-change: transform;
-            transition: all .3s;
+        .c-thumbnail{
+            border-radius: 4px;
+            &--picter,
+            &--title,
+            &--subTitle,
+            &--cover,
+            &--cover__text{
+                will-change: transform;
+                transition: all .3s;
+            }
         }
         &:hover{
             top: .5rem;

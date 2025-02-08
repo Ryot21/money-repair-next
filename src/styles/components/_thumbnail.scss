@@ -2,8 +2,12 @@
 
 .c-thumbnail{
     position: relative;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
+    z-index: 1;
+    @include min(500){
+        border-radius: 10px;
+    }
     .imgBox{
         width: 100%;
         height: auto;

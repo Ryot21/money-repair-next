@@ -101,14 +101,14 @@
         position: relative;
         width: 100%;
         padding: 10% 5%;
-        margin-top: 8%;
         background: $main-color--w;
         border: 1px solid $site-color03;
         border-radius: 5px;
-
         @include min(500){
             padding: 10% 5% 5% 5%;
-         }
-
+        }
+        span,p{
+            font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+        }
     }
 }
