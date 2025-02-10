@@ -26,7 +26,7 @@ export default function Footer() {
                                 <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="">利用条件</Link></li>
                                 <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="">個人情報保護方針</Link></li>
                                 <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="">情報セキュリティ基本方針</Link></li>
-                                <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="">プライバシーポリシー</Link></li>
+                                <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="/privacy-policy">プライバシーポリシー</Link></li>
                             </ul>
                         </nav>
                     </li>

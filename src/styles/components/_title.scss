@@ -105,6 +105,7 @@
     &.-contact02  {&::before{content: "- REQUEST FOR INFORMATION -"; white-space: nowrap;}}
     &.-notFound   {&::before{content: "- 404 NOT FOUND -"; white-space: nowrap;}}//エラーページ
 
+    &.-privacyPolicy{&::before{content: "- PRIVACY POLICY -"; white-space: nowrap;}}// プライバシーポリシー
 }
 
 // サービスページ > サービス内容内のタイトル
