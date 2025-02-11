@@ -184,10 +184,10 @@ export default function TopMainVisual() {
 
           {/* ================= キーワード ================= */}
           <div className={"c-contentsBox -catchCopy01"}>
-            <span>キャッチコピーはここに入ります。</span>
+            <p>キャッチコピーはここに入ります。</p>
           </div>
           <div className={"c-contentsBox -catchCopy02"}>
-            <span>キャッチコピーはここに入ります。</span>
+            <p>キャッチコピーはここに入ります。</p>
           </div>
 
           {/* ================= 注釈 ================= */}

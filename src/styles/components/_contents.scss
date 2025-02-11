@@ -343,7 +343,11 @@
 				// 共通
 				&.-catchCopy01,
 				&.-catchCopy02{
-					span{
+					background: $main-color--w;
+					padding: 1% 1%;
+					transform: translate(-50%, -50%);
+					z-index: 11;
+					p,span{
 						font-size: 1.2rem;
 						font-family: $f-gothic01;
 						font-weight: bold;
@@ -357,10 +361,6 @@
 					&.-catchCopy01{
 						top: 18%;
 						left: 93%;
-						transform: translate(-50%, -50%);
-						background: $main-color--w;
-						padding: 1% 1%;
-						z-index: 10;
 						@include min(500){
 							top: 25%;
 							left: 88.5%;
@@ -373,10 +373,6 @@
 					&.-catchCopy02{
 						top: 20%;
 						left: 87%;
-						transform: translate(-50%, -50%);
-						background: $main-color--w;
-						padding: 1% 1%;
-						z-index: 9;
 						@include min(500){
 							top: 27%;
 							left: 82.5%;
@@ -391,7 +387,7 @@
 				&.-comments01{
 					position: absolute;
 					top: 42%;
-					left: 9.5%;
+					left: 8.5%;
 					transform: translate(1%, -50%);
 					z-index: 10;
 					@include min(500){
