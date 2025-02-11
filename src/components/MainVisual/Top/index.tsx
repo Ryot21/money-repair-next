@@ -94,7 +94,7 @@ export default function TopMainVisual() {
               className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}
             >
               <Image
-                src="/images/mv/mv-05.JPG"
+                src="/images/mv/mv-05.jpg"
                 alt=""
                 width={1000}
                 height={667}
@@ -161,7 +161,7 @@ export default function TopMainVisual() {
               className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}
             >
               <Image
-                src="/images/mv/mv-03.JPG"
+                src="/images/mv/mv-03.jpg"
                 alt=""
                 width={480}
                 height={320}
