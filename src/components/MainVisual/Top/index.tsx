@@ -1,48 +1,215 @@
+"use client";
+
 import Image from "next/image";
-import Script from "next/script";
+// import Script from "next/script";
+import styles from "./index.module.scss";
+import { useEffect } from "react";
 
 export default function TopMainVisual() {
+  useEffect(() => {
+    // マウスの動きに応じてパララックス効果を適用する関数
+    const handleMouseMove = (e: MouseEvent) => {
+      // パララックス効果を適用する要素をすべて取得
+      const parallaxItems = document.querySelectorAll(".js-parallax");
+      // ビューポートの中心座標を計算（マウスの移動量の基準点）
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      // 現在のマウス座標
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      // 各パララックス要素に対して処理を実行
+      parallaxItems.forEach((item) => {
+        let movement;
+        // 要素のZ軸位置（奥行き）に応じて移動量を設定
+        if (item.classList.contains(styles.item01)) {
+          movement = 16; // 最前面の要素（最も大きく動く）
+        } else if (item.classList.contains(styles.item02)) {
+          movement = 30; // 前面の要素
+        } else if (item.classList.contains(styles.item03)) {
+          movement = 50; // 中間の要素
+        } else if (item.classList.contains(styles.item04)) {
+          movement = 70; // 最背面の要素（最も小さく動く）
+        } else {
+          movement = 40; // デフォルト値
+        }
+
+        // マウスの移動量から要素の移動量を計算
+        // movementで割ることで奥行きに応じた移動量の違いを表現
+        // 1.5を掛けることで移動量を調整
+        const moveX = ((mouseX - centerX) / movement) * 1.5;
+        const moveY = ((mouseY - centerY) / movement) * 1.5;
+
+        // 要素の回転量を計算
+        // 前面の要素（movement < 40）は大きく、背面の要素は小さく回転
+        const rotateMultiplier = movement < 40 ? 0.008 : 0.004;
+        const rotateX = (mouseY - centerY) * rotateMultiplier; // X軸回転（上下の傾き）
+        const rotateY = (mouseX - centerX) * -rotateMultiplier; // Y軸回転（左右の傾き）
+
+        // 影の設定を計算
+        // マウスと逆方向に影をつけることで立体感を強調
+        const shadowX = (centerX - mouseX) * 0.01; // 影のX方向のオフセット
+        const shadowY = (centerY - mouseY) * 0.01; // 影のY方向のオフセット
+        // 影のぼかし具合を計算（マウスの移動距離に応じて変化）
+        const shadowBlur =
+          Math.abs(Math.sqrt(shadowX * shadowX + shadowY * shadowY)) * 2;
+        // 影の不透明度を計算（最小0.1、マウスの移動に応じて濃くなる）
+        const shadowOpacity = 0.1 + shadowBlur * 0.01;
+
+        // 計算した値を使って要素のスタイルを更新
+        // translate3dでGPUアクセラレーションを有効化し、パフォーマンスを向上
+        (
+          item as HTMLElement
+        ).style.transform = `translate3d(${moveX}px, ${moveY}px, 0) 
+           rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+        // 動的な影を適用（shadowBlur * 0.75で影のぼかしを調整）
+        (
+          item as HTMLElement
+        ).style.filter = `drop-shadow(${shadowX}px ${shadowY}px ${
+          shadowBlur * 0.75
+        }px rgba(0, 0, 0, ${shadowOpacity}))`;
+      });
+    };
+
+    // マウス移動イベントのリスナーを登録
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // コンポーネントのアンマウント時にイベントリスナーを解除（メモリリーク防止）
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []); // 空の依存配列で初回レンダリング時のみ実行
+
   return (
-    <div className={"c-contents -imgBg -fv -top"}>
-      {/* ボード */}
-      <div className={"imgBox"}></div>
+    <>
+      <div id="js-parallaxArea" className={`${styles.parallaxArea}`}>
+        <div className={`c-contents -imgBg -fv -top`}>
+          <div className={"imgBox"}></div>
 
-      {/* 画像 */}
-      <div className={"c-contentsBox -pic16_9 -pic3_4_s -p01"}>
-        <Image src="/images/item/480-320.png" alt="" width={480} height={320} />
-      </div>
-      {/* // 中央 */}
-      <div className={"c-contentsBox -pic9_16 -pic4_3_s -p02"}>
-        <Image src="/images/item/480-320.png" alt="" width={480} height={320} />
-      </div>
-      {/* // 右01 */}
-      <div className={"c-contentsBox -pic4_3 -p03 -blur-b02"}>
-        <Image src="/images/item/480-320.png" alt="" width={480} height={320} />
-      </div>
-      {/* // 右02 */}
-      <div className={"c-contentsBox -pic9_16 -pic4_3_s -p04"}>
-        <Image src="/images/item/480-320.png" alt="" width={480} height={320} />
-      </div>
-      {/* // 左01 */}
-      <div className={"c-contentsBox -pic4_3 -p05 -blur-b03"}>
-        <Image src="/images/item/480-320.png" alt="" width={480} height={320} />
-      </div>
-      {/* // 左02 */}
+          {/* ================= 画像 ================= */}
+          <div className={"c-contentsBox -pic16_9 -pic3_4_s -pic-01"}>
+            {/* 中央 */}
+            <div
+              className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}
+            >
+              <Image
+                src="/images/mv/mv-05.JPG"
+                alt=""
+                width={1000}
+                height={667}
+              />
+            </div>
+          </div>
+          <div className={"tb-pc c-contentsBox -pic4_3 -pic4_3_s -pic-02"}>
+            {/* 右下 */}
+            <div
+              className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}
+            >
+              <Image
+                src="/images/mv/mv-12.png"
+                alt=""
+                width={1000}
+                height={667}
+              />
+            </div>
+          </div>
+          <div className={"c-contentsBox -pic4_3 -blur-b02 -blur-b03s -pic-03"}>
+            {/* 中央上 */}
+            <div
+              className={`js-parallax ${styles.parallaxItem} ${styles.item02}`}
+            >
+              <Image
+                src="/images/mv/mv-01.jpg"
+                alt=""
+                width={480}
+                height={320}
+              />
+            </div>
+          </div>
+          <div className={"tb-pc c-contentsBox -pic4_3 -pic4_3_s -pic-04"}>
+            {/* 左上 */}
+            <div
+              className={`js-parallax ${styles.parallaxItem} ${styles.item03}`}
+            >
+              <Image
+                src="/images/mv/mv-10.jpg"
+                alt=""
+                width={480}
+                height={320}
+              />
+            </div>
+          </div>
+          <div className="c-contentsBox -pic4_3 -blur-b01 -pic-05">
+            {/* 左下 */}
+            <div
+              className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}
+            >
+              <Image
+                src="/images/mv/mv-02.jpg"
+                alt=""
+                width={480}
+                height={320}
+              />
+            </div>
+          </div>
 
-      {/* キーワード */}
-      <div className={"c-contentsBox -catchCopy01"}>
-        <span>キャッチコピーはここに入ります。</span>
-      </div>
-      <div className={"c-contentsBox -catchCopy02"}>
-        <span>キャッチコピーはここに入ります。</span>
-      </div>
+          {/* 追加 */}
+          <div className="c-contentsBox -pic4_3 -pic-06">
+            {/* 右上 */}
+            <div
+              className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}
+            >
+              <Image
+                src="/images/mv/mv-03.JPG"
+                alt=""
+                width={480}
+                height={320}
+              />
+            </div>
+          </div>
+          <div className="c-contentsBox -pic4_3 -blur-b02 -blur-b02s -pic-07">
+            {/* 中央下 */}
+            <div
+              className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}
+            >
+              <Image
+                src="/images/mv/mv-06.jpg"
+                alt=""
+                width={480}
+                height={320}
+              />
+            </div>
+          </div>
 
-      {/* 注釈 */}
-      <Script src="/js/typing.js" />
-      <div className={"c-contentsBox -comments01"}>
-        <p>その判断が、</p>
-        <p className={"a-typing"}></p>
+          {/* ================= キーワード ================= */}
+          <div className={"c-contentsBox -catchCopy01"}>
+            <span>キャッチコピーはここに入ります。</span>
+          </div>
+          <div className={"c-contentsBox -catchCopy02"}>
+            <span>キャッチコピーはここに入ります。</span>
+          </div>
+
+          {/* ================= 注釈 ================= */}
+          {/* <Script src="/js/typing.js" /> */}
+          <div className={"c-contentsBox -comments01"}>
+            {/* ピックアップ */}
+            <p className="pickup">
+              <span>金融知識を学べる環境づくり</span>で、情報格差をない世の中へ
+            </p>
+            {/* タイトル */}
+            <div className="title mgb2 mgb2s">
+              <p className="a-typing -blue -ls-2">
+                仕事に集中できる<br />
+                <span>環境</span>を整える
+              </p>
+            </div>
+            {/* 注釈 */}
+            <p className="text -blue -ls-2">企業向け金融リテラシーコーチング型サービス</p>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </>
   );
 }
