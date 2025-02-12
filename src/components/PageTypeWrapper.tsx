@@ -47,7 +47,8 @@ export default function PageTypeWrapper({
 
     // React 19の改善されたハイドレーション対策として
     requestAnimationFrame(() => {
-      document.body.className = `p-${pageType} is-scroll`;
+      document.body.className = `p-${pageType}`;
+      // document.body.className = `p-${pageType} is-scroll`;
     });
   }, [pathname, initialPageType]);
 

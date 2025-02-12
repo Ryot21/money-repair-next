@@ -43,18 +43,18 @@
 
         }
         &-wrapper{
-            animation: sc-headerLogo-gap linear both;
-            animation-range: contain 30% contain 60%;
-            animation-timeline: scroll();
-            will-change: transform;
+            // animation: sc-headerLogo-gap linear both;
+            // animation-range: contain 30% contain 60%;
+            // animation-timeline: scroll();
+            // will-change: transform;
 
-            @include min(768){
-                animation: sc-header-gap linear both;
-                animation-range: contain 30% contain 60%;
-                animation-timeline: scroll();
-                will-change: transform;
+            // @include min(768){
+            //     animation: sc-header-gap linear both;
+            //     animation-range: contain 30% contain 60%;
+            //     animation-timeline: scroll();
+            //     will-change: transform;
 
-            }
+            // }
 
             .c-navAreaBox{
                 // .-pageLink{
