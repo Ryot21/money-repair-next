@@ -85,7 +85,9 @@ export default function TopMainVisual() {
     <>
       <div id="js-parallaxArea" className={`${styles.parallaxArea}`}>
         <div className={`c-contents -imgBg -fv -top`}>
-          <div className={"imgBox"}></div>
+
+          {/* 背景の切り替えができる */}
+          <div className={"imgBox -wave"}></div>
 
           {/* ================= 画像 ================= */}
           <div className={"c-contentsBox -pic16_9 -pic3_4_s -pic-01"}>

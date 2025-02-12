@@ -64,10 +64,22 @@
 		&.-top{// TOP
 			.imgBox{
 				height: 110vh;
-				background-image: linear-gradient(150deg, rgba(123, 201, 246, 0.2) 20%, rgba(123, 201, 246, 0.3) 50%, rgba(123, 201, 246, 0.22) 90%);
-				// max-height: 950px !important;
 				@include min(500) {height: 100vh;}
-				// @include min(1600){height: 80vh;}
+
+				// 1.ドット背景
+				&.-dot{
+					background-image:  radial-gradient($site-color01 2px, transparent 2px), radial-gradient($site-color01 2px, #ffffff 2px);
+					background-size: 40px 40px;
+					background-position: 0 0,20px 20px;
+				}
+				// 2.波背景
+				&.-wave{
+					background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient($site-color01, $site-color03);
+					background-color: $site-color01;
+					background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+					background-repeat: repeat;
+				}
+				
 			}
 			.c-contentsBox{
 
@@ -79,9 +91,6 @@
 				&.-pic3_4{
 					width: auto;
 					background: gray;
-					// border-radius: 20px;
-					// filter: drop-shadow(9px 9px 2px rgba(0, 0, 0, 0.123));
-					// overflow: hidden;
 					img{
 						width: 100%;
 						object-fit: cover;
@@ -249,9 +258,9 @@
 						width: 15%;
 					}
 					@include min(1400){
-						top: 15%;
+						top: 10%;
 						left: 37%;
-						width: 12%;
+						width: 10%;
 					}
 				}
 				&.-pic-04{// 左上
@@ -271,8 +280,8 @@
 					}
 					@include min(1400){
 						top: 15%;
-						left: 10%;
-						width: 25%;
+						left: 8%;
+						width: 22%;
 					}
 				}
 				&.-pic-05{// 左下
@@ -346,6 +355,8 @@
 					background: $main-color--w;
 					padding: 5px 4px 5px 3px;
 					transform: translate(-50%, -50%);
+					border-radius: 5px;
+					box-shadow: 3px 6px 5px 0px #00000021;
 					z-index: 11;
 					@include min(500){
 						padding: 1% .5%;
@@ -365,8 +376,8 @@
 						top: 18%;
 						left: 93%;
 						@include min(500){
-							top: 25%;
-							left: 88.5%;
+							top: 40%;
+							left: 80.5%;
 						}
 						@include min(1600){
 							top: 40%;
@@ -377,8 +388,8 @@
 						top: 20%;
 						left: 87%;
 						@include min(500){
-							top: 27%;
-							left: 82.5%;
+							top: 43%;
+							left: 76.5%;
 						}
 						@include min(1600){
 							top: 43%;
@@ -514,6 +525,28 @@
 				background: $main-color--Lgray;
 				background-position: 50% 50%;
 				@include max(500){height: 20vh;}
+
+				// 
+				max-width: 100%;
+				overflow: hidden;
+				.slash_position {
+					position: absolute;
+					stroke: #666; //線の色はここで調整
+				}
+				svg {
+					stroke-width: 1px; //線幅はここで調整
+					stroke-dasharray: 800;
+					stroke-dashoffset: 800;
+					animation: slash_line 3s; //線が流れる速さはここで調整
+					animation-timing-function: ease-in-out;
+					animation-direction: reverse;
+					opacity: 1;
+				}
+				//アニメーションの定義
+				@keyframes slash_line {
+					50% {stroke-dashoffset: 0;}
+					100% {stroke-dashoffset: -800;}
+				}
 			}
 		}
 	}
