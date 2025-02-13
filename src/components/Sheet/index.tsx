@@ -13,7 +13,7 @@ export default function Sheet({ children, title, mvClass, contentClass }: Props)
     return (
         <main>
             {/* メインビジュアル */}
-            <SingleMainVisual title={title} mvClass={mvClass}/>
+            <SingleMainVisual title={title} mvClass={mvClass} animationType="svg"/>
 
             {/* コンテンツ */}
             <div className={`c-contents pdt5 pdt10s pdb5 pdb10s ${contentClass || ''} `} >
