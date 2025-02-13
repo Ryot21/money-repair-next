@@ -4,8 +4,7 @@
 	position: relative;
 	width: 100%;
 	height: 100dvb;
-	background: $main-color--gray;
-
+	background: $site-color01;
 	animation: fadeAnime 3s forwards;
 	@include min(768){
 		animation: fadeAnime 2s forwards;

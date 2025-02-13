@@ -3,12 +3,15 @@
 .p-single{
 	background-size: 50px 15px;
 	// 背景（線状 > 斜め）
-	background-image: linear-gradient(
-		-45deg,
-		$main-color--Lgray,$main-color--Lgray 45%,
-		white 45.5%, white 54.5%,
-		$main-color--Lgray 55.5%, $main-color--Lgray
-	);
+	// background-image: linear-gradient(
+	// 	-45deg,
+	// 	$main-color--Lgray,$main-color--Lgray 45%,
+	// 	white 45.5%, white 54.5%,
+	// 	$main-color--Lgray 55.5%, $main-color--Lgray
+	// );
+	background: $site-color01;
+	animation: fadeAnime 2s forwards;
+
 	// 共通
 	&--title{
 		position: relative;
