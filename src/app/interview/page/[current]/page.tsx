@@ -36,17 +36,17 @@ export default async function Page({ params }: Props) {
       {/* 導入部分 */}
       <div className={"c-contents pdt2 pdt10s pdb5 pdb10s"}>
         <div className={"c-contents--inner"}>
-          <p className={"s-ML -s14 -center -ls-2 -lh-2"}>
+          <p className={"s-M -s14 -center -ls-2 -lh-2"}>
             マネーリペアをご利用された方々の
-            <span className={"s-ML -s14 -b -ls-2"}>率直な体験談</span>
+            <span className={"s-M -s14 -b -ls-2"}>率直な体験談</span>
             を集めました。
             <br className={"tb-pc"} />
             実際の体験を通じて、
-            <span className={"s-ML -s14 -b -ls-2"}>
+            <span className={"s-M -s14 -b -ls-2"}>
               どのように金融知識が深まり、
             </span>
             <br className={"tb-pc"} />
-            <span className={"s-ML -s14 -b -ls-2"}>
+            <span className={"s-M -s14 -b -ls-2"}>
               経済的な安心が得られたのかをご紹介します。
             </span>
             <br className={"tb-pc"} />
