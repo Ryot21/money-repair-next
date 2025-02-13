@@ -1,6 +1,5 @@
 
 import Image from "next/image";
-import Link from "next/link";
 import type { Information } from "@/libs/microcms";
 import Date from "@/components/Parts/Date";
 import CategoryLink from "@/components/Parts/Category/Link";
