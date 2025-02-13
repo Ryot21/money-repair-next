@@ -209,9 +209,16 @@
             border-radius: 8px;
             &:nth-child(1){
                 background: $main-color--w;
-                border: 1px solid $site-color03;
+                border: 1px solid $main-color--Dblue;
                 padding: 5%;
             }
+            // @include min(500) {
+            //     position: sticky;
+            //     top: 40px;
+            //     // overflow: scroll;
+            //     height: fit-content;
+            //     align-self: flex-start;
+            // }
             @include min(768){
                 &:nth-child(1){
                     width: 67%;

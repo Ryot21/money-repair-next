@@ -33,7 +33,7 @@ export default async function Article ({ data }: Props) {
                     {/* 日付 */}
                     <ul className={"c-flex -category -jc-st -h-cen mgb1 mgb2s"}>
                         <li className={"categoryItem"}></li>
-                        <li className={"categoryItem mgr3 mgr3s"}>
+                        <li className={"categoryItem mgr1 mgr3s"}>
                             <span className={"-ws-n pdr1 pdr1s"}>株式会社インプレーム</span>
                         </li>
                         {/* カテゴリー */}
@@ -86,26 +86,26 @@ export default async function Article ({ data }: Props) {
                     {data.captionLists &&
                         <ul className={"c-card-lists"}>
                             <li className={"c-card-item"}>
-                                <Link href="#detail01" className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle01}</Link>
+                                <p className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle01}</p>
                             </li>
                             {data.captionLists.captionTitle02 && 
                                 <li className={"c-card-item"}>
-                                    <Link href="#detail02" className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle02}</Link>
+                                    <p className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle02}</p>
                                 </li>
                             }
                             {data.captionLists.captionTitle03 && 
                                 <li className={"c-card-item"}>
-                                    <Link href="#detail03" className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle03}</Link>
+                                    <p className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle03}</p>
                                 </li>
                             }
                             {data.captionLists.captionTitle04 && 
                                 <li className={"c-card-item"}>
-                                    <Link href="#detail04" className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle04}</Link>
+                                    <p className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle04}</p>
                                 </li>
                             }
                             {data.captionLists.captionTitle05 && 
                                 <li className={"c-card-item"}>
-                                    <Link href="#detail05" className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle05}</Link>
+                                    <p className={"c-link -check s-M -s12 -b -ls-1 -lh-1_5"}>{data.captionLists.captionTitle05}</p>
                                 </li>
                             }
                         </ul>

@@ -101,8 +101,8 @@
   &.-fv {
     //ファーストビュー
     position: relative;
-    &.-top {
-      // TOP
+
+    &.-top {// TOP
       .imgBox {
         height: 110vh;
         @include min(500) {
@@ -639,9 +639,9 @@
         }
       }
     }
-    &.-single {
-      // 下層ページ
+    &.-single {// 下層ページ
       background: white;
+      border-bottom: 1px solid $main-color--Dblue;
       .imgBox {
         width: 100lvw;
         height: 20vh;

@@ -13,7 +13,7 @@ export default function ContactBottom() {
         <p className={"c-contents--description s-M -s12 pdb3 pdb10s"}>
           貴社の<span className={"-b"}>福利厚生</span>に新たな価値を加え、
           <br />
-          <span className={"b-text -y -f-gothic01 -b"}>
+          <span className={"-f-gothic01 -b"}>
             従業員のご家族を含めた資産形成と経済力
           </span>
           を<br className={"sp"} />

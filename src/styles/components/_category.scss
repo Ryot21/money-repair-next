@@ -18,7 +18,7 @@
         justify-content: center;
         .titleArea{
             background: $site-color03;
-            border: 3px solid $site-color03;
+            border: 1px solid $main-color--Dblue;
             border-radius: 30px 0 0 30px;
             margin-right: 5px;
             @include max(768){
@@ -43,9 +43,9 @@
         }
         .itemArea{
             width: auto;
-            padding: 8px 20px 8px 10px;
+            padding: 6px 20px 6px 10px;
             background: $main-color--gray;
-            border: 1px solid $site-color03;
+            border: 1px solid $main-color--Dblue;
             border-radius: 0 30px 30px 0;
             @include max(768){
                 width: 100%;
@@ -57,7 +57,7 @@
     &__lists{justify-content: start;}
     &__item{ // li
         background: $main-color--w;
-        border: 1px solid $site-color03;
+        border: 1px solid $main-color--Dblue;
         margin-right: 5px;
         border-radius: 3px;
         overflow: hidden;
@@ -66,7 +66,7 @@
         }
         a{
             display: block;
-            color: $site-color03;
+            color: $main-color--Dblue;
             font-size: 1rem;
             font-weight: bold;
             letter-spacing: .2rem;

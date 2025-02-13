@@ -12,3 +12,17 @@
         }
     }
 }
+
+.time{
+    line-height: .5;
+    img{
+        display: inline-block;
+        width: auto;
+        height: auto;
+        vertical-align: -2px;
+        padding-right: 5px;
+        @include min(500){
+            vertical-align: -.5px;
+        }
+    }
+}

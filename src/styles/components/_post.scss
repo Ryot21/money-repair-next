@@ -90,13 +90,16 @@
         }
         &__item{ // li
             width: auto;
-            padding: 3px 5px 2px;
+            padding: 2px 5px 2px;
             margin-right: 5px;
             background: $main-color--w;
-            border: 1px solid $site-color03;
+            border: 1px solid $main-color--Dblue;
             border-radius: 3px;
-            p{
-                color: $site-color03;
+            @include min(500){
+                padding: 3px 5px 2px;
+            }
+            p,span{
+                color: $main-color--Dblue !important;
                 font-size: clamp(.8rem, 1.2vw, 1rem);
                 font-weight: bold;
                 white-space: nowrap;

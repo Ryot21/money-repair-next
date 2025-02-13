@@ -6,7 +6,7 @@
 
     &.-t01{// 投稿者
         background: $main-color--w;
-        border: 4px double $site-color03;
+        border: 4px double $main-color--Dblue;
         .c-card-lists{//ul
             display: flex;
             flex-wrap: nowrap;
@@ -94,7 +94,7 @@
     &.-t02{// 内部リンク > 合わせて読みたい
         position: relative;
         top: 0;
-        border: 1px solid $site-color03;
+        border: 1px solid $main-color--Dblue;
         overflow: visible;
         transition: all .3s;
 
@@ -204,7 +204,7 @@
         position: relative;
         width: 100%;
         background: $main-color--w;
-        border: 1px solid $site-color03;
+        border: 1px solid $main-color--Dblue;
         border-radius: 5px;
         h2{
             font-size: clamp(1.6rem, 2vw, 2rem);
@@ -256,7 +256,7 @@
             &.-h2-lists{
                 .c-card-item{
                     position: relative;
-                    margin: 5px 0 15px 20px;
+                    margin: 5px 0 5px 20px;
                     a,
                     a::before{
                         font-size: clamp(1.4rem, 1.5vw, 1.6rem);
@@ -337,7 +337,7 @@
     &.-t04{// お悩み
         position: relative;
         padding: 30px 10px 20px 10px;
-        border: 1px solid $site-color03;
+        border: 1px solid $main-color--Dblue;
         border-radius: 5px;
         overflow: visible;
         @include min(500){padding: 30px 20px 20px 0;}
@@ -358,6 +358,8 @@
             z-index: 1;
         }
         .c-card-lists{//ul
+            @include min(500){padding-left: 10px;}
+            @include min(1000){padding-left: 15px;}
             .c-card-item{
                 width: 100% !important;
                 margin: 0 0 10px 0;

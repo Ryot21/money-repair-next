@@ -50,7 +50,7 @@ export default function Article ({ data }: Props) {
                     {/* 日付 */}
                     <ul className="c-flex -category -jc-st -h-cen mgb1 mgb2s">
                         <li className="categoryItem"></li>
-                        <li className="categoryItem mgr3 mgr3s">
+                        <li className="categoryItem mgr1 mgr3s">
                             <span className="-ws-n pdr1 pdr1s">{data.company}</span>
                         </li>
                         {/* カテゴリー */}

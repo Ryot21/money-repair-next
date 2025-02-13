@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./index.module.scss";
 import { formatDate } from "@/libs/utils";
 
 type Props = {
@@ -8,14 +7,14 @@ type Props = {
 
 export default function Date({ date } : Props) {
     return (
-        <time dateTime={formatDate(date)} className={`${styles.time}`}>
+        <time dateTime={formatDate(date)} className={"time"}>
             <Image
                 src="/images/SVG/clock.svg"
                 alt="時計"
                 width={12}
                 height={12}
             />
-            <span className={"s-SS -s12 -left -b -ls-2"}>{formatDate(date)}</span>
+            <span className={"s-SS -s10 -left -b -ls-2"}>{formatDate(date)}</span>
         </time>
     );
 }

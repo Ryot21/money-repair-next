@@ -22,8 +22,7 @@
 			display: block;
 			width: 100%;
 			height: 1px;
-			border-bottom: 4px dotted $site-color03;
-
+			border-bottom: 4px dotted $main-color--b;
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -42,28 +41,32 @@
 			}
 		}
 		span{
-			font-size: clamp(1rem, 2vw, 2rem);
+			font-size: clamp(1rem, 2vw, 1.6rem);
 			font-weight: bold;
 			letter-spacing: .2rem;
 		}
 		h1{
-			font-size: clamp(1.8rem, 2vw, 3.2rem);
+			color: $main-color--Dblue;
+			font-size: clamp(1.8rem, 2vw, 3rem);
 			font-weight: bold;
 			letter-spacing: .2rem;
 			padding-bottom: 10px;
 		}
 	}
 	&--category{// a
-		color: $site-color03;
+		color: $main-color--Dblue;
 		font-size: clamp(.8rem, 1.2vw, 1rem);
 		font-weight: bold;
 		white-space: nowrap;
-		padding: 3px 5px 4px;
+		padding: 2px 5px 2px;
 		margin-right: 5px;
 		background: $main-color--w;
-		border: 1px solid $site-color03;
+		border: 1px solid $main-color--Dblue;
 		border-radius: 3px;
 		transition: all .5s;
+		@include min(500){
+			padding: 3px 5px 4px;
+		}
 		&:hover{
 			color: $main-color--w;
 			background: $site-color03;
@@ -453,7 +456,7 @@
 				}
 				h3{// 中タイトル
 					position: relative;
-					font-size: clamp(1.6rem, 2vw, 2.4rem);
+					font-size: clamp(1.5rem, 2vw, 2.4rem);
 					padding: 2% 2%;
 					margin-bottom: 3%;
 					&::before{
