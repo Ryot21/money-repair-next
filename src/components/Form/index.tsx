@@ -53,7 +53,7 @@ export default function ContactForm({ customClass }: Props) {
     const type = searchParams.get('type');
 
     const [formData, setFormData] = useState({
-        purpose: type === 'download' ? '資料請求' : type === 'contact' ? 'お問い合わせ' : '',
+        purpose: type === 'download' ? '資料ダウンロード' : type === 'contact' ? 'お問い合わせ' : '',
         company: "",
         name: "",
         phone: "",
@@ -222,7 +222,7 @@ export default function ContactForm({ customClass }: Props) {
                                 required
                             >
                                 <option value="">選択して下さい</option>
-                                <option value="資料請求">資料請求</option>
+                                <option value="資料ダウンロード">資料ダウンロード</option>
                                 <option value="お問い合わせ">お問い合わせ</option>
                             </select>
                         </td>

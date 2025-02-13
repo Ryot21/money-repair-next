@@ -46,8 +46,8 @@
 		text-align: center;
 		color : $main-color--w !important;
 		font-family: $f-gothic01;
-		background: $site-color03;
-		border: 1px solid $site-color03;
+		background: $main-color--Dblue;
+		border: 1px solid $main-color--Dblue;
 		padding: 10px 20px;
 		border-radius: 30px;
 		overflow: hidden;
@@ -55,7 +55,7 @@
 		transition: all .3s;
 
 		&:hover{
-			color: $site-color03 !important;
+			color: $main-color--Dblue !important;
 			background: $main-color--w;
 			padding: 10px 30px;
 		}

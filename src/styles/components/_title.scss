@@ -50,7 +50,7 @@
     &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
     &.-news     {&::before{content: "Information"; white-space: nowrap;}}//お役立ち情報
     &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}//お問い合わせ
-    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}//資料請求
+    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}//資料ダウンロード
     &.-point    {&::before{content: "POINT"; white-space: nowrap;}}//特徴
 
     // 画像
@@ -71,7 +71,7 @@
 .c-contents--description{
     text-align: center;
     letter-spacing: .2rem;
-    line-height: 1.5;
+    line-height: 2;
 }
 
 // 各ページ > ファーストビュー内のタイトル

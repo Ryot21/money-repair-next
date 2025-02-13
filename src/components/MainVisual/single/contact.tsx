@@ -14,7 +14,7 @@ export default function ContactMainVisual({ mvClass, customClass = '' }: Props) 
     const getTitle = () => {
         switch (type) {
             case 'download':
-                return '資料請求';
+                return '資料ダウンロード';
             case 'contact':
                 return 'お問い合わせ';
         }

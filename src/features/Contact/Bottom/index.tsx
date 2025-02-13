@@ -8,9 +8,9 @@ export default function ContactBottom() {
         <h2
           className={"c-contents--title -contact -ls-1 -en-color03 pdb3 pdb10s"}
         >
-          資料請求&お問い合わせ
+          資料ダウンロード
         </h2>
-        <p className={"c-contents--description s-S -s12 pdb3 pdb10s"}>
+        <p className={"c-contents--description s-M -s12 pdb3 pdb10s"}>
           貴社の<span className={"-b"}>福利厚生</span>に新たな価値を加え、
           <br />
           <span className={"b-text -y -f-gothic01 -b"}>
@@ -22,7 +22,7 @@ export default function ContactBottom() {
           <span className={"-b"}>『マネーリペア』をぜひご利用ください。</span>
         </p>
         {/* パンフレット・2024年版 */}
-        <div className={"imgBox w80 w100s pdb3 pdb10s"}>
+        <div className={"imgBox w80 w100s pdb5 pdb10s"}>
           <Image
             src="/images/item/pf-2024.png"
             alt="マネーリペア2024"
@@ -35,17 +35,17 @@ export default function ContactBottom() {
             <li className={"cvItem mgb5s"}>
               <p
                 className={
-                  "s-S -s12 -blur-b03 -f-gothic01 -center -ls-2 mgb2 mgb3s"
+                  "s-M -s12 -blur-b03 -f-gothic01 -center -ls-2 mgb5 mgb3s"
                 }
               >
                 <span className={"-f-gothic01 -b"}>お役立ち資料</span>はこちら
               </p>
-              <PageButtonLink href="/contact?type=download">資料請求</PageButtonLink>
+              <PageButtonLink href="/contact?type=download">資料ダウンロード</PageButtonLink>
             </li>
             <li className={"cvItem"}>
               <p
                 className={
-                  "s-S -s12 -blur-b03 -f-gothic01 -center -ls-2 mgb2 mgb3s"
+                  "s-M -s12 -blur-b03 -f-gothic01 -center -ls-2 mgb5 mgb3s"
                 }
               >
                 お気軽にお問い合わせ下さい。
