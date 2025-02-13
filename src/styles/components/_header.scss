@@ -27,6 +27,9 @@
   &.is-visible {
     transform: translateY(0);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include min(500) {
+      padding: .65% 0 .75%;
+    }
   }
 
   // 非表示状態

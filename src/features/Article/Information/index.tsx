@@ -135,10 +135,11 @@ export default async function Article ({ data }: Props) {
                 />
             </li>
             {/* サイドバー */}
-            <li className={"singleItem"}>
-                <div className={"c-sideber"}>
-                    {/* 検索窓 */}
-                    <SearchField />
+            <li className={"singleItem c-sideber"}>
+                {/* 検索窓 */}
+                <SearchField />
+                {/* 固定エリア */}
+                <div className={"c-sideber--sticky"}>
                     {/* 目次 */}
                     <TableOfContents content={data.article} isSidebar={true} />
                     {/* cta */}

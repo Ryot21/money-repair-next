@@ -58,11 +58,11 @@ export default function TableOfContents({ content, isSidebar = false }: TableOfC
     }, [content]);
 
     const containerClass = isSidebar 
-        ? "c-card -t03 mgt10 mgb10 mgb10s"
-        : "sp c-card -t03 mgb10 mgb10s";
+        ? "mgt7 tb-pc"
+        : "sp";
 
     return (
-        <div className={containerClass}>
+        <div className={`c-card -t03 ${containerClass}`}>
             <h2>目次</h2>
             <ul className={"c-card-lists -h2-lists"}>
                 {tocItems.map((h2Item) => (
