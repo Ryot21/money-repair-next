@@ -19,7 +19,7 @@ export default function InformationList({ contents }: Props) {
         <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb10s"}>
           <Link href={`/information/${article.id}`} className={"c-post--link"}>
             {/* バナー画像 */}
-            <div className={"c-thumbnail -news mgb3 mgb3s"}>
+            <div className={"c-thumbnail -news"}>
               <div className={"imgBox"}>
                 <Image
                   src="/images/item/news/news-thumbnail.png"
@@ -58,23 +58,25 @@ export default function InformationList({ contents }: Props) {
               </div>
             </div>
             {/* テキストエリア */}
-            <div className={"c-date mgb2 mgb1s"}>
-              <ul className={"c-date__lists c-flex -col2"}>
-                <li className={"c-date__item"}>
-                  <Date date={article.publishedAt || article.createdAt} />
-                </li>
-                <li className={"c-date__item"}>
-                  <ul className={"c-post--category__lists c-flex -h-cen"}>
-                    <li className={"c-post--category__item"}>
-                      <Category category={article.category} />
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <div className={"c-post--data"}>
+              <div className={"c-date mgb2 mgb1s"}>
+                <ul className={"c-date__lists c-flex -col2"}>
+                  <li className={"c-date__item"}>
+                    <Date date={article.publishedAt || article.createdAt} />
+                  </li>
+                  <li className={"c-date__item"}>
+                    <ul className={"c-post--category__lists c-flex -h-cen"}>
+                      <li className={"c-post--category__item"}>
+                        <Category category={article.category} />
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <h3 className={"c-post--title s-M -s16 -left -b -ls-2"}>
+                {article.mainTitle}
+              </h3>
             </div>
-            <h3 className={"c-post--title s-ML -s16 -left -b -ls-1"}>
-              {article.mainTitle}
-            </h3>
           </Link>
         </li>
       ))}
