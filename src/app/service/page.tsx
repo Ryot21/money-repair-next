@@ -5,7 +5,7 @@ export default function Page(){
     return(
         <div>
             {/* マネーリペアとは */}
-            <div className={"c-contents--introduction  pdt10s mgb5s"}>
+            <div className={"c-contents--introduction  pdt5s mgb5s"}>
                 {/* <lottie-player
                     id="lottie-scroll-trigger"
                     className={"lottie--logo"}

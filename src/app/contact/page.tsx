@@ -4,11 +4,11 @@ export default function Page(){
     return (
         <>
             {/* 導入部分 */}
-            <div className="c-contents pdt5 pdt10s pdb10 pdb10s">
+            <div className="c-contents pdt5 pdt5s pdb10 pdb10s">
                 <div className="c-contents--inner">
-                    <p className="s-M -s14 -center -ls-2 -lh-2 pdb10 pdb10s">
-                        こちらのフォームから必要事項をご入力ください。<br className="tb-pc" />
-                        お問い合わせの内容を確認後、<br className="tb-pc" />
+                    <p className="s-M -s12 -center -ls-2 -lh-2 pdb10 pdb10s">
+                        こちらのフォームからご入力ください。<br />
+                        お問い合わせの内容を確認後、<br />
                         担当者より3営業日以内にご連絡いたします。
                     </p>
                     {/* STEP */}
