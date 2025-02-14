@@ -57,6 +57,42 @@ export default function TableOfContents({ content, isSidebar = false }: TableOfC
         generateToc();
     }, [content]);
 
+    useEffect(() => {
+        // スクロール位置を調整するための関数を追加
+        const handleClick = (e: MouseEvent) => {
+            const target = e.target as Element;
+            const anchor = target.closest('a');
+            if (anchor instanceof HTMLAnchorElement) {
+                e.preventDefault();
+                const targetId = anchor.getAttribute('href');
+                if (targetId) {
+                    const element = document.querySelector(targetId);
+                    if (element) {
+                        // ヘッダーの高さを考慮してスクロール位置を調整（『目次』と同じ位置に調整）
+                        const offsetTop = element.getBoundingClientRect().top + window.scrollY - 57;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }
+        };
+
+        // クリックイベントリスナーを追加
+        const tocLists = document.querySelectorAll('.c-card-lists');
+        tocLists.forEach(list => {
+            list.addEventListener('click', handleClick as EventListener);
+        });
+
+        // クリーンアップ関数
+        return () => {
+            tocLists.forEach(list => {
+                list.removeEventListener('click', handleClick as EventListener);
+            });
+        };
+    }, [tocItems]);
+
     const containerClass = isSidebar 
         ? "mgt7 tb-pc"
         : "sp";
