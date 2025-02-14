@@ -121,10 +121,10 @@ export default function SingleMainVisual({
           </div>
         )}
       </div>
-      <div className={"c-contents--inner"}>
+      <div className={"c-contentsBox -center"}>
         {/* ページタイトル */}
         <h1
-          className={`c-page-title s-LL -s20 -center -b -ls-2 ${
+          className={`c-page-title s-L -s20 -center -b -ls-2 ${
             mvClass || ""
           } `}
         >

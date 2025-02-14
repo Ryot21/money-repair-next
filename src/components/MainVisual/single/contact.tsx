@@ -23,7 +23,7 @@ export default function ContactMainVisual({ mvClass, customClass = '' }: Props) 
     return (
         <div className={`c-contents -imgBg -fv -single ${customClass}`}>
             <div className={"imgBox"}></div>
-            <div className={"c-contents--inner"}>
+            <div className={"c-contentsBox -center"}>
                 {/* ページタイトル */}
                 <h1 className={`c-page-title s-L -s20 -center -b -ls-2 ${mvClass || ''} `}>{getTitle()}</h1>
                 {/* パンくず 今後実装予定 */}
