@@ -1,7 +1,6 @@
 // サイドバー関係
 
 .c-sideber {
-
   @include max(500) {
     display: grid;
 
@@ -33,7 +32,7 @@
         padding: 0 15px;
         border-radius: 5px 0 0 5px;
         background: $main-color--w;
-        border: 1px solid $main-color--Dblue;
+        border: 1px solid $site-color03;
         outline: 0;
       }
       button {
@@ -43,7 +42,7 @@
         font-size: clamp(1.2rem, 1.5vw, 1.6rem);
         font-weight: bold;
         background: $site-color03;
-        border: 1px solid $main-color--Dblue !important;
+        border: 1px solid $site-color03 !important;
         border-radius: 0 5px 5px 0;
         border: none;
         letter-spacing: 0.5rem;
@@ -52,7 +51,7 @@
         cursor: pointer;
 
         &:hover {
-          background: $main-color--Dblue;
+          background: $site-color03;
         }
       }
     }
@@ -60,8 +59,8 @@
 
   &--sticky {
     @include min(500) {
-        position: sticky;
-        top: 57px;
+      position: sticky;
+      top: 57px;
     }
   }
 
@@ -82,14 +81,15 @@
     width: 100%;
     padding: 10% 5%;
     background: $main-color--w;
-    border: 1px solid $main-color--Dblue;
+    border: 1px solid $site-color03;
     border-radius: 5px;
     @include min(500) {
-        padding: 10% 5% 5% 5%;
+      padding: 15% 5% 10% 5%;
     }
-    
-    p,span {
-      font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+
+    p,
+    span {
+      font-size: 1.2rem;
     }
   }
 }

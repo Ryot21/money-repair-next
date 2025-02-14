@@ -8,7 +8,7 @@
   background: #fff;
   z-index: 1000;
   padding: 15px 0;
-  border-bottom: 1px solid $main-color--Dblue;
+  border-bottom: 1px solid $site-color03;
   transform: translateY(0);
   transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, padding, background-color;
@@ -28,7 +28,7 @@
     transform: translateY(0);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     @include min(500) {
-      padding: .65% 0 .75%;
+      padding: 0.65% 0 0.75%;
     }
   }
 

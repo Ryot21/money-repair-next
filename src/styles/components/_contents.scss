@@ -62,7 +62,7 @@
     &.-card {
       padding: 10% 2.5% 10%;
       border-radius: 10px;
-      border: 1px solid $main-color--Dblue;
+      border: 1px solid $site-color03;
       box-shadow: 0px 0px 5px #8080802b;
       @include min(768) {
         padding: 6% 2.5% 5%;
@@ -105,7 +105,8 @@
     //ファーストビュー
     position: relative;
 
-    &.-top {// TOP
+    &.-top {
+      // TOP
       .imgBox {
         height: 110vh;
         @include min(500) {
@@ -549,7 +550,7 @@
               top: auto;
               bottom: -1rem;
               height: 1px;
-              background: $main-color--Dblue;
+              background: $site-color03;
             }
             &::before {
               left: 0;
@@ -568,7 +569,7 @@
             }
             span {
               display: inline-block;
-              color: $main-color--Dblue;
+              color: $site-color03;
               font-weight: bold;
               background: $main-color--w;
               padding: 0.5rem 0.75rem;
@@ -581,7 +582,7 @@
                 left: 28px;
                 width: 25px;
                 height: 1px;
-                background: $main-color--Dblue;
+                background: $site-color03;
                 transform: rotate(30deg);
                 @include min(768) {
                   left: 60px;
@@ -606,7 +607,7 @@
             span {
               background: linear-gradient(
                 55deg,
-                $main-color--Dblue 0%,
+                $site-color03 0%,
                 #5399df 100%
               );
               background-clip: text;
@@ -635,27 +636,35 @@
               transform: translateY(-50%);
               width: 2px;
               height: 65%;
-              background: $main-color--Dblue;
+              background: $site-color03;
               border-radius: 5px;
             }
           }
         }
       }
     }
-    &.-single {// 下層ページ
+    &.-single {
+      // 下層ページ
       background: white;
-      border-bottom: 1px solid $main-color--Dblue;
+      border-bottom: 1px solid $site-color03;
       .imgBox {
         width: 100lvw;
         height: 20vh;
         max-height: 480px !important;
         position: relative;
-        background: linear-gradient(220deg, rgba(235, 249, 255, 0.367), rgb(110 133 166 / 36%));
+        background: linear-gradient(
+          220deg,
+          rgba(235, 249, 255, 0.367),
+          rgb(110 133 166 / 36%)
+        );
         overflow: hidden;
 
-        @include min(768)  {height: 30vh;}
-        @include min(1200) {height: 40vh;}
-
+        @include min(768) {
+          height: 30vh;
+        }
+        @include min(1200) {
+          height: 40vh;
+        }
 
         // 回転アニメーション
         &.-rotate {
@@ -771,7 +780,7 @@
               #Dblue {
                 fill: none;
                 opacity: 0.15;
-                stroke: $main-color--Dblue;
+                stroke: $site-color03;
                 stroke-width: 5;
                 stroke-miterlimit: 10;
                 stroke-dasharray: 800;
@@ -783,7 +792,7 @@
               #gray {
                 fill: none;
                 opacity: 0.15;
-                stroke: $main-color--Dblue;
+                stroke: $site-color03;
                 stroke-width: 1;
                 stroke-miterlimit: 10;
                 stroke-dasharray: 800;
@@ -802,20 +811,34 @@
               }
 
               @keyframes draw {
-                to {stroke-dashoffset: 0;}
+                to {
+                  stroke-dashoffset: 0;
+                }
               }
 
               @keyframes show {
-                0% {opacity: 0;}
-                70% {opacity: 0;}
-                80% {opacity: 0.2;}
-                100% {opacity: 1;}
+                0% {
+                  opacity: 0;
+                }
+                70% {
+                  opacity: 0;
+                }
+                80% {
+                  opacity: 0.2;
+                }
+                100% {
+                  opacity: 1;
+                }
               }
 
               // 斜め線のアニメーション
               @keyframes slash_line {
-                90% {stroke-dashoffset: 0;}
-                100% {stroke-dashoffset: -800;}
+                90% {
+                  stroke-dashoffset: 0;
+                }
+                100% {
+                  stroke-dashoffset: -800;
+                }
               }
             }
           }

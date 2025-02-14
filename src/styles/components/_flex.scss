@@ -1,239 +1,353 @@
 // フレックス
-.c-flex{
-    display: flex;
-    flex-wrap: wrap;
+.c-flex {
+  display: flex;
+  flex-wrap: wrap;
 
-    // 【 横_位置 】
-    &.-jc-sb   {justify-content: space-between;}// 両端
-    &.-jc-sb_s {@include max(768){justify-content: space-between;}}
-    &.-jc-cen    {justify-content: center;}// 真ん中
-    &.-jc-cen_s  {@include max(768){justify-content: center;}}
-    &.-jc-st    {justify-content: start;}// 左寄
-    &.-jc-st_s  {@include max(768){justify-content: start;}}
-    &.-jc-end    {justify-content: end;}// 右寄
-    &.-jc-end_s  {@include max(768){justify-content: end;}}
+  // 【 横_位置 】
+  &.-jc-sb {
+    justify-content: space-between;
+  } // 両端
+  &.-jc-sb_s {
+    @include max(768) {
+      justify-content: space-between;
+    }
+  }
+  &.-jc-cen {
+    justify-content: center;
+  } // 真ん中
+  &.-jc-cen_s {
+    @include max(768) {
+      justify-content: center;
+    }
+  }
+  &.-jc-st {
+    justify-content: start;
+  } // 左寄
+  &.-jc-st_s {
+    @include max(768) {
+      justify-content: start;
+    }
+  }
+  &.-jc-end {
+    justify-content: end;
+  } // 右寄
+  &.-jc-end_s {
+    @include max(768) {
+      justify-content: end;
+    }
+  }
 
-    //【 縦_位置 】
-    &.-h-cen    {align-items: center;}// 真ん中
-    &.-h-cen_pc {@include min(768){align-items: center;}}
-    &.-h-top    {align-items: flex-start;}// 上
-    &.-h-top_pc {@include min(768){align-items: flex-start;}}
-    &.-h-btm    {align-items: flex-end;}// 下
-    &.-h-btm_pc {@include min(768){align-items: flex-end;}}
+  //【 縦_位置 】
+  &.-h-cen {
+    align-items: center;
+  } // 真ん中
+  &.-h-cen_pc {
+    @include min(768) {
+      align-items: center;
+    }
+  }
+  &.-h-top {
+    align-items: flex-start;
+  } // 上
+  &.-h-top_pc {
+    @include min(768) {
+      align-items: flex-start;
+    }
+  }
+  &.-h-btm {
+    align-items: flex-end;
+  } // 下
+  &.-h-btm_pc {
+    @include min(768) {
+      align-items: flex-end;
+    }
+  }
 
-    // 【 反転 】
-    &.-r{ flex-direction: row-reverse !important;}
-    &.-r_s{ @include max(768){flex-direction: row-reverse !important;}}
-    &.-cr{ flex-direction: column-reverse !important;}
-    &.-cr_s{ @include max(768){flex-direction: column-reverse !important;}}
+  // 【 反転 】
+  &.-r {
+    flex-direction: row-reverse !important;
+  }
+  &.-r_s {
+    @include max(768) {
+      flex-direction: row-reverse !important;
+    }
+  }
+  &.-cr {
+    flex-direction: column-reverse !important;
+  }
+  &.-cr_s {
+    @include max(768) {
+      flex-direction: column-reverse !important;
+    }
+  }
 
-
-    // コンテンツ_カラム（sp:pc 1:2）
-    &.-col1_2{
-        .flexItem{// li
-            width: 100%;
-            @include min(768){width: 48.5%;}
+  // コンテンツ_カラム（sp:pc 1:2）
+  &.-col1_2 {
+    .flexItem {
+      // li
+      width: 100%;
+      @include min(768) {
+        width: 48.5%;
+      }
+    }
+    &.-pc2_1 {
+      .flexItem {
+        @include min(768) {
+          &:nth-child(1) {
+            width: 35%;
+          }
+          &:nth-child(2) {
+            width: 63%;
+          }
         }
-        &.-pc2_1{
-            .flexItem{
-                @include min(768){
-                    &:nth-child(1){width: 35%;}
-                    &:nth-child(2){width: 63%;}
-                }
-            }
-        }
+      }
     }
-    // コンテンツカラム（sp:pc 2:2）
-    &.-col2{
-        .flexItem{width: 48.5%;}// li
+  }
+  // コンテンツカラム（sp:pc 2:2）
+  &.-col2 {
+    .flexItem {
+      width: 48.5%;
+    } // li
+  }
+  // コンテンツ_カラム（sp:大1小2、pc:3）
+  &.-col2M1_3 {
+    .flexItem {
+      // li
+      width: 48.5%;
+      @include min(768) {
+        width: 32%;
+      }
     }
-    // コンテンツ_カラム（sp:大1小2、pc:3）
-    &.-col2M1_3{
-        .flexItem{// li
-            width: 48.5%;
-            @include min(768){width: 32%;}
-        }
-        .flexItem_M{
-            @include max(768){width: 100%;}
-            @include min(768){width: 32%;}
-        }
-    }
-    // コンテンツ_カラム（sp:1 pc:大1小2）
-    &.-col1_2M1{
-        .flexItem{// li
-            width: 100%;
-            @include min(768){width:48.5%}
-        }
-        .flexItem_M{
-            @include max(768){width: 100%;}
-            @include min(768){width: 100%;}
-        }
-    }
-    // コンテンツ_カラム（sp:2 pc:3）
-    &.-col2_3{
-        .flexItem{// li
-            width: 50%;
-            @include min(768){width: 33.3333%;}
-        }
-    }
-    // コンテンツカラム（sp:pc 2:4）
-    &.-col2_4{
-        .flexItem{
-            width: 48.5%;
-            @include min(768){width: 23.5%;}
-        }
-    }
-    // コンテンツ_カラム（sp,pc:3）
-    &.-co3{
-        .flexItem{width: calc(100%/3 - 10px);}
-    }
-    // コンテンツカラム（sp:pc 4）
-    &.-col4{
-        .flexItem{
-            width: 23.5%;
-            height: auto;
-        }// li
-    }
-    // コンテンツ_カラム（sp,pc:5）
-    &.-col5{
-        .flexItem{width: calc(100%/5 - 10px);}
-    }
-
-
-    // header > ナビ＋コンタクト
-    &.-nav-contact{
-        height: 100%;
-        .flexItem{
-            &.-pageLink{
-                @include min(500){width: 68%;}
-            }
-            &.-contact{
-                @include min(500){
-                    width: 27%;
-                    height: 100%;
-                    background: $main-color--red;
-
-                    // border-radius: 0 15px 15px 0;
-                    will-change: transform;
-                    transition: all .5s;
-                    &:hover{
-                        background: $main-color--orange;
-                    }
-                }
-            }
-        }
-    }
-    // cvエリア
-    &.-cvArea{
-        .cvItem{
-            width: 100%;
-            @include min(500){width: 40%;}
-
-            &:nth-child(2){
-                a{
-                    background: $main-color--red;
-                    border: 1px solid $main-color--red;
-                    &:hover{
-                        color: $main-color--red !important;
-                        background: $main-color--w;
-                    }
-                }
-            }
-        }// li
-    }
-    // footer関係
-    &.-footer{
-        .flexItem{
-            &.-logoArea,
-            &.-snsArea{
-                @include max(500){display: contents;}
-                @include max(500){
-                    .logo      {order: 1;}
-                    .siteMap   {order: 3;}
-                    .snsBox    {order: 2;}
-                    .copyright {order: 4;}
-                }
-            }
-
-            &.-logoArea{
-                width: 100%;
-                @include min(500){width: 65%;}
-                @include min(768){width: 55%;}
-                .logo{
-                    width: 50%;
-                    max-width: 250px;
-                    @include max(500){margin: 0 auto;}
-                }
-            }
-            &.-snsArea{
-                width: 100%;
-                @include min(500){width: 35%;}
-                @include min(768){width: 45%;}
-                p{width: 100%;}
-            }
-        }
-    }
-    // Logo関係
-    &.-sns{
+    .flexItem_M {
+      @include max(768) {
         width: 100%;
-        @include min(768){
-            width: 50%;
-            margin-right: 0;
-            margin-left: auto;
-        }
-        .flexItem{
-            &.-snsLogoArea{
-                width: 22%;
-                @include min(768){width: 20%;}
-            }
-        }
-        &.snsBox{
-            @include max(768){
-                width: 55%;
-                margin: 0 auto;
-            }
-        }
+      }
+      @include min(768) {
+        width: 32%;
+      }
     }
+  }
+  // コンテンツ_カラム（sp:1 pc:大1小2）
+  &.-col1_2M1 {
+    .flexItem {
+      // li
+      width: 100%;
+      @include min(768) {
+        width: 48.5%;
+      }
+    }
+    .flexItem_M {
+      @include max(768) {
+        width: 100%;
+      }
+      @include min(768) {
+        width: 100%;
+      }
+    }
+  }
+  // コンテンツ_カラム（sp:2 pc:3）
+  &.-col2_3 {
+    .flexItem {
+      // li
+      width: 50%;
+      @include min(768) {
+        width: 33.3333%;
+      }
+    }
+  }
+  // コンテンツカラム（sp:pc 2:4）
+  &.-col2_4 {
+    .flexItem {
+      width: 48.5%;
+      @include min(768) {
+        width: 23.5%;
+      }
+    }
+  }
+  // コンテンツ_カラム（sp,pc:3）
+  &.-co3 {
+    .flexItem {
+      width: calc(100% / 3 - 10px);
+    }
+  }
+  // コンテンツカラム（sp:pc 4）
+  &.-col4 {
+    .flexItem {
+      width: 23.5%;
+      height: auto;
+    } // li
+  }
+  // コンテンツ_カラム（sp,pc:5）
+  &.-col5 {
+    .flexItem {
+      width: calc(100% / 5 - 10px);
+    }
+  }
 
-    // カテゴリー関係
-    &.-category{
-        .categoryItem{
-            width: auto;
-            margin-right: 5px;
+  // header > ナビ＋コンタクト
+  &.-nav-contact {
+    height: 100%;
+    .flexItem {
+      &.-pageLink {
+        @include min(500) {
+          width: 68%;
         }
-    }
+      }
+      &.-contact {
+        @include min(500) {
+          width: 27%;
+          height: 100%;
+          background: $main-color--red;
 
-    // 詳細ページ
-    &.-single-lists{
-        .singleItem{
-            border-radius: 8px;
-            &:nth-child(1){
-                background: $main-color--w;
-                border: 1px solid $main-color--Dblue;
-                padding: 5%;
-            }
-            // @include min(500) {
-            //     position: sticky;
-            //     top: 40px;
-            //     // overflow: scroll;
-            //     height: fit-content;
-            //     align-self: flex-start;
-            // }
-            @include min(768){
-                &:nth-child(1){
-                    width: 67%;
-                    padding: 3% 2.5%;
-                }
-                &:nth-child(2){width: 30%;}
-            }
+          // border-radius: 0 15px 15px 0;
+          will-change: transform;
+          transition: all 0.5s;
+          &:hover {
+            background: $main-color--orange;
+          }
         }
+      }
     }
+  }
+  // cvエリア
+  &.-cvArea {
+    .cvItem {
+      width: 100%;
+      @include min(500) {
+        width: 40%;
+      }
 
-    // 詳細ページ > 別記事紹介
-    &.-article-lists{
-        .articleItem{
-            width: 48.5%;
-            margin-bottom: 5%;
+      &:nth-child(2) {
+        a {
+          background: $main-color--red;
+          border: 1px solid $main-color--red;
+          &:hover {
+            color: $main-color--red !important;
+            background: $main-color--w;
+          }
         }
+      }
+    } // li
+  }
+  // footer関係
+  &.-footer {
+    .flexItem {
+      &.-logoArea,
+      &.-snsArea {
+        @include max(500) {
+          display: contents;
+        }
+        @include max(500) {
+          .logo {
+            order: 1;
+          }
+          .siteMap {
+            order: 3;
+          }
+          .snsBox {
+            order: 2;
+          }
+          .copyright {
+            order: 4;
+          }
+        }
+      }
+
+      &.-logoArea {
+        width: 100%;
+        @include min(500) {
+          width: 65%;
+        }
+        @include min(768) {
+          width: 55%;
+        }
+        .logo {
+          width: 50%;
+          max-width: 250px;
+          @include max(500) {
+            margin: 0 auto;
+          }
+        }
+      }
+      &.-snsArea {
+        width: 100%;
+        @include min(500) {
+          width: 35%;
+        }
+        @include min(768) {
+          width: 45%;
+        }
+        p {
+          width: 100%;
+        }
+      }
     }
+  }
+  // Logo関係
+  &.-sns {
+    width: 100%;
+    @include min(768) {
+      width: 50%;
+      margin-right: 0;
+      margin-left: auto;
+    }
+    .flexItem {
+      &.-snsLogoArea {
+        width: 22%;
+        @include min(768) {
+          width: 20%;
+        }
+      }
+    }
+    &.snsBox {
+      @include max(768) {
+        width: 55%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // カテゴリー関係
+  &.-category {
+    .categoryItem {
+      width: auto;
+      margin-right: 5px;
+    }
+  }
+
+  // 詳細ページ
+  &.-single-lists {
+    .singleItem {
+      border-radius: 8px;
+      &:nth-child(1) {
+        background: $main-color--w;
+        border: 1px solid $site-color03;
+        padding: 5%;
+      }
+      // @include min(500) {
+      //     position: sticky;
+      //     top: 40px;
+      //     // overflow: scroll;
+      //     height: fit-content;
+      //     align-self: flex-start;
+      // }
+      @include min(768) {
+        &:nth-child(1) {
+          width: 67%;
+          padding: 3% 2.5%;
+        }
+        &:nth-child(2) {
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  // 詳細ページ > 別記事紹介
+  &.-article-lists {
+    .articleItem {
+      width: 48.5%;
+      margin-bottom: 5%;
+    }
+  }
 }

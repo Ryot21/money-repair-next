@@ -315,8 +315,8 @@ export default function ContactForm({ customClass }: Props) {
                 </tbody>
             </table>
             {/* プライバシーポリシー */}
-            <p className="s-S -center -lh-1_5 -ls-2 mgb5 mgb5s">
-                ※<Link href="/privacy-policy" className="s-S -color03 b-text ">プライバシーポリシー</Link>をお読みいただき、同意の上お問い合わせください。
+            <p className="-center -lh-2 -ls-2 mgb5 mgb5s">
+                ※<Link href="/privacy-policy" className="-color03 b-text ">プライバシーポリシー</Link>をお読みいただき、同意の上お問い合わせください。
             </p>
 
             {/* 送信ボタン */}
