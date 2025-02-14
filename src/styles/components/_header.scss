@@ -7,14 +7,14 @@
   height: auto;
   background: #fff;
   z-index: 1000;
-  padding: 15px 0;
+  padding: 10px 0 15px;
   border-bottom: 1px solid $site-color03;
   transform: translateY(0);
   transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, padding, background-color;
-  @include min(500) {
-    padding: 1% 0;
-  }
+  @include min(500) {padding: 2% 0;}
+  @include min(768) {padding: 1% 0;}
+
 
   // スクロール中の状態
   &.is-scrolling {
@@ -27,9 +27,9 @@
   &.is-visible {
     transform: translateY(0);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    @include min(500) {
-      padding: 0.65% 0 0.75%;
-    }
+    // @include min(500) {
+      // padding: 0.65% 0 0.75%;
+    // }
   }
 
   // 非表示状態
@@ -67,7 +67,7 @@
       margin: auto;
     }
     @include min(768) {
-      width: 82.5%;
+      width: 90%;
     }
     @include min(1600) {
       max-width: 1380px;
@@ -96,9 +96,12 @@
           width: 70%;
         }
         @include min(500) {
-          width: 18%;
+          width: 30%;
         }
-        @include min(1200) {
+        @include min(768) {
+          width: 20%;
+        }
+        @include min(1000) {
           max-width: 180px;
         }
       }

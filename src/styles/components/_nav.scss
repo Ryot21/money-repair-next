@@ -110,7 +110,7 @@
       }
     }
     &.-archive {
-      padding: 8px 20px 8px 0;
+      padding: 8px 15px 8px 0;
       &::before {
         display: none;
       }
@@ -162,7 +162,6 @@
         // cvボタン
         width: auto;
         border-radius: 30px;
-        margin-left: 20px;
         will-change: transform;
         transition: all 0.3s;
         a {
@@ -189,8 +188,13 @@
           // cvボタン01
           background: $site-color03;
           border: 1px solid $site-color03;
+          margin-left: 10px;
+          @include min(1000) {
+            margin-left: 20px;
+          }
           a {
-            padding: 0.65rem 3.5rem 0.5rem 2rem;
+            @include min(768)  {padding: 0.65rem 3rem 0.5rem 1.5rem;}
+            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
           }
           &:hover {
             background: $main-color--w;
@@ -209,9 +213,6 @@
             background: $main-color--red;
             border: 1px solid $main-color--red;
             margin-left: 2%;
-            a {
-              padding: 0.65rem 4rem 0.5rem 2rem;
-            }
             &:hover {
               background: $main-color--w;
               a {
@@ -222,6 +223,10 @@
                 }
               }
             }
+          }
+          a {
+            @include min(768)  {padding: 0.65rem 3rem 0.5rem 1.5rem;}
+            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
           }
         }
       }
