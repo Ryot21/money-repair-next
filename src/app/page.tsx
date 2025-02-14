@@ -2,28 +2,19 @@ import Image from "next/image";
 
 // コンポーネント
 import TopMainVisual from "@/components/MainVisual/Top";
-import LogoSlider from "@/components/Slider/Logo";
 import ContactBottom from "@/features/Contact/Bottom";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
 
 // 投稿関係
-import { getInterviewsList, getInformationList } from "@/libs/microcms";
-import { INTERVIEW_TOP_LIST_LIMIT, INFORMATION_TOP_LIST_LIMIT } from "@/constants";
-import InterviewList from "@/features/PostList/Interview";
-import InformationList from "@/features/PostList/Information";
+import LogoArea from "@/features/Content/LogoArea";
+import InterviewArea from "@/features/Content/InterviewArea";
+import InformationArea from "@/features/Content/InformationArea";
 
 // ISR
 export const revalidate = 600;
 
 export default async function Home() {
 
-  // 表示件数を絞る
-  const interviewData = await getInterviewsList({
-    limit: INTERVIEW_TOP_LIST_LIMIT,
-  });
-  const informationData = await getInformationList({
-    limit: INFORMATION_TOP_LIST_LIMIT,
-  });
 
   return (
     <main>
@@ -31,19 +22,7 @@ export default async function Home() {
       <TopMainVisual />
 
       {/* 導入企業ロゴ */}
-      <div id="logoSection" className={"c-contents pdt5 pdt10s mgb5s"}>
-        <div className={"c-contents--inner"}>
-          <h2 className={"s-L -center -b pdb3 pdb3s"}>
-            多くのお客様にご好評いただいております
-          </h2>
-        </div>
-        <div className={"swiper swiper-Logo -right mgb1 mgb3s"}>
-          <LogoSlider />
-        </div>
-        <div className={"swiper swiper-Logo -left"}>
-          <LogoSlider />
-        </div>
-      </div>
+      <LogoArea />
 
       {/* マネーリペアとは */}
       <div id="sc01" className={"c-contents pdt10 pdt10s mgb5s"}>
@@ -84,46 +63,10 @@ export default async function Home() {
       </div>
 
       {/* ご利用者インタビュー */}
-      <div id="sc02" className={"c-contents pdt10 pdt20s mgb5s"}>
-        <div className={"c-contents--inner"}>
-          {/* タイトル */}
-          <h2 className={"c-contents--title -interview -ls-1 -en-color03 pdb5 pdb5s"}>
-            ご利用者インタビュー
-          </h2>
-
-          {/* 投稿リスト */}
-          <div className={"c-post mgb2 mgb10s"}>
-            <InterviewList contents={interviewData.contents} />
-          </div>
-
-          {/* ボタン */}
-          <div className={"c-contents--btnArea"}>
-            <PageButtonLink href="/interview">すべて見る</PageButtonLink>
-          </div>
-        </div>
-      </div>
+      <InterviewArea />
 
       {/* お役立ち情報 */}
-      <div id="sc03" className={"c-contents pdt10 pdt20s mgb10 mgb20s"}>
-        <div className={"c-contents--inner"}>
-          {/* タイトル */}
-          <h2
-            className={"c-contents--title -news -ls-1 -en-color03 pdb5 pdb5s"}
-          >
-            お役立ち情報
-          </h2>
-
-          {/* 投稿リスト */}
-          <div className={"c-post mgb2 mgb10s"}>
-            <InformationList contents={informationData.contents} />
-          </div>
-
-          {/* ボタン */}
-          <div className={"c-contents--btnArea"}>
-            <PageButtonLink href="/information">すべて見る</PageButtonLink>
-          </div>
-        </div>
-      </div>
+      <InformationArea />
 
       {/* お問い合わせ */}
       <ContactBottom />

@@ -6,21 +6,21 @@ import { Autoplay } from "swiper/modules";
 
 export default function LogoSwiper() {
   // ブレイクポイントに基づいて1つのスライドに表示するスライドの数を指定
-  // const slideSettings = {
-  //     0: {
-  //         slidesPerView: 3,
-  //         spaceBetween: 10,
-  //     },
-  //     1024: {
-  //         slidesPerView: 5,
-  //         spaceBetween: 10,
-  //     },
-  // };
+  const slideSettings = {
+      0: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+      },
+      1024: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+      },
+  };
   return (
     <Swiper
       modules={[Autoplay]} // モジュールを指定
-      // breakpoints={slideSettings} // slidesPerViewを指定
-      // spaceBetween={20}
+      breakpoints={slideSettings} // slidesPerViewを指定
+      spaceBetween={20}
       slidesPerView={"auto"} // ハイドレーションエラー対策
       centeredSlides={true} // スライドを中央に配置
       loop={true} // スライドをループさせる
