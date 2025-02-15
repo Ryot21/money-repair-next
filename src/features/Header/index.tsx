@@ -1,17 +1,31 @@
+// UIレンダリングとインタラクションを管理するクライアントコンポーネント
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import IconButtonLink from "@/components/Parts/Button/IconButton";
 import type { Category } from "@/libs/microcms";
-import {
-  getInterviewCategoryList,
-  getInformationCategoryList,
-} from "@/libs/microcms";
 import HeaderScroll from "./HeaderScroll";
 
-export default async function Header() {
-  // カテゴリー情報を直接取得
-  const interviewCategories = await getInterviewCategoryList();
-  const informationCategories = await getInformationCategoryList();
+// Props型を定義
+type HeaderProps = {
+  interviewCategories: { contents: Category[] };
+  informationCategories: { contents: Category[] };
+};
+
+// クライアントコンポーネントとしてHeaderを実装
+export default function Header({
+  interviewCategories,
+  informationCategories,
+}: HeaderProps) {
+  // 現在のパスを取得
+  const pathname = usePathname();
+
+  // リンクがアクティブかどうかを判定する関数
+  const isActive = (href: string) => {
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   return (
     <>
@@ -43,7 +57,9 @@ export default async function Header() {
                         {/* 特徴 */}
                         <li className={"hnavItem"}>
                           <Link
-                            className={"c-hnav--link s-M -b -ls-3 -ws-n"}
+                            className={`c-hnav--link s-M -b -ls-4 -ws-n ${
+                              isActive("/service") ? "-active" : ""
+                            }`}
                             href="/service"
                           >
                             特徴
@@ -52,9 +68,9 @@ export default async function Header() {
                         {/* ご利用者の声 */}
                         <li className={"hnavItem archiveItem"}>
                           <Link
-                            className={
-                              "c-hnav--link -archive s-M -b -ls-3 -ws-n"
-                            }
+                            className={`c-hnav--link -archive s-M -b -ls-2 -ws-n ${
+                              isActive("/interview") ? "-active" : ""
+                            }`}
                             href="/interview"
                           >
                             ご利用者の声
@@ -83,9 +99,9 @@ export default async function Header() {
                         {/* お役立ち情報 */}
                         <li className={"hnavItem archiveItem"}>
                           <Link
-                            className={
-                              "c-hnav--link -archive s-M -b -ls-3 -ws-n"
-                            }
+                            className={`c-hnav--link -archive s-M -b -ls-2 -ws-n ${
+                              isActive("/information") ? "-active" : ""
+                            }`}
                             href="/information"
                           >
                             お役立ち情報
@@ -101,7 +117,7 @@ export default async function Header() {
                                   >
                                     <Link
                                       href={`/information/category/${category.id}`}
-                                      className={"c-link s-S -b -ls-3 -ws-n"}
+                                      className={"c-link s-S -b -ls-2 -ws-n"}
                                     >
                                       # {category.name}
                                     </Link>

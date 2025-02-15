@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.scss";
 import PageTypeWrapper from "@/components/PageTypeWrapper";
 import ScrollToTop from "@/components/ScrollToTop";
-import Header from "@/features/Header";
+import HeaderContainer from "@/features/Header/HeaderContainer";
 import HamburgerNav from "@/features/HamburgerNav";
 import Footer from "@/features/Footer";
 
@@ -34,7 +34,7 @@ export default async function RootLayout({
       <body suppressHydrationWarning>
         <PageTypeWrapper initialPageType={initialPageType}>
           <ScrollToTop />
-          <Header />
+          <HeaderContainer />
           <HamburgerNav />
           {children}
           <Footer />

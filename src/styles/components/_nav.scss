@@ -19,7 +19,7 @@
         position: relative;
         &:hover {
           .c-hnav--dropdown {
-            transform: translateY(0);
+            transform: translate(-50%, 0);
             pointer-events: auto;
             opacity: 1;
           }
@@ -30,21 +30,22 @@
   // ドロップダウンメニュー
   &--dropdown {
     position: absolute;
-    top: 105%;
-
+    top: 85%;
+    left: 50%;
     width: auto;
     height: auto;
     background: $main-color--w;
     border: 1px solid $main-color--b;
 
-    padding: 15px 20px 10px 19px;
+    padding: 15px 15px 10px 15px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
     pointer-events: none;
     will-change: transform;
     opacity: 0;
-    transform: translateY(-10px);
+
+    transform: translate(-50%, -10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
   // ドロップダウンリスト > 一覧ページ
@@ -88,7 +89,7 @@
     &::before {
       content: "";
       width: 0;
-      height: 1px;
+      height: 2px;
       background: $main-color--w;
       border-radius: 5px;
 
@@ -104,7 +105,7 @@
     &.-active {
       color: $site-color03;
       &::before {
-        width: 90%;
+        width: 100%;
         background: $site-color03;
         opacity: 1;
       }
@@ -112,7 +113,7 @@
     &.-archive {
       padding: 8px 15px 8px 0;
       &::before {
-        display: none;
+        bottom: 4px;
       }
       &::after {
         content: "";
@@ -193,8 +194,12 @@
             margin-left: 20px;
           }
           a {
-            @include min(768)  {padding: 0.65rem 3rem 0.5rem 1.5rem;}
-            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
+            @include min(768) {
+              padding: 0.65rem 3rem 0.5rem 1.5rem;
+            }
+            @include min(1000) {
+              padding: 0.65rem 3.5rem 0.5rem 2rem;
+            }
           }
           &:hover {
             background: $main-color--w;
@@ -225,8 +230,12 @@
             }
           }
           a {
-            @include min(768)  {padding: 0.65rem 3rem 0.5rem 1.5rem;}
-            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
+            @include min(768) {
+              padding: 0.65rem 3rem 0.5rem 1.5rem;
+            }
+            @include min(1000) {
+              padding: 0.65rem 3.5rem 0.5rem 2rem;
+            }
           }
         }
       }
