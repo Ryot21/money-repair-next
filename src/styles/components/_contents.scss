@@ -650,7 +650,7 @@
       .imgBox {
         width: 100lvw;
         height: 30vh;
-        max-height: 480px !important;
+        max-height: 190px !important;
         position: relative;
         background: linear-gradient(
           220deg,
@@ -659,6 +659,10 @@
         );
         overflow: hidden;
 
+        @include min(500) {
+          height: 20vh;
+          max-height: 480px !important;
+        }
         @include min(768) {
           height: 30vh;
         }
