@@ -13,7 +13,7 @@
   transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, padding, background-color;
   @include min(500) {padding: 2% 0;}
-  @include min(768) {padding: 1% 0;}
+  @include min(768) {padding: 20px 0;}
 
 
   // スクロール中の状態
@@ -27,9 +27,6 @@
   &.is-visible {
     transform: translateY(0);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    // @include min(500) {
-      // padding: 0.65% 0 0.75%;
-    // }
   }
 
   // 非表示状態
