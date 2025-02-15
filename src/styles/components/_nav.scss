@@ -428,18 +428,37 @@
     }
   }
   &__lists {
-    .hbNavItem {
+  
+    .hbNavItem{
       margin-bottom: 16.5px;
       will-change: transform;
       transition: 0.5s all;
       opacity: 0;
 
-      a,
-      label {
+      a,label {
         display: block;
         position: relative;
         transition: 0.5s all;
         span {
+          color: $main-color--w;
+          transition: 0.5s all;
+        }
+        &.-active {
+          span {
+            color: $main-color--yellow !important;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .hbNavCategoryItem{
+      a,label {
+        display: block;
+        color: $main-color--w;
+        position: relative;
+        transition: 0.5s all;
+        span {
+          color: $main-color--w;
           transition: 0.5s all;
         }
         &.-active {
