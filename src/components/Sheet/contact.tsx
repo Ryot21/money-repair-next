@@ -1,5 +1,5 @@
 // 共通レイアウト
-import ContactMainVisual from "@/components/MainVisual/single/contact";
+import ContactMainVisual from "@/features/MainVisual/single/contact";
 
 type Props = {
     children: React.ReactNode;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // コンポーネント
-import TopMainVisual from "@/components/MainVisual/Top";
+import TopMainVisual from "@/features/MainVisual/Top";
 import ContactBottom from "@/features/Contact/Bottom";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
 
