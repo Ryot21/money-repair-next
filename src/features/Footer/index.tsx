@@ -11,7 +11,7 @@ export default function Footer() {
                         <div className={"logo mgb5 mgb10s"}>
                             <Link className={"c-link -img"} href="/">
                                 <Image
-                                    src="images/logo/mp/money-repair-logo_black.svg"
+                                    src="images/logo/mp/money-repair-logo_w.svg"
                                     alt="マネーリペア"
                                     width={250}
                                     height={100}
@@ -63,7 +63,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                         </ul>
-                        <p className={"copyright s-SS -s12 -white -center_s -right"}>© 2016-2024 株式会社インプレーム All rights reserved.</p>
+                        <p className={"copyright s-SS -s12 -white -center_s -right"}>© 2016-2025 株式会社インプレーム All rights reserved.</p>
                     </li>  
                 </ul>
             </div>

@@ -38,7 +38,7 @@ export default function Header({
               <div className={"logo"}>
                 <Link href="/" className={"c-link -img"}>
                   <Image
-                    src="images/logo/mp/money-repair-logo_black.svg"
+                    src="images/logo/mp/money-repair-logo_b.svg"
                     alt="福利厚生で金融教育するならマネーリペア"
                     width={200}
                     height={50}
