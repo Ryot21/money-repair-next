@@ -220,3 +220,11 @@ export const getPosterList = async (queries?: MicroCMSQueries) => {
     });
     return listData;
 }
+// 取引先_リスト
+export const getClientList = async (queries?: MicroCMSQueries) => {
+    const listData = await client.getList<Client>({
+        endpoint: "clients",
+        queries,
+    });
+    return listData;
+}
