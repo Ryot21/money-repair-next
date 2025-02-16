@@ -1,3 +1,5 @@
+import Breadcrumb from "@/features/breadcrumb";
+
 type Props = {
   title: string;
   mvClass?: string;
@@ -130,7 +132,10 @@ export default function SingleMainVisual({
         >
           {title}
         </h1>
-        {/* パンくず 今後実装予定 */}
+      </div>
+      {/* パンくず */}
+      <div className={"c-contentsBox -breadcrumb"}>
+        <Breadcrumb />
       </div>
     </div>
   );

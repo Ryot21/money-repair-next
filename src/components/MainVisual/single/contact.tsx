@@ -1,6 +1,8 @@
 "use client";
 
 import { useSearchParams } from 'next/navigation';
+import Breadcrumb from "@/features/breadcrumb";
+
 
 type Props = {
     mvClass?: string;
@@ -26,8 +28,10 @@ export default function ContactMainVisual({ mvClass, customClass = '' }: Props) 
             <div className={"c-contentsBox -center"}>
                 {/* ページタイトル */}
                 <h1 className={`c-page-title s-L -s20 -center -b -ls-2 ${mvClass || ''} `}>{getTitle()}</h1>
-                {/* パンくず 今後実装予定 */}
-
+            </div>
+            {/* パンくず */}
+            <div className={"c-contentsBox -breadcrumb"}>
+                <Breadcrumb />
             </div>
         </div>
     );
