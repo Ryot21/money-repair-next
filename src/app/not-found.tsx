@@ -1,5 +1,5 @@
 // import styles from "@/app/not-found.module.scss";
-import SingleMainVisual from "@/components/MainVisual/single";
+import SingleMainVisual from "@/features/MainVisual/single";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
 
 export default function NotFound() {

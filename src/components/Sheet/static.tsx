@@ -1,5 +1,5 @@
 // 共通レイアウト
-import SingleMainVisual from "@/components/MainVisual/single";
+import SingleMainVisual from "@/features/MainVisual/single";
 
 type Props = {
     children: React.ReactNode;

@@ -1,5 +1,5 @@
 // 共通レイアウト
-import SingleMainVisual from "@/components/MainVisual/single";
+import SingleMainVisual from "@/features/MainVisual/single";
 import ContactBottom from "@/features/Contact/Bottom";
 
 type Props = {
