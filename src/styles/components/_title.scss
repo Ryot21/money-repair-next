@@ -192,3 +192,58 @@
         }
     }
 }
+
+// ロゴセクション > タイトル
+.c-logo--title{
+    text-align: center;
+    margin: 0 auto;
+
+    span{
+        position: relative;
+        display: inline-block;
+        color: $site-color03;
+        font-size: clamp(1.4rem, 2vw, 2.8rem);
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        padding: 0 1px;
+
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 18px;
+            background: $site-color03;
+            border-radius: 10px;
+            @include min(768){
+                height: 25px;
+            }
+            @include min(1200){
+                height: 35px;
+            }
+        }
+        &::before{
+            left: -15px;
+            transform: rotate(325deg);
+            @include min(768){
+                left: -25px;
+            }
+            @include min(1200){
+                left: -30px;
+            }
+        }
+        &::after{
+            right: -10px;
+            transform: rotate(35deg);
+            @include min(768){
+                right: -18px;
+            }
+            @include min(1200){
+                right: -20px;
+            }
+        }
+    }
+
+}

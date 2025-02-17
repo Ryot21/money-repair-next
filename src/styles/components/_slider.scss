@@ -8,7 +8,7 @@
         .swiper-slide{
             width: auto ;
             text-align: end;
-            opacity: .5;
+            // opacity: .5;
             overflow: hidden;
             transition: .5s all;
             img{
@@ -499,18 +499,6 @@
                     img{
                         width: 100%;
                         height: auto;
-                    }
-                    &.r-01{
-                    }
-                    &.r-02{
-                    }
-                    &.r-03{
-                    }
-                    &.r-04{
-                    }
-                    &.r-05{
-                    }
-                    &.r-06{
                     }
                 }
             }
