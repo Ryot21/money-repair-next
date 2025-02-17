@@ -860,6 +860,30 @@
       }
     }
   }
+  &.-logoArea{
+    position: relative;
+
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      z-index: 1;
+      @include min(768){
+        width: 100px;
+      }
+    }
+    &::before{
+      left: -5px;
+      background: linear-gradient(.25turn, $site-color01, 75%, rgba(0, 0, 0, 0));
+    }
+    &::after{
+      right: -5px;
+      background: linear-gradient(.75turn, $site-color01, 75%, rgba(0, 0, 0, 0));
+    }
+  }
   &.-serviceBox {
     position: relative;
     padding: 12% 5% 25% 5%;

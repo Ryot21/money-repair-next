@@ -13,15 +13,17 @@ export default function LogoArea() {
             </h2>
 
             {/* 右方向に流れるスライダー */}
-            <div className={"swiper swiper-Logo -right mgb1 mgb3s"}>
-                <Suspense fallback={<div>Loading...</div>}>
-                <LogoAreaContainer />
+            <div className="c-contents -logoArea">
+                <div className={"swiper swiper-Logo -right mgb1 mgb3s"}>
+                    <Suspense fallback={<div>Loading...</div>}>
+                    <LogoAreaContainer />
                 </Suspense>
-            </div>
-            <div className={"swiper swiper-Logo -right"}>
-                <Suspense fallback={<div>Loading...</div>}>
-                <LogoAreaContainer />
-                </Suspense>
+                </div>
+                <div className={"swiper swiper-Logo -right"}>
+                    <Suspense fallback={<div>Loading...</div>}>
+                    <LogoAreaContainer />
+                    </Suspense>
+                </div>
             </div>
         </div>
     </div>
