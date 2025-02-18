@@ -2,6 +2,7 @@
 
 .c-sideber {
   @include max(500) {
+    width: 100%;
     display: grid;
 
     .c-sideber {

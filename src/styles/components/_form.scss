@@ -4,6 +4,10 @@
     width: 100%;
     border-collapse: collapse;
     &.-page{
+        .c-form--inner{
+            max-width: 1000px;
+            margin: 0 auto;
+        }
         .required{// 必須
             position: relative;
             &::after{
@@ -339,12 +343,16 @@
             }
             th{
                 width: 100%;
-                font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+                background-image: linear-gradient(45deg, #e4ebf445, #e4ebf480);
+                font-size: clamp(1.4rem, 1.5vw, 1.6rem);
                 text-align: left;
+                letter-spacing: .2rem;
                 padding: 10px 6px 5px;
             }
             td{
-                padding: 0 0 10px;
+                font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+                letter-spacing: .1rem;
+                padding: 10px 0 10px 20px;
                 input[type="text"],
                 select,
                 textarea {

@@ -21,8 +21,6 @@
         transition: all 0.5s;
       }
     }
-    img {
-    }
     &:hover {
       transform: scale(1.05);
       .c-contents {
@@ -75,6 +73,16 @@
       &:hover {
         color: $main-color--red !important;
         background: $main-color--w;
+      }
+    }
+    &.-c-gray {
+      color: $main-color--w !important;
+      background: $main-color--Dgray;
+      border: 1px solid $main-color--Dgray;
+      &:hover {
+        color: $main-color--Dgray !important;
+        background: $main-color--w;
+        border: 1px solid $main-color--Dgray;
       }
     }
     &.-c-blue {
