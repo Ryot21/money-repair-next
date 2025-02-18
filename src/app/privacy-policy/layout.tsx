@@ -1,5 +1,9 @@
 import Sheet from "@/components/Sheet/static";
 
+export const metadata = {
+  title: "プライバシーポリシー",
+};
+
 type Props = {
     children: React.ReactNode;
 }

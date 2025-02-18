@@ -1,10 +1,12 @@
-// import styles from "@/app/service/page.module.scss";
-
 import Sheet from "@/components/Sheet";
 
+export const metadata = {
+  title: "マネーリペアの特徴",
+};
+
 type Props = {
-    children: React.ReactNode;
-}
+  children: React.ReactNode;
+};
 
 export default function RootLayout({ children }:Props ) {
     return (

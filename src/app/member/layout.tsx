@@ -1,7 +1,8 @@
-// import styles from "@/app/member/page.module.scss";
-
 import Sheet from "@/components/Sheet";
 
+export const metadata = {
+  title: "メンバーリスト",
+};
 
 type Props = {
     children: React.ReactNode;

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getInterviewsDetail } from "@/libs/microcms";
 import Article from "@/features/Article/Interview";
@@ -25,7 +25,13 @@ export async function generateMetadata({
 
     return {
         title: data.mainTitle,
+        description: data.subTitle,
         // その他のメタデータ
+        openGraph: {
+            title: data.mainTitle,
+            description: data.subTitle,
+            images: [data.thumbnail?.url ?? ""],
+        },
     };
 }
 

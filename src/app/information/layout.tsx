@@ -1,8 +1,12 @@
 import Sheet from "@/components/Sheet"
 
+export const metadata = {
+    title: "お役立ち情報",
+};
+
 type Props = {
     children: React.ReactNode;
-}
+};
 
 // ISR（Information関連に適用）
 export const revalidate = 600;

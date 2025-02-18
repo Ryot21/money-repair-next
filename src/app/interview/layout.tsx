@@ -1,8 +1,12 @@
 import Sheet from "@/components/Sheet"
 
+export const metadata = {
+    title: "ご利用者の声",
+};
+
 type Props = {
     children: React.ReactNode;
-}
+};
 
 // ISR（Interview関連に適用）
 export const revalidate = 600;
