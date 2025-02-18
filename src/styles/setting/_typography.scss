@@ -342,6 +342,10 @@ td {
       }
     }
   }
+  // エラー時
+  &.-error {
+    color: $main-color--red;
+  }
 }
 
 // 大きさ

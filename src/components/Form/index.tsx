@@ -1,10 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useActionState } from "react";
-import { createContactDate } from "@/actions/contact";
 import { useState, useEffect } from "react";
-
 import { useSearchParams } from 'next/navigation';
 
 type Props = {
@@ -45,8 +42,7 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactForm({ customClass }: Props) {
-    // useActionStateの型を明示的に指定
-    const [state, formAction] = useActionState<ContactState, FormData>(createContactDate, null);
+    const [submitStatus, setSubmitStatus] = useState<ContactState>(null);
 
     // パラメーター取得
     const searchParams = useSearchParams();
@@ -172,10 +168,51 @@ export default function ContactForm({ customClass }: Props) {
         setIsFormValid(isValid);
     }, [formData, isAgreed, errors]);
 
-    console.log(state);
+    // フォーム送信時の処理
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
+        if (!isFormValid) return;
+
+        const formElement = e.currentTarget;
+        const formData = new FormData(formElement);
+        
+        try {
+            const response = await fetch("https://money-repair-media.form.newt.so/v1/YktRisGz0", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (!response.ok) {
+                throw new Error("送信に失敗しました");
+            }
+
+            // 成功時の処理
+            setSubmitStatus({
+                status: "success",
+                message: "お問い合わせを受け付けました。"
+            });
+            setFormData({
+                purpose: "",
+                company: "",
+                name: "",
+                phone: "",
+                email: "",
+                message: "",
+            });
+            setIsAgreed(false);
+            
+        } catch (error) {
+            console.error("Error:", error);
+            setSubmitStatus({
+                status: "error",
+                message: "エラーが発生しました。しばらく時間をおいて再度お試しください。"
+            });
+        }
+    };
 
     // 送信完了
-    if (state?.status === "success") {
+    if (submitStatus?.status === "success") {
         return (
         <p className="s-ML -center -ls-1 -lh-2">
             ご回答後はできる限り早急に
@@ -206,7 +243,11 @@ export default function ContactForm({ customClass }: Props) {
 
     // Frist Access
     return (
-        <form className={`c-form ${customClass}`} action={formAction}>
+        <form 
+            className={`c-form ${customClass}`} 
+            onSubmit={handleSubmit}
+            method="POST"
+        >
             <table className="mgb5 mgb5s">
                 <tbody>
                     {/* 目的 */}
@@ -341,8 +382,8 @@ export default function ContactForm({ customClass }: Props) {
                 <p className="mgb5 mgb10s">入力内容をご確認のうえ、次の画面へ進んでください。</p>
 
                 {/* エラーテキスト */}
-                {state?.status === "error" && (
-                    <p className="s-M -center -red -ls-2">{state.message}</p>
+                {submitStatus?.status === "error" && (
+                    <p className="s-M -center -red -ls-2">{submitStatus.message}</p>
                 )}
 
                 {/* 送信 */}
