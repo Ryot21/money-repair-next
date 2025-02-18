@@ -667,7 +667,10 @@
           height: 30vh;
         }
         @include min(1200) {
-          height: 40vh;
+          height: 45vh;
+        }
+        @include min(1400) {
+          height: 50vh;
         }
 
         // 回転アニメーション
