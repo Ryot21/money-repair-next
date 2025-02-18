@@ -76,6 +76,9 @@ export default function Breadcrumb({ categories }: BreadcrumbProps) {
             // クエリパラメータをURLに含める
             url = `${url}?type=${type}`;
             break;
+          case "thanks":
+            label = "お問い合わせ完了";
+            break;
           case "search":
             label = "検索結果";
             break;
