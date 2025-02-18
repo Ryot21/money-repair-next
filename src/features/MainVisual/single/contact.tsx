@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, usePathname } from 'next/navigation';
 import Breadcrumb from "@/features/breadcrumb";
 
 
@@ -11,13 +11,20 @@ type Props = {
 
 export default function ContactMainVisual({ mvClass, customClass = '' }: Props) {
     const searchParams = useSearchParams();
+    const pathname = usePathname();
     const type = searchParams.get('type');
 
     const getTitle = () => {
+        if (pathname === '/contact/thanks') {
+            return 'お問い合わせありがとうございます！';
+        }
+
         switch (type) {
             case 'download':
                 return '資料ダウンロード';
             case 'contact':
+                return 'お問い合わせ';
+            default:
                 return 'お問い合わせ';
         }
     };
@@ -27,7 +34,7 @@ export default function ContactMainVisual({ mvClass, customClass = '' }: Props) 
             <div className={"imgBox"}></div>
             <div className={"c-contentsBox -center"}>
                 {/* ページタイトル */}
-                <h1 className={`c-page-title s-L -s20 -center -b -ls-2 ${mvClass || ''} `}>{getTitle()}</h1>
+                <h1 className={`c-page-title s-L -s18 -ws-n -center -b -ls-2 ${mvClass || ''} `}>{getTitle()}</h1>
             </div>
             {/* パンくず */}
             <div className={"c-contentsBox -breadcrumb"}>
