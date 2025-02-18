@@ -228,3 +228,33 @@ export const getClientList = async (queries?: MicroCMSQueries) => {
     });
     return listData;
 }
+
+// 【 サイトマップ 】
+// お役立ち情報_全記事
+export const getAllInformationSitemap = async () => {
+    const listData = await client.getAllContents<Information>({
+        endpoint: "information",
+    });
+    return listData;
+}
+// お役立ち情報_カテゴリー_全記事
+export const getAllInformationCategorySitemap = async () => {
+    const listData = await client.getAllContents<Category>({
+        endpoint: "information_categories",
+    });
+    return listData;
+}
+// ご利用者の声_全記事
+export const getAllInterviewSitemap = async () => {
+    const listData = await client.getAllContents<Interview>({
+        endpoint: "interview",
+    });
+    return listData;
+}
+// ご利用者の声_カテゴリー_全記事
+export const getAllInterviewCategorySitemap = async () => {
+    const listData = await client.getAllContents<Category>({
+        endpoint: "interview_categories",
+    });
+    return listData;
+}
