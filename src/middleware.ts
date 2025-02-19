@@ -1,32 +1,32 @@
 import { NextResponse, NextRequest } from 'next/server';
 
 // Basic認証のクレデンシャルを環境変数から直接取得
-const BASIC_AUTH_USER = process.env.BASIC_AUTH_USER;
-const BASIC_AUTH_PASSWORD = process.env.BASIC_AUTH_PASSWORD;
+// const BASIC_AUTH_USER = process.env.BASIC_AUTH_USER;
+// const BASIC_AUTH_PASSWORD = process.env.BASIC_AUTH_PASSWORD;
 
 export function middleware(request: NextRequest) {
     // Basic認証のチェック
-    if (process.env.NODE_ENV === 'production') {  // 本番環境のみBasic認証を有効化
-        const basicAuth = request.headers.get('authorization');
+    // if (process.env.NODE_ENV === 'production') {  // 本番環境のみBasic認証を有効化
+    //     const basicAuth = request.headers.get('authorization');
         
-        if (basicAuth) {
-            const authValue = basicAuth.split(' ')[1];
-            const [user, pwd] = atob(authValue).split(':');
+    //     if (basicAuth) {
+    //         const authValue = basicAuth.split(' ')[1];
+    //         const [user, pwd] = atob(authValue).split(':');
 
-            if (user === BASIC_AUTH_USER && pwd === BASIC_AUTH_PASSWORD) {
-                // 認証成功：既存の処理を続行
-                return handleExistingMiddleware(request);
-            }
-        }
+    //         if (user === BASIC_AUTH_USER && pwd === BASIC_AUTH_PASSWORD) {
+    //             // 認証成功：既存の処理を続行
+    //             return handleExistingMiddleware(request);
+    //         }
+    //     }
 
-        // 認証失敗時のレスポンス
-        return new NextResponse('Authentication required', {
-            status: 401,
-            headers: {
-                'WWW-Authenticate': 'Basic realm="Secure Area"',
-            },
-        });
-    }
+    //     // 認証失敗時のレスポンス
+    //     return new NextResponse('Authentication required', {
+    //         status: 401,
+    //         headers: {
+    //             'WWW-Authenticate': 'Basic realm="Secure Area"',
+    //         },
+    //     });
+    // }
 
     // 開発環境では既存の処理のみ実行
     return handleExistingMiddleware(request);
