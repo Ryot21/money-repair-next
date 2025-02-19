@@ -37,7 +37,7 @@ $breakpoints: (
 	.pc{display: none !important;}
     .tb-pc{display: block !important;}
 }
-@include min(1400){
+@include min(1000){
     .sp{display: none !important;}
     .tb{display: none !important;}
 	.pc{display: block !important;}
