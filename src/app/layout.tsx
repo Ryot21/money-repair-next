@@ -1,11 +1,11 @@
 import "@/styles/globals.scss";
+import { metadata } from "./metadata";
 import { headers } from "next/headers";
 import PageTypeWrapper from "@/components/PageTypeWrapper";
 import ScrollToTop from "@/components/ScrollToTop";
 import HeaderContainer from "@/features/Header/HeaderContainer";
 import HamburgerNav from "@/features/HamburgerNav";
 import Footer from "@/features/Footer";
-import { metadata } from "./metadata";
 
 export { metadata };
 

@@ -48,8 +48,3 @@ export default async function Page() {
     </>
   );
 }
-
-export const metadata = {
-  title: 'Information',
-  description: 'Information page description',
-};
