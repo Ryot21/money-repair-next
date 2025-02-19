@@ -992,11 +992,18 @@
       height: auto;
       border-radius: 10px;
       box-shadow: 5px 3px 2px 0px #63636314;
+      overflow: hidden;
       @include min(768) {
         top: 47%;
         left: 60%;
         transform: translateY(-50%);
         width: 35%;
+      }
+      img{
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
       }
     }
   }

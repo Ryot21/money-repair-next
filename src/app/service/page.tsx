@@ -83,10 +83,10 @@ export default function Page(){
                         <div className={"picArea"}>
                             <div className={"imgBox"}>
                                 <Image
-                                    src="/images/item/service/service--pic-cv.png"
-                                    alt="グレーアウト画像"
-                                    width={300}
-                                    height={300}
+                                    src="/images/mv/mv-04.jpg"
+                                    alt="金融勉強会の実際の画像"
+                                    width={1000}
+                                    height={667}
                                 />
                             </div>
                         </div>
@@ -105,10 +105,10 @@ export default function Page(){
                         <div className={"picArea"}>
                             <div className={"imgBox"}>
                                 <Image
-                                        src="/images/item/service/service--pic-cv.png"
-                                        alt="グレーアウト画像"
-                                        width={300}
-                                        height={300}
+                                    src="/images/mv/mv-05.jpg"
+                                    alt="実際の相談風景"
+                                    width={1000}
+                                    height={667}
                                 />
                             </div>
                         </div>
@@ -127,10 +127,10 @@ export default function Page(){
                         <div className={"picArea"}>
                             <div className={"imgBox"}>
                                 <Image
-                                    src="/images/item/service/service--pic-cv.png"
-                                    alt="グレーアウト画像"
-                                    width={300}
-                                    height={300}
+                                    src="/images/mv/mv-13.png"
+                                    alt="資産管理システムを紹介している画像"
+                                    width={1000}
+                                    height={667}
                                 />
                             </div>
                         </div>
