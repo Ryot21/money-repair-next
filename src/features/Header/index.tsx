@@ -16,7 +16,7 @@ type HeaderProps = {
 
 // クライアントコンポーネントとしてHeaderを実装
 export default function Header({
-  interviewCategories,
+  // interviewCategories,
   informationCategories,
 }: HeaderProps) {
   // 現在のパスを取得

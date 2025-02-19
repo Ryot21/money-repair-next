@@ -12,7 +12,7 @@ type HamburgerNavProps = {
 };
 
 export default function HamburgerNavContent({
-  interviewCategories,
+  // interviewCategories,
   informationCategories,
 }: HamburgerNavProps) {
   // 現在のパスとクエリパラメータを取得
