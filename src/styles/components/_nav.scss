@@ -7,10 +7,14 @@
     // ul
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     .hnavItem {
       width: auto;
+      margin-left: 15px;
+      @include min(1000) {
+        margin-left: 30px;
+      }
       a {
         display: inline-block;
         white-space: nowrap;

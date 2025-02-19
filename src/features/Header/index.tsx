@@ -67,7 +67,7 @@ export default function Header({
                           </Link>
                         </li>
                         {/* ご利用者の声 */}
-                        <li className={"hnavItem archiveItem"}>
+                        {/* <li className={"hnavItem archiveItem"}>
                           <Link
                             className={`c-hnav--link -archive s-M -b -ls-2 -ws-n ${
                               isActive("/interview") ? "-active" : ""
@@ -76,7 +76,6 @@ export default function Header({
                           >
                             ご利用者の声
                           </Link>
-                          {/* ドロップダウンメニュー */}
                           <div className={"c-hnav--dropdown"}>
                             <ul className={"c-hnav--archiveLists"}>
                               {interviewCategories.contents.map(
@@ -96,7 +95,7 @@ export default function Header({
                               )}
                             </ul>
                           </div>
-                        </li>
+                        </li> */}
                         {/* お役立ち情報 */}
                         <li className={"hnavItem archiveItem"}>
                           <Link

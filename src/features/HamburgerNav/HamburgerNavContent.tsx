@@ -76,7 +76,8 @@ export default function HamburgerNavContent({
               </span>
             </Link>
           </li>
-          <li className={"hbNavItem c-borderBtm -dotted"}>
+          {/* ご利用者の声 */}
+          {/* <li className={"hbNavItem c-borderBtm -dotted"}>
             <Link
               className={`mgb5 mgb5s ${
                 isActive("/interview") ? "-active" : ""
@@ -110,7 +111,8 @@ export default function HamburgerNavContent({
                 </li>
               ))}
             </ul>
-          </li>
+          </li> */}
+          {/* お役立ち情報 */}
           <li className={"hbNavItem c-borderBtm -dotted"}>
             <Link
               className={`mgb5 mgb5s ${

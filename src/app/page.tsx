@@ -6,8 +6,8 @@ import ContactBottom from "@/features/Contact/Bottom";
 import PageButtonLink from "@/components/Parts/Button/PageButton";
 
 // 投稿関係
-import LogoArea from "@/features/Content/LogoArea";
-import InterviewArea from "@/features/Content/InterviewArea";
+// import LogoArea from "@/features/Content/LogoArea";
+// import InterviewArea from "@/features/Content/InterviewArea";
 import InformationArea from "@/features/Content/InformationArea";
 
 // ISR
@@ -22,7 +22,7 @@ export default async function Home() {
       <TopMainVisual />
 
       {/* 導入企業ロゴ */}
-      <LogoArea />
+      {/* <LogoArea /> */}
 
       {/* マネーリペアとは */}
       <div id="sc01" className={"c-contents pdt10 pdt10s mgb5s"}>
@@ -63,7 +63,7 @@ export default async function Home() {
       </div>
 
       {/* ご利用者インタビュー */}
-      <InterviewArea />
+      {/* <InterviewArea /> */}
 
       {/* お役立ち情報 */}
       <InformationArea />
