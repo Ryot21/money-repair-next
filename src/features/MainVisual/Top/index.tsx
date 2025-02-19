@@ -100,6 +100,7 @@ export default function TopMainVisual() {
                 alt=""
                 width={1000}
                 height={667}
+                priority
               />
             </div>
           </div>
@@ -113,6 +114,7 @@ export default function TopMainVisual() {
                 alt=""
                 width={1000}
                 height={667}
+                priority
               />
             </div>
           </div>
@@ -126,6 +128,7 @@ export default function TopMainVisual() {
                 alt=""
                 width={480}
                 height={320}
+                priority
               />
             </div>
           </div>
@@ -139,6 +142,7 @@ export default function TopMainVisual() {
                 alt=""
                 width={480}
                 height={320}
+                priority
               />
             </div>
           </div>
@@ -152,6 +156,7 @@ export default function TopMainVisual() {
                 alt=""
                 width={480}
                 height={320}
+                priority
               />
             </div>
           </div>
@@ -167,6 +172,7 @@ export default function TopMainVisual() {
                 alt=""
                 width={480}
                 height={320}
+                priority
               />
             </div>
           </div>
@@ -180,6 +186,7 @@ export default function TopMainVisual() {
                 alt=""
                 width={480}
                 height={320}
+                priority
               />
             </div>
           </div>

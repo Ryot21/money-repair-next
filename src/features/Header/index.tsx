@@ -42,6 +42,7 @@ export default function Header({
                     alt="福利厚生で金融教育するならマネーリペア"
                     width={200}
                     height={50}
+                    priority
                   />
                 </Link>
               </div>
