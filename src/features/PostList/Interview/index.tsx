@@ -85,7 +85,7 @@ export default function InterviewList({ contents }: Props) {
                   </li>
                 </ul>
               </div>
-              <h3 className={"c-post--title s-M -s16 -left -b -ls-2"}>
+              <h3 className={"c-post--title s-ML -s16 -left -b -ls-2 -lh-1_5"}>
                 {article.mainTitle}
               </h3>
             </div>

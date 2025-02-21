@@ -55,7 +55,7 @@
     &:hover {
       top: 0.5rem;
       background: $main-color--gray;
-      padding: 2% 2% 0 2%;
+      // padding: 2% 2% 0 2%;
       border: 1px solid $site-color03;
       border-radius: 10px;
 
@@ -89,6 +89,9 @@
     padding: 2% 3% 5%;
     will-change: transform;
     transition: all 0.5s;
+    @include min(768) {
+      padding: 10px 12px 20px
+    }
   }
   // 記事 > カテゴリー
   &--category {
