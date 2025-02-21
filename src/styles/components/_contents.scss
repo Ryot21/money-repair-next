@@ -37,7 +37,7 @@
       width: 90%;
     }
     @include min(1600) {
-      max-width: 1380px;
+      max-width: 1320px;
     }
     @include min(1800) {
       max-width: 1500px;
@@ -958,8 +958,8 @@
     .titleArea {
       position: absolute;
       top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 3%;
+      transform: translateY(-50%);
 
       background: $main-color--w;
       border-radius: 10px;
@@ -969,6 +969,19 @@
         left: 3%;
         transform: translateY(-50%);
         padding: 0.5% 2.5% 0.5% 1%;
+      }
+      &::after{
+        content: "サービス";
+        color: $main-color--b;
+        font-size: 1rem;
+        position: absolute;
+        top: 2px;
+        left: 12px;
+        padding-bottom: 2px;
+        @include min(768){
+          font-size: 1.2rem;
+          top: 5px;
+        }
       }
     }
     // テキスト
