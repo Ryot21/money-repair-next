@@ -3,10 +3,10 @@ import {
   getInterviewCategoryDetail,
   getInterviewsList,
   getInterviewCategoryList,
-} from "@/libs/microcms";
-import InterviewList from "@/features/PostList/Interview";
-import CategoryList from "@/components/Parts/Category/List";
-import Pagination from "@/components/Parts/pagination";
+} from "@/features/media/api/microcms/getInterview";
+import InterviewList from "@/features/media/interview/postList";
+import CategoryLists from "@/components/elements/category/categoryLists";
+import Pagination from "@/components/elements/pagination";
 import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
 
 type Props = {
@@ -61,7 +61,7 @@ export default async function Page({ params }: Props) {
       </div>
       {/* カテゴリ一覧 */}
       {/* article = information or interview */}
-      <CategoryList
+      <CategoryLists
         article="interview"
         currentCategoryId={category.id}
         categories={categories}

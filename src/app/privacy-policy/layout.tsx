@@ -1,4 +1,4 @@
-import Sheet from "@/components/Sheet/static";
+import Sheet from "@/components/sheet/static";
 
 export const metadata = {
   title: "プライバシーポリシー",

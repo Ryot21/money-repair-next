@@ -1,10 +1,13 @@
 import { MetadataRoute } from "next";
-import { 
+import {
     getAllInformationSitemap,
-    getAllInterviewSitemap,
     getAllInformationCategorySitemap,
-    getAllInterviewCategorySitemap
-} from "@/libs/microcms";
+} from "@/features/media/api/microcms/getInformation";
+import {
+    getAllInterviewSitemap,
+    getAllInterviewCategorySitemap,
+} from "@/features/media/api/microcms/getInterview";
+
 
 const buildUrl = (path?: string) => `https://money-repair.jp${path ?? ""}`;
 

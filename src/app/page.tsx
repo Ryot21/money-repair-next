@@ -1,28 +1,26 @@
 import Image from "next/image";
 
 // コンポーネント
-import TopMainVisual from "@/features/MainVisual/Top";
-import ContactBottom from "@/features/Contact/Bottom";
-import PageButtonLink from "@/components/Parts/Button/PageButton";
+import TopMainVisual from "@/features/media/mainVisual/top";
+import ContactBottom from "@/features/media/contact/bottom";
+import Button from "@/components/elements/button";
 
 // 投稿関係
-// import LogoArea from "@/features/Content/LogoArea";
-// import InterviewArea from "@/features/Content/InterviewArea";
-import InformationArea from "@/features/Content/InformationArea";
+import LogoContents from "@/components/slider/logo/logoContents";
+// import InterviewArea from "@/features/media/interview/content";
+import InformationArea from "@/features/media/information/content";
 
 // ISR
 export const revalidate = 600;
 
 export default async function Home() {
-
-
   return (
     <main>
       {/* メインビジュアル */}
       <TopMainVisual />
 
       {/* 導入企業ロゴ */}
-      {/* <LogoArea /> */}
+      <LogoContents />
 
       {/* マネーリペアとは */}
       <div id="sc01" className={"c-contents pdt10 pdt10s mgb5s"}>
@@ -43,9 +41,7 @@ export default async function Home() {
                 金融は分野によって知識が偏りがちなので、金融知識という知的財産を身につけ、自分たちで適切な判断ができるようにすることが必要だと感じます。金融リテラシーを上げることにより「将来に向けたお金の不安を解決する」サービスです。
               </p>
               <div className={"c-contents--btnArea -left"}>
-                <PageButtonLink href="/service">
-                  マネーリペアについて
-                </PageButtonLink>
+                <Button href="/service">マネーリペアについて</Button>
               </div>
             </li>
             <li className={"flexItem"}>

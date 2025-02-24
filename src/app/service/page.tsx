@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoMark from "@/components/Lottie/LogoMark";
+import LogoMark from "@/components/lottie/logoMark";
 
 export default function Page() {
   return (

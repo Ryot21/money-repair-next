@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import { getInterviewsList, getInterviewCategoryList } from "@/libs/microcms";
-import InterviewList from "@/features/PostList/Interview";
+import { getInterviewsList, getInterviewCategoryList } from "@/features/media/api/microcms/getInterview";
+import InterviewList from "@/features/media/interview/postList";
 import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
-import CategoryList from "@/components/Parts/Category/List";
-import Pagination from "@/components/Parts/pagination";
+import CategoryLists from "@/components/elements/category/categoryLists";
+import Pagination from "@/components/elements/pagination";
 
 type Props = {
   params: Promise<{
@@ -55,7 +55,7 @@ export default async function Page({ params }: Props) {
         </div>
       </div>
       {/* カテゴリ一覧 */}
-      <CategoryList article="interview" categories={categories} />
+      <CategoryLists article="interview" categories={categories} />
       {/* 記事一覧 */}
       <div className="c-contents pdt5 pdt10s pdb2">
         <InterviewList contents={interview} />

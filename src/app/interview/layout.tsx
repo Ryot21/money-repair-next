@@ -1,4 +1,4 @@
-import Sheet from "@/components/Sheet"
+import Sheet from "@/components/sheet";
 
 export const metadata = {
     title: "ご利用者の声",

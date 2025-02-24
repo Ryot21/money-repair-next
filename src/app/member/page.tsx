@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getPosterList } from "@/libs/microcms";
+import { getPosterList } from "@/features/media/api/microcms/getPosterList";
 
 
 export default async function Page(){

@@ -3,9 +3,9 @@ import { metadata } from "./metadata";
 import { headers } from "next/headers";
 import PageTypeWrapper from "@/components/PageTypeWrapper";
 import ScrollToTop from "@/components/ScrollToTop";
-import HeaderContainer from "@/features/Header/HeaderContainer";
-import HamburgerNav from "@/features/HamburgerNav";
-import Footer from "@/features/Footer";
+import HeaderContainer from "@/features/media/header/headerContainer";
+import NavigationContainer from "@/features/media/navigation/navigationContainer";
+import Footer from "@/features/media/footer";
 
 export { metadata };
 
@@ -31,7 +31,7 @@ export default async function RootLayout({
         <PageTypeWrapper initialPageType={initialPageType}>
           <ScrollToTop />
           <HeaderContainer />
-          <HamburgerNav />
+          <NavigationContainer />
           {children}
           <Footer />
         </PageTypeWrapper>

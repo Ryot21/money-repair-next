@@ -2,12 +2,12 @@ import {
   getInterviewCategoryDetail,
   getInterviewsList,
   getInterviewCategoryList,
-} from "@/libs/microcms";
+} from "@/features/media/api/microcms/getInterview";
 import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
 import { notFound } from "next/navigation";
-import InterviewList from "@/features/PostList/Interview";
-import CategoryList from "@/components/Parts/Category/List";
-import Pagination from "@/components/Parts/pagination";
+import InterviewList from "@/features/media/interview/postList";
+import CategoryLists from "@/components/elements/category/categoryLists";
+import Pagination from "@/components/elements/pagination";
 
 type Props = {
   params: Promise<{
@@ -19,9 +19,7 @@ export default async function Page({ params }: Props) {
   // paramsを非同期で取得
   const { id } = await params;
 
-  const category = await getInterviewCategoryDetail(id).catch(
-    notFound
-  );
+  const category = await getInterviewCategoryDetail(id).catch(notFound);
   const categories = await getInterviewCategoryList();
 
   const { contents: interview, totalCount } = await getInterviewsList({
@@ -52,7 +50,7 @@ export default async function Page({ params }: Props) {
 
       {/* カテゴリ一覧 */}
       {/* article = information or interview */}
-      <CategoryList
+      <CategoryLists
         article="interview"
         currentCategoryId={id}
         categories={categories}

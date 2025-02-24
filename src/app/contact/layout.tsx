@@ -1,4 +1,4 @@
-import ContactSheet from "@/components/Sheet/contact";
+import ContactSheet from "@/components/sheet/contact";
 
 export const metadata = {
   title: "お問い合わせ",

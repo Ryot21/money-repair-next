@@ -1,4 +1,4 @@
-import ContactStep from "@/components/ContactStep";
+import ContactStep from "@/features/media/step";
 
 export default function Page() {
   return (

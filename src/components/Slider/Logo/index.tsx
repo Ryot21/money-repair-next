@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import type { Client } from "@/libs/microcms";
+import type { Client } from "@/types/microcms";
 
 // クライアントから受け取ったデータを表示するSwiperコンポーネント
 export default function ClientLogoSwiper({ clients }: { clients: Client[] }) {
