@@ -4,9 +4,9 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Iconbutton from "@/components/elements/button/iconButton";
+import Iconbutton from "@/components/elements/button/IconButton";
 import type { Category } from "@/types/microcms";
-import HeaderScroll from "./headerScroll";
+import HeaderScroll from "./HeaderScroll";
 
 // Props型を定義
 type HeaderProps = {

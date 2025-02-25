@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import SideberContactForm from "@/components/elements/form/sideber";
+import SideberContactForm from "@/components/elements/form/Sideber";
 
 export default function ContactSidebar() {
   return (

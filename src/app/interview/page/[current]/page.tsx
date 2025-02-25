@@ -1,8 +1,11 @@
 import { notFound } from "next/navigation";
-import { getInterviewsList, getInterviewCategoryList } from "@/features/media/api/microcms/getInterview";
-import InterviewList from "@/features/media/interview/postList";
+import {
+  getInterviewsList,
+  getInterviewCategoryList,
+} from "@/features/media/api/microcms/getInterview";
+import InterviewList from "@/features/media/interview/PostList";
 import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
-import CategoryLists from "@/components/elements/category/categoryLists";
+import CategoryLists from "@/components/elements/category/CategoryLists";
 import Pagination from "@/components/elements/pagination";
 
 type Props = {

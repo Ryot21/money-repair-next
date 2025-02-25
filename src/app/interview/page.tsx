@@ -1,7 +1,10 @@
-import { getInterviewsList, getInterviewCategoryList } from "@/features/media/api/microcms/getInterview";
+import {
+  getInterviewsList,
+  getInterviewCategoryList,
+} from "@/features/media/api/microcms/getInterview";
 import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
-import InterviewList from "@/features/media/interview/postList";
-import CategoryLists from "@/components/elements/category/categoryLists";
+import InterviewList from "@/features/media/interview/PostList";
+import CategoryLists from "@/components/elements/category/CategoryLists";
 import Pagination from "@/components/elements/pagination";
 
 export default async function Page() {

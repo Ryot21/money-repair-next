@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getInformationDetail } from "@/features/media/api/microcms/getInformation";
-import Article from "@/features/media/information/article";
+import Article from "@/features/media/information/Article";
 
 // SSR（microcms.tsに記述　通常時ISR＋プレビュー時SSR）
 

@@ -3,10 +3,10 @@ import {
   getInformationList,
   getInformationCategoryList,
 } from "@/features/media/api/microcms/getInformation";
-import InformationList from "@/features/media/information/postList";
+import InformationList from "@/features/media/information/PostList";
 import { INFORMATION_PAGE_LIST_LIMIT } from "@/constants";
 import SearchField from "@/components/elements/searchField";
-import CategoryLists from "@/components/elements/category/categoryLists";
+import CategoryLists from "@/components/elements/category/CategoryLists";
 import Pagination from "@/components/elements/pagination";
 
 type Props = {

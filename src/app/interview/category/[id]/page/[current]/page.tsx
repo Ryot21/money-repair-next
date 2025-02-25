@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import {
-  getInterviewCategoryDetail,
   getInterviewsList,
+  getInterviewCategoryDetail,
   getInterviewCategoryList,
 } from "@/features/media/api/microcms/getInterview";
-import InterviewList from "@/features/media/interview/postList";
-import CategoryLists from "@/components/elements/category/categoryLists";
+import InterviewList from "@/features/media/interview/PostList";
+import CategoryLists from "@/components/elements/category/CategoryLists";
 import Pagination from "@/components/elements/pagination";
 import { INTERVIEW_PAGE_LIST_LIMIT } from "@/constants";
 

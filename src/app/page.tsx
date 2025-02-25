@@ -6,9 +6,9 @@ import ContactBottom from "@/features/media/contact/bottom";
 import Button from "@/components/elements/button";
 
 // 投稿関係
-import LogoContents from "@/components/slider/logo/logoContents";
+import LogoContents from "@/components/slider/logo/LogoContents";
 // import InterviewArea from "@/features/media/interview/content";
-import InformationArea from "@/features/media/information/content";
+import InformationArea from "@/features/media/information/Content";
 
 // ISR
 export const revalidate = 600;

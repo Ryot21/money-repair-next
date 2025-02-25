@@ -3,8 +3,8 @@ import { metadata } from "./metadata";
 import { headers } from "next/headers";
 import PageTypeWrapper from "@/components/PageTypeWrapper";
 import ScrollToTop from "@/components/ScrollToTop";
-import HeaderContainer from "@/features/media/header/headerContainer";
-import NavigationContainer from "@/features/media/navigation/navigationContainer";
+import HeaderContainer from "@/features/media/header/HeaderContainer";
+import NavigationContainer from "@/features/media/navigation/NavigationContainer";
 import Footer from "@/features/media/footer";
 
 export { metadata };
