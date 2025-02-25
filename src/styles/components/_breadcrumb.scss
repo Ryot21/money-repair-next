@@ -11,7 +11,7 @@
 	align-items: center;
 	padding-left: 0;
 	@include max(768) {
-		justify-content: end;
+		justify-content: flex-end;
 	}
 	}
 	&__item {

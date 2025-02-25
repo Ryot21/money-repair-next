@@ -29,11 +29,11 @@
     }
   }
   &.-jc-end {
-    justify-content: end;
+		justify-content: flex-end;
   } // 右寄
   &.-jc-end_s {
     @include max(768) {
-      justify-content: end;
+      justify-content: flex-end;
     }
   }
 
