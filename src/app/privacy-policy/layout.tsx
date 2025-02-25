@@ -1,4 +1,4 @@
-import Sheet from "@/components/sheet/static";
+import StaticSheet from "@/components/sheet/static";
 
 export const metadata = {
   title: "プライバシーポリシー",
@@ -10,8 +10,8 @@ type Props = {
 
 export default function RootLayout({ children } : Props) {
     return (
-        <Sheet title="プライバシーポリシー" mvClass="-privacyPolicy" contentClass="">
+        <StaticSheet title="プライバシーポリシー" mvClass="-privacyPolicy" contentClass="">
             {children}
-        </Sheet>
+        </StaticSheet>
     )
 }

@@ -8,7 +8,7 @@ type Props = {
     contentClass?: string;
 }
 
-export default function Sheet({ children, title, mvClass, contentClass }: Props) {
+export default function StaticSheet({ children, title, mvClass, contentClass }: Props) {
     return (
         <main>
             {/* メインビジュアル */}
