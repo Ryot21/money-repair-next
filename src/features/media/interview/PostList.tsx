@@ -57,14 +57,10 @@ export default function InterviewList({ contents }: Props) {
                   />
                 )}
               </div>
-              <p className={"c-thumbnail--title"}>
-                <span className={"s-M -s20 -b -color03 -ls-1"}>
-                  {article.mainTitle}
-                </span>
+              <p className={"c-thumbnail--title s-ML -s16 -b -color03 -ls-1"}>
+                {article.mainTitle}
               </p>
-              <p
-                className={"c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1"}
-              >
+              <p className={"c-thumbnail--subTitle s-SS -s10 -b -color03 -ls-1"}>
                 {article.subTitle}
               </p>
             </div>
@@ -73,7 +69,6 @@ export default function InterviewList({ contents }: Props) {
               <div className={"c-date mgb2 mgb1s"}>
                 <ul className={"c-date__lists c-flex -col2"}>
                   <li className={"c-date__item"}>
-                    {/* <Date date={article.date} /> */}
                     <Date date={article.publishedAt || article.createdAt} />
                   </li>
                   <li className={"c-date__item"}>

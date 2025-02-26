@@ -39,12 +39,10 @@ export default function Article({ data }: Props) {
               height={452}
             />
           </div>
-          <p className="c-thumbnail--title">
-            <span className="s-LL -s18 -b -color03 -ls-1">
-              {data.mainTitle}
-            </span>
+          <p className={"c-thumbnail--title s-L -s16 -b -color03 -ls-2 -lh-1_5"}>
+            {data.mainTitle}
           </p>
-          <p className="c-thumbnail--subTitle s-L -s16 -b -color03 -ls-1">
+          <p className={"c-thumbnail--subTitle s-M -s10 -b -color03 -ls-2"}>
             {data.subTitle}
           </p>
         </div>

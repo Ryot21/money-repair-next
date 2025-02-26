@@ -373,7 +373,7 @@ td {
   &.s-SS {
     font-size: 0.7rem;
     @include min(768) {
-      font-size: clamp(0.7rem, 2vw, 1.2rem);
+      font-size: clamp(0.7rem, 1.1vw, 1.2rem);
     }
   }
   &.s-S {
