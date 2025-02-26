@@ -26,12 +26,12 @@ export async function generateMetadata({
 
     return {
         title: data.mainTitle,
-        description: data.subTitle,
+        description: data.read,
         // その他のメタデータ
         openGraph: {
             title: data.mainTitle,
-            description: data.subTitle,
-            images: [data.thumbnail?.url ?? ""],
+            description: data.read,
+            images: [data.thumbnail.url],
         },
     };
 }
