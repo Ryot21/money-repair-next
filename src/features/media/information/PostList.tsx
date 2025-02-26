@@ -40,21 +40,12 @@ export default function InformationList({ contents }: Props) {
                 />
               </div>
               <div className={"c-thumbnail--picter"}>
-                {article.thumbnail ? (
-                  <Image
-                    src={article.thumbnail.url}
-                    alt={article.mainTitle}
-                    width={480}
-                    height={320}
-                  />
-                ) : (
-                  <Image
-                    src="/images/item/480-320.png"
-                    alt="お客様との写真"
-                    width={480}
-                    height={320}
-                  />
-                )}
+                <Image
+                  src={article.thumbnail.url}
+                  alt={article.thumbnailAlt}
+                  width={480}
+                  height={320}
+                />
               </div>
             </div>
             {/* テキストエリア */}

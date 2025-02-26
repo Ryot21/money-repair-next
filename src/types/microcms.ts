@@ -57,13 +57,12 @@ export type Interview = {// ご利用者インタビュー
 } & MicroCMSListContent;
 
 export type Information = {// お役立ち情報
-    id:               string;   // ID
-    date:             string;   // 更新日（yyyy/mm/dd）
-    thumbnail?:       MicroCMSImage; // サムネイル
-    mainTitle:        string;   // メインタイトル
-    subTitle:         string;   // サブタイトル
-    category:         Category; // カテゴリー
-    captionLists: {             // 見出しリスト
+    id:               string;        // ID
+    mainTitle:        string;        // メインタイトル
+    thumbnail:        MicroCMSImage; // サムネイル
+    thumbnailAlt:     string;        // サムネイル_alt
+    category:         Category;      // カテゴリー
+    captionLists: {                  // 見出しリスト
         captionTitle01: string;
         captionTitle02: string;
         captionTitle03: string;

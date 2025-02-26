@@ -62,20 +62,18 @@ export default async function Article({ data }: Props) {
           <div className={"c-thumbnail--mark"}>
             <Image
               src="/images/item/news/news-mark.svg"
-              alt="マネーリペア | ご利用者インタビュー"
+              alt="マネーリペア | お役立ち情報"
               width={428}
               height={48}
             />
           </div>
           <div className={"c-thumbnail--picter"}>
-            {data.thumbnail && (
-              <Image
-                src={data.thumbnail?.url}
-                alt={data.mainTitle}
-                width={856}
-                height={570}
-              />
-            )}
+            <Image
+              src={data.thumbnail.url}
+              alt={data.thumbnailAlt}
+              width={856}
+              height={570}
+            />
           </div>
         </div>
         {/* 3. お悩み */}
