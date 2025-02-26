@@ -39,12 +39,11 @@ export type Recommend = {// 合わせて読みたい記事
 export type Interview = {// ご利用者インタビュー
     id:             string;        // ID
     company:        string;        // 企業名
-    date:           string;        // 更新日（yyyy/mm/dd）
+    client:         Client;        // 取引先情報
+    category:       Category;      // カテゴリー
     thumbnail:      MicroCMSImage; // サムネイル
     mainTitle:      string;        // メインタイトル
     subTitle:       string;        // サブタイトル
-    category:       Category;      // カテゴリー
-    client:         Client;        // 取引先情報
     article1Body:   string;        // 本文1
     article1Image:  MicroCMSImage; // 本文1
     article2Title:  string;        // 本文2_見出し
