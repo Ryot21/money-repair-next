@@ -1,7 +1,6 @@
-// リンク関係（aタグ）
-
+// aタグ用のスタイル
 .c-link {
-  &.-nav {
+  &.-nav {// ナビゲーション
     display: block;
     width: auto;
     transition: all 0.5s;
@@ -9,7 +8,7 @@
       transform: scale(1.05);
     }
   }
-  &.-contact {
+  &.-contact {// お問い合わせ
     display: block;
     width: auto;
     height: auto;
@@ -30,7 +29,7 @@
       }
     }
   }
-  &.-img {
+  &.-img {// 画像
     display: block;
     transform: scale(1);
     transition-duration: 0.5s;
@@ -43,7 +42,7 @@
       // box-shadow: 1px 1px 4px 0px $item-hover--bg;
     }
   }
-  &.-btn {
+  &.-btn {// ボタン風レイアウト
     display: inline-block;
     width: auto !important;
     height: auto !important;

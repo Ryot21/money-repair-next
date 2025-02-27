@@ -299,14 +299,14 @@ export default function SideberContactForm({ customClass }: Props) {
           <button
             type="button"
             onClick={handleBack}
-            className="c-link -btn -c-gray -center s-M -s14 -b -ls-2 mgr3 mgr3s"
+            className="c-link -btn -c-gray -center s-M -s14 -b -ls-2 mgr2 mgr2s"
           >
             修正する
           </button>
           <button
             type="button"
             onClick={handleSubmit}
-            className="c-link -btn -center s-M -s14 -b -ls-2 primary"
+            className="c-link -btn -center s-M -s14 -b -ls-2 primary mgl2 mgl2s"
           >
             送信する
           </button>
