@@ -29,21 +29,13 @@ html{
             width: 90vw;
             height: auto;
             margin: auto;
-            @include min(768){
-
-            }
         }
     }
     &.is-open {
-
         .modal__overlay{
             background: rgba(0,0,0,0.6);
             opacity: 1;
             z-index: 999;
-        }
-        .modal__container{
-
-
         }
     }
 }

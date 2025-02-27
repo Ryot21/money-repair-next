@@ -4,8 +4,7 @@
   border-radius: 5px;
   overflow: hidden;
 
-  &.-t01 {
-    // 投稿者
+  &.-t01 {// 投稿者
     background: $main-color--w;
     border: 4px double $site-color03;
     .c-card-lists {
@@ -90,6 +89,7 @@
           text-overflow: ellipsis;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
+          line-clamp: 2;
           overflow: hidden;
 
           @include min(500) {
@@ -99,8 +99,7 @@
       }
     }
   }
-  &.-t02 {
-    // 内部リンク > 合わせて読みたい
+  &.-t02 {// 内部リンク > 合わせて読みたい
     position: relative;
     top: 0;
     border: 1px solid $site-color03;
@@ -197,6 +196,7 @@
           text-overflow: ellipsis;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
+          line-clamp: 2;
           overflow: hidden;
 
           @include min(500) {
@@ -211,6 +211,7 @@
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         overflow: hidden;
         p,
         span,
@@ -225,8 +226,7 @@
       }
     }
   }
-  &.-t03 {
-    // 目次
+  &.-t03 {// 目次
     width: 100%;
     background: $main-color--w;
     border: 1px solid $site-color03;
@@ -278,6 +278,7 @@
                 text-overflow: ellipsis;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 1;
+                line-clamp: 1;
                 overflow: hidden;
             }
 
@@ -431,8 +432,7 @@
       }
     }
   }
-  &.-t04 {
-    // お悩み
+  &.-t04 {// お悩み
     position: relative;
     padding: 30px 10px 20px 10px;
     border: 1px solid $site-color03;
@@ -477,6 +477,7 @@
           text-overflow: ellipsis;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 1;
+          line-clamp: 1;
           overflow: hidden;
         }
       }
@@ -484,6 +485,7 @@
   }
 }
 
+// 目次 > アクティブ状態
 .c-card-lists {
   &.-h2-lists {
     > .c-card-item {

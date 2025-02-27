@@ -39,7 +39,6 @@
     &:hover {
       transform: scale(1.025);
       transition-duration: 0.2s;
-      // box-shadow: 1px 1px 4px 0px $item-hover--bg;
     }
   }
   &.-btn {// ボタン風レイアウト
@@ -92,9 +91,7 @@
         background: $main-color--w;
       }
     }
-
-    // アイコンあり
-    &.-icon {
+    &.-icon {// アイコンあり
       position: relative;
       &.-dl {
         padding: 10px 30px 10px 20px;
@@ -129,7 +126,6 @@
       transform: scale(1.05);
     }
   }
-
   &.-c-color {
     @include min(768) {
       transition: 1s all;
@@ -143,8 +139,7 @@
       }
     }
   }
-
-  &.-logo {
+  &.-logo {// ロゴ
     position: relative;
     margin-right: 3rem;
     text-decoration: underline;
@@ -168,9 +163,7 @@
       background-size: contain;
     }
   }
-
-  &.-check {
-    // お悩み
+  &.-check {// お悩み
     position: relative;
     display: inline-block;
     margin-left: 25px;
@@ -202,18 +195,8 @@
       opacity: 0;
       transition: all 0.75s;
     }
-    // &:hover{
-    // 	color: $site-color03;
-    // 	opacity: .6;
-    // 	&::after{
-    // 		height: 1px;
-    // 		border-bottom: 2px solid $site-color03;
-    // 		opacity: .6;
-    // 	}
-    // }
   }
-  &.-mokuji {
-    // 目次
+  &.-mokuji {// 目次
     transition: all 0.3s;
     &:hover {
       color: $site-color03;

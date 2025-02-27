@@ -5,17 +5,17 @@
 	padding: 10px 0;
 	
 	@include min(768){width: 80%;}
-	&__lists{// ul
+	&__lists{// ulタグ
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
 	}
-	&__item{// li
+	&__item{// liタグ
 		width: auto;
 		margin: 0 5px;
 	}
-	&__link{// a
+	&__link{// aタグ
 		position: relative;
 		display: inline-block;
 		width: 20px;
@@ -44,7 +44,6 @@
 		}
 		&:hover{
 			color: $main-color--gray;
-			// text-shadow: 1px 1px 0px $main-color--b;
 		}
 	}
 	&__right{// 進むボタン
@@ -55,7 +54,6 @@
 		}
 		&:hover{
 			color: $main-color--gray;
-			// text-shadow: 1px 1px 0px $main-color--b;
 		}
 	}
 }

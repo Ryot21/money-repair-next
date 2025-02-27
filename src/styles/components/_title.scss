@@ -63,9 +63,7 @@
             max-width: 220px;
         }
     }
-    span{
-        font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-    }
+    span{font-size: clamp(1.2rem, 1.5vw, 1.6rem);}
 }
 
 .c-contents--description{

@@ -90,8 +90,6 @@
 }
 
 .lum {
-  &-closing {
-  }
   &-lightbox {
     transition: all 1s;
     z-index: 999;
@@ -103,7 +101,6 @@
       transform: translate(-50%, -50%) !important;
       transition: all 1s;
       img {
-        // filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.459));
         @include min(768) {
           width: 85%;
           max-width: 750px;
@@ -113,9 +110,6 @@
     &-image-wrapper {
       @include max(768) {
         width: 90vw !important;
-        // height: 100% !important;
-        // max-height: 100% !important;
-
         max-width: 400px !important;
         height: 60lvh !important;
         max-width: 100% !important;
@@ -127,12 +121,7 @@
         max-width: 700px;
       }
     }
-    &-caption {
-      display: none;
-      // left: 50%;
-      // transform: translateX(-50%);
-      // @include max(768){max-width: inherit;}
-    }
+    &-caption {display: none;}
   }
   &-gallery-button {
     &::after {
@@ -194,13 +183,10 @@
     width: 85%;
     background: $main-color--w;
     border-radius: 10px;
-    // padding: 10px;
     @include min(768) {
       width: 75%;
       max-width: 1000px;
     }
-  }
-  &__contactLink {
   }
   &__backLink {
     display: block;

@@ -2,11 +2,7 @@
 
 .c-post {
   // 記事 > リスト
-  &--lists {
-    // ul
-  }
-  &--item {
-    // li
+  &--item {// liタグ
     @include min(768) {
       &:nth-child(1),
       &:nth-child(4),
@@ -55,7 +51,6 @@
     &:hover {
       top: 0.5rem;
       background: $main-color--gray;
-      // padding: 2% 2% 0 2%;
       border: 1px solid $site-color03;
       border-radius: 10px;
 
@@ -72,10 +67,6 @@
       .c-thumbnail--cover__text {
         opacity: 1;
       }
-      .c-post--data {
-        // background: $main-color--gray;
-        // padding: 2% 3% 4%;
-      }
     }
   }
   &--title {
@@ -83,9 +74,9 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
   &--data {
-    // background: white;
     padding: 2% 3% 5%;
     will-change: transform;
     transition: all 0.5s;
@@ -95,14 +86,12 @@
   }
   // 記事 > カテゴリー
   &--category {
-    &__lists {
-      // ul
+    &__lists {// ulタグ
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
     }
-    &__item {
-      // li
+    &__item {// liタグ
       width: auto;
       padding: 2px 5px 2px;
       margin-right: 5px;
