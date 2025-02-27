@@ -256,6 +256,10 @@
   height: 50px;
   border-radius: 50%;
   z-index: 9999;
+  @include min(500) {
+    left: 87%;
+  }
+
   &__cheakbox {
     display: none;
     &:checked ~ .c-hb-nav__close {

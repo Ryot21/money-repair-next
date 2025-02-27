@@ -5,12 +5,6 @@
 }
 
 .c-contents {
-  &.-min1200 {
-    @include min(500) {
-      min-height: 1200px;
-    }
-  }
-
   &.-bg-color01 {
     background: $site-color01;
   }
@@ -27,21 +21,13 @@
     background: $main-color--gray;
   }
 
-  &--inner {
+  &--inner {// コンテンツ幅
     width: 92.5%;
     margin: auto;
-    @include min(500) {
-      width: 85%;
-    }
-    @include min(768) {
-      width: 90%;
-    }
-    @include min(1600) {
-      max-width: 1320px;
-    }
-    @include min(1800) {
-      max-width: 1500px;
-    }
+    @include min(500) {width: 85%;}
+    @include min(768) {width: 90%;}
+    @include min(1600) {max-width: 1380px;}
+    @include min(1800) {max-width: 1500px;}
 
     &.-bg-color01 {
       background: $site-color01;
@@ -70,8 +56,7 @@
     }
   }
   &--banner {
-    // お客様の声
-    &.-ver01 {
+    &.-ver01 {// お客様の声
       width: 90%;
       margin: auto;
       @include min(500) {
@@ -84,8 +69,7 @@
         max-width: 1000px;
       }
     }
-    // お役立ち情報
-    &.-ver02 {
+    &.-ver02 {// お役立ち情報
       width: 100%;
     }
   }
@@ -101,30 +85,39 @@
     }
   }
 
-  &.-fv {
-    //ファーストビュー
+  // 共通設定
+  &.-imgBg {
+    //背景画像
+    position: relative;
+    .c-contentsBox {
+      position: absolute;
+      // 要素の真ん中
+      &.-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.-fv {//ファーストビュー
     position: relative;
 
-    &.-top {
-      // TOP
+    &.-top {// TOPページ
       .imgBox {
         height: 120vh;
-        @include min(400){
-          height: 110vh;
-        }
-        @include min(500) {
-          height: 100vh;
-        }
+        @include min(400){height: 110vh;}
+        @include min(500) {height: 100vh;}
 
-        // 1.ドット背景
-        &.-dot {
+        &.-dot {// 1.ドット背景
           background-image: radial-gradient($site-color01 2px, transparent 2px),
             radial-gradient($site-color01 2px, #ffffff 2px);
           background-size: 40px 40px;
           background-position: 0 0, 20px 20px;
         }
-        // 2.波背景
-        &.-wave {
+        &.-wave {// 2.波背景
           background: radial-gradient(
                 1.5em 6.28571em at 1.95em,
                 rgba(255, 255, 255, 0) 50%,
@@ -181,12 +174,11 @@
         }
       }
       .c-contentsBox {
-        // アスペクト比
-        // 共通
+        //アスペクト比
         &.-pic16_9,
         &.-pic9_16,
         &.-pic4_3,
-        &.-pic3_4 {
+        &.-pic3_4 {// 共通
           width: auto;
           background: gray;
           img {
@@ -337,8 +329,7 @@
             width: 30%;
           }
         }
-        &.-pic-02 {
-          // 右下
+        &.-pic-02 {// 右下
           top: 25%;
           left: 5%;
           width: 75%;
@@ -359,8 +350,7 @@
             width: 25%;
           }
         }
-        &.-pic-03 {
-          // 中央上
+        &.-pic-03 {// 中央上
           top: 20%;
           left: 58%;
           width: 30%;
@@ -382,8 +372,7 @@
             width: 10%;
           }
         }
-        &.-pic-04 {
-          // 左上
+        &.-pic-04 {// 左上
           top: 84%;
           left: 2%;
           width: 39%;
@@ -404,8 +393,7 @@
             width: 22%;
           }
         }
-        &.-pic-05 {
-          // 左下
+        &.-pic-05 {// 左下
           top: 77%;
           left: 3%;
           width: 50%;
@@ -426,8 +414,7 @@
             width: 12%;
           }
         }
-        &.-pic-06 {
-          // 右上
+        &.-pic-06 {// 右上
           top: 8%;
           left: 7%;
           width: 55%;
@@ -448,8 +435,7 @@
             width: 15%;
           }
         }
-        &.-pic-07 {
-          // 中央下
+        &.-pic-07 {// 中央下
           top: 56%;
           left: -5%;
           width: 44%;
@@ -472,9 +458,8 @@
         }
 
         // キャッチコピー
-        // 共通
         &.-catchCopy01,
-        &.-catchCopy02 {
+        &.-catchCopy02 {// 共通
           background: $main-color--w;
           padding: 5px 4px 5px 4px;
           transform: translate(-50%, -50%);
@@ -523,7 +508,7 @@
             }
           }
         }
-        &.-catchCopy01 {
+        &.-catchCopy01 {// 上文
           top: 19%;
           left: 91%;
           z-index: 11;
@@ -539,8 +524,8 @@
             top: 45%;
             left: 73%;
           }
-        } // 上文
-        &.-catchCopy02 {
+        }
+        &.-catchCopy02 {// 下文
           top: 20%;
           left: 83%;
           z-index: 10;
@@ -556,10 +541,10 @@
             top: 48%;
             left: 68.75%;
           }
-        } // 下文
+        }
 
         // 注釈
-        &.-comments01 {
+        &.-comments01 {// 縦文
           position: absolute;
           top: 44%;
           left: 5%;
@@ -693,8 +678,7 @@
         }
       }
     }
-    &.-single {
-      // 下層ページ
+    &.-single {// 下層ページ
       background: white;
       border-bottom: 1px solid $site-color03;
       .imgBox {
@@ -913,7 +897,7 @@
       }
     }
   }
-  &.-logoArea{
+  &.-logoArea{// 導入実績
     position: relative;
 
     &::before,
@@ -937,7 +921,7 @@
       background: linear-gradient(.75turn, $site-color01, 75%, rgba(0, 0, 0, 0));
     }
   }
-  &.-serviceBox {
+  &.-serviceBox{// マネーリペアとは
     position: relative;
     padding: 12% 5% 25% 5%;
     border-radius: 10px;
@@ -1017,40 +1001,6 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
         object-position: center;
-      }
-    }
-  }
-  &.-imgBg {
-    //背景画像
-    position: relative;
-    .c-contentsBox {
-      position: absolute;
-      // 要素の真ん中
-      &.-center {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-
-  &.-returnBtn {
-    // 戻るボタン
-    a {
-      display: block;
-      width: 20%;
-      border-radius: 5px;
-      overflow: hidden;
-      margin: auto;
-      text-align: center;
-      box-shadow: 1px 1px gray;
-      @include min(768) {
-        width: 6%;
-      }
-      @include min(1400) {
-        width: 7%;
       }
     }
   }
