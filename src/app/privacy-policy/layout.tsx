@@ -1,4 +1,4 @@
-import StaticSheet from "@/components/sheet/Static";
+import StaticSheet from "@/features/media/sheet/Static";
 
 export const metadata = {
   title: "プライバシーポリシー",

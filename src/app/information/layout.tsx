@@ -1,4 +1,4 @@
-import Sheet from "@/components/sheet";
+import Sheet from "@/features/media/sheet";
 
 export const metadata = {
     title: "お役立ち情報",
