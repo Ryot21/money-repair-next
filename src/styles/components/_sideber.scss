@@ -40,16 +40,19 @@
         width: 20%;
         min-width: 70px;
         color: $main-color--w;
-        font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+        font-size: clamp(1.2rem, 1.5vw, 1.4rem);
         font-weight: bold;
         background: $site-color03;
         border: 1px solid $site-color03 !important;
         border-radius: 0 5px 5px 0;
         border: none;
+        text-align: center;
         letter-spacing: 0.5rem;
         will-change: transform;
         transition: all 0.3s;
         cursor: pointer;
+
+        padding: 0;
 
         &:hover {
           background: $site-color03;
