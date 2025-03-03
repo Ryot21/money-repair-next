@@ -1,11 +1,11 @@
 // import styles from "@/app/not-found.module.scss";
-import SingleMainVisual from "@/features/media/mainVisual/single";
+import LpOtherMainVisual from "@/features/lp/mainVisual/Others";
 import Button from "@/components/elements/button";
 
 export default function NotFound() {
   return (
-    <main>
-      <SingleMainVisual
+    <main className="c-main -404">
+      <LpOtherMainVisual
         title="ページが見つかりませんでした"
         mvClass="-notFound"
       />
@@ -28,11 +28,11 @@ export default function NotFound() {
         <p className="s-SS -s10 -center -ls-2 -lh-1_5 mgb10 mgb20s">
           The page may have been moved or deleted, <br className="sp" />
           or the URL may be incorrect. <br />
-          We apologize for the inconvenience, but please check again.
+          We apologize for the inconvenience, <br className="sp" />but please check again.
         </p>
         {/* ボタン */}
         <div className={"c-contents--btnArea"}>
-          <Button href="/">トップへ戻る</Button>
+          <Button href="/lp">トップへ戻る</Button>
         </div>
       </div>
     </main>

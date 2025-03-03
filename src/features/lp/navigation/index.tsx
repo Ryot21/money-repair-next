@@ -32,7 +32,7 @@ export default function LpNavigation() {
         <ul className={"c-hb-nav__lists"}>
           {/* マネーリペアとは */}
           <li className={"hbNavItem"}>
-            <Link href="#sc01" onClick={handleLinkClick}>
+            <Link href="/lp#sc01" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
                 マネーリペアとは
               </span>
@@ -40,7 +40,7 @@ export default function LpNavigation() {
           </li>
           {/* サービス内容 */}
           <li className={"hbNavItem"}>
-            <Link href="#sc02" onClick={handleLinkClick}>
+            <Link href="/lp#sc02" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
                 サービス内容
               </span>
@@ -48,7 +48,7 @@ export default function LpNavigation() {
           </li>
           {/* 選ばれる理由 */}
           <li className={"hbNavItem"}>
-            <Link href="#sc03" onClick={handleLinkClick}>
+            <Link href="/lp#sc03" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
                 選ばれる理由
               </span>
@@ -56,7 +56,7 @@ export default function LpNavigation() {
           </li>
           {/* 導入事例 */}
           <li className={"hbNavItem"}>
-            <Link href="#sc04" onClick={handleLinkClick}>
+            <Link href="/lp#sc04" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
                 導入事例
               </span>
@@ -64,7 +64,7 @@ export default function LpNavigation() {
           </li>
           {/* Q&A */}
           <li className={"hbNavItem"}>
-            <Link href="#sc05" onClick={handleLinkClick}>
+            <Link href="/lp#sc05" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
                 Q&A
               </span>
@@ -72,7 +72,7 @@ export default function LpNavigation() {
           </li>
           {/* お問い合わせ */}
           <li className={"hbNavItem"}>
-            <Link href="#contact" onClick={handleLinkClick}>
+            <Link href="/lp#contact" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
                 お問い合わせ
               </span>
