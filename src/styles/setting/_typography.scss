@@ -487,6 +487,11 @@ td {
       font-size: 2.4rem;
     }
   }
+  &.-s30 {
+    @include max(768) {
+      font-size: 3rem;
+    }
+  }
 }
 
 // ナビゲーション

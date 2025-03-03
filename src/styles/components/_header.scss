@@ -43,6 +43,9 @@
     left: 0;
     z-index: 999;
   }
+  &.-c-color02 {
+    background: $site-color02;
+  }
 
   &-wrapper {// コンテンツ幅
     width: 50%;

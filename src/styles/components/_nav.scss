@@ -137,6 +137,20 @@
         }
       }
     }
+
+    // LPに使用
+    &.-white {
+      &::before {
+        background: $site-color02;
+      }
+      &:hover,
+      &.-active {
+        color: $main-color--w;
+        &::before {
+          background: $main-color--w;
+        }
+      }
+    }
   }
 }
 .c-navAreaBox {
@@ -160,7 +174,7 @@
         width: auto;
         border-radius: 30px;
         will-change: transform;
-        transition: all 0.3s;
+        transition: all 0.5s;
         a {
           position: relative;
           display: inline-block;
@@ -213,6 +227,28 @@
                 path,
                 rect {
                   fill: $main-color--red;
+                }
+              }
+            }
+          }
+          a {
+            @include min(768) {padding: 0.65rem 3rem 0.5rem 1.5rem;}
+            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
+          }
+        }
+        &.-cv03 {// オレンジ色のボタン_LPに使用
+          @include min(500) {
+            background: $main-color--orange;
+            border: 1px solid $main-color--orange;
+            margin-left: 2%;
+            &:hover {
+              background: $main-color--w;
+              border: 1px solid $main-color--w;
+              a {
+                color: $main-color--orange !important;
+                path,
+                rect {
+                  fill: $main-color--orange;
                 }
               }
             }
@@ -535,7 +571,7 @@
     width: auto;
     margin: 0 15px 2px 0;
     @include min(768) {
-      margin: 0 5px 1px 0;
+      margin: 0 5px 5px 0;
     }
   }
   &--link {
@@ -562,6 +598,56 @@
         background: $main-color--yellow;
         opacity: 1;
       }
+    }
+  }
+  // LP用フッターナビゲーション
+  &--lists__lp {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    @include min(768){
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .LpnavItem {
+      position: relative;
+      width: 100%;
+      margin: 0 10px 10px;
+      @include min(768) {
+        width: auto;
+        margin: 0 30px;
+        &:nth-child(1){
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 1px;
+            height: 100%;
+            background: $main-color--w;
+            border-radius: 5px;
+            @include min(768) {
+              left: -30px;
+            }
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -10px;
+          width: 1px;
+          height: 100%;
+          background: $main-color--w;
+          border-radius: 5px;
+          @include min(768) {
+            right: -30px;
+          }
+        }
+      }
+
     }
   }
 }

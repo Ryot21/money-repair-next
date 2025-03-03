@@ -4,7 +4,7 @@ import PageTypeWrapper from "@/components/PageTypeWrapper";
 import ScrollToTop from "@/components/ScrollToTop";
 import LpHeader from "@/features/lp/header";
 import LpNavigation from "@/features/lp/navigation";
-import Footer from "@/features/media/footer";
+import LpFooter from "@/features/lp/footer";
 
 /**
  * LPページ用のメタデータ
@@ -37,7 +37,7 @@ export default async function LpLayout({
       <LpHeader />
       <LpNavigation />
       {children}
-      <Footer />
+      <LpFooter />
     </PageTypeWrapper>
   );
 }

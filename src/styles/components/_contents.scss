@@ -896,6 +896,147 @@
         }
       }
     }
+    &.-lp01 {// LP01
+      background: #d5edfc;
+      .c-contents--inner {position: relative;}
+      .imgBox {
+        height: 120vh;
+        @include min(400){height: 110vh;}
+        @include min(500) {height: 100vh;}
+
+      }
+      .c-contentsBox {
+        // 注釈
+        &.-comments01 {// 縦文
+          position: absolute;
+          top: 8%;
+          left: 0;
+          z-index: 11;
+          @include min(500) {
+            top: 15%;
+            left: 0;
+          }
+          @include min(768) {
+            // top: 50%;
+            // left: 32%;
+          }
+          @include min(1000) {
+            // top: 45%;
+            // left: 50%;
+          }
+          // ピックアップ
+          .pickup {
+            position: relative;
+            display: inline-block;
+            color: $site-color03;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            font-weight: bold;
+            text-align: start;
+            letter-spacing: .1rem;
+            margin-bottom: 2rem;
+            @include max(1000) {
+              line-height: 2;
+            }
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              top: auto;
+              bottom: -1rem;
+              height: 1px;
+              background: $site-color03;
+            }
+            &::before {
+              left: 0;
+              width: 30px;
+              @include min(768) {
+                width: 62px;
+              }
+            }
+            &::after {
+              left: auto;
+              right: 0;
+              width: 87%;
+              @include min(768) {
+                width: 80%;
+              }
+            }
+            span {
+              display: inline-block;
+              color: $site-color03;
+              font-size: clamp(1rem, 2vw, 1.4rem);
+              font-weight: bold;
+              background: $main-color--w;
+              padding: 0.5rem 0.5rem;
+              margin-right: .5rem;
+              border-radius: 5px;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: -1.6rem;
+                left: 28px;
+                width: 25px;
+                height: 1px;
+                background: $site-color03;
+                transform: rotate(30deg);
+                @include min(768) {
+                  left: 60px;
+                }
+              }
+            }
+          }
+          // タイトル
+          .title {
+            margin-bottom: 2rem;
+            p,
+            span {
+              font-size: 3.5rem;
+              font-weight: bold;
+              text-align: start;
+              letter-spacing: 0.2rem;
+              line-height: 1.5;
+              @include min(768) {
+                font-size: clamp(4rem, 5.5vw, 6rem);
+              }
+            }
+            span {
+              background: linear-gradient(
+                55deg,
+                $site-color03 0%,
+                #5399df 100%
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              filter: drop-shadow(1px 1px 1px $main-color--gray);
+            }
+          }
+          .text {
+            position: relative;
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-align: start;
+            letter-spacing: 0.2rem;
+            line-height: 1.75;
+            padding-left: 1rem;
+            @include min(500){
+              font-size: clamp(1.5rem, 1.5vw, 2rem);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 2px;
+              height: 65%;
+              background: $site-color03;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
   }
   &.-logoArea{// 導入実績
     position: relative;
