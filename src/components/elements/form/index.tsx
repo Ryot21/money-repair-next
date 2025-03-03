@@ -4,25 +4,25 @@ import Link from "next/link";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
-import { validatePhoneNumber, validateEmail } from "@/utils/validation";
+import {
+  validateForm,
+  formatPhoneNumber,
+  validateField,
+} from "@/utils/validation";
+import type {
+  ContactState,
+  FormStep,
+  FormData,
+  FormErrors,
+  Props as FormProps,
+} from "@/types/form";
 
 // ContactStepコンポーネントを動的インポート
 const ContactStep = dynamic(() => import("@/features/media/step"), {
   ssr: false, // クライアントサイドでのみレンダリング
 });
 
-type Props = {
-  customClass: string;
-};
-// 状態の型定義
-type ContactState = {
-  status: "success" | "error";
-  message: string;
-} | null;
-
-type FormStep = "input" | "confirm" | "thanks";
-
-export default function ContactForm({ customClass }: Props) {
+export default function ContactForm({ customClass }: FormProps) {
   const router = useRouter();
   // フォームの状態管理（入力・確認・完了の3ステップ）
   const [step, setStep] = useState<FormStep>("input");
@@ -34,7 +34,7 @@ export default function ContactForm({ customClass }: Props) {
   const type = searchParams.get("type");
 
   // フォームの入力値を管理
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     purpose:
       type === "download"
         ? "資料ダウンロード"
@@ -53,7 +53,7 @@ export default function ContactForm({ customClass }: Props) {
   // フォーム全体の有効性
   const [isFormValid, setIsFormValid] = useState(false);
   // 各フィールドのエラー状態
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormErrors>({
     phone: "",
     email: "",
   });
@@ -66,50 +66,13 @@ export default function ContactForm({ customClass }: Props) {
       >
     ) => {
       const { name, value } = e.target;
-      setFormData((prev) => ({ ...prev, [name]: value }));
 
       // 電話番号のフォーマット処理
       if (name === "phone") {
-        let formattedValue = value.replace(/[^\d]/g, "");
-        // 携帯電話番号（090, 080, 070, 050）の場合
-        if (formattedValue.length > 2) {
-          if (formattedValue.startsWith("0")) {
-            if (
-              ["090", "080", "070", "050"].some((prefix) =>
-                formattedValue.startsWith(prefix)
-              )
-            ) {
-              formattedValue = formattedValue.replace(
-                /^(\d{3})(\d{4})(\d{4}).*/,
-                "$1-$2-$3"
-              );
-              // 固定電話（03, 04, 06）の場合
-            } else if (
-              ["03", "04", "06"].some((prefix) =>
-                formattedValue.startsWith(prefix)
-              )
-            ) {
-              formattedValue = formattedValue.replace(
-                /^(\d{2})(\d{4})(\d{4}).*/,
-                "$1-$2-$3"
-              );
-              // その他の市外局番の場合
-            } else {
-              formattedValue = formattedValue.replace(
-                /^(\d{3,4})(\d{2,3})(\d{4}).*/,
-                "$1-$2-$3"
-              );
-            }
-          }
-        }
-        // 最大13文字に制限（ハイフン含む）
-        if (formattedValue.length > 13) {
-          formattedValue = formattedValue.slice(0, 13);
-        }
-        setFormData((prev) => ({
-          ...prev,
-          phone: formattedValue,
-        }));
+        const formattedValue = formatPhoneNumber(value);
+        setFormData((prev) => ({ ...prev, phone: formattedValue }));
+      } else {
+        setFormData((prev) => ({ ...prev, [name]: value }));
       }
     },
     []
@@ -118,54 +81,13 @@ export default function ContactForm({ customClass }: Props) {
   // メモ化されたバリデーション処理
   const handleBlur = useCallback((e: React.FocusEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-
-    // 電話番号のバリデーション
-    if (name === "phone") {
-      if (!value) {
-        setErrors((prev) => ({ ...prev, phone: "電話番号を入力してください" }));
-      } else if (!validatePhoneNumber(value)) {
-        setErrors((prev) => ({
-          ...prev,
-          phone: "正しい電話番号を入力してください",
-        }));
-      } else {
-        setErrors((prev) => ({ ...prev, phone: "" }));
-      }
-    }
-
-    // メールアドレスのバリデーション
-    if (name === "email") {
-      if (!value) {
-        setErrors((prev) => ({
-          ...prev,
-          email: "メールアドレスを入力してください",
-        }));
-      } else if (!validateEmail(value)) {
-        setErrors((prev) => ({
-          ...prev,
-          email: "正しいメールアドレスを入力してください",
-        }));
-      } else {
-        setErrors((prev) => ({ ...prev, email: "" }));
-      }
-    }
+    const error = validateField(name, value);
+    setErrors((prev) => ({ ...prev, [name]: error }));
   }, []);
 
   // フォームの有効性をメモ化
   const isFormValidMemo = useMemo(() => {
-    return (
-      formData.purpose.trim() !== "" &&
-      formData.company.trim() !== "" &&
-      formData.name.trim() !== "" &&
-      formData.phone.trim() !== "" &&
-      validatePhoneNumber(formData.phone) &&
-      formData.email.trim() !== "" &&
-      validateEmail(formData.email) &&
-      formData.message.trim() !== "" &&
-      isAgreed &&
-      !errors.phone &&
-      !errors.email
-    );
+    return validateForm(formData, isAgreed, errors);
   }, [formData, isAgreed, errors]);
 
   // フォームの有効性を更新

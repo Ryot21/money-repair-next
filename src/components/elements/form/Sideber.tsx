@@ -3,23 +3,20 @@
 import Link from "next/link";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { validatePhoneNumber, validateEmail } from "@/utils/validation";
+import {
+  validateForm,
+  formatPhoneNumber,
+  validateField,
+} from "@/utils/validation";
+import type {
+  ContactState,
+  FormStep,
+  FormData,
+  FormErrors,
+  Props as FormProps,
+} from "@/types/form";
 
-// コンポーネントのプロップス型定義
-type Props = {
-  customClass: string;
-};
-
-// フォームの状態管理用の型定義
-type ContactState = {
-  status: "success" | "error";
-  message: string;
-} | null;
-
-// フォームステップの型定義（入力・確認・完了）
-type FormStep = "input" | "confirm" | "thanks";
-
-export default function SideberContactForm({ customClass }: Props) {
+export default function SideberContactForm({ customClass }: FormProps) {
   const router = useRouter();
   // フォームの状態管理
   const [step, setStep] = useState<FormStep>("input");
@@ -31,7 +28,7 @@ export default function SideberContactForm({ customClass }: Props) {
   const type = searchParams.get("type");
 
   // フォームデータの状態管理
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     purpose:
       type === "download"
         ? "資料ダウンロード"
@@ -50,7 +47,7 @@ export default function SideberContactForm({ customClass }: Props) {
   // フォーム全体の有効性
   const [isFormValid, setIsFormValid] = useState(false);
   // バリデーションエラーの状態管理
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormErrors>({
     phone: "",
     email: "",
   });
@@ -63,50 +60,12 @@ export default function SideberContactForm({ customClass }: Props) {
       >
     ) => {
       const { name, value } = e.target;
-      setFormData((prev) => ({ ...prev, [name]: value }));
 
-      // 電話番号入力時の自動フォーマット処理
       if (name === "phone") {
-        let formattedValue = value.replace(/[^\d]/g, "");
-        if (formattedValue.length > 2) {
-          if (formattedValue.startsWith("0")) {
-            // 携帯電話番号のフォーマット
-            if (
-              ["090", "080", "070", "050"].some((prefix) =>
-                formattedValue.startsWith(prefix)
-              )
-            ) {
-              formattedValue = formattedValue.replace(
-                /^(\d{3})(\d{4})(\d{4}).*/,
-                "$1-$2-$3"
-              );
-              // 固定電話（2桁市外局番）のフォーマット
-            } else if (
-              ["03", "04", "06"].some((prefix) =>
-                formattedValue.startsWith(prefix)
-              )
-            ) {
-              formattedValue = formattedValue.replace(
-                /^(\d{2})(\d{4})(\d{4}).*/,
-                "$1-$2-$3"
-              );
-              // その他の市外局番のフォーマット
-            } else {
-              formattedValue = formattedValue.replace(
-                /^(\d{3,4})(\d{2,3})(\d{4}).*/,
-                "$1-$2-$3"
-              );
-            }
-          }
-        }
-        // 最大文字数の制限
-        if (formattedValue.length > 13) {
-          formattedValue = formattedValue.slice(0, 13);
-        }
-        setFormData((prev) => ({
-          ...prev,
-          phone: formattedValue,
-        }));
+        const formattedValue = formatPhoneNumber(value);
+        setFormData((prev) => ({ ...prev, phone: formattedValue }));
+      } else {
+        setFormData((prev) => ({ ...prev, [name]: value }));
       }
     },
     []
@@ -115,37 +74,8 @@ export default function SideberContactForm({ customClass }: Props) {
   // メモ化されたバリデーション処理
   const handleBlur = useCallback((e: React.FocusEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-
-    // 電話番号のバリデーション
-    if (name === "phone") {
-      if (!value) {
-        setErrors((prev) => ({ ...prev, phone: "電話番号を入力してください" }));
-      } else if (!validatePhoneNumber(value)) {
-        setErrors((prev) => ({
-          ...prev,
-          phone: "正しい電話番号を入力してください",
-        }));
-      } else {
-        setErrors((prev) => ({ ...prev, phone: "" }));
-      }
-    }
-
-    // メールアドレスのバリデーション
-    if (name === "email") {
-      if (!value) {
-        setErrors((prev) => ({
-          ...prev,
-          email: "メールアドレスを入力してください",
-        }));
-      } else if (!validateEmail(value)) {
-        setErrors((prev) => ({
-          ...prev,
-          email: "正しいメールアドレスを入力してください",
-        }));
-      } else {
-        setErrors((prev) => ({ ...prev, email: "" }));
-      }
-    }
+    const error = validateField(name, value);
+    setErrors((prev) => ({ ...prev, [name]: error }));
   }, []);
 
   // メモ化されたチェックボックス処理
@@ -158,19 +88,7 @@ export default function SideberContactForm({ customClass }: Props) {
 
   // フォームの有効性をメモ化
   const isFormValidMemo = useMemo(() => {
-    return (
-      formData.purpose.trim() !== "" &&
-      formData.company.trim() !== "" &&
-      formData.name.trim() !== "" &&
-      formData.phone.trim() !== "" &&
-      validatePhoneNumber(formData.phone) &&
-      formData.email.trim() !== "" &&
-      validateEmail(formData.email) &&
-      formData.message.trim() !== "" &&
-      isAgreed &&
-      !errors.phone &&
-      !errors.email
-    );
+    return validateForm(formData, isAgreed, errors);
   }, [formData, isAgreed, errors]);
 
   // フォームの有効性を更新
