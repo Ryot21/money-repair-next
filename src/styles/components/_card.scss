@@ -483,6 +483,15 @@
       }
     }
   }
+  &.-t05 {// LP用
+    width: 100%;
+    background: $main-color--w;
+    border: 1px solid $site-color03;
+    border-radius: 5px;
+    .c-card--inner {
+      padding: 20px 20px;
+    }
+  }
 }
 
 // 目次 > アクティブ状態

@@ -370,6 +370,9 @@ select,
 button,
 th,
 td {
+  &.s-XS {
+    font-size: 1rem;
+  }
   &.s-SS {
     font-size: 0.7rem;
     @include min(768) {

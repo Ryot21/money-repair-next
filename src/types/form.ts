@@ -13,13 +13,20 @@ export type ContactState = {
 export type FormStep = "input" | "confirm" | "thanks";
 
 // フォームデータの型定義
-export type FormData = {
+export type FormData = {// メディアサイト用
   purpose: string;
   company: string;
   name: string;
   phone: string;
   email: string;
   message: string;
+};
+
+export type LpFormData = {// LP用
+  company: string;
+  name: string;
+  phone: string;
+  email: string;
 };
 
 // フォームエラーの型定義

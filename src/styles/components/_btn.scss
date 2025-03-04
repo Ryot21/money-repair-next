@@ -1,5 +1,6 @@
 // buttonタグ用のスタイル
-button {
+
+button { // 通常
   color: $main-color--w;
   font-size: clamp(1.2rem, 1.5vw, 1.6rem);
   font-weight: bold;
@@ -16,9 +17,15 @@ button {
     transition: 0.3s;
     opacity: 0.8;
   }
-  
   &.disabled {// 非活性時のスタイル
     pointer-events: none;
     opacity: 0.5;
+  }
+
+  &.ver01 { // LP_資料ダウンロードボタン
+    width: 100%;
+    color: $main-color--w;
+    background: $main-color--orange;
+    border-radius: 5px;
   }
 }

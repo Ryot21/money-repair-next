@@ -898,44 +898,50 @@
     }
     &.-lp01 {// LP01
       background: #d5edfc;
+      overflow: hidden;
       .c-contents--inner {position: relative;}
       .imgBox {
         height: 120vh;
-        @include min(400){height: 110vh;}
-        @include min(500) {height: 100vh;}
+        max-height: 850px !important;
+        @include min(500) {
+          max-height: 750px !important;
+        }
+        @include min(768) {
+          max-height: 800px !important;
+        }
+        @include min(1000) {
+          max-height: 800px !important;
+        }
+        @include min(1200) {
+          max-height: 960px !important;
+        }
 
       }
       .c-contentsBox {
         // 注釈
         &.-comments01 {// 縦文
           position: absolute;
-          top: 8%;
+          top: 9%;
           left: 0;
           z-index: 11;
           @include min(500) {
-            top: 15%;
+            top: 110px;
             left: 0;
           }
-          @include min(768) {
-            // top: 50%;
-            // left: 32%;
-          }
-          @include min(1000) {
-            // top: 45%;
-            // left: 50%;
-          }
+
           // ピックアップ
           .pickup {
             position: relative;
             display: inline-block;
             color: $site-color03;
-            font-size: clamp(1rem, 2vw, 1.4rem);
+            font-size: 1rem;
             font-weight: bold;
             text-align: start;
             letter-spacing: .1rem;
+            line-height: 2;
             margin-bottom: 2rem;
-            @include max(1000) {
-              line-height: 2;
+            @include min(1000) {
+              font-size: clamp(1rem, 1.5vw, 1.4rem);
             }
             &::before,
             &::after {
@@ -964,12 +970,15 @@
             span {
               display: inline-block;
               color: $site-color03;
-              font-size: clamp(1rem, 2vw, 1.4rem);
+              font-size: 1rem;
               font-weight: bold;
               background: $main-color--w;
               padding: 0.5rem 0.5rem;
               margin-right: .5rem;
               border-radius: 5px;
+              @include min(1000) {
+                font-size: clamp(1rem, 1.5vw, 1.4rem);
+              }
               &::after {
                 content: "";
                 position: absolute;
@@ -996,7 +1005,7 @@
               letter-spacing: 0.2rem;
               line-height: 1.5;
               @include min(768) {
-                font-size: clamp(4rem, 5.5vw, 6rem);
+                font-size: clamp(4rem, 4.2vw, 6rem);
               }
             }
             span {
@@ -1014,12 +1023,12 @@
           .text {
             position: relative;
             font-weight: bold;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             text-align: start;
             letter-spacing: 0.2rem;
             line-height: 1.75;
             padding-left: 1rem;
-            @include min(500){
+            @include min(1000){
               font-size: clamp(1.5rem, 1.5vw, 2rem);
             }
             &::after {
@@ -1033,6 +1042,149 @@
               background: $site-color03;
               border-radius: 5px;
             }
+          }
+        }
+        // コンタクト
+        &.-cta {
+          position: absolute;
+          top: 57%;
+          left: 0;
+
+          width: 100%;
+          z-index: 11;
+          @include min(500) {
+            top: 42%;
+            width: 52%;
+          }
+          @include min(768) {
+            top: 42%;
+            width: 55%;
+            max-width: 350px;
+          }
+          @include min(1000) {
+            top: 45%;
+            width: 40%;
+            max-width: 450px;
+          }
+        }
+        // 英字
+        &.-en {
+          position: absolute;
+          top: 32%;
+          right: 10px;
+          width: 85%;
+          z-index: 1;
+          @include min(500) {
+            top: 160px;
+            right: 2%;
+            width: 41%;
+          }
+          @include min(768) {
+            top: 140px;
+            right: 2%;
+            width: 50%;
+          }
+          @include min(1000) {
+            top: 125px;
+            right: 1%;
+            width: 45%;
+          }
+          @include min(1200) {
+            top: 130px;
+            right: 8%;
+            width: 50%;
+            max-width: 900px;
+          }
+          @include min(1600) {
+            right: 20%;
+          }
+        }
+        // 風景
+        &.-landscape {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 120%;
+          z-index: 1;
+          @include min(768) {
+            top: auto;
+            bottom: -20px;
+            left: auto;
+            right: 0;
+            width: 85%;
+            max-width: 1500px;
+          }
+        }
+        // 男性
+        &.-man {
+          width: 25%;
+          position: absolute;
+          bottom: 40%;
+          left: 55%;
+          transform: translateX(-50%);
+          z-index: 6;
+          @include min(500) {
+            width: 180px;
+            left: 65%;
+            bottom: 0;
+          }
+          @include min(768) {
+            width: 280px;
+            left: 58%;
+          }
+          @include min(1000) {
+            width: 300px;
+            left: 55%;
+          }
+          @include min(1200) {
+            width: 350px;
+            left: 55%;
+          }
+          @include min(1400) {
+            width: 380px;
+            left: 58%;
+          }
+          @include min(1600) {
+            width: 380px;
+            left: 58%;
+          }
+        }
+        // 女性
+        &.-woman {
+          width: 32%;
+          position: absolute;
+          bottom: 40%;
+          left: 80%;
+          transform: translateX(-50%);
+          z-index: 5;
+          @include min(500) {
+            width: 220px;
+            left: 88%;
+            bottom: 0;
+          }
+          @include min(768) {
+            width: 350px;
+            left: 85%;
+          }
+          @include min(1000) {
+            width: 400px;
+            left: 80%;
+          }
+          @include min(1200) {
+            width: 450px;
+            left: 84%;
+          }
+          @include min(1400) {
+            width: 500px;
+            left: 82%;
+          }
+          @include min(1600) {
+            width: 500px;
+            left: 78%;
+          }
+          @include min(1600) {
+            width: 500px;
+            left: 73%;
           }
         }
       }

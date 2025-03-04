@@ -1,8 +1,8 @@
 "use client";
 
-// import Image from "next/image";
+import Image from "next/image";
 import styles from "./index.module.scss";
-
+import CardContactForm from "@/components/elements/form/Card";
 export default function Lp01MainVisual() {
 
     return (
@@ -15,7 +15,7 @@ export default function Lp01MainVisual() {
                     <div className={"c-contentsBox -comments01"}>
                         {/* ピックアップ */}
                         <p className="pickup">
-                            <span>社員の金融リテラシー向上</span>が、<br className="tb" />会社の競争力を支える未来の投資に。
+                            <span>社員の金融リテラシー向上</span>が、会社の競争力を支える未来の投資に。
                         </p>
                         {/* タイトル */}
                         <div className="title mgb2 mgb2s">
@@ -28,18 +28,43 @@ export default function Lp01MainVisual() {
                         <p className="text -blue -ls-2">企業向け金融リテラシーコーチング型サービス</p>
                     </div>
                     {/* ================= cv ================= */}
-                    <div className="c-card">
-                        <div className="c-card--inner">
-                            <div className={`c-form`}>
-
-                            </div>
-                        </div>
+                    <div className="c-contentsBox -cta">
+                        <CardContactForm customClass="-card" />
                     </div>
                 </div>
                 {/* ================= 画像 ================= */}
-
-
-
+                <div className="c-contentsBox -en">{/* 英字 */}
+                    <Image
+                        src="/images/SVG/Let's-find-a-new-future-together..svg"
+                        alt="Let's find a new future together"
+                        width={648}
+                        height={119}
+                    />
+                </div>
+                <div className="c-contentsBox -landscape">{/* 風景 */}
+                    <Image
+                        src="/images/SVG/landscape-city.svg"
+                        alt="ビジネル街の風景"
+                        width={1000}
+                        height={1000}
+                    />
+                </div>
+                <div className="c-contentsBox -man">{/* 男性 */}
+                    <Image
+                        src="/images/SVG/man.svg"
+                        alt="先輩の男性"
+                        width={351}
+                        height={671}
+                    />
+                </div>
+                <div className="c-contentsBox -woman">{/* 女性 */}
+                    <Image
+                        src="/images/SVG/woman.svg"
+                        alt="後輩の女性"
+                        width={446}
+                        height={559}
+                    />
+                </div>
             </div>
         </div>
     );
