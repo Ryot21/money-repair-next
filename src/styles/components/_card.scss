@@ -1,8 +1,14 @@
 // カードレイアウト
 
 .c-card {
+  // 共通
+  background: $main-color--w;
+  border: 1px solid $site-color03;
   border-radius: 5px;
   overflow: hidden;
+  &--inner {
+    padding: 10px;
+  }
 
   &.-t01 {// 投稿者
     background: $main-color--w;
@@ -483,13 +489,37 @@
       }
     }
   }
-  &.-t05 {// LP用
+  &.-t05 {// LP_お問い合わせなどに使用
     width: 100%;
     background: $main-color--w;
     border: 1px solid $site-color03;
     border-radius: 5px;
     .c-card--inner {
       padding: 20px 20px;
+    }
+  }
+
+  &.-lp {
+    text-align: center;
+    &.-lp01 {// LP用
+      position: relative;
+      height: 150px;
+      @include min(500) {
+        height: 200px;
+      }
+      p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &::after{
+        content: url("/images/Lp/tarari-mark.png");
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: 10%;
+      }
     }
   }
 }

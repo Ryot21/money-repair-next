@@ -35,7 +35,7 @@ export default function Lp01MainVisual() {
                 {/* ================= 画像 ================= */}
                 <div className="c-contentsBox -en">{/* 英字 */}
                     <Image
-                        src="/images/SVG/Let's-find-a-new-future-together..svg"
+                        src="/images/SVG/Lp/Let's-find-a-new-future-together..svg"
                         alt="Let's find a new future together"
                         width={648}
                         height={119}
@@ -43,7 +43,7 @@ export default function Lp01MainVisual() {
                 </div>
                 <div className="c-contentsBox -landscape">{/* 風景 */}
                     <Image
-                        src="/images/SVG/landscape-city.svg"
+                        src="/images/SVG/Lp/landscape-city.svg"
                         alt="ビジネル街の風景"
                         width={1000}
                         height={1000}
@@ -51,7 +51,7 @@ export default function Lp01MainVisual() {
                 </div>
                 <div className="c-contentsBox -man">{/* 男性 */}
                     <Image
-                        src="/images/SVG/man.svg"
+                        src="/images/SVG/Lp/man.svg"
                         alt="先輩の男性"
                         width={351}
                         height={671}
@@ -59,7 +59,7 @@ export default function Lp01MainVisual() {
                 </div>
                 <div className="c-contentsBox -woman">{/* 女性 */}
                     <Image
-                        src="/images/SVG/woman.svg"
+                        src="/images/SVG/Lp/woman.svg"
                         alt="後輩の女性"
                         width={446}
                         height={559}

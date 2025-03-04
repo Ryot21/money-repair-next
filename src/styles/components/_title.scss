@@ -2,14 +2,15 @@
 // コンテンツ_メインタイトル
 .c-contents--title{// s-L相当
     position: relative;
-    font-size: clamp(2rem, 2vw, 4.2rem);
+    font-size: clamp(2rem, 1.5vw, 4rem);
     font-weight: bold;
     letter-spacing: .2rem;
+    line-height: 1.5;
     text-align: center;
     padding: 0 1px;
     &::before{
         position: absolute;
-        top: -20%;
+        top: -10%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 1rem;
