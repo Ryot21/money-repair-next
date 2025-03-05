@@ -68,7 +68,7 @@ export default async function Home() {
         {/* お悩みを解決するためには？ */}
         <div id="sc02" className={"c-contents -bg-color01 pdt5 pdt10s pdb5 pdb5s"}>
           <div className="c-contents--inner">
-            <div className="c-contents--inner mgb10 mgb20s">
+            <div className="c-contents--inner mgb20 mgb20s">
               <h2 className="c-contents--title -b-btm -c01 mgb5 mgb10s">マネーリペアを導入することで<br />そのお悩みを解決できます</h2>
               <p className="s-M -b -center -ls-2 -lh-2 -ws-n mgb5 mgb10s">
                 従業員の「金融リテラシー向上」をご支援し、<br />
