@@ -66,7 +66,7 @@ export default async function Home() {
           </div>
         </div>
         {/* お悩みを解決するためには？ */}
-        <div id="sc02" className={"c-contents -bg-color01 pdt5 pdt10s pdb5 pdb5s"}>
+        <div id="sc02" className={"c-contents -bg-color01 pdt5 pdt10s pdb5 pdb10s"}>
           <div className="c-contents--inner">
             <div className="c-contents--inner mgb20 mgb20s">
               <h2 className="c-contents--title -b-btm -c01 mgb5 mgb10s">マネーリペアを導入することで<br />そのお悩みを解決できます</h2>
@@ -176,6 +176,86 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        {/* マネーリペアで出来ること */}
+        <div id="sc03" className={"c-contents -bg-white pdt5 pdt10s pdb5 pdb5s"}>
+          <div className="c-contents--inner">
+            <h2 className="c-contents--title -b-btm -c01 mgb10 mgb10s">マネーリペアで出来ること</h2>
+            <div className="c-contents--inner mgb10 mgb10s">
+              {/* 1. 金融勉強会 */}
+              <ul className={"c-flex -col1_2 -h-top -jc-sb mgb10 mgb15s"}>
+                <li className={"flexItem mgb5s"}>
+                  <h3 className="c-section--title mgb4 mgb5s">
+                    金融勉強会で知識の習得と<br />
+                    金融知識を当たり前に
+                  </h3>
+                  <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                    金融知識の「当たり前」を学ぶ環境をご提供いたします。<br />
+                    【勉強会の一例】<br />
+                    ・源泉徴収票の読み取り方、節税<br />
+                    ・経済動向、情報の取方、ニュースの見方<br />
+                    ・四季報、財務諸表、株式分析
+                  </p>
+                  
+                </li>
+                <li className={"flexItem"}>
+                  <div className="imgBox">
+                    <Image
+                      src="/images/Lp/sc03-A.png"
+                      alt="金融勉強会の様子"
+                      width={480}
+                      height={320}
+                    />
+                  </div>
+                </li>
+              </ul>
+              {/* 2. 個別相談 */}
+              <ul className={"c-flex -col1_2 -r -h-top -jc-sb mgb10 mgb15s"}>
+                <li className={"flexItem mgb5s"}>
+                  <h3 className="c-section--title mgb4 mgb5s">
+                    個別相談も可能！<br className="tb-pc" />
+                    専属ファイナンシャルプランナー相談窓口の提供
+                  </h3>
+                  <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                    NISA、iDeCo、ふるさと納税などあらゆる相談が可能です。ライフサイクルによって、教育資金、住宅、老後資金など不安になるようなイベントも多くありますので、専門家によるアドバイスが可能です。
+                  </p>
+                  
+                </li>
+                <li className={"flexItem"}>
+                  <div className="imgBox">
+                    <Image
+                      src="/images/Lp/sc03-B.png"
+                      alt="個人相談の様子"
+                      width={480}
+                      height={320}
+                    />
+                  </div>
+                </li>
+              </ul>
+              {/* 3. 家計管理 */}
+              <ul className={"c-flex -col1_2 -h-top -jc-sb mgb10 mgb15s"}>
+                <li className={"flexItem mgb5s"}>
+                  <h3 className="c-section--title mgb4 mgb5s">
+                    家計管理も可能！<br />
+                    資産管理システムの提供
+                  </h3>
+                  <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                    運用している有価証券、不動産、保険などあらゆる金融商品を一括管理でき、キャッシュフローを可視化することが出来ます。ライフプランシミュレーションを作成することも可能です
+                  </p>
+                </li>
+                <li className={"flexItem"}>
+                  <div className="imgBox">
+                    <Image
+                      src="/images/Lp/sc03-C.png"
+                      alt="家計管理ができて喜んでいる様子"
+                      width={480}
+                      height={320}
+                    />
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
