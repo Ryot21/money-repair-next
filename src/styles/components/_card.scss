@@ -499,9 +499,9 @@
     }
   }
 
-  &.-lp {
+  &.-lp {// LP用
     text-align: center;
-    &.-lp01 {// LP用
+    &.-lp01 {// セクション01
       position: relative;
       height: 150px;
       @include min(500) {
@@ -519,6 +519,41 @@
         top: 0;
         left: 15px;
         width: 10%;
+      }
+    }
+    &.-lp02 {// セクション02
+      position: relative;
+      height: 150px;
+      overflow: inherit;
+      @include min(500) {
+        height: 200px;
+      }
+      p{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $main-color--w;
+      }
+      .imgBox{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        width: 85%;
+        transform: translate(-50%, -50%);
+        @include min(500){
+          width: 90%;
+        }
+        @include min(768){
+          width: 75%;
+        }
+        @include min(1000){
+          top: 80%;
+          width: 75%;
+        }
+        @include min(1400){
+          top: 95%;
+        }
       }
     }
   }

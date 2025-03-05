@@ -65,6 +65,31 @@ td {
     font-family: $f-gothic02;
   }
 
+  // ※
+  &.-kome{
+    position: relative;
+    &::after{
+      content: "※";
+      font-size: .5rem;
+      position: absolute;
+      top: 4px;
+      right: -10%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      @include min(500){
+        right: -5%;
+      }
+      @include min(768){
+        font-size: .8rem;
+        right: -5%;
+      }
+      @include min(1000){
+        right: -1%;
+      }
+    }
+  }
+
   // ボーダー
   &.b-text {
     position: relative;
