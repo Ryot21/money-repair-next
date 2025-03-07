@@ -1,87 +1,89 @@
 
-// コンテンツ_メインタイトル
-.c-contents--title{// s-L相当
-    position: relative;
-    font-size: clamp(2rem, 1.5vw, 4rem);
-    font-weight: bold;
-    letter-spacing: .2rem;
-    line-height: 1.5;
-    text-align: center;
-    padding: 0 1px;
-    &::before{
-        position: absolute;
-        top: -10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1rem;
-        letter-spacing: .3rem;
-    }
-    // コンテンツタイトル > カナ表記
-    &.-kana{
-        @include max(500){
-            font-size: clamp(2.5rem, 1.5vw, 5rem);
-        }
-    }
-    // コンテンツタイトル > ボーダーライン
-    &.-b-btm{
-        &::after{// 基本設定
-            content: "";
-            display: block;
-            position: relative;
-            bottom: -10px;
+.c-contents{
+    &--title{// メディア > コンテンツ > メインタイトル
+        position: relative;
+        font-size: clamp(2rem, 1.5vw, 4rem);
+        font-weight: bold;
+        letter-spacing: .2rem;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 1px;
+        &::before{
+            position: absolute;
+            top: -10%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            max-width: 1100px;
-            height: 0;
-            background: $main-color--w;
-            border-bottom: 3px dotted $site-color03;
-            @include min(768){
-                bottom: -20px;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            letter-spacing: .3rem;
+        }
+        // コンテンツタイトル > カナ表記
+        &.-kana{
+            @include max(500){
+                font-size: clamp(2.5rem, 1.5vw, 5rem);
             }
         }
-        // 色指定
-        &.-c01{&::after{background: $site-color01 !important;}}
-        &.-c02{&::after{background: $site-color02 !important;}}
-        &.-c03{&::after{background: $site-color03 !important;}}
-        &.-c04{&::after{background: $site-color04 !important;}}
-    }
+        // コンテンツタイトル > ボーダーライン
+        &.-b-btm{
+            &::after{// 基本設定
+                content: "";
+                display: block;
+                position: relative;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40px;
+                max-width: 1100px;
+                height: 0;
+                background: $main-color--w;
+                border-bottom: 3px dotted $site-color03;
+                @include min(768){
+                    bottom: -20px;
+                }
+            }
+            // 色指定
+            &.-c01{&::after{background: $site-color01 !important;}}
+            &.-c02{&::after{background: $site-color02 !important;}}
+            &.-c03{&::after{background: $site-color03 !important;}}
+            &.-c04{&::after{background: $site-color04 !important;}}
 
-    // コンテンツタイトル > 英語表記 > カラー設定
-    &.-en-color01{&::before{color: $site-color01;}}
-    &.-en-color02{&::before{color: $site-color02;}}
-    &.-en-color03{&::before{color: $site-color03;}}
-    &.-en-color04{&::before{color: $site-color04;}}
-
-    // コンテンツタイトル > 英語表記
-    &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
-    &.-news     {&::before{content: "Information"; white-space: nowrap;}}//お役立ち情報
-    &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}//お問い合わせ
-    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}//資料ダウンロード
-    &.-point    {&::before{content: "POINT"; white-space: nowrap;}}//特徴
-
-    // 画像
-    .imgBox{
-        width: 40%;
-        margin: 0 auto;
-        @include min(500){
-            width: 20%;
-            min-width: 160px;
-            max-width: 220px;
+            &.-left{ // テキストが左寄せの場合
+                &::after{
+                    left: 0;
+                    transform: translateX(0);
+                }
+            }
         }
-    }
-    span{font-size: clamp(1.2rem, 1.5vw, 1.6rem);}
 
-    // LP > セクション内
-    &.-lp{
-        font-size: clamp(1.6rem, 1.5vw, 3rem);
-    }
-}
+        // コンテンツタイトル > 英語表記 > カラー設定
+        &.-en-color01{&::before{color: $site-color01;}}
+        &.-en-color02{&::before{color: $site-color02;}}
+        &.-en-color03{&::before{color: $site-color03;}}
+        &.-en-color04{&::before{color: $site-color04;}}
 
-.c-contents--description{
-    text-align: center;
-    letter-spacing: .2rem;
-    line-height: 2;
+        // コンテンツタイトル > 英語表記
+        &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
+        &.-news     {&::before{content: "Information"; white-space: nowrap;}}//お役立ち情報
+        &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}//お問い合わせ
+        &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}//資料ダウンロード
+        &.-point    {&::before{content: "POINT"; white-space: nowrap;}}//特徴
+
+        // 画像
+        .imgBox{
+            width: 40%;
+            margin: 0 auto;
+            @include min(500){
+                width: 20%;
+                min-width: 160px;
+                max-width: 220px;
+            }
+        }
+        span{font-size: clamp(1.2rem, 1.5vw, 1.6rem);}
+    }
+    &--description{// メディア > コンテンツ > 説明テキスト
+        text-align: center;
+        letter-spacing: .2rem;
+        line-height: 2;
+    }
 }
 
 // 各ページ > ファーストビュー内のタイトル
@@ -258,10 +260,114 @@
 
 }
 
-// LP > セクション内
-.c-section--title{
-    font-size: clamp(1.6rem, 1.5vw, 2.5rem);
-    // font-weight: bold;
-    letter-spacing: .2rem;
-    line-height: 1.8;
+// LP > コンテンツ > セクション内
+.c-contents{
+    &--LpMainTitle{
+        position: relative;
+        font-size: clamp(2rem, 2vw, 4.5rem) !important;
+        font-weight: bold;
+        letter-spacing: .2rem;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 1px;
+        &::before{
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            letter-spacing: .3rem;
+        }
+        // コンテンツタイトル > ボーダーライン
+        &.-b-btm{
+            &::after{// 基本設定
+                content: "";
+                display: block;
+                position: relative;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40px;
+                max-width: 1100px;
+                height: 0;
+                background: $main-color--w;
+                border-bottom: 3px dotted $site-color03;
+                @include min(768){
+                    bottom: -20px;
+                }
+            }
+            // 色指定
+            &.-c01{&::after{background: $site-color01 !important;}}
+            &.-c02{&::after{background: $site-color02 !important;}}
+            &.-c03{&::after{background: $site-color03 !important;}}
+            &.-c04{&::after{background: $site-color04 !important;}}
+    
+            &.-left{ // テキストが左寄せの場合
+                &::after{
+                    left: 0;
+                    transform: translateX(0);
+                }
+            }
+        } 
+        span{font-size: clamp(1.2rem, 1.5vw, 1.8rem);}
+    }
+    &--LpTitle{// コンテンツ > セクション > タイトル
+        font-size: clamp(1.6rem, 2vw, 2.5rem);
+        letter-spacing: .2rem;
+        line-height: 1.8;
+    }
+    &--LpCtaTitle{// コンテンツ > CTA
+        position: relative;
+        font-size: clamp(1.8rem, 2vw, 4rem);
+        font-weight: bold;
+        letter-spacing: .2rem;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 1px;
+        &::before{
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            letter-spacing: .3rem;
+        }
+        // コンテンツタイトル > ボーダーライン
+        &.-b-btm{
+            &::after{// 基本設定
+                content: "";
+                display: block;
+                position: relative;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40px;
+                max-width: 1100px;
+                height: 0;
+                background: $main-color--w;
+                border-bottom: 3px dotted $site-color03;
+                @include min(768){
+                    bottom: -10px;
+                }
+            }
+            // 色指定
+            &.-c01{&::after{background: $site-color01 !important;}}
+            &.-c02{&::after{background: $site-color02 !important;}}
+            &.-c03{&::after{background: $site-color03 !important;}}
+            &.-c04{&::after{background: $site-color04 !important;}}
+    
+            &.-left{ // テキストが左寄せの場合
+                &::after{
+                    left: 0;
+                    transform: translateX(0);
+                }
+            }
+        }
+    
+        // コンテンツタイトル > 英語表記 > カラー設定
+        &.-en-color01{&::before{color: $site-color01;}}
+        &.-en-color02{&::before{color: $site-color02;}}
+        &.-en-color03{&::before{color: $site-color03;}}
+        &.-en-color04{&::before{color: $site-color04;}}
+    }
 }

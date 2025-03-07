@@ -3,6 +3,7 @@ import Image from "next/image";
 // コンポーネント
 import Lp01MainVisual from "@/features/lp/mainVisual/Lp01";
 // import Button from "@/components/elements/button";
+import LpCta from "@/features/lp/cta";
 
 // 投稿関係
 import LogoContents from "@/components/slider/logo/LogoContents";
@@ -12,7 +13,7 @@ export const revalidate = 600;
 
 export default async function Home() {
   return (
-    <main id="top">
+    <main>
       {/* メインビジュアル */}
       <Lp01MainVisual />
 
@@ -22,7 +23,7 @@ export default async function Home() {
         {/* こんなお悩みはありませんか？ */}
         <div id="sc01" className={"c-contents pdt10 pdt10s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--title -b-btm -c01 mgb5 mgb10s"}>経営者・総務・人事の皆さん<br />こういうお悩みはありませんか？</h2>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>経営者・総務・人事の皆さん<br />こういうお悩みはありませんか？</h2>
             <ul className={"c-flex -col2_4 -h-cen -jc-sb mgb2 mgb5s"}>
               <li className={"flexItem mgb5s"}>
                 <div className="c-card -lp -lp01">
@@ -68,8 +69,9 @@ export default async function Home() {
         {/* お悩みを解決するためには？ */}
         <div id="sc02" className={"c-contents -bg-color01 pdt5 pdt10s pdb5 pdb10s"}>
           <div className="c-contents--inner">
+            {/* メリット */}
             <div className="c-contents--inner mgb20 mgb20s">
-              <h2 className="c-contents--title -b-btm -c01 mgb5 mgb10s">マネーリペアを導入することで<br />そのお悩みを解決できます</h2>
+              <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">マネーリペアを導入することで<br />そのお悩みを解決できます</h2>
               <p className="s-M -b -center -ls-2 -lh-2 -ws-n mgb5 mgb10s">
                 従業員の「金融リテラシー向上」をご支援し、<br />
                 給料を上げずに、1人当たりの所得を<br className="sp" />月々<span className="s-ML -kome -b -color02 pdr1 pdr1s">150,000円</span>高めることが可能です！
@@ -123,8 +125,9 @@ export default async function Home() {
 
               </ul>
             </div>
+            {/* マネーリペアとは */}
             <div className="c-contents--inner mgb10 mgb10s">
-              <h2 className="c-contents--title -kana -b-btm -c01 mgb5 mgb10s">
+              <h2 className="c-contents--LpMainTitle -kana -b-btm -c01 mgb5 mgb10s">
                 マネーリペア<span className="s-M -b -ls-1">とは</span>
               </h2>
               <div className="c-contents--inner">
@@ -140,7 +143,7 @@ export default async function Home() {
                     </div>
                   </li>
                   <li className={"flexItem"}>
-                    <h3 className="c-section--title mgb4 mgb5s">
+                    <h3 className="c-contents--LpTitle mgb4 mgb5s">
                       企業の従業員様向けに金融・投資・税務の教育を<br className="pc" />
                       実施する福利厚生プログラム
                     </h3>
@@ -156,10 +159,11 @@ export default async function Home() {
                 </ul>
               </div>
             </div>
+            {/* 何ができる？ */}
             <div className="c-contents--inner ">
               <div className="c-card -lp -lp03">
                 <div className="c-card--inner">
-                  <h2 className={"c-contents--title -b-btm -lp -c01 mgb5 mgb10s"}>金融リテラシーを習得して<br className="sp" />純資産を増やすことが可能に</h2>
+                  <h2 className={"c-contents--LpMainTitle -b-btm -lp -c01 mgb5 mgb10s"}>金融リテラシーを習得して<br />純資産を増やすことが可能に</h2>
                   <p className="s-M -s10 -center -ls-2 -lh-2 mgb5 mgb10s">
                     バランスシートに置き換えて考えるとわかりやすいですが、<br />
                     金融リテラシーという知的財産を付けることにより、<br />
@@ -182,12 +186,12 @@ export default async function Home() {
         {/* マネーリペアで出来ること */}
         <div id="sc03" className={"c-contents -bg-white pdt5 pdt10s pdb5 pdb5s"}>
           <div className="c-contents--inner">
-            <h2 className="c-contents--title -b-btm -c01 mgb10 mgb10s">マネーリペアで出来ること</h2>
-            <div className="c-contents--inner mgb10 mgb10s">
+            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s">マネーリペアで出来ること</h2>
+            <div className="mgb10 mgb10s">
               {/* 1. 金融勉強会 */}
               <ul className={"c-flex -col1_2 -h-top -jc-sb mgb10 mgb15s"}>
                 <li className={"flexItem mgb5s"}>
-                  <h3 className="c-section--title mgb4 mgb5s">
+                  <h3 className="c-contents--LpTitle mgb4 mgb5s">
                     金融勉強会で知識の習得と<br />
                     金融知識を当たり前に
                   </h3>
@@ -214,9 +218,9 @@ export default async function Home() {
               {/* 2. 個別相談 */}
               <ul className={"c-flex -col1_2 -r -h-top -jc-sb mgb10 mgb15s"}>
                 <li className={"flexItem mgb5s"}>
-                  <h3 className="c-section--title mgb4 mgb5s">
+                  <h3 className="c-contents--LpTitle mgb4 mgb5s">
                     個別相談も可能！<br className="tb-pc" />
-                    専属ファイナンシャルプランナー相談窓口の提供
+                    専属FP相談窓口の提供
                   </h3>
                   <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
                     NISA、iDeCo、ふるさと納税などあらゆる相談が可能です。ライフサイクルによって、教育資金、住宅、老後資金など不安になるようなイベントも多くありますので、専門家によるアドバイスが可能です。
@@ -237,7 +241,7 @@ export default async function Home() {
               {/* 3. 家計管理 */}
               <ul className={"c-flex -col1_2 -h-top -jc-sb mgb10 mgb15s"}>
                 <li className={"flexItem mgb5s"}>
-                  <h3 className="c-section--title mgb4 mgb5s">
+                  <h3 className="c-contents--LpTitle mgb4 mgb5s">
                     家計管理も可能！<br />
                     資産管理システムの提供
                   </h3>
@@ -259,6 +263,10 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        {/* cta */}
+        <LpCta />
+        {/* 選ばれる理由 */}
+        
       </div>
     </main>
   );

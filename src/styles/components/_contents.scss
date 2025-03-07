@@ -1146,7 +1146,7 @@
           }
           @include min(1600) {
             width: 380px;
-            left: 58%;
+            left: 55%;
           }
         }
         // 女性
@@ -1184,7 +1184,7 @@
           }
           @include min(1600) {
             width: 500px;
-            left: 73%;
+            left: 75%;
           }
         }
       }
@@ -1294,6 +1294,52 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
         object-position: center;
+      }
+    }
+  }
+
+  &.-LpCta{// LP > CTAエリア
+    position: relative;
+    padding: 10% 5%;
+    background:linear-gradient(0deg, rgb(73, 103, 142, .5) 0%, rgb(73, 103, 142, .1) 50%, rgb(73, 103, 142, .3) 100%);
+    &::before{
+      content: "";
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      width: 150px;
+      height: 30%;
+      background: url("/images/SVG/Lp/GO.svg") no-repeat center center;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: 1;
+      @include min(768){
+        top: 5%;
+        left: 5%; 
+        width: 30%; 
+        max-width: 420px;
+        height: 15%;
+        max-height: 170px;
+      }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 2%;
+      right: 2%;
+      width: 350px;
+      height: 30%;
+      background: url("/images/SVG/Lp/money-repair.svg") no-repeat center center;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: 1;
+      @include min(768){
+        bottom: 5%;
+        right: 5%;  
+        width: 75%;
+        max-width: 1180px;
+        height: 20%;
+        max-height: 170px;
       }
     }
   }

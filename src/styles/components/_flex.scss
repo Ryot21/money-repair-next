@@ -102,6 +102,18 @@
         }
       }
     }
+    &.-pc1_2 {
+      .flexItem {
+        @include min(768) {
+          &:nth-child(1) {
+            width: 60%;
+          }
+          &:nth-child(2) {
+            width: 35%;
+          }
+        }
+      }
+    }
   }
   // コンテンツカラム（sp:pc 2:2）
   &.-col2 {
