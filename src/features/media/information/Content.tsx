@@ -27,7 +27,7 @@ export default async function InterviewArea() {
 
         {/* ボタン */}
         <div className={"c-contents--btnArea"}>
-          <Button href="/information">すべて見る</Button>
+          <Button href="/information" customClass="-maru -blue">すべて見る</Button>
         </div>
       </div>
     </div>

@@ -246,14 +246,14 @@ export default function ContactForm({ customClass }: FormProps) {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="c-link -btn -c-gray -center s-M -s14 -b -ls-2 mgr2 mgr2s"
+                  className="c-link -btn -maru -gray -center s-M -s14 -b -ls-2 mgr2 mgr2s"
                 >
                   修正する
                 </button>
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  className="c-link -btn -center s-M -s14 -b -ls-2 primary mgl2 mgl2s"
+                  className="c-link -btn -maru -orange -icon -arrow -center s-M -s14 -b -ls-2 primary mgl2 mgl2s"
                 >
                   送信する
                 </button>
@@ -438,7 +438,7 @@ export default function ContactForm({ customClass }: FormProps) {
                 <button
                   type="submit"
                   value="確認する"
-                  className={!isFormValid ? "disabled" : ""}
+                  className={`c-link -btn -maru -orange -center s-M -s14 -b -ls-2 ${!isFormValid ? "disabled" : ""}`}
                   id="submit"
                   disabled={!isFormValid}
                 >

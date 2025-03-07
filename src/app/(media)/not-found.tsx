@@ -32,7 +32,7 @@ export default function NotFound() {
         </p>
         {/* ボタン */}
         <div className={"c-contents--btnArea"}>
-          <Button href="/">トップへ戻る</Button>
+          <Button href="/" customClass="-maru -blue">トップへ戻る</Button>
         </div>
       </div>
     </main>

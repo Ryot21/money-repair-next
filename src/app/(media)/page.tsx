@@ -41,7 +41,7 @@ export default async function Home() {
                 金融は分野によって知識が偏りがちなので、金融知識という知的財産を身につけ、自分たちで適切な判断ができるようにすることが必要だと感じます。金融リテラシーを上げることにより「将来に向けたお金の不安を解決する」サービスです。
               </p>
               <div className={"c-contents--btnArea -left"}>
-                <Button href="/service">マネーリペアについて</Button>
+                <Button href="/service" customClass="-maru -blue">マネーリペアについて</Button>
               </div>
             </li>
             <li className={"flexItem"}>
