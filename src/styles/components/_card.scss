@@ -563,6 +563,38 @@
         @include min(1000){padding: 10% 5%;}
       }
     }
+
+    &.-No{
+      position: relative;
+      overflow: visible;
+      &::before{
+        content: "";
+        position: absolute;
+        top: -25px;
+        right: 5px;
+        width: 45px;
+        height: 45px;
+        background: url("/images/Lp/card-hukidashi.png") no-repeat center center / cover;
+      }
+      &::after{
+        content: "";
+        display: block;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: .2rem;
+        position: absolute;
+        top: -15px;
+        right: 3px;
+        width: 45px;
+      }
+      &.-No01{&::after{content: "01";}}
+      &.-No02{&::after{content: "02";}}
+      &.-No03{&::after{content: "03";}}
+      .c-card--inner {
+        padding: 20px;
+      }
+    }
   }
 }
 

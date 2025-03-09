@@ -21,9 +21,9 @@ export default async function Home() {
         {/* 導入企業ロゴ */}
         <LogoContents />
         {/* こんなお悩みはありませんか？ */}
-        <div id="sc01" className={"c-contents pdt10 pdt10s pdb5 pdb10s"}>
+        <div id="sc01" className={"c-contents pdt5 pdt5s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>経営者・総務・人事の皆さん<br />こういうお悩みはありませんか？</h2>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>経営者・総務・人事<span className="-b">の</span>皆さん<br /><span className="-b">こういう</span>お悩み<span className="-b">は</span>ありませんか？</h2>
             <ul className={"c-flex -col2_4 -h-cen -jc-sb mgb2 mgb5s"}>
               <li className={"flexItem mgb5s"}>
                 <div className="c-card -lp -lp01">
@@ -67,11 +67,11 @@ export default async function Home() {
           </div>
         </div>
         {/* お悩みを解決するためには？ */}
-        <div id="sc02" className={"c-contents -bg-color01 pdt5 pdt10s pdb5 pdb10s"}>
+        <div id="sc02" className={"c-contents -bg-color01 pdt7 pdt15s pdb10 pdb15s"}>
           <div className="c-contents--inner">
             {/* メリット */}
-            <div className="c-contents--inner mgb20 mgb20s">
-              <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">マネーリペアを導入することで<br />そのお悩みを解決できます</h2>
+            <div className="c-contents--inner mgb15 mgb20s">
+              <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"><span className="-kana -b">マネーリペア</span><span className="-b">を</span>導入<span className="-b">することで</span><br /><span className="-b">その</span>お悩み<span className="-b">を</span>解決<span className="-b">できます</span></h2>
               <p className="s-M -b -center -ls-2 -lh-2 -ws-n mgb5 mgb10s">
                 従業員の「金融リテラシー向上」をご支援し、<br />
                 給料を上げずに、1人当たりの所得を<br className="sp" />月々<span className="s-ML -kome -b -color02 pdr1 pdr1s">150,000円</span>高めることが可能です！
@@ -127,8 +127,8 @@ export default async function Home() {
             </div>
             {/* マネーリペアとは */}
             <div className="c-contents--inner mgb10 mgb10s">
-              <h2 className="c-contents--LpMainTitle -kana -b-btm -c01 mgb5 mgb10s">
-                マネーリペア<span className="s-M -b -ls-1">とは</span>
+              <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">
+                <span className="-kana -b">マネーリペア</span><span className="-b">とは</span>
               </h2>
               <div className="c-contents--inner">
                 <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb mgb5 mgb5s"}>
@@ -163,7 +163,7 @@ export default async function Home() {
             <div className="c-contents--inner ">
               <div className="c-card -lp -lp03">
                 <div className="c-card--inner">
-                  <h2 className={"c-contents--LpMainTitle -b-btm -lp -c01 mgb5 mgb10s"}>金融リテラシーを習得して<br />純資産を増やすことが可能に</h2>
+                  <h2 className={"c-contents--LpMainTitle -b-btm -lp -c01 mgb5 mgb10s"}>金融リテラシー<span className="-b">を</span>習得<span className="-b">して</span><br />純資産<span className="-b">を</span>増<span className="-b">やすことが</span>可能<span className="-b">に</span></h2>
                   <p className="s-M -s10 -center -ls-2 -lh-2 mgb5 mgb10s">
                     バランスシートに置き換えて考えるとわかりやすいですが、<br />
                     金融リテラシーという知的財産を付けることにより、<br />
@@ -184,9 +184,9 @@ export default async function Home() {
           </div>
         </div>
         {/* マネーリペアで出来ること */}
-        <div id="sc03" className={"c-contents -bg-white pdt5 pdt10s pdb5 pdb5s"}>
+        <div id="sc03" className={"c-contents -bg-white pdt7 pdt15s pdb5 pdb5s"}>
           <div className="c-contents--inner">
-            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s">マネーリペアで出来ること</h2>
+            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb7 mgb10s"><span className="-kana -b">マネーリペア</span><span className="-b">で</span>出来<span className="-b">る</span>事<span className="-b"></span></h2>
             <div className="mgb10 mgb10s">
               {/* 1. 金融勉強会 */}
               <ul className={"c-flex -col1_2 -h-top -jc-sb mgb10 mgb15s"}>
@@ -266,7 +266,69 @@ export default async function Home() {
         {/* cta */}
         <LpCta />
         {/* 選ばれる理由 */}
-        
+        <div id="sc04" className={"c-contents pdt10 pdt20s pdb5 pdb10s"}>
+          <div className={"c-contents--inner"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s"}><span className="-kana -b">マネーリペア</span><span className="-b">を</span>選<span className="-b">ばれる</span>理由</h2>
+            <ul className={"c-flex -col1_3 -h-cen -jc-sb mgb2 mgb5s"}>
+              <li className={"flexItem mgb10s"}>
+                <div className="c-card -lp -No -No01">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s18 -b -ls-2 -lh-1_5 mgb4 mgb5s">
+                      1人当たり月500円といった<br />圧倒的なコストパフォーマンス
+                    </h3>
+                    <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc04-A.png"
+                        alt="マネーリペアを説明する図"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb10s"}>
+                <div className="c-card -lp -No -No02">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s16 -b -ls-2 -lh-1_5 mgb4 mgb5s">
+                      個別相談がつくことで<br />
+                      精度の高い提案で削減事例多数
+                    </h3>
+                    <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc04-B.png"
+                        alt="お金が溜まっている様子"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem"}>
+                <div className="c-card -lp -No -No03">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s16 -b -ls-2 -lh-1_5 mgb4 mgb5s">
+                      従業員へのアンケートを<br />
+                      元にしたカリキュラム作成
+                    </h3>
+                    <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc04-C.png"
+                        alt="従業員が喜んでいる様子"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
   );
