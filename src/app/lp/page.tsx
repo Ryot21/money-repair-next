@@ -268,7 +268,7 @@ export default async function Home() {
         {/* 選ばれる理由 */}
         <div id="sc04" className={"c-contents pdt10 pdt20s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s"}><span className="-kana -b">マネーリペア</span><span className="-b">を</span>選<span className="-b">ばれる</span>理由</h2>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s"}><span className="-kana -b">マネーリペア</span><span className="-b">が</span>選<span className="-b">ばれる</span>理由</h2>
             <ul className={"c-flex -col1_3 -h-cen -jc-sb mgb2 mgb5s"}>
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -No -No01">
@@ -327,6 +327,34 @@ export default async function Home() {
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+        {/* 石橋 > 説明 */}
+        <div id="sc04-02" className={"c-contents -bg-color01 -triangle pdt10 pdt20s pdb5 pdb10s pdb15s"}>
+          <div className={"c-contents--inner"}>
+            <div className="c-card -lp -lp04 -Profile">
+              <div className="c-card--inner">
+                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
+                  <li className={"flexItem mgb10s"}>
+                    <div className="imgBox" style={{borderRadius: "5px", border: "1px solid lightgray"}}>
+                      <Image
+                        src="/images/Lp/sc04-D.png"
+                        alt="石橋が説明する内容"
+                        width={320}
+                        height={320}
+                      />
+                    </div>
+                  </li>
+                  <li className={"flexItem mgb15s"}>
+                    <h3 className="s-L -s16 -b -left -ls-2 -lh-1_5 mgb4 mgb5s">
+                      「離職率減少」と<br className="tb-pc" />
+                      「社員モチベーションアップ」に効果を発揮します。
+                    </h3>
+                    <p className="s-M -b -left -ls-2 -lh-2 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

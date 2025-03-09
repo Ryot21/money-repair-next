@@ -563,6 +563,13 @@
         @include min(1000){padding: 10% 5%;}
       }
     }
+    &.-lp04 {
+      .c-card--inner {
+        padding: 20px 20px;
+        @include min(768){padding: 5% 4%;}
+        @include min(1000){padding: 3% 3%;}
+      }
+    }
 
     &.-No{
       position: relative;
@@ -593,6 +600,43 @@
       &.-No03{&::after{content: "03";}}
       .c-card--inner {
         padding: 20px;
+      }
+    }
+    &.-Profile{
+      position: relative;
+      overflow: visible;
+      &::before{// 画像
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        right: 20px;
+        width: 80px;
+        height: 80px;
+        background: url("/images/Lp/ishibashi-20241219.png") no-repeat center center / cover;
+        border: 2px solid $site-color03;
+        border-radius: 50%;
+        @include min(500){
+          bottom: 10px;
+          right: 20px;
+          width: 100px;
+          height: 100px;  
+        }
+      }
+      &::after{// 名前
+        content: "株式会社インプレーム 石橋";
+        position: absolute;
+        bottom: 10px;
+        right: 120px;
+        color: $main-color--b;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: .2rem;
+        @include min(500){
+          bottom: 10px;
+          right: 130px;
+          font-size: 1.2rem;
+        }
       }
     }
   }

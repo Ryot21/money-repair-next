@@ -1348,4 +1348,24 @@
       }
     }
   }
+
+  // 三角形
+  &.-triangle{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+      height: 5%;
+      background: $main-color--w;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      @include min(500){
+        width: 20%;
+        height: 10%;
+      }
+    }
+  }
 }
