@@ -174,18 +174,20 @@
       &:nth-child(odd) {margin-right: 5px;}
       &:nth-child(even) {margin-left: 5px;}
       @include min(768) {
-        width: calc(25% - 10px);
+        width: calc(25% - 15px);
         // 一番左
         &:nth-child(1),
-        &:nth-child(5) {margin-right: 5px;}
+        &:nth-child(5) {margin-right: 15px;}
+
         // 真ん中
         &:nth-child(2),
+        &:nth-child(6) {margin: 0 10px 0 5px;}
+
         &:nth-child(3),
-        &:nth-child(6),
-        &:nth-child(7) {margin: 0 5px;}
+        &:nth-child(7) {margin: 0 5px 0 10px;}
         // 一番右
         &:nth-child(4),
-        &:nth-child(8) {margin-left: 5px;}
+        &:nth-child(8) {margin-left: 15px;}
       }
     }
   }
@@ -194,8 +196,30 @@
     .flexItem {
       width: 100%;
       @include max(500){margin: 0 auto;}
-      @include min(768){width: calc(100% / 3 - 20px);}
-      @include min(1600){width: calc(100% / 3 - 30px);}
+      @include min(768){
+        width: calc(100% / 3 - 20px);
+        // 一番左
+        &:nth-child(1),
+        &:nth-child(4){margin-right: 20px;}
+        // 真ん中
+        &:nth-child(2),
+        &:nth-child(5){margin: 0 10px;}
+        // 一番右
+        &:nth-child(3),
+        &:nth-child(6){margin-left: 20px;}
+      }
+      @include min(1600){
+        width: calc(100% / 3 - 30px);
+        // 一番左
+        &:nth-child(1),
+        &:nth-child(4){margin-right: 30px;}
+        // 真ん中
+        &:nth-child(2),
+        &:nth-child(5){margin: 0 15px;}
+        // 一番右
+        &:nth-child(3),
+        &:nth-child(6){margin-left: 30px;}
+      }
     }
   }
   // コンテンツ_カラム（sp,pc:3）

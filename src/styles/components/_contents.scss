@@ -1381,4 +1381,34 @@
       }
     }
   }
+  // 応援しているイラスト
+  &.-support{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 150px;
+      height: 150px;
+      background: url("/images/Lp/ouen.png") no-repeat center center;
+      background-size: contain;
+      z-index: 1;
+      @include min(1000){
+        bottom: -5%;
+
+        width: 180px;
+        height: 180px;
+      }
+      @include min(1400){
+        bottom: 0;
+        width: 200px;
+        height: 200px;
+      }
+      @include min(1600){
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
 }

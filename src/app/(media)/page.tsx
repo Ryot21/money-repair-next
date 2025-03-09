@@ -25,7 +25,7 @@ export default async function Home() {
       {/* マネーリペアとは */}
       <div id="sc01" className={"c-contents pdt10 pdt10s mgb5s"}>
         <div className={"c-contents--inner"}>
-          <ul className={"c-flex -col1_2 -jc-sb -h-cen"}>
+          <ul className={"c-flex -col1_2 -jc-sb -h-top"}>
             <li className={"flexItem mgb10s"}>
               <h2 className={"s-L -s30 -left -b mgl0 mgl0s mgb3 mgb3s"}>
                 {/* <h2 className={"w50 mgl0 mgl0s mgb3 mgb3s"}> */}

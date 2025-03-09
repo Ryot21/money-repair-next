@@ -219,16 +219,18 @@
       transform: scale(1.05);
     }
   }
-  &.-c-color {
+  &.-red {
+
     @include min(768) {
-      transition: 1s all;
+      transition: .3s all;
+      opacity: 1;
       span {
-        transition: 1s all;
+        transition: .3s all;
+        opacity: 1;
       }
       &:hover {
-        span {
-          color: $site-color01;
-        }
+        color: $main-color--red;
+        opacity: 0.5;
       }
     }
   }

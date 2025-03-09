@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 // コンポーネント
@@ -267,7 +268,8 @@ export default async function Home() {
         <div id="sc04" className={"c-contents pdt7 pdt20s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}><span className="-kana -b">マネーリペア</span><span className="-b">が</span>選<span className="-b">ばれる</span>理由</h2>
-            <ul className={"c-flex -col1_3 -h-cen -jc-sb mgb2 mgb5s"}>
+            <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
+              {/* 1. 圧倒的なコストパフォーマンス */}
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -No -No01">
                   <div className="c-card--inner">
@@ -286,6 +288,7 @@ export default async function Home() {
                   </div>
                 </div>
               </li>
+              {/* 2. 個別相談がつくことで */}
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -No -No02">
                   <div className="c-card--inner">
@@ -305,6 +308,7 @@ export default async function Home() {
                   </div>
                 </div>
               </li>
+              {/* 3. 従業員へのアンケートを元に */}
               <li className={"flexItem"}>
                 <div className="c-card -lp -No -No03">
                   <div className="c-card--inner">
@@ -484,6 +488,124 @@ export default async function Home() {
         <LpCta />
         {/* 導入実績 */}
         <LpInterviewArea />
+        {/* 申し込みから導入までの流れ */}
+        <div id="sc8" className={"c-contents -bg-color01 -support pdt7 pdt20s pdb7 pdb15s"}>
+          <div className={"c-contents--inner"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
+              申し込み<span className="-b">から</span>導入<span className="-b">までの</span>流れ
+            </h2>
+            <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
+              {/* 1. WEBサイトから申し込み */}
+              <li className={"flexItem mgb5 mgb10s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">1. WEBサイトから申し込み</h3>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc07-A.png"
+                        alt="申し込みの様子"
+                        className="mgb5 mgb5s"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">サイト内の<Link href="#contact" className="c-link -b -red">申し込みフォーム</Link>からお申し込みください。</p>
+                  </div>
+                </div>
+              </li>
+              {/* 2. 導入決定後のお打合せ */}
+              <li className={"flexItem mgb5 mgb10s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">2. 導入決定後のお打合せ</h3>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc07-B.png"
+                        alt="打ち合わせの様子"
+                        className="mgb5 mgb5s"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">ご担当者様と今後の進め方を擦り合わせいたします。</p>
+                  </div>
+                </div>
+              </li>
+              {/* 3. 従業員様への導入説明会 */}
+              <li className={"flexItem mgb5 mgb10s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">3. 従業員様への導入説明会</h3>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc07-C.png"
+                        alt="導入説明会を実施している様子"
+                        className="mgb5 mgb5s"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">貴社へ訪問、もしくはオンラインミーティングなどで説明を致します。</p>
+                  </div>
+                </div>
+              </li>
+              {/* 4. 公式LINEに友達追加 */}
+              <li className={"flexItem mgb10s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">4. 公式LINEに友達追加</h3>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc07-D.png"
+                        alt="公式LINEに友達追加している様子"
+                        className="mgb5 mgb5s"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">マネーリペアの公式LINEアカウントを従業員様にご登録いただきます。</p>
+                  </div>
+                </div>
+              </li>
+              {/* 5. 税金の無料診断 */}
+              <li className={"flexItem mgb10s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">5. 税金の無料診断</h3>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc07-E.png"
+                        alt="税金の無料診断を実施している様子"
+                        className="mgb5 mgb5s"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">初回電話を5~10分、2回目の電話を20分させていただき、税金の払い過ぎを診断します。</p>
+                  </div>
+                </div>
+              </li>
+              {/* 6. 個別FP相談 */}
+              <li className={"flexItem mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">6. 個別FP相談</h3>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/sc07-F.png"
+                        alt="個別FP相談を実施している様子"
+                        className="mgb5 mgb5s"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">生命保険や住宅の住み替え、NISAやふるさと納税制度の活用方法等をお伝えします。</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
   );
