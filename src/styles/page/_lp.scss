@@ -24,5 +24,13 @@
                 }
             }
         }
+        .-logoArea{
+            &::before{
+                background: linear-gradient(0.25turn, $main-color--w, 75%, rgba(0, 0, 0, 0));
+            }
+            &::after{
+                background: linear-gradient(0.75turn, $main-color--w, 75%, rgba(0, 0, 0, 0));
+            }
+        }
     }
 }

@@ -24,6 +24,9 @@
   &--inner {// コンテンツ幅
     width: 92.5%;
     margin: auto;
+    @include max(500) {
+      max-width: 375px;
+    }
     @include min(500) {width: 85%;}
     @include min(768) {width: 90%;}
     @include min(1600) {max-width: 1380px;}
@@ -1192,7 +1195,7 @@
   }
   &.-logoArea{// 導入実績
     position: relative;
-
+    
     &::before,
     &::after{
       content: "";
@@ -1205,13 +1208,15 @@
         width: 100px;
       }
     }
+    // 背景 > site-color01用
     &::before{
       left: -5px;
-      background: linear-gradient(.25turn, $site-color01, 75%, rgba(0, 0, 0, 0));
+      background: linear-gradient(.25turn, $site-color01, 50%, rgb(245, 251, 255, 0.1));
     }
+    // 背景 > site-color01用
     &::after{
       right: -5px;
-      background: linear-gradient(.75turn, $site-color01, 75%, rgba(0, 0, 0, 0));
+      background: linear-gradient(.75turn, $site-color01, 50%, rgb(245, 251, 255, 0.1));
     }
   }
   &.-serviceBox{// マネーリペアとは

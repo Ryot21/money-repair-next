@@ -5,7 +5,7 @@ import LogoWrapper from "@/components/slider/logo/LogoWrapper";
 export default function LogoContents() {
   return (
     // ロゴセクションのメインコンテナ
-    <div id="logoSection" className={"c-contents pdt5 pdt10s mgb5s"}>
+    <div id="logoSection" className={"c-contents pdt5 pdt10s pdb5 pdb10s"}>
         {/* セクションタイトル */}
         <div className={"c-contents--inner"}>
             <h2 className={"c-logo--title pdb3 pdb3s"}>
