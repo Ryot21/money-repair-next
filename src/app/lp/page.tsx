@@ -268,7 +268,7 @@ export default async function Home() {
         {/* 選ばれる理由 */}
         <div id="sc04" className={"c-contents pdt10 pdt20s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s"}><span className="-kana -b">マネーリペア</span><span className="-b">が</span>選<span className="-b">ばれる</span>理由</h2>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}><span className="-kana -b">マネーリペア</span><span className="-b">が</span>選<span className="-b">ばれる</span>理由</h2>
             <ul className={"c-flex -col1_3 -h-cen -jc-sb mgb2 mgb5s"}>
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -No -No01">
@@ -360,7 +360,7 @@ export default async function Home() {
         {/* 考えられる問題 */}
         <div id="sc05" className={"c-contents -bg-color07 pdt10 pdt20s pdb5 pdb10s pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
               <span className="-kana -b">マネーリペア</span><span className="-b">で</span>解決<span className="-b">できる</span><br className="" />
               様々<span className="-b">な</span>お金<span className="-b">の</span>問題
             </h2>
@@ -427,6 +427,56 @@ export default async function Home() {
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">年金</h3>
                     <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
                   </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* マネーリペアを導入すると */}
+        <div id="sc06" className={"c-contents pdt10 pdt20s pdb5 pdb10s pdb15s"}>
+          <div className={"c-contents--inner"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
+              <span className="-kana -b">マネーリペア</span><span className="-b">を</span>導入<span className="-b">することで</span><br className="" />
+              従業員の満足度<span className="-b">や</span>企業の魅力が向上<span className="-b">し、</span>離職率の低下<span className="-b">につながります。</span>
+            </h2>
+            <ul className={"c-flex -col3 -h-top -jc-sb mgb2 mgb5s"}>
+              <li className={"flexItem mgb5s"}>
+                <p className="s-M -s10 -b -center -ls-2 -lh-1_5 mgb5 mgb5s">
+                  社員とご家族の<br className="tb-pc" />金融リテラシーの向上
+                </p>
+                <div className="imgBox">
+                  <Image
+                    src="/images/Lp/sc06-A.png"
+                    alt="ご家族が悩んでいる様子"
+                    width={480}
+                    height={320}
+                  />
+                </div>
+              </li>
+              <li className={"flexItem mgb5s"}>
+                <p className="s-M -s10 -b -center -ls-2 -lh-1_5 mgb5 mgb5s">
+                  新入社員採用時の<br className="tb-pc" />アピールポイント
+                </p>
+                <div className="imgBox">
+                  <Image
+                    src="/images/Lp/sc06-B.png"
+                    alt="ビジネス街の写真"
+                    width={480}
+                    height={320}
+                  />
+                </div>
+              </li>
+              <li className={"flexItem mgb5s"}>
+                <p className="s-M -s10 -b -center -ls-2 -lh-1_5 mgb5 mgb5s">
+                  社員の会社満足度の向上、<br className="tb-pc" />離職率低下
+                </p>
+                <div className="imgBox">
+                  <Image
+                    src="/images/Lp/sc06-C.png"
+                    alt="従業員が話し合っている様子"
+                    width={480}
+                    height={320}
+                  />
                 </div>
               </li>
             </ul>
