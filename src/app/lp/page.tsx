@@ -489,7 +489,7 @@ export default async function Home() {
         {/* 導入実績 */}
         <LpInterviewArea />
         {/* 申し込みから導入までの流れ */}
-        <div id="sc8" className={"c-contents -bg-color01 -support pdt7 pdt20s pdb7 pdb15s"}>
+        <div id="sc8" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
               申し込み<span className="-b">から</span>導入<span className="-b">までの</span>流れ
@@ -502,7 +502,7 @@ export default async function Home() {
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">1. WEBサイトから申し込み</h3>
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc07-A.png"
+                        src="/images/Lp/sc08-A.png"
                         alt="申し込みの様子"
                         className="mgb5 mgb5s"
                         width={480}
@@ -520,7 +520,7 @@ export default async function Home() {
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">2. 導入決定後のお打合せ</h3>
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc07-B.png"
+                        src="/images/Lp/sc08-B.png"
                         alt="打ち合わせの様子"
                         className="mgb5 mgb5s"
                         width={480}
@@ -538,7 +538,7 @@ export default async function Home() {
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">3. 従業員様への導入説明会</h3>
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc07-C.png"
+                        src="/images/Lp/sc08-C.png"
                         alt="導入説明会を実施している様子"
                         className="mgb5 mgb5s"
                         width={480}
@@ -556,7 +556,7 @@ export default async function Home() {
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">4. 公式LINEに友達追加</h3>
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc07-D.png"
+                        src="/images/Lp/sc08-D.png"
                         alt="公式LINEに友達追加している様子"
                         className="mgb5 mgb5s"
                         width={480}
@@ -574,7 +574,7 @@ export default async function Home() {
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">5. 税金の無料診断</h3>
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc07-E.png"
+                        src="/images/Lp/sc08-E.png"
                         alt="税金の無料診断を実施している様子"
                         className="mgb5 mgb5s"
                         width={480}
@@ -592,7 +592,7 @@ export default async function Home() {
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">6. 個別FP相談</h3>
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc07-F.png"
+                        src="/images/Lp/sc08-F.png"
                         alt="個別FP相談を実施している様子"
                         className="mgb5 mgb5s"
                         width={480}

@@ -5,34 +5,24 @@
 }
 
 .c-contents {
-  &.-bg-color01 {
-    background: $site-color01;
-  }
-  &.-bg-color02 {
-    background: $site-color02;
-  }
-  &.-bg-color03 {
-    background: $site-color03;
-  }
-  &.-bg-color04 {
-    background: $site-color04;
-  }
-  &.-bg-color05 {
-    background: $site-color05;
-  }
-  &.-bg-color06 {
-    background: $site-color06;
-  }
-  &.-bg-color07 {
-    background: $site-color07;
-  }
-  
-  
-  &.-bg-white {
-    background: $main-color--w;
-  }
-  &.-bg-gray {
-    background: $main-color--gray;
+  &.-bg{
+    &-color01 {background: $site-color01;}
+    &-color02 {background: $site-color02;}
+    &-color03 {background: $site-color03;}
+    &-color04 {background: $site-color04;}
+    &-color05 {background: $site-color05;}
+    &-color06 {background: $site-color06;}
+    &-color07 {background: $site-color07;}
+    &-white {background: $main-color--w;}
+    &-gray {background: $main-color--gray;}
+    &-img{
+      &-sc08 {
+        background-image: url(/images/Lp/sc08-bg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
   }
 
   &--inner {// コンテンツ幅
@@ -60,6 +50,12 @@
     }
     &.-bg-gray {
       background: $main-color--gray;
+    }
+    &.-bg-img01 {
+      background-image: url(/images/Lp/sc08-bg.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     &.-card {
