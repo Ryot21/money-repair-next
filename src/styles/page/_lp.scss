@@ -2,7 +2,7 @@
 .p-lp{
     .c-contents{
         &--inner {// コンテンツ幅
-            width: 92.5%;
+            width: 85%;
             margin: auto;
             @include min(500) {width: 85%;}
             @include min(768) {width: 90%;}

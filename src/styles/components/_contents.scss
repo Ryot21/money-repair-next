@@ -1113,7 +1113,7 @@
             max-width: 900px;
           }
           @include min(1600) {
-            right: 20%;
+            right: 2%;
           }
         }
         // 風景
@@ -1319,7 +1319,6 @@
 
   &.-LpCta{// LP > CTAエリア
     position: relative;
-    padding: 10% 5%;
     background:linear-gradient(0deg, rgb(73, 103, 142, .5) 0%, rgb(73, 103, 142, .1) 50%, rgb(73, 103, 142, .3) 100%);
     &::before{
       content: "";

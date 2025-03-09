@@ -192,7 +192,7 @@
   // コンテンツ_カラム（sp,pc:1:3）
   &.-col1_3 {
     .flexItem {
-      width: 90%;
+      width: 100%;
       @include max(500){margin: 0 auto;}
       @include min(768){width: calc(100% / 3 - 20px);}
       @include min(1600){width: calc(100% / 3 - 30px);}

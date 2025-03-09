@@ -558,9 +558,9 @@
     }
     &.-lp03 {
       .c-card--inner {
-        padding: 20px 10px;
+        padding: 30px 10px 40px;
         @include min(768){padding: 15% 5%;}
-        @include min(1000){padding: 10% 5%;}
+        @include min(1000){padding: 5%;}
       }
     }
     &.-lp04 {

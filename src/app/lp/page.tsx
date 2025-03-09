@@ -22,7 +22,7 @@ export default async function Home() {
         {/* 導入企業ロゴ */}
         <LogoContents />
         {/* こんなお悩みはありませんか？ */}
-        <div id="sc01" className={"c-contents pdt5 pdt5s pdb7 pdb15s"}>
+        <div id="sc01" className={"c-contents pdt5s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>経営者・総務・人事<span className="-b">の</span>皆さん<br /><span className="-b">こういう</span>お悩み<span className="-b">は</span>ありませんか？</h2>
             <ul className={"c-flex -col2_4 -h-cen -jc-sb mgb2 mgb5s"}>
@@ -68,10 +68,10 @@ export default async function Home() {
           </div>
         </div>
         {/* お悩みを解決するためには？ */}
-        <div id="sc02" className={"c-contents -bg-color01 pdt7 pdt15s pdb10 pdb15s"}>
-          <div className="c-contents--inner">
+        <div id="sc02" className={"c-contents -bg-color01 pdt7 pdt15s pdb7 pdb15s"}>
+
             {/* メリット */}
-            <div className="c-contents--inner mgb15 mgb20s">
+            <div className="c-contents--inner mgb10 mgb20s">
               <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"><span className="-kana -b">マネーリペア</span><span className="-b">を</span>導入<span className="-b">することで</span><br /><span className="-b">その</span>お悩み<span className="-b">を</span>解決<span className="-b">できます</span></h2>
               <p className="s-M -b -center -ls-2 -lh-2 -ws-n mgb5 mgb10s">
                 従業員の「金融リテラシー向上」をご支援し、<br />
@@ -127,38 +127,36 @@ export default async function Home() {
               </ul>
             </div>
             {/* マネーリペアとは */}
-            <div className="c-contents--inner mgb10 mgb10s">
+            <div className="c-contents--inner mgb5 mgb10s">
               <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">
                 <span className="-kana -b">マネーリペア</span><span className="-b">とは</span>
               </h2>
-              <div className="c-contents--inner">
-                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb mgb5 mgb5s"}>
-                  <li className={"flexItem mgb10s"}>
-                    <div className="imgBox w90s">
-                      <Image
-                        src="/images/Lp/sc02-D.png"
-                        alt="バランスの良い金融情報の図表"
-                        width={414}
-                        height={231}
-                      />
-                    </div>
-                  </li>
-                  <li className={"flexItem"}>
-                    <h3 className="c-contents--LpTitle mgb4 mgb5s">
-                      企業の従業員様向けに金融・投資・税務の教育を<br className="pc" />
-                      実施する福利厚生プログラム
-                    </h3>
-                    <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                      企業にとって社員の方々はとても『大切な財産』です。しかし、急激な物価高騰の波に対応できず、大切な社員を流出させてしまうかも知れません。個々の社員の金融リテラシーを上げることにより、限られた給与でも『可処分所得』を上げる事ができます。
-                    </p>
-                    <p className="s-M -ls-2 -ls-1_5_s -lh-2">
-                      マネーリペアとは、大切な社員の『将来に向けたお金の不安』を解決するためのサービスです。長年続いたデフレにより凝り固まった誤ったお金の知識を修復し、正しい金融知識を身につけご自身で適切な判断ができるようにすることが大切なのです。
-                    </p>
+              <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
+                <li className={"flexItem mgb10s"}>
+                  <div className="imgBox w90s">
+                    <Image
+                      src="/images/Lp/sc02-D.png"
+                      alt="バランスの良い金融情報の図表"
+                      width={414}
+                      height={231}
+                    />
+                  </div>
+                </li>
+                <li className={"flexItem"}>
+                  <h3 className="c-contents--LpTitle mgb4 mgb5s">
+                    企業の従業員様向けに金融・投資・税務の教育を<br className="pc" />
+                    実施する福利厚生プログラム
+                  </h3>
+                  <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                    企業にとって社員の方々はとても『大切な財産』です。しかし、急激な物価高騰の波に対応できず、大切な社員を流出させてしまうかも知れません。個々の社員の金融リテラシーを上げることにより、限られた給与でも『可処分所得』を上げる事ができます。
+                  </p>
+                  <p className="s-M -ls-2 -ls-1_5_s -lh-2">
+                    マネーリペアとは、大切な社員の『将来に向けたお金の不安』を解決するためのサービスです。長年続いたデフレにより凝り固まった誤ったお金の知識を修復し、正しい金融知識を身につけご自身で適切な判断ができるようにすることが大切なのです。
+                  </p>
 
-                  </li>
+                </li>
 
-                </ul>
-              </div>
+              </ul>
             </div>
             {/* 何ができる？ */}
             <div className="c-contents--inner ">
@@ -182,7 +180,6 @@ export default async function Home() {
                 </div>
               </div>
             </div>
-          </div>
         </div>
         {/* マネーリペアで出来ること */}
         <div id="sc03" className={"c-contents -bg-white pdt7 pdt15s pdb5 pdb5s"}>
@@ -267,7 +264,7 @@ export default async function Home() {
         {/* cta */}
         <LpCta />
         {/* 選ばれる理由 */}
-        <div id="sc04" className={"c-contents pdt10 pdt20s pdb5 pdb10s"}>
+        <div id="sc04" className={"c-contents pdt7 pdt20s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}><span className="-kana -b">マネーリペア</span><span className="-b">が</span>選<span className="-b">ばれる</span>理由</h2>
             <ul className={"c-flex -col1_3 -h-cen -jc-sb mgb2 mgb5s"}>
@@ -331,7 +328,7 @@ export default async function Home() {
           </div>
         </div>
         {/* 石橋 > 説明 */}
-        <div id="sc04-02" className={"c-contents -bg-color01 -triangle pdt10 pdt20s pdb10 pdb10s pdb20s"}>
+        <div id="sc04-02" className={"c-contents -bg-color01 -triangle pdt7 pdt20s pdb7 pdb10s pdb20s"}>
           <div className={"c-contents--inner"}>
             <div className="c-card -lp -lp04 -Profile">
               <div className="c-card--inner">
@@ -347,9 +344,9 @@ export default async function Home() {
                     </div>
                   </li>
                   <li className={"flexItem mgb15s"}>
-                    <h3 className="s-L -s16 -b -left -ls-2 -lh-1_5 mgb4 mgb5s">
-                      「離職率減少」と<br className="tb-pc" />
-                      「社員モチベーションアップ」に効果を発揮します。
+                    <h3 className="c-contents--LpMainTitle -b -left -ls-2 -lh-1_5 mgb4 mgb5s">
+                      「離職率減少」<span className="-b">と</span><br className="" />
+                      「社員モチベーションアップ」<span className="-b">に</span>効果<span className="-b">を</span>発揮<span className="-b">します。</span>
                     </h3>
                     <p className="s-M -b -left -ls-2 -lh-2 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
                   </li>
@@ -359,7 +356,7 @@ export default async function Home() {
           </div>
         </div>
         {/* 考えられる問題 */}
-        <div id="sc05" className={"c-contents -bg-color07 pdt10 pdt20s pdb5 pdb10s pdb15s"}>
+        <div id="sc05" className={"c-contents -bg-color07 pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
               <span className="-kana -b">マネーリペア</span><span className="-b">で</span>解決<span className="-b">できる</span><br className="" />
@@ -434,7 +431,7 @@ export default async function Home() {
           </div>
         </div>
         {/* マネーリペアを導入すると */}
-        <div id="sc06" className={"c-contents pdt10 pdt20s pdb5 pdb10s pdb15s"}>
+        <div id="sc06" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
               <span className="-kana -b">マネーリペア</span><span className="-b">を</span>導入<span className="-b">することで</span><br className="" />
