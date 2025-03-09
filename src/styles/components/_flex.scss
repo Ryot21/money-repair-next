@@ -125,9 +125,9 @@
   &.-col2M1_3 {
     .flexItem {
       // li
-      width: 48.5%;
+      width: calc(50% - 1%);
       @include min(768) {
-        width: 32%;
+        width: calc(100% / 3 - 1%);
       }
     }
     .flexItem_M {
@@ -135,7 +135,7 @@
         width: 100%;
       }
       @include min(768) {
-        width: 32%;
+        width: calc(100% / 3 - 1%);
       }
     }
   }

@@ -7,7 +7,7 @@ import Button from "@/components/elements/button";
 
 // 投稿関係
 import LogoContents from "@/components/slider/logo/LogoContents";
-// import InterviewArea from "@/features/media/interview/content";
+// import InterviewArea from "@/features/media/interview/Content";
 import InformationArea from "@/features/media/information/Content";
 
 // ISR

@@ -7,6 +7,7 @@ import LpCta from "@/features/lp/cta";
 
 // 投稿関係
 import LogoContents from "@/components/slider/logo/LogoContents";
+import LpInterviewArea from "@/features/lp/interview/Content";
 
 // ISR
 export const revalidate = 600;
@@ -482,6 +483,10 @@ export default async function Home() {
             </ul>
           </div>
         </div>
+        {/* cta */}
+        <LpCta />
+        {/* 導入実績 */}
+        <LpInterviewArea />
       </div>
     </main>
   );
