@@ -170,9 +170,22 @@
   // コンテンツカラム（sp:pc 2:4）
   &.-col2_4 {
     .flexItem {
-      width: 48.5%;
+      width: calc(50% - 5px);
+      &:nth-child(odd) {margin-right: 5px;}
+      &:nth-child(even) {margin-left: 5px;}
       @include min(768) {
-        width: 23.5%;
+        width: calc(25% - 10px);
+        // 一番左
+        &:nth-child(1),
+        &:nth-child(5) {margin-right: 5px;}
+        // 真ん中
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(6),
+        &:nth-child(7) {margin: 0 5px;}
+        // 一番右
+        &:nth-child(4),
+        &:nth-child(8) {margin-left: 5px;}
       }
     }
   }

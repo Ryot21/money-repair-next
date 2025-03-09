@@ -639,6 +639,13 @@
         }
       }
     }
+
+    &.-lp05 {
+      .c-card--inner {
+        padding: 20px 20px;
+        @include min(768){padding: 15px 10px;}
+      }
+    }
   }
 }
 

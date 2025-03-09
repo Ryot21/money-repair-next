@@ -330,7 +330,7 @@ export default async function Home() {
           </div>
         </div>
         {/* 石橋 > 説明 */}
-        <div id="sc04-02" className={"c-contents -bg-color01 -triangle pdt10 pdt20s pdb5 pdb10s pdb15s"}>
+        <div id="sc04-02" className={"c-contents -bg-color01 -triangle pdt10 pdt20s pdb10 pdb10s pdb20s"}>
           <div className={"c-contents--inner"}>
             <div className="c-card -lp -lp04 -Profile">
               <div className="c-card--inner">
@@ -355,6 +355,81 @@ export default async function Home() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+        {/* 考えられる問題 */}
+        <div id="sc05" className={"c-contents -bg-color07 pdt10 pdt20s pdb5 pdb10s pdb15s"}>
+          <div className={"c-contents--inner"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb10 mgb10s"}>
+              <span className="-kana -b">マネーリペア</span><span className="-b">で</span>解決<span className="-b">できる</span><br className="" />
+              様々<span className="-b">な</span>お金<span className="-b">の</span>問題
+            </h2>
+            <ul className={"c-flex -col2_4 -h-top -jc-st mgb2 mgb5s"}>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">税金の適正化/節税</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">生命保険の見直し</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">資産運用</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">投資信託</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">NISA</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">iDeco</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">ふるさと納税</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb5s"}>
+                <div className="c-card -lp -lp05">
+                  <div className="c-card--inner">
+                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">年金</h3>
+                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
