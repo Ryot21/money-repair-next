@@ -271,6 +271,7 @@
         text-align: center;
         padding: 0 1px;
         @include min(500){font-size: clamp(2rem, 2vw, 4.75rem) !important;}
+        @include min(1800){font-size: max(3rem, 35px) !important;}
         &::before{
             position: absolute;
             top: -10%;
@@ -312,18 +313,18 @@
         } 
         .-kana {
             font-size: 2.5rem;
-            @include min(500){
-                font-size: clamp(2.2rem, 2vw, 4.5rem);
-            }
+            @include min(500){font-size: clamp(2.2rem, 2vw, 4.5rem);}
+            @include min(1800){font-size: max(3.2rem, 37px) !important;}
         }
         span{font-size: clamp(1.8rem, 1.5vw, 2.8rem);}
     }
     &--LpTitle{// コンテンツ > セクション > タイトル
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         letter-spacing: .2rem;
-        line-height: 1.5;
+        line-height: 1.7;
         @include min(500){
-            font-size: clamp(1.6rem, 2vw, 2.3rem);
+            font-size: clamp(1.6rem, 1.7vw, 2.2rem);
+            line-height: 2;
         }
     }
     &--LpCtaTitle{// コンテンツ > CTA
