@@ -56,6 +56,7 @@ export default function Navigation({
       ></label>
       <div className={"c-hb-nav__content"}>
         <ul className={"c-hb-nav__lists"}>
+          {/* TOP */}
           <li className={"hbNavItem"}>
             <Link
               className={isActive("/") ? "-active" : ""}
@@ -65,6 +66,7 @@ export default function Navigation({
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>TOP</span>
             </Link>
           </li>
+          {/* マネリペとは */}
           <li className={"hbNavItem"}>
             <Link
               className={isActive("/service") ? "-active" : ""}
@@ -76,6 +78,7 @@ export default function Navigation({
               </span>
             </Link>
           </li>
+          {/* マネリペ情報 */}
           <li className={"hbNavItem"}>
             <Link
               className={`mgb5 mgb5s ${isActive("/maneripe") ? "-active" : ""}`}
@@ -159,6 +162,19 @@ export default function Navigation({
               ))}
             </ul>
           </li>
+          {/* お知らせ */}
+          <li className={"hbNavItem"}>
+            <Link
+              className={isActive("/news") ? "-active" : ""}
+              href="/news"
+              onClick={handleLinkClick}
+            >
+              <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
+                お知らせ
+              </span>
+            </Link>
+          </li>
+          {/* 資料ダウンロード */}
           <li className={"hbNavItem"}>
             <Link
               className={isActive("/contact?type=download") ? "-active" : ""}
@@ -170,6 +186,7 @@ export default function Navigation({
               </span>
             </Link>
           </li>
+          {/* お問い合わせ */}
           <li className={"hbNavItem"}>
             <Link
               className={isActive("/contact?type=contact") ? "-active" : ""}
