@@ -2,7 +2,7 @@
 .c-accordion{
     &--item{
         position: relative;
-        background: $main-color--w;
+        background: $site-color01;
         border: 1px solid $site-color02;
         border-radius: 10px;
         .toggle{display: none;}
@@ -56,7 +56,7 @@
     // 開閉時
     .toggle:checked + .label + .c-accordion--text {
         height: auto;
-        background: #f7f7f7;
+        background: $main-color--w;
         border-top: 1px dotted $site-color02;
         border-radius: 0 0 10px 10px;
 

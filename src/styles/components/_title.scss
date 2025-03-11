@@ -37,7 +37,7 @@
                 background: $main-color--w;
                 border-bottom: 3px dotted $site-color03;
                 @include min(768){
-                    bottom: -20px;
+                    bottom: -10px;
                 }
             }
             // 色指定
@@ -295,7 +295,7 @@
                 background: $main-color--w;
                 border-bottom: 3px dotted $site-color03;
                 @include min(768){
-                    bottom: -20px;
+                    bottom: -10px;
                 }
             }
             // 色指定

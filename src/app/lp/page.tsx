@@ -5,7 +5,7 @@ import Image from "next/image";
 import Lp01MainVisual from "@/features/lp/mainVisual/Lp01";
 // import Button from "@/components/elements/button";
 import LpCta from "@/features/lp/cta";
-
+import LpCtaBottom from "@/features/lp/cta/LpBottom";
 // 投稿関係
 import LogoContents from "@/components/slider/logo/LogoContents";
 import LpInterviewArea from "@/features/lp/interview/Content";
@@ -844,6 +844,8 @@ export default async function Home() {
             <Accordion items={faqItems} />
           </div>
         </div>
+        {/* お問い合わせ */}
+        <LpCtaBottom />
       </div>
     </main>
   );
