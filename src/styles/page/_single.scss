@@ -646,5 +646,10 @@
         }
       }
     }
+    .c-thumbnail{
+      &--mark{
+        display: none;
+      }
+    }
   }
 }
