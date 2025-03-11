@@ -12,7 +12,7 @@ export default function SingleMainVisual({
   animationType = "rotate",
 }: Props) {
   return (
-    <div className={"c-contents -imgBg -fv -single"}>
+    <div className={"c-contents -imgBg -fv -single -bg-color06"}>
       <div className={`imgBox -${animationType}`}>
         {animationType === "svg" && (
           <div className="slash_position">

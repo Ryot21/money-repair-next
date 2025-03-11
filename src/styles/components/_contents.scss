@@ -6,15 +6,15 @@
 
 .c-contents {
   &.-bg{
-    &-color01 {background: $site-color01;}
-    &-color02 {background: $site-color02;}
-    &-color03 {background: $site-color03;}
-    &-color04 {background: $site-color04;}
-    &-color05 {background: $site-color05;}
-    &-color06 {background: $site-color06;}
-    &-color07 {background: $site-color07;}
-    &-white {background: $main-color--w;}
-    &-gray {background: $main-color--gray;}
+    &-color01 {background: $site-color01 !important;}
+    &-color02 {background: $site-color02 !important;}
+    &-color03 {background: $site-color03 !important;}
+    &-color04 {background: $site-color04 !important;}
+    &-color05 {background: $site-color05 !important;}
+    &-color06 {background: $site-color06 !important;}
+    &-color07 {background: $site-color07 !important;}
+    &-white {background: $main-color--w !important;}
+    &-gray {background: $main-color--gray !important;}
     &-img{
       &-sc08 {
         background-image: url(/images/Lp/sc08-bg.png);

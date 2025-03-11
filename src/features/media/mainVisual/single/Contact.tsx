@@ -30,8 +30,8 @@ export default function ContactMainVisual({ mvClass, customClass = '' }: Props) 
     };
 
     return (
-        <div className={`c-contents -imgBg -fv -single ${customClass}`}>
-            <div className={"imgBox"}></div>
+        <div className={`c-contents -imgBg -fv -single -bg-color06 ${customClass}`}>
+            <div className={"imgBox -slide"}></div>
             <div className={"c-contentsBox -center"}>
                 {/* ページタイトル */}
                 <h1 className={`c-page-title s-L -s18 -ws-n -center -b -ls-2 ${mvClass || ''} `}>{getTitle()}</h1>
