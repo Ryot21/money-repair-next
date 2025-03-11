@@ -55,7 +55,13 @@ export default function Breadcrumb({ categories }: BreadcrumbProps) {
         // 通常のパスの場合、パスに応じてラベルを設定
         switch (path) {
           case "service":
-            label = "特徴";
+            label = "マネリペとは";
+            break;
+          case "news":
+            label = "お知らせ";
+            break;
+          case "maneripe":
+            label = "マネリペ情報";
             break;
           case "interview":
             label = "ご利用者の声";

@@ -167,7 +167,9 @@
 
   // 記事内_共通
   &.-interview,
-  &.-information {
+  &.-information,
+  &.-maneripe,
+  &.-news {
     .p-single {
       &--intro,
       &--detail {
@@ -431,8 +433,9 @@
       }
     }
   }
-  // お役立ち情報
-  &.-information {
+  // お役立ち情報・マネリペ情報
+  &.-information,
+  &.-maneripe {
     .p-single {
       &--title {
         margin-bottom: 10%;
@@ -615,7 +618,7 @@
       }
       &--articleArea {
         // 関連記事
-        margin-top: 15%;
+        margin-top: 10%;
 
         h2 {
           // 記事タイトル

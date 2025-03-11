@@ -14,7 +14,7 @@ export default function LpInterviewList({ contents }: Props) {
   return (
     <ul className={`c-post--lists c-flex -col2M1_3 -jc-st -h-top`}>
       {contents.map((article) => (
-        <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb5s"}>
+        <li key={article.id} className={"c-post--item -card flexItem_M mgb3 mgb5s"}>
         {/* <Link href={`/interview/${article.id}`} className={"c-post--link"}> */}
           {/* サムネイルコンポーネント | 2025/03/10追加 */}
           <Thumbnail

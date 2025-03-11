@@ -17,7 +17,7 @@ export default function PageTypeWrapper({
   useEffect(() => {
     setMounted(true);
     let pageType = initialPageType;
-    const archivePaths = ["/information", "/interview"];
+    const archivePaths = ["/information", "/interview", "/maneripe", "/news"];
 
     if (archivePaths.some((path) => pathname.startsWith(path))) {
       // パスを分割して解析

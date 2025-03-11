@@ -9,7 +9,8 @@ import Button from "@/components/elements/button";
 import LogoContents from "@/components/slider/logo/LogoContents";
 import InterviewArea from "@/features/media/interview/Content";
 import InformationArea from "@/features/media/information/Content";
-
+import ManeripeArea from "@/features/media/maneripe/Content";
+import NewsArea from "@/features/media/news/Content";
 // ISR
 export const revalidate = 600;
 
@@ -23,7 +24,7 @@ export default async function Home() {
       <LogoContents />
 
       {/* マネーリペアとは */}
-      <div id="sc01" className={"c-contents pdt10 pdt10s mgb5s"}>
+      <div id="sc01" className={"c-contents pdt10 pdt10s mgb5 mgb5s"}>
         <div className={"c-contents--inner"}>
           <ul className={"c-flex -col1_2 -jc-sb -h-top"}>
             <li className={"flexItem mgb10s"}>
@@ -37,11 +38,11 @@ export default async function Home() {
                 <br className={"tb-pc"} />
                 実施する福利厚生プログラム
               </h3>
-              <p className={"s-S -s12 -left -ls-2 -lh-1_5 mgb5 mgb10s"}>
+              <p className={"s-S -s12 -left -ls-2 -lh-1_5 mgb5 mgb5s"}>
                 金融は分野によって知識が偏りがちなので、金融知識という知的財産を身につけ、自分たちで適切な判断ができるようにすることが必要だと感じます。金融リテラシーを上げることにより「将来に向けたお金の不安を解決する」サービスです。
               </p>
               <div className={"c-contents--btnArea -left"}>
-                <Button href="/service" customClass="-maru -blue">マネーリペアについて</Button>
+                <Button href="/service" customAreaClass="-left" customClass="-btn -maru -blue">詳細を見る</Button>
               </div>
             </li>
             <li className={"flexItem"}>
@@ -63,6 +64,20 @@ export default async function Home() {
 
       {/* お役立ち情報 */}
       <InformationArea />
+
+      {/* マネリペ情報 / お知らせ */}
+      <div className={"c-contents pdt10 mgb5 mgb5s"}>
+        <div className={"c-contents--inner"}>
+          <ul className={"c-flex -col1_2 -jc-sb -h-top"}>
+            <li className={"flexItem"}>
+              <ManeripeArea />
+            </li>
+            <li className={"flexItem"}>
+              <NewsArea />
+            </li>
+          </ul>
+        </div>
+      </div>
 
       {/* お問い合わせ */}
       <ContactBottom />

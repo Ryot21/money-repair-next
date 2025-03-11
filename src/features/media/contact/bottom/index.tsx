@@ -6,7 +6,7 @@ export default function ContactBottom() {
     <div id="sc-contact" className={"c-contents pdb5 pdb10s"}>
       <div className={"c-contents--inner -bg-white -card"}>
         <h2
-          className={"c-contents--title -contact -ls-1 -en-color03 pdb3 pdb10s"}
+          className={"c-contents--title -contact -center -ls-2 -en-color03 pdb3 pdb10s"}
         >
           資料ダウンロード
         </h2>
@@ -40,7 +40,7 @@ export default function ContactBottom() {
               >
                 <span className={"-f-gothic01 -b"}>お役立ち資料</span>はこちら
               </p>
-              <Button href="/contact?type=download" customClass="-maru -orange -icon -arrow">資料ダウンロード</Button>
+              <Button href="/contact?type=download" customAreaClass="-center" customClass="-btn -maru -orange -icon -arrow">資料ダウンロード</Button>
             </li>
             <li className={"cvItem"}>
               <p
@@ -50,7 +50,7 @@ export default function ContactBottom() {
               >
                 お気軽にお問い合わせ下さい。
               </p>
-              <Button href="/contact?type=contact" customClass="-maru -red -icon -mail">お問い合わせ</Button>
+              <Button href="/contact?type=contact" customAreaClass="-center" customClass="-btn -maru -red -icon -mail">お問い合わせ</Button>
             </li>
           </ul>
         </div>

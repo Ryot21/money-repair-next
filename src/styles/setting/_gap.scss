@@ -39,18 +39,6 @@
 .mgt-12  {@include min(768){margin-top: -12% !important;}}
 .mgt-12s {@include max(768){margin-top: -12% !important;}}
 
-// 最大値
-.mgt3,
-.mgt4,
-.mgt5{@include min(1800){margin-top: min(15%, 50px) !important;}}
-.mgt6,
-.mgt7,
-.mgt8,
-.mgt9,
-.mgt10,
-.mgt15,
-.mgt20 {@include min(1800){margin-top: min(20%, 100px) !important;}}
-
 
 // 768px以下
 .mgb-20s {@include max(768){margin-bottom: -20% !important;}}
@@ -100,21 +88,6 @@
 .mgb20 {@include min(768){margin-bottom: 20% !important;}}
 .mgb25 {@include min(768){margin-bottom: 25% !important;}}
 .mgb30 {@include min(768){margin-bottom: 30% !important;}}
-
-.mgb3,
-.mgb4,
-.mgb5{@include min(1800){margin-bottom: min(15%, 50px) !important;}}
-.mgb6,
-.mgb7,
-.mgb8,
-.mgb9,
-.mgb10,
-.mgb12,
-.mgb15,
-.mgb18,
-.mgb20,
-.mgb25,
-.mgb30 {@include min(1800){margin-bottom: min(20%, 100px) !important;}}
 
 
 /* ------------------------
@@ -224,17 +197,6 @@
 .pdt15 {@include min(768){padding-top:15% !important;}}
 .pdt20 {@include min(768){padding-top:20% !important;}}
 
-// 最大値
-.pdt3,
-.pdt4,
-.pdt5{@include min(1800){padding-top: min(15%, 50px) !important;}}
-.pdt6,
-.pdt7,
-.pdt8,
-.pdt9,
-.pdt10,
-.pdt15,
-.pdt20 {@include min(1600){padding-top: min(20%, 100px) !important;}}
 
 /* ------------------------
 　　　padding 下幅
@@ -270,17 +232,6 @@
 .pdb15 {@include min(768){padding-bottom:15% !important;}}
 .pdb20 {@include min(768){padding-bottom:20% !important;}}
 
-// 最大値
-.pdb3,
-.pdb4,
-.pdb5{@include min(1800){padding-bottom: min(15%, 50px) !important;}}
-.pdb6,
-.pdb7,
-.pdb8,
-.pdb9,
-.pdb10,
-.pdb15,
-.pdb20 {@include min(1800){padding-bottom: min(20%, 100px) !important;}}
 
 
 /* ------------------------
@@ -338,3 +289,60 @@
 .pdr5  {@include min(768){padding-right: 5% !important;}}
 
 .pd0 {padding:0!important;}
+
+
+// LP限定
+.p-lp{
+	// 最大値
+	.mgt3,
+	.mgt4,
+	.mgt5{@include min(1800){margin-top: min(15%, 50px) !important;}}
+	.mgt6,
+	.mgt7,
+	.mgt8,
+	.mgt9,
+	.mgt10,
+	.mgt15,
+	.mgt20 {@include min(1800){margin-top: min(20%, 100px) !important;}}
+
+	.mgb3,
+	.mgb4,
+	.mgb5{@include min(1800){margin-bottom: min(15%, 50px) !important;}}
+	.mgb6,
+	.mgb7,
+	.mgb8,
+	.mgb9,
+	.mgb10,
+	.mgb12,
+	.mgb15,
+	.mgb18,
+	.mgb20,
+	.mgb25,
+	.mgb30 {@include min(1800){margin-bottom: min(20%, 100px) !important;}}
+
+	// 最大値
+	.pdt3,
+	.pdt4,
+	.pdt5{@include min(1800){padding-top: min(15%, 50px) !important;}}
+	.pdt6,
+	.pdt7,
+	.pdt8,
+	.pdt9,
+	.pdt10,
+	.pdt15,
+	.pdt20 {@include min(1600){padding-top: min(20%, 100px) !important;}}
+
+	// 最大値
+	.pdb3,
+	.pdb4,
+	.pdb5{@include min(1800){padding-bottom: min(15%, 50px) !important;}}
+	.pdb6,
+	.pdb7,
+	.pdb8,
+	.pdb9,
+	.pdb10,
+	.pdb15,
+	.pdb20 {@include min(1800){padding-bottom: min(20%, 100px) !important;}}
+
+
+}

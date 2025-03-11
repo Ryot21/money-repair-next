@@ -131,7 +131,7 @@ export default function TableOfContents({
   }, [tocItems]);
 
   return (
-    <div className={`c-card -t03 ${isSidebar ? "mgt7 tb-pc" : "sp"}`}>
+    <div className={`c-card -t03 ${isSidebar ? "tb-pc" : "sp"}`}>
       <h2>目次</h2>
       <ul className={"c-card-lists -h2-lists"}>
         {tocItems.map((h2Item) => (

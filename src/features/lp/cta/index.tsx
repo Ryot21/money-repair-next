@@ -13,7 +13,7 @@ export default function LpCta(){
                         <p className="s-M -left -ls-2 -lh-2 mgb5 mgb10s">
                             マネーリペアの特徴や価格、事例に加えて、社員定着を成功に導いた豊富なノウハウをもとに、貴社に合わせたプランを実際の画面をご覧いただきながら、わかりやすくご説明・ご提案いたします。
                         </p>
-                        <Button href="#contact" customClass="-maru -orange -icon -arrow">資料ダウンロードはこちら</Button>
+                        <Button href="#contact" customAreaClass="-center" customClass="-btn -maru -orange -icon -arrow">資料ダウンロードはこちら</Button>
                     </li>
                     <li className="flexItem" style={{zIndex: 3}}>
                         <Image

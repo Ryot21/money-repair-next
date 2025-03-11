@@ -55,16 +55,28 @@ export default function Header({
                   <li className={"navItem -pageLink"}>
                     <nav className={"c-hnav"}>
                       <ul className={"c-hnav-lists"}>
-                        {/* 特徴 */}
-                        <li className={"hnavItem"}>
+                        {/* マネーリペアの特徴 */}
+                        <li className={"hnavItem archiveItem"}>
                           <Link
-                            className={`c-hnav--link s-M -b -ls-4 -ws-n ${
+                            className={`c-hnav--link -archive s-M -b -ls-2 -ws-n ${
                               isActive("/service") ? "-active" : ""
                             }`}
                             href="/service"
                           >
-                            特徴
+                            マネリペとは
                           </Link>
+                          <div className={"c-hnav--dropdown"}>
+                            <ul className={"c-hnav--archiveLists"}>
+                              <li className={"archiveItem"}>
+                                <Link
+                                  href="/maneripe"
+                                  className={"c-link s-S -b -ls-2 -ws-n"}
+                                >
+                                  # マネリペ情報
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
                         </li>
                         {/* ご利用者の声 */}
                         {/* <li className={"hnavItem archiveItem"}>

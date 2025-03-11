@@ -111,7 +111,7 @@
     border: 1px solid $site-color03;
     overflow: visible;
     transition: all 0.3s;
-
+    margin-bottom: 5%;
     &::after {
       content: "合わせて読みたい";
       position: absolute;
@@ -237,6 +237,7 @@
     background: $main-color--w;
     border: 1px solid $site-color03;
     border-radius: 5px;
+
     h2 {
       font-size: clamp(1.6rem, 2vw, 2rem);
       color: $main-color--w;

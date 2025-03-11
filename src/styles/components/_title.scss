@@ -2,24 +2,86 @@
 .c-contents{
     &--title{// メディア > コンテンツ > メインタイトル
         position: relative;
-        font-size: clamp(2rem, 1.5vw, 4rem);
+        font-size: 2rem !important;
         font-weight: bold;
         letter-spacing: .2rem;
         line-height: 1.5;
-        text-align: center;
         padding: 0 1px;
-        &::before{
+        @include min(500){
+            font-size: clamp(2rem, 2vw, 4.75rem) !important;
+        }
+        @include min(1800){
+            font-size: max(3rem, 35px) !important;
+        }
+        &::before {
             position: absolute;
-            top: -10%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: -5px;
             font-size: 1rem;
             letter-spacing: .3rem;
         }
-        // コンテンツタイトル > カナ表記
-        &.-kana{
-            @include max(500){
-                font-size: clamp(2.5rem, 1.5vw, 5rem);
+
+        // コンテンツタイトル > 位置指定
+        &.-center{
+            text-align: center;
+            &::before{// 英字
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &.-left{
+            text-align: left;
+            padding-left: 15px;
+            @include min(1600){
+                padding-left: 20px;
+            }
+            &::before{// 英字
+                left: 15px;
+                transform: translate(0, -50%);
+                @include min(1600){
+                    left: 20px;
+                }
+            }
+            &::after{// ボーダーライン
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateX(-50%);
+                width: 2px;
+                height: calc(100% + 10px);
+                background: $site-color03;
+                border-radius: 10px;
+                @include min(1600){
+                    width: 3px;
+                }
+            }
+        }
+        &.-right{
+            text-align: right;
+            padding-right: 15px;
+            @include min(1600){
+                padding-right: 20px;
+            }
+            &::before{// 英字
+                right: 0;
+                transform: translate(0, -50%);
+                @include min(1600){
+                    right: 20px;
+                }
+            }
+            &::after{// ボーダーライン
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translate(0, -50%);
+                width: 2px;
+                height: calc(100% + 10px);
+                background: $site-color03;
+                border-radius: 10px;
+                @include min(1600){
+                    width: 3px;
+                }
             }
         }
         // コンテンツタイトル > ボーダーライン
@@ -45,13 +107,23 @@
             &.-c02{&::after{background: $site-color02 !important;}}
             &.-c03{&::after{background: $site-color03 !important;}}
             &.-c04{&::after{background: $site-color04 !important;}}
-
+    
             &.-left{ // テキストが左寄せの場合
                 &::after{
                     left: 0;
                     transform: translateX(0);
                 }
             }
+        } 
+        // コンテンツタイトル > カナ表記
+        .-kana {
+            font-size: 2.5rem;
+            @include min(500){font-size: clamp(2.2rem, 2vw, 4.5rem);}
+            @include min(1800){font-size: max(3.2rem, 37px) !important;}
+        }
+        span{
+            font-size: clamp(1.8rem, 1.5vw, 2.8rem);
+            font-weight: bold;
         }
 
         // コンテンツタイトル > 英語表記 > カラー設定
@@ -61,11 +133,13 @@
         &.-en-color04{&::before{color: $site-color04;}}
 
         // コンテンツタイトル > 英語表記
-        &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
-        &.-news     {&::before{content: "Information"; white-space: nowrap;}}//お役立ち情報
-        &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}//お問い合わせ
-        &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}//資料ダウンロード
-        &.-point    {&::before{content: "POINT"; white-space: nowrap;}}//特徴
+        &.-interview   {&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
+        &.-information {&::before{content: "Information"; white-space: nowrap;}}//お役立ち情報
+        &.-news        {&::before{content: "News"; white-space: nowrap;}}//お役立ち情報
+        &.-maneripe    {&::before{content: "Maneripe"; white-space: nowrap;}}//お役立ち情報
+        &.-contact     {&::before{content: "Contact"; white-space: nowrap;}}//お問い合わせ
+        &.-contact02   {&::before{content: "Request For Information"; white-space: nowrap;}}//資料ダウンロード
+        &.-point       {&::before{content: "POINT"; white-space: nowrap;}}//特徴
 
         // 画像
         .imgBox{
@@ -94,8 +168,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @include min(500){top: 55%;}
+
     &::before{
-        
         position: absolute;
         bottom: -55%;
         left: 50%;
@@ -112,6 +186,8 @@
     &.-service    {&::before{content: "- FEATURE -";}}
     &.-interview  {&::before{content: "- USER INTERVIEW -";}}
     &.-information{&::before{content: "- INFORMATION -";}}
+    &.-news       {&::before{content: "- NEWS -";}}
+    &.-maneripe   {&::before{content: "- MANERIPE INFORMATION -";}}
     &.-member     {&::before{content: "- MEMBER -";}}
     &.-contact    {&::before{content: "- CONTACT -";}}
     &.-contact02  {&::before{content: "- REQUEST FOR INFORMATION -"; white-space: nowrap;}}

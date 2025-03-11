@@ -17,7 +17,7 @@ export default function InformationList({ contents }: Props) {
   return (
     <ul className={`c-post--lists c-flex -col2M1_3 -jc-st -h-top`}>
       {contents.map((article) => (
-        <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb10s"}>
+        <li key={article.id} className={"c-post--item -card flexItem_M mgb3 mgb10s"}>
           <Link href={`/information/${article.id}`} className={"c-post--link"}>
             {/* バナー画像 */}
             <Thumbnail

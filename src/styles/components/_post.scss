@@ -3,27 +3,29 @@
 .c-post {
   // 記事 > リスト
   &--item {// liタグ
-    @include min(768) {
-      &:nth-child(1),
-      &:nth-child(4),
-      &:nth-child(7) {
-        // 1列目
-        margin-right: 1%;
+    &.-card{
+      @include min(768) {
+        &:nth-child(1),
+        &:nth-child(4),
+        &:nth-child(7) {
+          // 1列目
+          margin-right: 1%;
+        }
+        &:nth-child(2),
+        &:nth-child(5),
+        &:nth-child(8) {
+          // 2列目
+          margin-left: 0.5%;
+          margin-right: 0.5%;
+        }
+        &:nth-child(3),
+        &:nth-child(6),
+        &:nth-child(9) {
+          // 3列目
+          margin-left: 1%;
+        }
       }
-      &:nth-child(2),
-      &:nth-child(5),
-      &:nth-child(8) {
-        // 2列目
-        margin-left: 0.5%;
-        margin-right: 0.5%;
-      }
-      &:nth-child(3),
-      &:nth-child(6),
-      &:nth-child(9) {
-        // 3列目
-        margin-left: 1%;
-      }
-    }
+  }
   }
   &--link {
     position: relative;
@@ -78,7 +80,7 @@
     line-clamp: 2;
   }
   &--data {
-    padding: 2% 3% 5%;
+    padding: 2% 3% 3%;
     will-change: transform;
     transition: all 0.5s;
     @include min(768) {

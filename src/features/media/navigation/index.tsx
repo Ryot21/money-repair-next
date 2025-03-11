@@ -72,7 +72,18 @@ export default function Navigation({
               onClick={handleLinkClick}
             >
               <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
-                マネーリペアの特徴
+                マネリペとは
+              </span>
+            </Link>
+          </li>
+          <li className={"hbNavItem"}>
+            <Link
+              className={`mgb5 mgb5s ${isActive("/maneripe") ? "-active" : ""}`}
+              href="/maneripe"
+              onClick={handleLinkClick}
+            >
+              <span className={"s-ML -s18 -b -ls-2 pdr5 pdr4s"}>
+                マネリペ情報
               </span>
             </Link>
           </li>

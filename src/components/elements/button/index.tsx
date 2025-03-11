@@ -4,8 +4,13 @@ type Props = {
   href: string;
   children: React.ReactNode;
   customClass?: string;
+  customAreaClass?: string;
 };
 
+// ボタンエリアのカスタムクラス
+// .-center 中央揃え
+// .-left 左揃え
+// .-right 右揃え
 // カスタムクラス一覧
 // .-maru 丸ボタン
 // .-center 中央揃え
@@ -17,10 +22,12 @@ type Props = {
 // .-icon + .-arrow →アイコンあり
 
 
-export default function Button({ href, children, customClass }: Props) {
+export default function Button({ href, children, customClass, customAreaClass }: Props) {
   return (
-    <Link href={href} className={`c-link -btn -center s-M -s14 -b -ls-2 ${customClass}`}>
-      {children}
-    </Link>
+    <div className={`c-contents--btnArea ${customAreaClass}`}>
+      <Link href={href} className={`c-link s-M -s14 -b -ls-2 ${customClass}`}>
+        {children}
+      </Link>
+    </div>
   );
 }

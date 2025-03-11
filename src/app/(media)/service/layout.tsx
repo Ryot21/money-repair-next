@@ -10,7 +10,7 @@ type Props = {
 
 export default function RootLayout({ children }:Props ) {
     return (
-        <Sheet title="マネーリペアの特徴" mvClass="-service">
+        <Sheet title="マネリペとは" mvClass="-service">
             {children}
         </Sheet>
     );

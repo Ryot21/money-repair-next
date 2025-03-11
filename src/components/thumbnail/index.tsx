@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type ThumbnailType = "interview" | "news" | "information" | "lp";
+type ThumbnailType = "interview" | "news" | "information" | "maneripe" | "lp";
 
 interface ThumbnailProps {
   type: ThumbnailType;

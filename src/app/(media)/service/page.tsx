@@ -8,8 +8,8 @@ export default function Page() {
       <div className={"c-contents--introduction  pdt5s mgb5s"}>
         {/* ロゴ */}
         <LogoMark />
-        <h2 className={"c-contents--title -b-btm mgb5 mgb10s"}>
-          マネーリペア<span className="-b">とは</span>
+        <h2 className={"c-contents--title -center -b-btm -ls-2 mgb5 mgb10s"}>
+          マネーリペア<span>（マネリペ）とは</span>
         </h2>
         <p className={"s-ML -s12 -center -ls-2 -lh-2"}>
           金融のプロが貴社の従業員に対して
@@ -24,15 +24,13 @@ export default function Page() {
       </div>
       {/* POINT */}
       <div className={"c-contents pdt10 pdt20s mgb5s"}>
-        <h2
-          className={"c-contents--title -point -en-color03 -b-btm mgb5 mgb10s"}
-        >
-          金融リテラシー<span className={"s-L -b"}>を</span>習得
-          <span className={"s-L -b"}>して</span>
+        <h2 className={"c-contents--title -center -en-color03 -b-btm -ls-2 mgb5 mgb10s"}>
+          金融リテラシー<span>を</span>習得
+          <span>して</span>
           <br />
-          純資産<span className={"s-L -b"}>を</span>増やすこと
-          <span className={"s-L -b"}>が</span>可能
-          <span className={"s-L -b"}>に</span>
+          純資産<span>を</span>増やすこと
+          <span>が</span>可能
+          <span>に</span>
         </h2>
         <p className={"s-ML -s12 -center -ls-2 -lh-2"}>
           金融リテラシーという知的財産を付けることにより、

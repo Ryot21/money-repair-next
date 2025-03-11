@@ -41,6 +41,45 @@
       transition-duration: 0.2s;
     }
   }
+  &.-text {
+    position: relative;
+    padding-right: 15px;
+    will-change: transform;
+    transition: all 0.3s;
+
+    &::before {
+      content: ">";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      // font-size: 1.2rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+
+      width: 0;
+      height: 2px;
+      background: $site-color03;
+      border-radius: 5px;
+      opacity: 0;
+      will-change: transform;
+      transition: all 0.3s;
+    }
+    &:hover {
+      color: $site-color03;
+      &::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
   &.-btn {// ボタン風レイアウト
     display: inline-block;
     width: auto !important;

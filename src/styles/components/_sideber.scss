@@ -23,6 +23,9 @@
   }
 
   &--search {
+    @include min(768){
+      margin-bottom: 7%;
+    }
     // 検索窓
     #search {
       display: flex;
