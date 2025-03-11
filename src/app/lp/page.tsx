@@ -686,10 +686,7 @@ export default async function Home() {
         {/* 導入実績 */}
         <LpInterviewArea />
         {/* 申し込みから導入までの流れ */}
-        <div
-          id="sc8"
-          className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}
-        >
+        <div id="sc08" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
               申し込み<span className="-b">から</span>導入
@@ -836,7 +833,7 @@ export default async function Home() {
           </div>
         </div>
         {/* Q&A */}
-        <div id="sc9" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
+        <div id="Q&A" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
               よくある質問

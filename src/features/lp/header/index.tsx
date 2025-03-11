@@ -40,31 +40,31 @@ export default function LpHeader(){
                       <ul className={"c-hnav-lists"}>
                         {/* #sc01 */}
                         <li className={"hnavItem"}>
-                          <Link href="#sc01" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
+                          <Link href="#sc02" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
                             マネーリペアとは
                           </Link>
                         </li>
                         {/* #sc02 */}
                         <li className={"hnavItem"}>
-                          <Link href="#sc02" className={`c-hnav--link -archive s-M -b -white -ls-2 -ws-n`}>
+                          <Link href="#sc03" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
                             サービス内容
                           </Link>
                         </li>
                         {/* #sc03 */}
                         <li className={"hnavItem"}>
-                          <Link href="#sc03" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
+                          <Link href="#sc04" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
                             選ばれる理由
                           </Link>
                         </li>
                         {/* #sc04 */}
                         <li className={"hnavItem"}>
-                          <Link href="#sc04" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
+                          <Link href="#sc07" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
                             導入事例
                           </Link>
                         </li>
                         {/* #sc05 */}
                         <li className={"hnavItem"}>
-                          <Link href="#sc05" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
+                          <Link href="#Q&A" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
                             Q&A
                           </Link>
                         </li>
@@ -73,7 +73,7 @@ export default function LpHeader(){
                   </li>
                   {/* お問い合せ */}
                   <li className={"navItem -cvBtn -cv03"}>
-                    <Iconbutton href="#contact">
+                    <Iconbutton href="#cta">
                       お問い合わせ
                       <svg
                         id="Layer_1"

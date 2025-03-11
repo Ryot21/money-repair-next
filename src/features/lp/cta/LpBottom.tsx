@@ -3,7 +3,7 @@ import CardContactForm from "@/components/elements/form/Card";
 
 export default function LpCtaBottom(){
     return (
-        <div className="c-contents -bg-img-cta pdt7 pdt15s pdb7 pdb15s">
+        <div id="cta" className="c-contents -bg-img-cta pdt7 pdt15s pdb7 pdb15s">
             <div className="c-contents--inner">
                 <ul className="c-flex -col1_2 -pc1_2 -h-cen -jc-sb">
                     <li className="flexItem mgb10s">
