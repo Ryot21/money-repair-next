@@ -79,3 +79,18 @@ export type Information = {// お役立ち情報
     publishedAt:      string;   // 更新日
     createdAt:        string;   // 作成日
 } & MicroCMSListContent;
+
+export type Maneripe = {// マネーリペア情報
+    id: string;
+    mainTitle:        string;   // メインタイトル
+    captionLists: {             // 見出しリスト
+        captionTitle01: string;
+        captionTitle02: string;
+        captionTitle03: string;
+        captionTitle04: string;
+        captionTitle05: string;
+    };
+    read:             string;   // 導入文
+    article:          string;   // 本文
+    recommend?:       Recommend;// 合わせて読みたい記事
+} & MicroCMSListContent;
