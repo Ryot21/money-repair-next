@@ -10,6 +10,9 @@ import { getInformationsByCategory } from "@/features/media/api/microcms/getInfo
 import RecommendCategory from "@/features/media/recommend/Category";
 import ContactSidebar from "@/features/media/contact/sidebar";
 
+// 開発中
+import Thumbnail from "@/components/thumbnail";
+
 type Props = {
   data: Information;
 };
@@ -47,35 +50,13 @@ export default async function Article({ data }: Props) {
           <Date date={data.publishedAt || data.createdAt} />
         </div>
         {/* 2. バナー */}
-        <div className={"c-thumbnail -news"}>
-          <div className={"imgBox"}>
-            <Image
-              src="/images/item/news/news-thumbnail.png"
-              alt="サムネイル"
-              width={856}
-              height={481}
-            />
-          </div>
-          <div className={"c-thumbnail--cover"}>
-            <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
-          </div>
-          <div className={"c-thumbnail--mark"}>
-            <Image
-              src="/images/item/news/news-mark.svg"
-              alt="マネーリペア | お役立ち情報"
-              width={428}
-              height={48}
-            />
-          </div>
-          <div className={"c-thumbnail--picter"}>
-            <Image
-              src={data.thumbnail.url}
-              alt={data.thumbnailAlt}
-              width={856}
-              height={570}
-            />
-          </div>
-        </div>
+        <Thumbnail
+          type="information"
+          thumbnail={{
+            url: data.thumbnail.url,
+            alt: data.thumbnailAlt,
+          }}
+        />
         {/* 3. お悩み */}
         <div className={"c-card -t04 mgt15 mgt15s"}>
           {data.captionLists && (

@@ -1,13 +1,17 @@
 // 投稿リスト > お役立ち情報
-import Image from "next/image";
 import Link from "next/link";
 import Date from "@/components/elements/date";
 import Category from "@/components/elements/category";
 import type { Information } from "@/types/microcms";
 
+// 開発中
+import Thumbnail from "@/components/thumbnail";
+
 type Props = {
   contents: Information[];
 };
+
+
 
 export default function InformationList({ contents }: Props) {
   if (contents.length === 0) {
@@ -19,35 +23,15 @@ export default function InformationList({ contents }: Props) {
         <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb10s"}>
           <Link href={`/information/${article.id}`} className={"c-post--link"}>
             {/* バナー画像 */}
-            <div className={"c-thumbnail -news"}>
-              <div className={"imgBox"}>
-                <Image
-                  src="/images/item/news/news-thumbnail.png"
-                  alt="企業1"
-                  width={480}
-                  height={320}
-                />
-              </div>
-              <div className={"c-thumbnail--cover"}>
-                <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
-              </div>
-              <div className={"c-thumbnail--mark"}>
-                <Image
-                  src="/images/item/news/news-mark.svg"
-                  alt="マネーリペア | お役立ち情報"
-                  width={186}
-                  height={16}
-                />
-              </div>
-              <div className={"c-thumbnail--picter"}>
-                <Image
-                  src={article.thumbnail.url}
-                  alt={article.thumbnailAlt}
-                  width={480}
-                  height={320}
-                />
-              </div>
-            </div>
+            <Thumbnail
+              type="information"
+              thumbnail={{
+                url: article.thumbnail.url,
+                alt: article.thumbnailAlt,
+              }}
+              // title={article.mainTitle}
+              // subTitle={article.subTitle}
+            />
             {/* テキストエリア */}
             <div className={"c-post--data"}>
               <div className={"c-date mgb2 mgb1s"}>

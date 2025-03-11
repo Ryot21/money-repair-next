@@ -1,10 +1,9 @@
 // 投稿リスト > ご利用者の声
-import Image from "next/image";
 import Link from "next/link";
-
 import Date from "@/components/elements/date";
 import Category from "@/components/elements/category";
 import type { Interview } from "@/types/microcms";
+import Thumbnail from "@/components/thumbnail";
 
 type Props = {
   contents: Interview[];
@@ -19,51 +18,16 @@ export default function InterviewList({ contents }: Props) {
       {contents.map((article) => (
         <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb10s"}>
           <Link href={`/interview/${article.id}`} className={"c-post--link"}>
-            {/* バナー画像 */}
-            <div className={"c-thumbnail -interview"}>
-              <div className={"imgBox"}>
-                <Image
-                  src="/images/item/interview/interview-thumbnail.png"
-                  alt="企業1"
-                  width={480}
-                  height={320}
-                />
-              </div>
-              <div className={"c-thumbnail--cover"}>
-                <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
-              </div>
-              <div className={"c-thumbnail--mark"}>
-                <Image
-                  src="/images/item/interview/interview-mark.svg"
-                  alt="マネーリペア | ご利用者インタビュー"
-                  width={186}
-                  height={16}
-                />
-              </div>
-              <div className={"c-thumbnail--picter"}>
-                {article.thumbnail ? (
-                  <Image
-                    src={article.thumbnail.url}
-                    alt={article.mainTitle}
-                    width={480}
-                    height={320}
-                  />
-                ) : (
-                  <Image
-                    src="/images/item/480-320.png"
-                    alt="お客様との写真"
-                    width={480}
-                    height={320}
-                  />
-                )}
-              </div>
-              <p className={"c-thumbnail--title s-ML -s16 -b -color03 -ls-1"}>
-                {article.mainTitle}
-              </p>
-              <p className={"c-thumbnail--subTitle s-SS -s10 -b -color03 -ls-1"}>
-                {article.subTitle}
-              </p>
-            </div>
+            {/* サムネイルコンポーネント | 2025/03/10追加 */}
+            <Thumbnail
+              type="interview"
+              thumbnail={{
+                url: article.thumbnail.url,
+                alt: article.thumbnailAlt,
+              }}
+              title={article.mainTitle}
+              subTitle={article.subTitle}
+            />
             {/* テキストエリア */}
             <div className={"c-post--data"}>
               <div className={"c-date mgb2 mgb1s"}>

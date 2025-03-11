@@ -10,7 +10,7 @@
     .imgBox{
         width: 100%;
         height: auto;
-        img{aspect-ratio: 16 / 9;}
+        img{aspect-ratio: 3 / 2;}
     }
     // 共通
     &--mark{// 画像左上
@@ -56,6 +56,8 @@
             opacity: 0;
         }
     }
+
+    // 共通
     &--title,
     &--subTitle{// タイトル
         position: absolute;
@@ -66,15 +68,29 @@
         word-break: auto-phrase;
         z-index: 1;
     }
-    &--title{// タイトル
+    &--title{// タイトル_フォント（大きさ・太さ・色・文字間隔）
         display: -webkit-box;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         line-clamp: 2;
         overflow: hidden;
+
+        font-size: clamp(1.6rem, 2vw, 3.2rem);
+        font-weight: bold;
+        color: $site-color03;
+        letter-spacing: .2rem;
+        line-height: 1.5;
+    }
+    &--subTitle{// サブタイトル_フォント（大きさ・太さ・色・文字間隔）
+        font-size: clamp(1rem, 2vw, 1.6rem);
+        font-weight: bold;
+        color: $site-color03;
+        letter-spacing: .2rem;
+        line-height: 1.5;
     }
 
+    // 位置関係
     &.-interview{
         .c-thumbnail{
             &--title{
@@ -92,6 +108,18 @@
                 @include min(500){top: 28%;}
                 @include min(768){top: 25%;}
                 @include min(1000){top: 25%;}
+            }
+            &--mark{// 画像左上
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                width: 55%;
+                z-index: 1;
+                @include min(500){width: 45%;}
+                @include min(768){width: 50%;}
+                @include min(1000){width: 48%;}
+                @include min(1400){width: 50%;}
+                @include min(1600){width: 40%;}
             }
         }
     }
@@ -112,6 +140,13 @@
             }
             &--picter{
                 top: 43%;
+            }
+        }
+    }
+    &.-information{// お役立ち情報
+        .c-thumbnail{
+            &--title{
+                top: 45%;
             }
         }
     }

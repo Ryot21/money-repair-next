@@ -28,7 +28,8 @@ export type Category = {// カテゴリー
 
 export type Recommend = {// 合わせて読みたい記事
     id:          string;
-    thumbnail?:  MicroCMSImage;
+    thumbnail:  MicroCMSImage;
+    thumbnailAlt: string;
     mainTitle:   string;
     read?:       string;
     url:         string;
@@ -42,6 +43,7 @@ export type Interview = {// ご利用者インタビュー
     client:         Client;        // 取引先情報
     category:       Category;      // カテゴリー
     thumbnail:      MicroCMSImage; // サムネイル
+    thumbnailAlt:   string;        // サムネイル_alt
     mainTitle:      string;        // メインタイトル
     subTitle:       string;        // サブタイトル
     article1Body:   string;        // 本文1

@@ -1,9 +1,9 @@
 import type { Route } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import type { Information } from "@/types/microcms";
 import Date from "@/components/elements/date";
 import CategoryLink from "@/components/elements/category/CategoryLink";
+import Thumbnail from "@/components/thumbnail";
 
 type Props = {
   currentArticle: Information;
@@ -31,44 +31,14 @@ export default function Category({ currentArticle, relatedArticles }: Props) {
               href={`/information/${article.id}` as Route}
               className={"c-post--link"}
             >
-              <div className={"c-thumbnail -news mgb3 mgb3s"}>
-                <div className={"imgBox"}>
-                  <Image
-                    src="/images/item/news/news-thumbnail.png"
-                    alt="企業1"
-                    width={415}
-                    height={233}
-                  />
-                </div>
-                <div className={"c-thumbnail--cover"}>
-                  <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
-                </div>
-                <div className={"c-thumbnail--mark"}>
-                  <Image
-                    src="/images/item/news/news-mark.svg"
-                    alt="マネーリペア | ご利用者インタビュー"
-                    width={207}
-                    height={24}
-                  />
-                </div>
-                <div className={"c-thumbnail--picter"}>
-                  {article.thumbnail ? (
-                    <Image
-                      src={article.thumbnail.url}
-                      alt={article.mainTitle}
-                      width={415}
-                      height={277}
-                    />
-                  ) : (
-                    <Image
-                      src="/images/item/480-320.png"
-                      alt="お客様との写真"
-                      width={415}
-                      height={277}
-                    />
-                  )}
-                </div>
-              </div>
+              {/* サムネイルコンポーネント | 2025/03/10追加 */}
+              <Thumbnail
+                type="information"
+                thumbnail={{
+                  url: article.thumbnail.url,
+                  alt: article.thumbnailAlt,
+                }}
+              />
               {/* テキストエリア */}
               <div className={"c-post--data"}>
                 <div className={"c-date mgb2 mgb4s"}>

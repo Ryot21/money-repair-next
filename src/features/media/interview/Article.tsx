@@ -4,6 +4,7 @@ import type { Interview } from "@/types/microcms";
 import Date from "@/components/elements/date";
 import CategoryLink from "@/components/elements/category/CategoryLink";
 import Client from "@/features/media/client";
+// import Thumbnail from "@/components/thumbnail";
 
 type Props = {
   data: Interview;
@@ -12,41 +13,21 @@ type Props = {
 export default function Article({ data }: Props) {
   return (
     <>
-      {/* バナー */}
-      <div className="c-contents--banner -ver01">
-        <div className="c-thumbnail -interview mgb10 mgb10s">
-          <div className="imgBox">
-            <Image
-              src="/images/item/interview/interview-thumbnail.png"
-              alt="企業1"
-              width={678}
-              height={381}
-            />
-          </div>
-          <div className="c-thumbnail--mark">
-            <Image
-              src="/images/item/interview/interview-mark.svg"
-              alt="マネーリペア | ご利用者インタビュー"
-              width={339}
-              height={30}
-            />
-          </div>
-          <div className="c-thumbnail--picter">
-            <Image
-              src={data.thumbnail.url}
-              alt={data.mainTitle}
-              width={678}
-              height={452}
-            />
-          </div>
-          <p className={"c-thumbnail--title s-L -s16 -b -color03 -ls-2 -lh-1_5"}>
-            {data.mainTitle}
-          </p>
-          <p className={"c-thumbnail--subTitle s-M -s10 -b -color03 -ls-2"}>
-            {data.subTitle}
-          </p>
+
+      {/* サムネイルコンポーネント | 2025/03/10追加 */}
+      {/* <div className="c-contents--banner -ver01">
+        <div className="mgb5 mgb10s">
+          <Thumbnail
+            type="interview"
+            thumbnail={{
+              url: data.thumbnail.url,
+              alt: data.thumbnailAlt,
+            }}
+            title={data.mainTitle}
+            subTitle={data.subTitle}
+          />
         </div>
-      </div>
+      </div> */}
       {/* 記事詳細 */}
       <div className="c-contents--inner -bg-white -card ">
         {/* タイトルエリア */}

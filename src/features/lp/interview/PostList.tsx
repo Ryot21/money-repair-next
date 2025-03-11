@@ -1,6 +1,5 @@
 // 投稿リスト > ご利用者の声
-import Image from "next/image";
-// import Link from "next/link";
+import Thumbnail from "@/components/thumbnail";
 
 import LpClient from "@/features/lp/client";
 import type { Interview } from "@/types/microcms";
@@ -18,15 +17,14 @@ export default function LpInterviewList({ contents }: Props) {
       {contents.map((article) => (
         <li key={article.id} className={"c-post--item flexItem_M mgb3 mgb5s"}>
         {/* <Link href={`/interview/${article.id}`} className={"c-post--link"}> */}
-          {/* バナー画像 */}
-          <div className={"imgBox mgb2 mgb2s"}>
-            <Image
-              src={article.thumbnail.url}
-              alt={article.mainTitle}
-              width={480}
-              height={320}
-            />
-          </div>
+          {/* サムネイルコンポーネント | 2025/03/10追加 */}
+          <Thumbnail
+            type="lp"
+            thumbnail={{
+              url: article.thumbnail.url,
+              alt: article.thumbnailAlt,
+            }}
+          />
           {/* テキストエリア */}
           <LpClient client={article.client} />
         {/* </Link> */}
