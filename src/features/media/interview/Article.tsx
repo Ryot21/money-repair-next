@@ -1,5 +1,6 @@
+// ご利用者の声 > 詳細ページ
+
 import Image from "next/image";
-// import Link from "next/link";
 import type { Interview } from "@/types/microcms";
 import Date from "@/components/elements/date";
 import CategoryLink from "@/components/elements/category/CategoryLink";

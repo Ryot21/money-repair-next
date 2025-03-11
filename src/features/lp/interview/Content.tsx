@@ -1,4 +1,4 @@
-// コンポーネント
+// LP > ご利用者の声エリア
 import LpInterviewList from "@/features/lp/interview/PostList";
 
 // 投稿関係

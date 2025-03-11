@@ -1,4 +1,4 @@
-import Image from "next/image";
+// お役立ち情報 > 詳細ページ
 import type { Information } from "@/types/microcms";
 import Date from "@/components/elements/date";
 import CategoryLink from "@/components/elements/category/CategoryLink";
@@ -9,8 +9,6 @@ import Recommend from "@/features/media/recommend";
 import { getInformationsByCategory } from "@/features/media/api/microcms/getInformation";
 import RecommendCategory from "@/features/media/recommend/Category";
 import ContactSidebar from "@/features/media/contact/sidebar";
-
-// 開発中
 import Thumbnail from "@/components/thumbnail";
 
 type Props = {

@@ -1,7 +1,6 @@
-// コンポーネント
+// TOPページ > お役立ち情報エリア
 import InformationList from "@/features/media/information/PostList";
 import Button from "@/components/elements/button";
-
 // 投稿関係
 import { getInformationList } from "@/features/media/api/microcms/getInformation";
 import { INFORMATION_TOP_LIST_LIMIT } from "@/constants";

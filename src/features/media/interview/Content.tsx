@@ -1,7 +1,6 @@
-// コンポーネント
+// TOPページ > ご利用者の声エリア
 import InterviewList from "@/features/media/interview/PostList";
 import Button from "@/components/elements/button";
-
 // 投稿関係
 import { getInterviewsList } from "@/features/media/api/microcms/getInterview";
 import { INTERVIEW_TOP_LIST_LIMIT } from "@/constants";

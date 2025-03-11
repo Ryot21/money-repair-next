@@ -3,14 +3,11 @@ import Link from "next/link";
 import Date from "@/components/elements/date";
 import Category from "@/components/elements/category";
 import type { Information } from "@/types/microcms";
-
-// 開発中
 import Thumbnail from "@/components/thumbnail";
 
 type Props = {
   contents: Information[];
 };
-
 
 
 export default function InformationList({ contents }: Props) {
