@@ -8,33 +8,33 @@ export default function LpFooter() {
                 {/* サイト内リンク */}
                 <nav className={"c-fnav mgb3 mgb2s"}>
                     <ul className={"c-fnav--lists__lp"}>
-                        {/* #sc01 */}
-                        <li className={"LpnavItem"}>
-                            <Link href="#sc01" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
-                                マネーリペアとは
-                            </Link>
-                        </li>
                         {/* #sc02 */}
                         <li className={"LpnavItem"}>
-                            <Link href="#sc02" className={`c-fnav--link -archive s-M -b -white -ls-2 -ws-n`}>
-                                サービス内容
+                            <Link href="#sc02" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                                マネーリペアとは
                             </Link>
                         </li>
                         {/* #sc03 */}
                         <li className={"LpnavItem"}>
-                            <Link href="#sc03" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
-                                選ばれる理由
+                            <Link href="#sc03" className={`c-fnav--link -archive s-M -b -white -ls-2 -ws-n`}>
+                                サービス内容
                             </Link>
                         </li>
                         {/* #sc04 */}
                         <li className={"LpnavItem"}>
                             <Link href="#sc04" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                                選ばれる理由
+                            </Link>
+                        </li>
+                        {/* #sc07 */}
+                        <li className={"LpnavItem"}>
+                            <Link href="#sc07" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 導入事例
                             </Link>
                         </li>
-                        {/* #sc05 */}
+                        {/* #Q&A */}
                         <li className={"LpnavItem"}>
-                            <Link href="#sc05" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="#Q&A" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 Q&A
                             </Link>
                         </li>
