@@ -488,9 +488,9 @@
           padding: 5px 4px 5px 4px;
           transform: translate(-50%, -50%);
           border-radius: 5px;
-          box-shadow: 3px 6px 5px 0px #00000021;
           @include min(500) {
             padding: 10px 8px 10px 8px;
+            box-shadow: 3px 6px 5px 0px #00000021;
           }
           p,.big {// 漢字（大きめ）
             color: $site-color03;
@@ -521,7 +521,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(1px 1px 1px $main-color--gray);
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-family: $f-gothic01;
             font-weight: bold;
             writing-mode: vertical-rl;
