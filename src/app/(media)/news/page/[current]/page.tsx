@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
 import {
   getNewsList,
-  // getNewsCategoryList,
+  // getManeripeCategoryList,
 } from "@/features/media/api/microcms/getNews";
 import NewsList from "@/features/media/news/PostList";
 import { NEWS_PAGE_LIST_LIMIT } from "@/constants";
-// import CategoryLists from "@/components/elements/category/CategoryLists";
 import Pagination from "@/components/elements/pagination";
 
 type Props = {
@@ -32,33 +31,30 @@ export default async function Page({ params }: Props) {
     notFound();
   }
 
-  // const categories = await getNewsCategoryList();
-
   return (
     <>
       {/* 導入部分 */}
       <div className={"c-contents pdt2 pdb5 pdb10s"}>
         <div className={"c-contents--inner"}>
           <p className={"s-M -s12 -center -ls-2 -lh-2"}>
-            マネーリペアをご利用された方々の
-            <span className={"s-M -s12 -b -ls-2"}>率直な体験談</span>
-            を集めました。
+            マネーリペアに関連する
+            <span className={"s-M -s12 -b -ls-2"}>資産形成</span>
+            に役立つ記事を発信しています。
             <br className={"tb-pc"} />
-            実際の体験を通じて、
+            従業員の
             <span className={"s-M -s12 -b -ls-2"}>
-              どのように金融知識が深まり、
+              経済力向上や福利厚生強化
             </span>
+            に向けた知識を
             <br className={"tb-pc"} />
-            <span className={"s-M -s12 -b -ls-2"}>
-              経済的な安心が得られたのかをご紹介します。
-            </span>
-            <br className={"tb-pc"} />
-            ぜひマネーリペアが提供する価値をご確認ください。
+            様々な情報を活用して、より豊かな未来を目指しましょう。
           </p>
         </div>
       </div>
+      {/* 検索フォーム */}
+      {/* <SearchField /> */}
       {/* カテゴリ一覧 */}
-      {/* <CategoryLists article="interview" categories={categories} /> */}
+      {/* <CategoryLists article="information" categories={categories} /> */}
       {/* 記事一覧 */}
       <div className="c-contents pdt5 pdt10s pdb2">
         <NewsList contents={news} />

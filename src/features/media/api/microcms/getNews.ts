@@ -11,7 +11,7 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
     return listData;
 }
 
-export const getInformationDetail = async (// 詳細
+export const getNewsDetail = async (// 詳細
     contentId: string,
     queries?: MicroCMSQueries
 ) => {
