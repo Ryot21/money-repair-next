@@ -8,6 +8,7 @@ export const INFORMATION_TOP_LIST_LIMIT = 3;
 export const INFORMATION_PAGE_LIST_LIMIT = 9;
 
 // お知らせ
+export const NEWS_MV_LIST_LIMIT = 1;
 export const NEWS_TOP_LIST_LIMIT = 3;
 export const NEWS_PAGE_LIST_LIMIT = 10;
 // マネリペ情報

@@ -17,8 +17,8 @@
     line-height: .5;
     img{
         display: inline-block;
-        width: auto;
-        height: auto;
+        width: auto !important;
+        height: auto !important;
         vertical-align: -2px;
         padding-right: 5px;
         @include min(500){

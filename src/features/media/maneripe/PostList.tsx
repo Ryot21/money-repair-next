@@ -20,7 +20,7 @@ export default function ManeripeList({ contents }: Props) {
 
             {/* テキストエリア */}
             <div className={"c-post--data"}>
-              <div className={"c-date mgb2 mgb1s"}>
+              <div className={"c-date mgb1 mgb1s"}>
                 <ul className={"c-date__lists c-flex -col2"}>
                   <li className={"c-date__item"}>
                     <Date date={article.publishedAt || article.createdAt} />

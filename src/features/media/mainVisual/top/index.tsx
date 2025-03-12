@@ -85,7 +85,6 @@ export default function TopMainVisual() {
     <>
       <div id="js-parallaxArea" className={`${styles.parallaxArea}`}>
         <div className={`c-contents -imgBg -fv -top`}>
-
           {/* 背景の切り替えができる */}
           <div className={"imgBox -wave"}></div>
 
@@ -193,10 +192,19 @@ export default function TopMainVisual() {
 
           {/* ================= キーワード ================= */}
           <div className={"c-contentsBox -catchCopy01"}>
-            <p><span className="big">人材育成</span><span className="small">から</span>人的資産形成<span className="small">へ</span></p>
+            <p>
+              <span className="big">人材育成</span>
+              <span className="small">から</span>人的資産形成
+              <span className="small">へ</span>
+            </p>
           </div>
           <div className={"c-contentsBox -catchCopy02"}>
-            <p>金融教育<span className="small">で</span><span className="big">企業価値</span><span className="small">を</span>高<span className="small">める。</span></p>
+            <p>
+              金融教育<span className="small">で</span>
+              <span className="big">企業価値</span>
+              <span className="small">を</span>高
+              <span className="small">める。</span>
+            </p>
           </div>
 
           {/* ================= 注釈 ================= */}
@@ -204,17 +212,22 @@ export default function TopMainVisual() {
           <div className={"c-contentsBox -comments01"}>
             {/* ピックアップ */}
             <p className="pickup">
-              <span>社員の金融リテラシー向上</span>が、<br className="tb" />会社の競争力を支える未来の投資に。
+              <span>社員の金融リテラシー向上</span>が、
+              <br className="tb" />
+              会社の競争力を支える未来の投資に。
             </p>
             {/* タイトル */}
             <div className="title mgb2 mgb2s">
               <p className="a-typing -blue -ls-2">
-                仕事に集中できる<br />
+                仕事に集中できる
+                <br />
                 <span>職場環境</span>を整える。
               </p>
             </div>
             {/* 注釈 */}
-            <p className="text -blue -ls-2">企業向け金融リテラシーコーチング型サービス</p>
+            <p className="text -blue -ls-2">
+              企業向け金融リテラシーコーチング型サービス
+            </p>
           </div>
 
         </div>

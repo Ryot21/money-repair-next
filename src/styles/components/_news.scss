@@ -1,0 +1,48 @@
+.c-newsBar {// お知らせバー
+    width: auto;
+    height: 30px;
+    background: $main-color--w;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 9999;
+    &--inner {
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 0.8rem;
+    }
+    &--link{
+        font-size: clamp(1rem, 1.2vw, 1.4rem);
+        font-weight: bold;
+        letter-spacing: .1rem;
+        time {
+            float: left;
+            span{
+                color: $site-color03;
+                font-size: clamp(1rem, 1.2vw, 1.4rem);
+                font-weight: bold;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+    &--title{
+        float: left;
+        color: $site-color03;
+        font-size: clamp(1rem, 1.2vw, 1.4rem);
+        font-weight: bold;
+        letter-spacing: .1rem;
+        padding-left: 10px;
+    }
+    &--item{
+        width: auto;
+        height: auto;
+    }
+}
+
+.news-swiper {
+    margin: 0 auto;
+    .swiper-slide {
+        height: auto;
+        a{display: inline !important;}
+    }
+}

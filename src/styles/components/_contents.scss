@@ -570,7 +570,7 @@
         // 注釈
         &.-comments01 {// 縦文
           position: absolute;
-          top: 44%;
+          top: 41%;
           left: 5%;
           transform: translate(1%, -50%);
           z-index: 11;
@@ -698,6 +698,51 @@
               background: $site-color03;
               border-radius: 5px;
             }
+          }
+        }
+
+        // 最新のお知らせ
+        &.-latestNews {
+          position: absolute;
+          top: 53%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 87%;
+
+          @include min (500){
+            top: 60%;
+            left: 38.5%;
+            width: 55%;
+          }
+          @include min(768) {
+            top: 62%;
+            left: 45%;
+            width: 45%;
+          }
+          @include min(1000) {
+            top: 58%;
+            left: 48%;
+            width: 45%;
+          }
+          @include min(1200) {
+            top: 58%;
+            left: 49%;
+            width: 43%;
+            max-width: 510px;
+          }
+          @include min(1400) {
+            width: 36%;
+          }
+          @include min(1500) {
+            width: 34%;
+          }
+          @include min(1600) {
+            width: 32%;
+            max-width: 510px;
+          }
+          @include min(1800) {
+            width: 28%;
+            max-width: 510px;
           }
         }
       }
