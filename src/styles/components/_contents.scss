@@ -484,6 +484,7 @@
         // キャッチコピー
         &.-catchCopy01,
         &.-catchCopy02 {// 共通
+          width: auto;
           background: $main-color--w;
           padding: 5px 4px 5px 4px;
           transform: translate(-50%, -50%);
