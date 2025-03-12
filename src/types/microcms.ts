@@ -102,9 +102,10 @@ export type Maneripe = {// マネリペ情報
 } & MicroCMSListContent;
 
 export type News = {// お知らせ
-    id: string;
+    id:           string;
     title:        string;   // タイトル
     article:      string;   // 本文
+    poster:       Poster;   // 投稿者
     publishedAt:  string;   // 更新日
     createdAt:    string;   // 作成日
 
