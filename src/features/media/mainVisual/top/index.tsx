@@ -200,10 +200,7 @@ export default function TopMainVisual() {
           </div>
           <div className={"c-contentsBox -catchCopy02"}>
             <p>
-              金融教育<span className="small">で</span>
-              <span className="big">企業価値</span>
-              <span className="small">を</span>高
-              <span className="small">める。</span>
+              金融教育<span className="small">で</span><span className="big">企業価値</span><span className="small">を</span>高<span className="small">める。</span>
             </p>
           </div>
 
