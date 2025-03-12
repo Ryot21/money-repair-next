@@ -280,6 +280,11 @@
           }
         }
       }
+      &--intro{
+        @include max(500) {
+          margin-bottom: 10%;
+        }
+      }
     }
   }
   // お客様の声
