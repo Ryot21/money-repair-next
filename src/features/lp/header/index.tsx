@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Iconbutton from "@/components/elements/button/IconButton";
-import HeaderScroll from "./HeaderScroll";
+// import HeaderScroll from "./HeaderScroll";
 
 
 // クライアントコンポーネントとしてHeaderを実装
@@ -12,7 +12,7 @@ export default function LpHeader(){
 
   return (
     <>
-      <HeaderScroll />
+      {/* <HeaderScroll /> */}
       <header id="js-header" className="c-header -c-color02">
         <div className={"c-header-wrapper"}>
           <ul className={"c-header-lists -jc-sb -h-cen"}>
