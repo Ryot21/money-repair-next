@@ -25,7 +25,6 @@ export default async function Home() {
           <TopMainVisual />
         </div>
         {/* 最新のお知らせ */}
-        {/* <LatestNewsBer /> */}
         <NewsContents />
       </div>
 
