@@ -582,8 +582,8 @@
             transform: translateY(-50%);
             cursor: pointer;
             @include max(500) {
-              width: 9px;
-              height: 9px;
+              // width: 9px;
+              // height: 9px;
             }
           }
           &::after {// チェックボックスのチェックマーク
@@ -596,11 +596,12 @@
             height: 4px;
             border-bottom: 2px solid #df2323;
             border-left: 2px solid #df2323;
-            transform: rotate(-45deg) translate(20%, -30%);
+            transform: rotate(-45deg);
+            // transform: rotate(-45deg) translate(20%, -30%);
             transition: all 0.1s;
             opacity: 0;
             @include max(500) {
-              top: 25%;
+              top: 18%;
             }
           }
         }
