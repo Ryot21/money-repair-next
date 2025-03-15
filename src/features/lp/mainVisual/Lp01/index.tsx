@@ -3,11 +3,13 @@
 import Image from "next/image";
 import styles from "./index.module.scss";
 import CardContactForm from "@/components/elements/form/Card";
+
+
 export default function Lp01MainVisual() {
 
     return (
         <div id="js-parallaxArea" className={styles.parallaxArea}>
-            <div className={`c-contents -imgBg -fv -lp01`}>
+            <div className={`c-mainVisual -LP`}>
                 <div className={"c-contents--inner"}>
                     {/* 背景の切り替えができる */}
                     <div className={"imgBox"}></div>
@@ -19,10 +21,10 @@ export default function Lp01MainVisual() {
                         </p>
                         {/* タイトル */}
                         <div className="title mgb2 mgb2s">
-                            <p className="a-typing -blue -ls-2">
+                            <h1 className="a-typing -b -blue -ls-2">
                                 仕事に集中できる<br />
                                 <span>職場環境</span>を整える。
-                            </p>
+                            </h1>
                         </div>
                         {/* 注釈 */}
                         <p className="text -blue -ls-2">企業向け金融リテラシーコーチング型サービス</p>
@@ -30,6 +32,33 @@ export default function Lp01MainVisual() {
                     {/* ================= cv ================= */}
                     <div className="c-contentsBox -cta">
                         <CardContactForm customClass="-card" />
+                    </div>
+                    {/* ================= サービス内容 ================= */}
+                    <div className="c-contentsBox -service">
+                        <div className={"c-card -t06"}>
+                            <h2 className="c-card--title -point">
+                                <span>ここが<br />ポイント!</span>コーチングで金融リテラシー向上!!
+                            </h2>
+                            <div className="c-card--inner">
+                                <ul className={"c-card-lists"}>
+                                    <li className={"c-card-item"}>{/* いいね その1 */}
+                                        <p className={"c-link -good s-ML -s12 -b -color03 -left -ls-2 -lh-1_5 -f-gothic02"}>
+                                            <span className="No1"><i></i></span>専属FP相談窓口の提供
+                                        </p>
+                                    </li>
+                                    <li className={"c-card-item"}>{/* いいね その2 */}
+                                        <p className={"c-link -good s-ML -s12 -b -color03 -ls-2 -lh-1_5 -f-gothic02"}>
+                                            <span className="No2"><i></i></span>金融勉強会の実施
+                                        </p>
+                                    </li>
+                                    <li className={"c-card-item"}>{/* いいね その3 */}
+                                        <p className={"c-link -good s-ML -s12 -b -color03 -ls-2 -lh-1_5 -f-gothic02"}>
+                                            <span className="No3"><i></i></span>資産管理システムの提供
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* ================= 画像 ================= */}

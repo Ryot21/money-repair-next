@@ -77,16 +77,12 @@ td {
       transform: translate(-50%, -50%);
       width: 10px;
       height: 10px;
-      @include min(500){
-        right: -5%;
-      }
+      @include min(500){right: -5%;}
       @include min(768){
         font-size: .8rem;
         right: -5%;
       }
-      @include min(1000){
-        right: -1%;
-      }
+      @include min(1000){right: -1%;}
     }
   }
 
@@ -104,174 +100,58 @@ td {
       width: 95%;
       z-index: -1;
     }
-    &.-y {
-      &::after {
-        background: $main-color--yellow;
-      }
-    }
-    &.-o {
-      &::after {
-        background: $main-color--orange;
-      }
-    }
-    &.-color03 {
-      &::after {
-        background: $site-color03;
-      }
-    }
+    &.-y {&::after {background: $main-color--yellow;}}
+    &.-o {&::after {background: $main-color--orange;}}
+    &.-color03 {&::after {background: $site-color03;}}
   }
 
   // ----- 位置関係 -----
   // 横_位置
-  &.-right {
-    text-align: right;
-  }
-  &.-left {
-    text-align: left;
-  }
-  &.-center {
-    text-align: center;
-  }
+  &.-right {text-align: right;}
+  &.-left {text-align: left;}
+  &.-center {text-align: center;}
 
-  &.-right_s {
-    @include max(768) {
-      text-align: right;
-    }
-  }
-  &.-left_s {
-    @include max(768) {
-      text-align: left;
-    }
-  }
-  &.-center_s {
-    @include max(768) {
-      text-align: center;
-    }
-  }
+  &.-right_s {@include max(768) {text-align: right;}}
+  &.-left_s {@include max(768) {text-align: left;}}
+  &.-center_s {@include max(768) {text-align: center;}}
 
   // 縦_位置
-  &.-top {
-    vertical-align: top;
-  }
-  &.-bottom {
-    vertical-align: bottom;
-  }
-  &.-middle {
-    vertical-align: middle;
-  }
+  &.-top {vertical-align: top;}
+  &.-bottom {vertical-align: bottom;}
+  &.-middle {vertical-align: middle;}
 
   // 行間
-  &.-lh-n {
-    line-height: normal;
-  }
-  &.-lh-1 {
-    line-height: 1;
-  }
-  &.-lh-1_3 {
-    line-height: 1.3;
-  }
-  &.-lh-1_5 {
-    line-height: 1.5;
-  }
-  &.-lh-1_8 {
-    line-height: 1.8;
-  }
-  &.-lh-2 {
-    line-height: 2;
-  }
-  &.-lh-2_5 {
-    line-height: 2.5;
-  }
-  &.-lh-3 {
-    line-height: 3;
-  }
+  &.-lh-n {line-height: normal;}
+  &.-lh-1 {line-height: 1;}
+  &.-lh-1_3 {line-height: 1.3;}
+  &.-lh-1_5 {line-height: 1.5;}
+  &.-lh-1_8 {line-height: 1.8;}
+  &.-lh-2 {line-height: 2;}
+  &.-lh-2_5 {line-height: 2.5;}
+  &.-lh-3 {line-height: 3;}
 
-  &.-lh-n_s {
-    @include max(768) {
-      line-height: normal;
-    }
-  }
-  &.-lh-1_s {
-    @include max(768) {
-      line-height: 1;
-    }
-  }
-  &.-lh-1_3_s {
-    @include max(768) {
-      line-height: 1.3;
-    }
-  }
-  &.-lh-1_5_s {
-    @include max(768) {
-      line-height: 1.5;
-    }
-  }
-  &.-lh-1_8_s {
-    @include max(768) {
-      line-height: 1.8;
-    }
-  }
-  &.-lh-2_s {
-    @include max(768) {
-      line-height: 2;
-    }
-  }
-  &.-lh-3_s {
-    @include max(768) {
-      line-height: 3;
-    }
-  }
+  &.-lh-n_s {@include max(768) {line-height: normal;}}
+  &.-lh-1_s {@include max(768) {line-height: 1;}}
+  &.-lh-1_3_s {@include max(768) {line-height: 1.3;}}
+  &.-lh-1_5_s {@include max(768) {line-height: 1.5;}}
+  &.-lh-1_8_s {@include max(768) {line-height: 1.8;}}
+  &.-lh-2_s {@include max(768) {line-height: 2;}}
+  &.-lh-3_s {@include max(768) {line-height: 3;}}
 
   // 文字間隔
-  &.-ls-n {
-    letter-spacing: normal;
-  }
-  &.-ls-1 {
-    letter-spacing: 0.1rem;
-  }
-  &.-ls-2 {
-    letter-spacing: 0.2rem;
-  }
-  &.-ls-3 {
-    letter-spacing: 0.3rem;
-  }
-  &.-ls-4 {
-    letter-spacing: 0.4rem;
-  }
-  &.-ls-5 {
-    letter-spacing: 0.5rem;
-  }
+  &.-ls-n {letter-spacing: normal;}
+  &.-ls-1 {letter-spacing: 0.1rem;}
+  &.-ls-2 {letter-spacing: 0.2rem;}
+  &.-ls-3 {letter-spacing: 0.3rem;}
+  &.-ls-4 {letter-spacing: 0.4rem;}
+  &.-ls-5 {letter-spacing: 0.5rem;}
 
-  &.-ls-n_s {
-    @include max(768) {
-      letter-spacing: normal;
-    }
-  }
-  &.-ls-1_s {
-    @include max(768) {
-      letter-spacing: 0.1rem;
-    }
-  }
-  &.-ls-2_s {
-    @include max(768) {
-      letter-spacing: 0.2rem;
-    }
-  }
-  &.-ls-3_s {
-    @include max(768) {
-      letter-spacing: 0.3rem;
-    }
-  }
-  &.-ls-4_s {
-    @include max(768) {
-      letter-spacing: 0.4rem;
-    }
-  }
-  &.-ls-5_s {
-    @include max(768) {
-      letter-spacing: 0.5rem;
-    }
-  }
+  &.-ls-n_s {@include max(768) {letter-spacing: normal;}}
+  &.-ls-1_s {@include max(768) {letter-spacing: 0.1rem;}}
+  &.-ls-2_s {@include max(768) {letter-spacing: 0.2rem;}}
+  &.-ls-3_s {@include max(768) {letter-spacing: 0.3rem;}}
+  &.-ls-4_s {@include max(768) {letter-spacing: 0.4rem;}}
+  &.-ls-5_s {@include max(768) {letter-spacing: 0.5rem;}}
 
   // 影
   &.-shadow {
@@ -296,25 +176,16 @@ td {
   }
 
   // 太さ
-  &.-b {
-    font-weight: $f-b;
-  }
+  &.-b {font-weight: $f-b;}
 
   // フォントファミリー(ローカルフォント)
-  &.-f-mincho01 {
-    font-family: mincho-font01;
-  } // しっぽり
-  &.-f-gothic01 {
-    font-family: gothic-font01;
-  } // セザンヌ
-  // &.-f-En01{font-family: e-font01;}         // BebasNeue
-  &.-f-En02 {
-    font-family: e-font02;
-  } // impact
-  // &.-f-En03{font-family: e-font03;}         // garamond
-  &.-f-En04 {
-    font-family: e-font04;
-  } // Roboto
+  &.-f-mincho01 {font-family: mincho-font01;}
+  &.-f-gothic01 {font-family: gothic-font01;}
+  &.-f-gothic02 {font-family: gothic-font02;}
+  &.-f-En01{font-family: e-font01;}
+  &.-f-En02 {font-family: e-font02;}
+  &.-f-En03{font-family: e-font03;}
+  &.-f-En04 {font-family: e-font04;}
 
   // 色
   &.-white {

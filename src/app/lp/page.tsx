@@ -59,7 +59,7 @@ export default async function Home() {
         {/* 導入企業ロゴ */}
         <LogoContents />
         {/* こんなお悩みはありませんか？ */}
-        <div id="sc01" className={"c-contents pdt5s pdb7 pdb15s"}>
+        <div id="sc01" className={"c-contents pdt7 pdt5s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
               経営者・総務・人事<span className="-b">の</span>皆さん
@@ -94,7 +94,7 @@ export default async function Home() {
                   </div>
                 </div>
               </li>
-              <li className={"flexItem"}>
+              <li className={"flexItem mgb5s"}>
                 <div className="c-card -lp -lp01">
                   <div className="c-card--inner">
                     <p className="s-M -b -ls-2 -lh-2 -ws-n">
@@ -105,7 +105,7 @@ export default async function Home() {
                   </div>
                 </div>
               </li>
-              <li className={"flexItem"}>
+              <li className={"flexItem mgb5s"}>
                 <div className="c-card -lp -lp01">
                   <div className="c-card--inner">
                     <p className="s-M -b -ls-2 -lh-2 -ws-n">

@@ -9,6 +9,50 @@
   &--inner {
     padding: 10px;
   }
+  &--title {
+    font-size: clamp(1.6rem, 1.6vw, 2rem);
+    color: $site-color03;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    white-space: nowrap;
+    &.-point{// ここがポイント
+      position: relative;
+
+      font-size: clamp(1.4rem, 1.6vw, 2rem);
+      padding: 1.2rem 2rem 1.2rem 9rem;
+      // background: $site-color01;
+      border-bottom: 2px solid $site-color03;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      @include min(768){
+        padding: 2rem 2rem 2rem 130px;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        top: -150%;
+        left: -120px;
+        width: 200px;
+        height: 300%;
+        transform: rotate(25deg);
+        background: $site-color03;
+        @include min(768){left: -80px;}
+      }
+      span{
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        padding-left: 16px;
+        font-size: clamp(1rem, 1.6vw, 1.6rem);
+        // font-weight: bold;
+        color: $main-color--w;
+        line-height: 1.2;
+      }
+    }
+  }
 
   &.-t01 {// 投稿者
     background: $main-color--w;
@@ -475,6 +519,7 @@
       .c-card-item {
         width: 100% !important;
         margin: 0 0 10px 0;
+        text-align: left;
         &:last-child {
           margin: 0;
         }
@@ -499,9 +544,42 @@
       padding: 20px 20px;
     }
   }
+  &.-t06 {// LP_ここがポイント！！で使用
+    position: relative;
+    background: $main-color--w;
+    // background: $site-color01;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: visible;
+    @include min(500){display: none;}
+    @include min(900){display: block;}
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+    }
+    .c-card {
+      &--inner {
+        @include min(768){
+          padding: 2rem 5rem 2rem 2rem;
+        }
+      }
+      &-item {
+        margin-bottom: 1rem;
+        @include min(768){
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
 
   &.-lp {// LP用
     text-align: center;
+
     &.-lp01 {// セクション01
       position: relative;
       height: 150px;

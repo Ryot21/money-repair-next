@@ -689,5 +689,324 @@
             }
         }
     }
-
+    &.-LP { // LPページ
+        position: relative;
+        background: #d5edfc;
+        overflow: hidden;
+        .c-contents--inner {position: relative;}
+        .imgBox {
+            height: 150vh;
+            max-height: 1080px !important;
+            @include min(400){
+                height: 120vh;
+            }
+            @include min(500) {
+                max-height: 820px !important;
+            }
+            @include min(768) {
+                max-height: 800px !important;
+            }
+            @include min(1000) {
+                max-height: 870px !important;
+            }
+            @include min(1200) {
+                max-height: 960px !important;
+            }
+        }
+        .c-contentsBox {
+            // 注釈
+            &.-comments01 {// 縦文
+                position: absolute;
+                top: 8%;
+                left: 0;
+                z-index: 11;
+                @include min(400){
+                    top: 7%;
+                }
+                @include min(500) {
+                    top: 110px;
+                    left: 0;
+                }
+    
+                // ピックアップ
+                .pickup {
+                position: relative;
+                display: inline-block;
+                color: $site-color03;
+                font-size: .9rem;
+                font-weight: bold;
+                text-align: start;
+                letter-spacing: .1rem;
+                line-height: 2;
+                margin-bottom: 2rem;
+                @include min(1000) {
+                    font-size: clamp(1rem, 1.5vw, 1.4rem);
+                }
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: auto;
+                    bottom: -1rem;
+                    height: 1px;
+                    background: $site-color03;
+                }
+                &::before {
+                    left: 0;
+                    width: 30px;
+                    @include min(768) {
+                    width: 62px;
+                    }
+                }
+                &::after {
+                    left: auto;
+                    right: 0;
+                    width: 87%;
+                    @include min(768) {
+                    width: 80%;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    color: $site-color03;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    background: $main-color--w;
+                    padding: 0.5rem 0.5rem;
+                    margin-right: .5rem;
+                    border-radius: 5px;
+                    @include min(1000) {
+                    font-size: clamp(1rem, 1.5vw, 1.4rem);
+                    }
+                    &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -1.6rem;
+                    left: 28px;
+                    width: 25px;
+                    height: 1px;
+                    background: $site-color03;
+                    transform: rotate(30deg);
+                    @include min(768) {
+                        left: 60px;
+                    }
+                    }
+                }
+                }
+                // タイトル
+                .title {
+                margin-bottom: 2rem;
+                p,
+                span {
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    text-align: start;
+                    letter-spacing: 0.2rem;
+                    line-height: 1.5;
+                    @include min(768) {
+                    font-size: clamp(4rem, 4.2vw, 6rem);
+                    }
+                }
+                span {
+                    background: linear-gradient(
+                    55deg,
+                    $site-color03 0%,
+                    #5399df 100%
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    filter: drop-shadow(1px 1px 1px $main-color--gray);
+                }
+                }
+                .text {
+                position: relative;
+                font-weight: bold;
+                font-size: 1.2rem;
+                text-align: start;
+                letter-spacing: 0.2rem;
+                line-height: 1.75;
+                padding-left: 1rem;
+                @include min(1000){
+                    font-size: clamp(1.5rem, 1.5vw, 2rem);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: 2px;
+                    height: 65%;
+                    background: $site-color03;
+                    border-radius: 5px;
+                }
+                }
+            }
+            // コンタクト
+            &.-cta {
+                position: absolute;
+                top: 60%;
+                left: 0;
+    
+                width: 100%;
+                z-index: 11;
+                @include min(500) {
+                top: 42%;
+                width: 100%;
+                max-width: 370px;
+                }
+                @include min(768) {
+                top: 42%;
+                width: 55%;
+                max-width: 350px;
+                }
+                @include min(1000) {
+                top: 45%;
+                width: 40%;
+                max-width: 450px;
+                }
+            }
+            // 英字
+            &.-en {
+                position: absolute;
+                top: 43%;
+                right: 10px;
+                width: 85%;
+                z-index: 1;
+                @include min(500) {
+                top: 160px;
+                right: 2%;
+                width: 41%;
+                }
+                @include min(768) {
+                top: 140px;
+                right: 2%;
+                width: 50%;
+                }
+                @include min(1000) {
+                top: 125px;
+                right: 1%;
+                width: 45%;
+                }
+                @include min(1200) {
+                top: 130px;
+                right: 8%;
+                width: 50%;
+                max-width: 900px;
+                }
+                @include min(1600) {
+                right: 2%;
+                }
+            }
+            // 風景
+            &.-landscape {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 120%;
+                z-index: 1;
+                @include min(768) {
+                top: auto;
+                bottom: -20px;
+                left: auto;
+                right: 0;
+                width: 85%;
+                max-width: 1500px;
+                }
+            }
+            // 男性
+            &.-man {
+                width: 25%;
+                position: absolute;
+                bottom: 40%;
+                left: 55%;
+                transform: translateX(-50%);
+                // opacity: .9;
+                z-index: 6;
+                @include min(500) {
+                width: 18%;
+                left: 69%;
+                bottom: 0;
+                }
+                @include min(768) {
+                    width: 30%;
+                    left: 58%;
+                }
+                @include min(1000) {
+                width: 300px;
+                left: 55%;
+                }
+                @include min(1200) {
+                width: 350px;
+                left: 55%;
+                }
+                @include min(1400) {
+                width: 380px;
+                left: 58%;
+                }
+                @include min(1600) {
+                width: 380px;
+                left: 55%;
+                }
+            }
+            // 女性
+            &.-woman {
+                width: 32%;
+                position: absolute;
+                bottom: 40%;
+                left: 80%;
+                transform: translateX(-50%);
+                // opacity: .9;
+                z-index: 5;
+                @include min(500) {
+                width: 23%;
+                left: 88%;
+                bottom: 0;
+                }
+                @include min(768) {
+                    width: 37%;
+                    left: 84%;
+                }
+                @include min(1000) {
+                width: 400px;
+                left: 80%;
+                }
+                @include min(1200) {
+                width: 450px;
+                left: 84%;
+                }
+                @include min(1400) {
+                width: 500px;
+                left: 82%;
+                }
+                @include min(1600) {
+                width: 500px;
+                left: 78%;
+                }
+                @include min(1600) {
+                width: 500px;
+                left: 75%;
+                }
+            }
+            // サービス内容
+            &.-service {
+                position: absolute;
+                top: 26%;
+                left: 0;
+                width: 100%;
+                z-index: 7;
+                @include min(768){
+                    top: 80.5%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    left: auto;
+                    width: auto;
+                }
+                @include min(1200){
+                    top: 77%;
+                }
+            }
+        }
+    }
 }
