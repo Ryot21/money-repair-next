@@ -284,9 +284,7 @@ export default function CardContactForm({ customClass }: FormProps) {
                 onChange={handleCheckboxChange}
                 value="1"
               />
-              <label htmlFor="checkbox">
-                <p className="s-SS">個人情報の取り扱いに同意します*</p>
-              </label>
+              <label htmlFor="checkbox">個人情報の取り扱いに同意します*</label>
             </div>
 
             {/* エラーテキスト */}

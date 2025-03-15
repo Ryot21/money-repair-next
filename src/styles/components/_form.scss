@@ -283,9 +283,7 @@
       }
     }
     // 個人情報の取り扱いについて
-    .pITitle {
-      margin-bottom: 3% !important;
-    }
+    .pITitle {margin-bottom: 3% !important;}
     .pIText {
       font-size: 1.2rem;
       margin-bottom: 3% !important;
@@ -547,10 +545,10 @@
         .policyBox {// ポリシーボックス
           background: white;
           padding: 0;
-          p {
+          text-align: left;
+          label {
             font-size: 1rem;
             letter-spacing: 0.2rem;
-            text-align: left;
           }
         }
       }
@@ -561,13 +559,12 @@
         display: none;
         + label {
           position: relative;
-          font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-          font-weight: bold;
           color: $main-color--b;
+          // font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+          // font-weight: bold;
+          text-align: left;
+          padding-left: 20px;
           cursor: pointer;
-          p {
-            padding-left: 20px;
-          }
           &::before {// チェックボックス
             content: "";
             position: absolute;
@@ -586,14 +583,14 @@
           &::after {// チェックボックスのチェックマーク
             content: "" !important;
             position: absolute;
-            top: 50%;
+            top: 0%;
             display: block;
             width: 8px;
-            height: 4px;
+            height: 8px;
             border-bottom: 2px solid #df2323;
             border-left: 2px solid #df2323;
             // transform: rotate(-45deg);
-            transform: rotate(-45deg) translate(20%, -50%);
+            transform: rotate(-45deg) translate(20%, 0%);
             transition: all 0.1s;
             opacity: 0;
 
