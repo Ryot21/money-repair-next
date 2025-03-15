@@ -546,7 +546,7 @@
         }
         .policyBox {// ポリシーボックス
           background: white;
-          padding: 0 0 5px;
+          padding: 0;
           p {
             font-size: 1rem;
             letter-spacing: 0.2rem;
@@ -571,7 +571,7 @@
           &::before {// チェックボックス
             content: "";
             position: absolute;
-            top: 50%;
+            top: 50% !important;
 
             display: block;
             width: 10px;
@@ -581,28 +581,22 @@
             border-radius: 2px;
             transform: translateY(-50%);
             cursor: pointer;
-            @include max(500) {
-              // width: 9px;
-              // height: 9px;
-            }
+
           }
           &::after {// チェックボックスのチェックマーク
             content: "" !important;
             position: absolute;
-            top: 41%;
-            
+            top: 50%;
             display: block;
             width: 8px;
             height: 4px;
             border-bottom: 2px solid #df2323;
             border-left: 2px solid #df2323;
-            transform: rotate(-45deg);
-            // transform: rotate(-45deg) translate(20%, -30%);
+            // transform: rotate(-45deg);
+            transform: rotate(-45deg) translate(20%, -50%);
             transition: all 0.1s;
             opacity: 0;
-            @include max(500) {
-              top: 18%;
-            }
+
           }
         }
       }
