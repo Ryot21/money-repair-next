@@ -25,14 +25,17 @@
 
             }
             @include min(768) {
-                height: 90vh;
+                height: 100vh;
                 max-height: 1020px;
             }
             @include min(1400) {
                 max-height: 950px;
             }
             @include min(1500){
-                max-height: 1280px;
+                max-height: 950px;
+            }
+            @include min(1600){
+                max-height: 1200px;
             }
 
             // 背景
@@ -686,4 +689,5 @@
             }
         }
     }
+
 }
