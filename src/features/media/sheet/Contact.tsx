@@ -2,20 +2,21 @@
 import ContactMainVisual from "@/features/media/mainVisual/single/Contact";
 
 type Props = {
-    children: React.ReactNode;
-    mvClass?: string;
-    customClass?: string;
-    contentClass?: string;
+    children       : React.ReactNode;
+    animationType? : string;
+    mvClass?       : string;
+    customClass?   : string;
+    contentClass?  : string;
 }
 
-export default function ContactSheet({ children, mvClass, customClass, contentClass }: Props) {
+export default function ContactSheet({ children, mvClass, customClass, contentClass, animationType }: Props) {
 
 
     
     return (
         <main>
             {/* メインビジュアル */}
-            <ContactMainVisual mvClass={mvClass} customClass={customClass}/>
+            <ContactMainVisual mvClass={mvClass} customClass={customClass} animationType={animationType}/>
 
             {/* コンテンツ */}
             <div className={`c-contents pdt5 pdt10s pdb5 pdb10s ${contentClass || ''} `} >

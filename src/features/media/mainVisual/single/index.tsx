@@ -3,18 +3,19 @@ import Breadcrumb from "@/features/media/breadcrumb";
 type Props = {
   title: string;
   mvClass?: string;
-  animationType?: "rotate" | "slide" | "svg"; // SVGタイプを追加
+  animationType?: string;
 };
 
 export default function SingleMainVisual({
   title,
   mvClass,
-  animationType = "rotate",
+  animationType,
 }: Props) {
   return (
     <div className={"c-contents -imgBg -fv -single -bg-color06"}>
       <div className={`imgBox -${animationType}`}>
         {animationType === "svg" && (
+          // svgの場合は、svgを描画する
           <div className="slash_position">
             <svg
               viewBox="0 0 1820 1080"

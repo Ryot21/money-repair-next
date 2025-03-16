@@ -1,7 +1,7 @@
 import StaticSheet from "@/features/media/sheet/Static";
 
 export const metadata = {
-  title: "プライバシーポリシー",
+  title: "会社概要",
 };
 
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
 
 export default function RootLayout({ children } : Props) {
     return (
-        <StaticSheet title="プライバシーポリシー" mvClass="-privacyPolicy" contentClass="" animationType="company">
+        <StaticSheet title="会社概要" animationType="company" mvClass="-company" contentClass="">
             {children}
         </StaticSheet>
     )
