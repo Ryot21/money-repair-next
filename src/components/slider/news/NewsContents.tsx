@@ -5,11 +5,13 @@ import NewsWrapper from "@/components/slider/news/NewsWrapper";
 export default function NewsContents() {
     return (
         <div className={`c-contentsBox -latestNews`}>
-            <div className="c-newsBar">
-                <div className="c-newsBar--inner">
-                <Suspense fallback={<div>Loading...</div>}>
-                    <NewsWrapper />
-                </Suspense>
+            <div className="a-fadeUp -tm2 -sp05">
+                <div className="c-newsBar">
+                    <div className="c-newsBar--inner">
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <NewsWrapper />
+                    </Suspense>
+                    </div>
                 </div>
             </div>
         </div>

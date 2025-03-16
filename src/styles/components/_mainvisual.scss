@@ -407,13 +407,16 @@
             &.-catchCopy01,
             &.-catchCopy02 {// 共通
             width: 25px;
-            background: $main-color--w;
             transform: translate(-50%, -50%);
-            border-radius: 5px;
-            @include min(500) {
-                width: auto;
-                padding: 10px 5px 10px 5px;
+            @include min(500) {width: auto;}
+            .wrapper{
+                background: $main-color--w;
                 box-shadow: 3px 6px 5px 0px #00000021;
+                padding: 2px 0 2px 0;
+                border-radius: 5px;
+                @include min(500) {
+                    padding: 10px 5px 10px 5px;
+                }
             }
             p{
                 margin: 5px auto;
@@ -422,8 +425,11 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 @include min(500) {
-                font-size: clamp(2rem, 2vw, 4.8rem);
-                letter-spacing: .4rem;
+                    font-size: clamp(2rem, 2.5vw, 5.4rem);
+                    letter-spacing: .4rem;
+                }
+                @include min(1600){
+                    font-size: clamp(2rem, 2.5vw, 4.5rem);
                 }
             }
             p,
@@ -442,7 +448,7 @@
             }
             .big {// 漢字（大きめ）
                 @include min(500) {
-                font-size: clamp(2rem, 2vw, 4.8rem);
+                font-size: clamp(2rem, 2.5vw, 5.4rem);
                 letter-spacing: .4rem;
                 background: linear-gradient(
                     55deg,
@@ -453,6 +459,9 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 }
+                @include min(1600){
+                    font-size: clamp(2rem, 2.5vw, 4.5rem);
+                }
             }
             .small {// ひらがな（小さめ）
                 background: $site-color03;
@@ -460,7 +469,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 @include min(500) {
-                font-size: clamp(1.2rem, 2vw, 2rem);
+                font-size: clamp(1.2rem, 2vw, 2.5rem);
                 letter-spacing: .2rem;
                 padding-top: 2px;
                 }
@@ -475,14 +484,17 @@
                 left: 92.5%;
             }
             @include min(768) {
-                top: 30%;
-                left: 86.5%;
+                top: 37%;
+                left: 85.5%;
+            }
+            @include min(1000) {
+                left: 84%;
             }
             @include min(1500){
-                top: 33%;
-                left: 84.5%;
+                top: 40%;
+                left: 78%;
             }
-            @include min(1600) {
+            @include min(1800) {
                 top: 45%;
                 left: 73%;
             }
@@ -496,16 +508,18 @@
                 left: 85.5%;
             }
             @include min(768) {
-                top: 33%;
-                left: 80.5%;
+                top: 39%;
+                left: 79.5%;
             }
             @include min(1500){
-                top: 36%;
-                left: 80.5%;
+                top: 43%;
+                left: 73.5%;
             }
             @include min(1600) {
                 top: 48%;
-                left: 68.75%;
+            }
+            @include min(1800) {
+                left: 69%;
             }
             }
 
@@ -643,50 +657,6 @@
             }
             }
 
-            // 最新のお知らせ
-            &.-latestNews {
-            position: absolute;
-            top: 53%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 87%;
-
-            @include min (500){
-                top: 60%;
-                left: 38.5%;
-                width: 55%;
-            }
-            @include min(768) {
-                top: 62%;
-                left: 45%;
-                width: 45%;
-            }
-            @include min(1000) {
-                top: 58%;
-                left: 48%;
-                width: 45%;
-            }
-            @include min(1200) {
-                top: 58%;
-                left: 49%;
-                width: 43%;
-                max-width: 510px;
-            }
-            @include min(1400) {
-                width: 36%;
-            }
-            @include min(1500) {
-                width: 34%;
-            }
-            @include min(1600) {
-                width: 32%;
-                max-width: 510px;
-            }
-            @include min(1800) {
-                width: 28%;
-                max-width: 510px;
-            }
-            }
         }
     }
     &.-LP { // LPページ

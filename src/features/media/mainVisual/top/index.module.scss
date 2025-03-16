@@ -17,19 +17,19 @@
     transform-style: preserve-3d;
 
     &.item01 {
-      background-color: rgba(104, 152, 208, 0.85);
+      // background-color: rgba(104, 152, 208, 0.85);
       transform: translateZ(100px);
     }
     &.item02 {
-      background-color: rgba(114, 188, 201, 0.71);
+      // background-color: rgba(114, 188, 201, 0.71);
       transform: translateZ(75px);
     }
     &.item03 {
-      background-color: rgba(#4cc5f9, 0.68);
+      // background-color: rgba(#4cc5f9, 0.68);
       transform: translateZ(50px);
     }
     &.item04 {
-      background-color: rgba(#4cc5f9, 0.68);
+      // background-color: rgba(#4cc5f9, 0.68);
       transform: translateZ(25px);
     }
   }

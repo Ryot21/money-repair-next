@@ -89,144 +89,142 @@ export default function TopMainVisual() {
           <div className={"imgBox -wave"}></div>
 
           {/* ================= 画像 ================= */}
+          {/* 中央 > フェードイン */}
           <div className={"c-contentsBox -pic16_9 -pic3_4_s -pic-01"}>
-            {/* 中央 */}
-            <div
-              className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}
-            >
-              <Image
-                src="/images/mv/mv-05.jpg"
-                alt=""
-                width={1000}
-                height={667}
-                priority
-              />
+            <div className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}>
+              <div className="a-fviewInImg -tm05 -sp05">
+                <Image
+                  src="/images/mv/mv-05.jpg"
+                  alt=""
+                  width={1000}
+                  height={667}
+                  priority
+                />
+              </div>
             </div>
           </div>
+          {/* 右下 > フェードイン */}
           <div className={"tb-pc c-contentsBox -pic4_3 -pic4_3_s -pic-02"}>
-            {/* 右下 */}
-            <div
-              className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}
-            >
-              <Image
-                src="/images/mv/mv-12.png"
-                alt=""
-                width={1000}
-                height={667}
-                priority
-              />
+            <div className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}>
+              <div className="a-fviewInImg -tm05 -sp1">
+                <Image
+                  src="/images/mv/mv-12.png"
+                  alt=""
+                  width={1000}
+                  height={667}
+                />
+              </div>
             </div>
           </div>
+          {/* 中央上 > フェードアウト① */}
           <div className={"c-contentsBox -pic4_3 -blur-b02 -blur-b03s -pic-03"}>
-            {/* 中央上 */}
-            <div
-              className={`js-parallax ${styles.parallaxItem} ${styles.item02}`}
-            >
-              <Image
-                src="/images/mv/mv-01.jpg"
-                alt=""
-                width={480}
-                height={320}
-                priority
-              />
+            <div className={`js-parallax ${styles.parallaxItem} ${styles.item02}`}>
+              <div className="a-fviewOutImg -tm05 -sp15">
+                <Image
+                  src="/images/mv/mv-01.jpg"
+                  alt=""
+                  width={480}
+                  height={320}
+                />
+              </div>
             </div>
           </div>
+          {/* 左上 > フェードイン */}
           <div className={"tb-pc c-contentsBox -pic4_3 -pic4_3_s -pic-04"}>
-            {/* 左上 */}
-            <div
-              className={`js-parallax ${styles.parallaxItem} ${styles.item03}`}
-            >
-              <Image
-                src="/images/mv/mv-10.jpg"
-                alt=""
-                width={480}
-                height={320}
-                priority
-              />
+            <div className={`js-parallax ${styles.parallaxItem} ${styles.item03}`}>
+              <div className="a-fviewInImg -tm1 -sp05">
+                <Image
+                  src="/images/mv/mv-10.jpg"
+                  alt=""
+                  width={480}
+                  height={320}
+                />
+              </div>
             </div>
           </div>
+          {/* 左下 > フェードイン */}
           <div className="c-contentsBox -pic4_3 -blur-b01 -pic-05">
-            {/* 左下 */}
-            <div
-              className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}
-            >
-              <Image
-                src="/images/mv/mv-02.jpg"
-                alt=""
-                width={480}
-                height={320}
-                priority
-              />
+            <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
+              <div className="a-fviewInImg -tm1 -sp1">
+                <Image
+                  src="/images/mv/mv-02.jpg"
+                  alt=""
+                  width={480}
+                  height={320}
+                />
+              </div>
             </div>
           </div>
-
-          {/* 追加 */}
+          {/* 右上 > フェードイン */}
           <div className="c-contentsBox -pic4_3 -pic-06">
-            {/* 右上 */}
-            <div
-              className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}
-            >
-              <Image
-                src="/images/mv/mv-03.jpg"
-                alt=""
-                width={480}
-                height={320}
-                priority
-              />
+            <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
+              <div className="a-fviewInImg -tm1 -sp15">
+                <Image
+                  src="/images/mv/mv-03.jpg"
+                  alt=""
+                  width={480}
+                  height={320}
+                />
+              </div>
             </div>
           </div>
+          {/* 中央下 > フェードアウト② */}
           <div className="c-contentsBox -pic4_3 -blur-b02 -blur-b02s -pic-07">
-            {/* 中央下 */}
-            <div
-              className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}
-            >
-              <Image
-                src="/images/mv/mv-06.jpg"
-                alt=""
-                width={480}
-                height={320}
-                priority
-              />
+            <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
+              <div className="a-fviewOutImg -tm05 -sp2">
+                <Image
+                  src="/images/mv/mv-06.jpg"
+                  alt=""
+                  width={480}
+                  height={320}
+                />
+              </div>
             </div>
           </div>
 
           {/* ================= キーワード ================= */}
-          <div className={"c-contentsBox -catchCopy01"}>
-            <p>
-              <span className="big">人材育成</span>
-              <span className="small">から</span>人的資産形成
-              <span className="small">へ</span>
-            </p>
+          <div className={"c-contentsBox -catchCopy01"}>{/* キーワード1 */}
+            <div className="wrapper a-fade -tm25 -sp05">
+              <p>
+                <span className="big">人材育成</span>
+                <span className="small">から</span>人的資産形成
+                <span className="small">へ</span>
+              </p>
+            </div>
           </div>
-          <div className={"c-contentsBox -catchCopy02"}>
-            <p>
-              金融教育<span className="small">で</span><span className="big">企業価値</span><span className="small">を</span>高<span className="small">める。</span>
-            </p>
+          <div className={"c-contentsBox -catchCopy02"}>{/* キーワード2 */}
+            <div className="wrapper a-fade -tm25 -sp1">
+              <p>
+                金融教育<span className="small">で</span><span className="big">企業価値</span><span className="small">を</span>高<span className="small">める。</span>
+              </p>
+            </div>
           </div>
 
           {/* ================= 注釈 ================= */}
           {/* <Script src="/js/typing.js" /> */}
           <div className={"c-contentsBox -comments01"}>
-            {/* ピックアップ */}
-            <p className="pickup">
-              <span>社員の金融リテラシー向上</span>が、
-              <br className="tb" />
-              会社の競争力を支える未来の投資に。
-            </p>
-            {/* タイトル */}
-            <div className="title mgb2 mgb2s">
-              <p className="a-typing -blue -ls-2">
-                仕事に集中できる
-                <br />
-                <span>職場環境</span>を整える。
+            <div className="a-fade -tm15 -sp05">{/* ピックアップ */}
+              <p className="pickup">
+                <span>社員の金融リテラシー向上</span>が、
+                <br className="tb" />
+                会社の競争力を支える未来の投資に。
               </p>
             </div>
-            {/* 注釈 */}
-            <p className="text -blue -ls-2">
-              企業向け金融リテラシーコーチング型サービス
-            </p>
+            <div className="a-fade -tm1 -sp15">{/* タイトル */}
+              <div className="title mgb2 mgb2s">
+                <p className="a-typing -blue -ls-2">
+                  仕事に集中できる
+                  <br />
+                  <span>職場環境</span>を整える。
+                </p>
+              </div>
+            </div>
+            <div className="a-fade -tm15 -sp1">{/* 注釈 */}
+              <p className="text -blue -ls-2">
+                企業向け金融リテラシーコーチング型サービス
+              </p>
+            </div>
           </div>
-
         </div>
       </div>
     </>
