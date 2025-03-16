@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <main>
       {/* メインビジュアル */}
-      <div className="c-contents -fv -top">
+      <div className="c-contents -imgBg -fv -top">
         <div className="imgBox">
           <TopMainVisual />
         </div>
