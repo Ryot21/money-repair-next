@@ -90,7 +90,7 @@ export default function TopMainVisual() {
 
           {/* ================= 画像 ================= */}
           {/* 中央 > フェードイン */}
-          <div className={"c-contentsBox -pic16_9 -pic3_4_s -pic-01"}>
+          <div className={"c-mainVisual--box -pic16_9 -pic3_4_s -pic-01"}>
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}>
               <div className="a-fviewInImg -tm05 -sp05">
                 <Image
@@ -104,7 +104,7 @@ export default function TopMainVisual() {
             </div>
           </div>
           {/* 右下 > フェードイン */}
-          <div className={"tb-pc c-contentsBox -pic4_3 -pic4_3_s -pic-02"}>
+          <div className={"tb-pc c-mainVisual--box -pic4_3 -pic4_3_s -pic-02"}>
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item01}`}>
               <div className="a-fviewInImg -tm05 -sp1">
                 <Image
@@ -117,7 +117,7 @@ export default function TopMainVisual() {
             </div>
           </div>
           {/* 中央上 > フェードアウト① */}
-          <div className={"c-contentsBox -pic4_3 -blur-b02 -blur-b03s -pic-03"}>
+          <div className={"c-mainVisual--box -pic4_3 -blur-b02 -blur-b03s -pic-03"}>
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item02}`}>
               <div className="a-fviewOutImg -tm05 -sp15">
                 <Image
@@ -130,7 +130,7 @@ export default function TopMainVisual() {
             </div>
           </div>
           {/* 左上 > フェードイン */}
-          <div className={"tb-pc c-contentsBox -pic4_3 -pic4_3_s -pic-04"}>
+          <div className={"tb-pc c-mainVisual--box -pic4_3 -pic4_3_s -pic-04"}>
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item03}`}>
               <div className="a-fviewInImg -tm1 -sp05">
                 <Image
@@ -143,7 +143,7 @@ export default function TopMainVisual() {
             </div>
           </div>
           {/* 左下 > フェードイン */}
-          <div className="c-contentsBox -pic4_3 -blur-b01 -pic-05">
+          <div className="c-mainVisual--box -pic4_3 -blur-b01 -pic-05">
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
               <div className="a-fviewInImg -tm1 -sp1">
                 <Image
@@ -156,7 +156,7 @@ export default function TopMainVisual() {
             </div>
           </div>
           {/* 右上 > フェードイン */}
-          <div className="c-contentsBox -pic4_3 -pic-06">
+          <div className="c-mainVisual--box -pic4_3 -pic-06">
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
               <div className="a-fviewInImg -tm1 -sp15">
                 <Image
@@ -169,7 +169,7 @@ export default function TopMainVisual() {
             </div>
           </div>
           {/* 中央下 > フェードアウト② */}
-          <div className="c-contentsBox -pic4_3 -blur-b02 -blur-b02s -pic-07">
+          <div className="c-mainVisual--box -pic4_3 -blur-b02 -blur-b02s -pic-07">
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
               <div className="a-fviewOutImg -tm05 -sp2">
                 <Image
@@ -183,7 +183,7 @@ export default function TopMainVisual() {
           </div>
 
           {/* ================= キーワード ================= */}
-          <div className={"c-contentsBox -catchCopy01"}>{/* キーワード1 */}
+          <div className={"c-mainVisual--box -catchCopy01"}>{/* キーワード1 */}
             <div className="wrapper a-fade -tm25 -sp05">
               <p>
                 <span className="big">人材育成</span>
@@ -192,7 +192,7 @@ export default function TopMainVisual() {
               </p>
             </div>
           </div>
-          <div className={"c-contentsBox -catchCopy02"}>{/* キーワード2 */}
+          <div className={"c-mainVisual--box -catchCopy02"}>{/* キーワード2 */}
             <div className="wrapper a-fade -tm25 -sp1">
               <p>
                 金融教育<span className="small">で</span><span className="big">企業価値</span><span className="small">を</span>高<span className="small">める。</span>
@@ -202,7 +202,7 @@ export default function TopMainVisual() {
 
           {/* ================= 注釈 ================= */}
           {/* <Script src="/js/typing.js" /> */}
-          <div className={"c-contentsBox -comments01"}>
+          <div className={"c-mainVisual--box -comments01"}>
             <div className="a-fade -tm15 -sp05">{/* ピックアップ */}
               <p className="pickup">
                 <span>社員の金融リテラシー向上</span>が、

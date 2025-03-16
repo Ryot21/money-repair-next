@@ -1,16 +1,88 @@
 // 各ページ > メインビジュアル
 
 .c-mainVisual{
-    //共通
-    .imgBox{
+    // ===================== 共通設定 =====================
+    position: relative;
+    &.-bg{// 背景色・背景画像
+        // 背景色
+        &-color01 {background: $site-color01 !important;}
+        &-color02 {background: $site-color02 !important;}
+        &-color03 {background: $site-color03 !important;}
+        &-color04 {background: $site-color04 !important;}
+        &-color05 {background: $site-color05 !important;}
+        &-color06 {background: $site-color06 !important;}
+        &-color07 {background: $site-color07 !important;}
+        &-white {background: $main-color--w !important;}
+        &-gray {background: $main-color--gray !important;}
+
+        // 背景画像
+        &-img{
+            &-sc08 {
+                background-image: url(/images/Lp/sc08-bg.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &-cta {
+                background-image: url(/images/Lp/cta-bg.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    &--inner {// コンテンツ幅
+        width: 92.5%;
+        margin: auto;
+        @include max(500) {max-width: 375px;}
+        @include min(500) {width: 85%;}
+        @include min(768) {width: 90%;}
+        @include min(1600) {max-width: 1380px;}
+        @include min(1800) {max-width: 1500px;}
+    
+        &.-bg-color01 {background: $site-color01;}
+        &.-bg-color02 {background: $site-color02;}
+        &.-bg-color03 {background: $site-color03;}
+        &.-bg-white {background: $main-color--w;}
+        &.-bg-gray {background: $main-color--gray;}
+        &.-bg-img01 {
+            background-image: url(/images/Lp/sc08-bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.-card {
+            padding: 10% 2.5% 10%;
+            border-radius: 10px;
+            border: 1px solid $site-color03;
+            box-shadow: 0px 0px 5px #8080802b;
+            @include min(768) {padding: 6% 2.5% 5%;}
+        }
+    }
+    .imgBox{// コンテンツ「幅・高さ」を指定する画像
         position: relative;
         width: 100%;
         height: 100%;
     }
-    .c-contentsBox{
+    &--box{// コンテンツ内のボックス
         position: absolute;
+        &.-center {// 要素の真ん中
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+        }
+        &.-breadcrumb {// パンくず
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: inherit;
+        }
     }
 
+    // ===================== メディア関係 =====================
     &.-top {// TOPページ
         .imgBox {
             // 高さ
@@ -101,7 +173,7 @@
             background-repeat: repeat;
             }
         }
-        .c-contentsBox {
+        .c-mainVisual--box {
             //アスペクト比
             &.-pic16_9,
             &.-pic9_16,
@@ -659,7 +731,191 @@
 
         }
     }
-    &.-LP { // LPページ
+    &.-single {//下層ページ
+        background: white;
+        border-bottom: 1px solid $site-color03;
+        .imgBox {
+            width: 100lvw;
+            height: 30vh;
+            max-height: 190px !important;
+            background: linear-gradient(
+                220deg,
+                rgba(235, 249, 255, 0.367),
+                rgb(110 133 166 / 36%)
+            );
+            overflow: hidden;
+    
+            @include min(500) {
+                height: 20vh;
+                max-height: 480px !important;
+            }
+            @include min(768) {height: 30vh;}
+            @include min(1200) {height: 45vh;}
+            @include min(1400) {height: 50vh;}
+
+            &.-rotate {// 回転
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 200%;
+                    height: 200%;
+                    top: -50%;
+                    left: -50%;
+                    z-index: 1;
+                    background: repeating-linear-gradient(
+                        transparent,
+                        transparent 50px,
+                        rgba(255, 255, 255, 0.1) 50px,
+                        rgba(255, 255, 255, 0.1) 51px
+                    );
+                    animation: animate 20s linear infinite;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 200%;
+                    height: 200%;
+                    top: -50%;
+                    left: -50%;
+                    z-index: 2;
+                    background: repeating-linear-gradient(
+                        90deg,
+                        transparent,
+                        transparent 50px,
+                        rgba(255, 255, 255, 0.1) 50px,
+                        rgba(255, 255, 255, 0.1) 51px
+                    );
+                    animation: animate 20s linear infinite;
+                }
+            }
+            &.-slide {// スライド
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 150%;
+                    height: 150%;
+                    top: -25%;
+                    left: -25%;
+                    z-index: 1;
+                    background: repeating-linear-gradient(
+                        -45deg,
+                        transparent 0,
+                        transparent 2px,
+                        rgba(255, 255, 255, 0.1) 2px,
+                        rgba(255, 255, 255, 0.1) 4px
+                    );
+                    animation: slide 20s linear infinite;
+                }
+            }
+            &.-svg {// svg
+                .slash_position {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    stroke: #666;
+        
+                    svg {
+                        width: 100%;
+                        height: 100%;
+        
+                        .line-group {
+                        transform-origin: center;
+                        transition: transform 0.3s ease;
+                        }
+        
+                        // ブレイクポイントごとの位置調整
+                        @include max(500) {
+                        #Lblue {transform: translateX(-20%);}
+                        #blue {transform: translateX(10%);}
+                        #Dblue {transform: translateX(-10%);}
+                        }
+                        @include min(500) {
+                        #Lblue {transform: translateX(-10%);}
+                        #blue {transform: translateX(5%);}
+                        #Dblue {transform: translateX(-5%);}
+                        }
+                        @include min(768) {
+                        #Lblue {transform: translateX(0);}
+                        #blue {transform: translateX(0);}
+                        #Dblue {transform: translateX(0);}
+                        }
+        
+                        // 既存のスタイル
+                        #Dblue {
+                        fill: none;
+                        opacity: 0.15;
+                        stroke: $site-color03;
+                        stroke-width: 5;
+                        stroke-miterlimit: 10;
+                        stroke-dasharray: 800;
+                        stroke-dashoffset: 800;
+                        animation: slash_line 10s ease-in-out infinite;
+                        animation-direction: reverse;
+                        }
+        
+                        #gray {
+                        fill: none;
+                        opacity: 0.15;
+                        stroke: $site-color03;
+                        stroke-width: 1;
+                        stroke-miterlimit: 10;
+                        stroke-dasharray: 800;
+                        stroke-dashoffset: 800;
+                        animation: slash_line 5s ease-in-out infinite;
+                        animation-direction: reverse;
+                        }
+        
+                        #Lblue {
+                        fill: none;
+                        stroke: #5182aa12;
+                        stroke-width: 20;
+                        stroke-miterlimit: 10;
+                        stroke-dasharray: 90;
+                        stroke-dashoffset: 800;
+                        }
+        
+                        @keyframes draw {
+                        to {
+                            stroke-dashoffset: 0;
+                        }
+                        }
+        
+                        @keyframes show {
+                        0% {
+                            opacity: 0;
+                        }
+                        70% {
+                            opacity: 0;
+                        }
+                        80% {
+                            opacity: 0.2;
+                        }
+                        100% {
+                            opacity: 1;
+                        }
+                        }
+        
+                        // 斜め線のアニメーション
+                        @keyframes slash_line {
+                        90% {
+                            stroke-dashoffset: 0;
+                        }
+                        100% {
+                            stroke-dashoffset: -800;
+                        }
+                        }
+                    }
+                }
+            }
+            &.-company {// 会社
+            }
+        }
+    }
+
+    // ===================== LP関係 =====================
+    &.-LP {
         position: relative;
         background: #d5edfc;
         overflow: hidden;
