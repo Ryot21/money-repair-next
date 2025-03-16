@@ -54,6 +54,9 @@ export default function Breadcrumb({ categories }: BreadcrumbProps) {
       } else {
         // 通常のパスの場合、パスに応じてラベルを設定
         switch (path) {
+          case "member":
+            label = "メンバー紹介";
+            break;
           case "service":
             label = "マネリペとは";
             break;
@@ -68,6 +71,18 @@ export default function Breadcrumb({ categories }: BreadcrumbProps) {
             break;
           case "information":
             label = "お役立ち情報";
+            break;
+          case "webinar":
+            label = "ウェビナー";
+            break;
+          case "company":
+            label = "運営会社";
+            break;
+          case "terms":
+            label = "ご利用規約";
+            break;
+          case "privacy-policy":
+            label = "プライバシーポリシー";
             break;
           case "contact":
             // contactの場合はクエリパラメータで表示を分岐
