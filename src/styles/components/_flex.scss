@@ -384,6 +384,9 @@
         border: 1px solid $site-color03;
         padding: 5%;
       }
+      &:nth-child(2) {
+        width: 100%;
+      }
       // @include min(500) {
       //     position: sticky;
       //     top: 40px;

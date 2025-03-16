@@ -412,17 +412,17 @@ export default function ContactForm({ customClass }: FormProps) {
               </p>
               {/* 同意 */}
               <div className="policyBox">
-                <input
-                  type="checkbox"
-                  id="checkbox"
-                  name="policy_doui"
-                  checked={isAgreed}
-                  onChange={handleCheckboxChange}
-                  value="1"
-                />
-                <label className="required" htmlFor="checkbox">
-                  <span>同意する</span>
-                </label>
+                <div className="policyBox--inner">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    name="policy_doui"
+                    checked={isAgreed}
+                    onChange={handleCheckboxChange}
+                    value="1"
+                  />
+                  <label className="required" htmlFor="checkbox"><span>同意する</span></label>
+                </div>
               </div>
               <p className="mgb5 mgb10s">
                 入力内容をご確認のうえ、次の画面へ進んでください。

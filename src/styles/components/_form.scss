@@ -9,26 +9,6 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-    .required {// 必須
-      position: relative;
-      &::after {
-        content: "必須";
-        position: absolute;
-        top: 50%;
-        right: 25px;
-        transform: translateY(-50%);
-
-        font-size: 1.1rem;
-        color: $main-color--w;
-        background: $main-color--red;
-        padding: 3px 5px 3px;
-        border-radius: 3px;
-        @include min(500) {
-          right: 15px;
-          padding: 4px 6px 3px;
-        }
-      }
-    }
     table {
       th,
       td {
@@ -121,88 +101,6 @@
             width: 100%;
             padding: 0;
             border: none;
-          }
-        }
-      }
-    }
-    input {
-      vertical-align: middle;
-      &[type="checkbox"] {
-        display: none;
-        + label {
-          position: relative;
-          font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-          font-weight: bold;
-          color: $main-color--b;
-          cursor: pointer;
-          span {
-            &::after {
-              content: "" !important;
-              position: absolute;
-              top: 30%;
-              left: -21px;
-              display: block;
-              width: 10px;
-              height: 7px;
-              border-bottom: 3px solid $main-color--red;
-              border-left: 3px solid $main-color--red;
-              transform: rotate(-45deg) translateY(-50%);
-              transition: all 0.1s;
-              opacity: 0;
-              @include max(500) {
-                left: -16px;
-                width: 8px;
-                height: 5px;
-              }
-            }
-          }
-          &::before {// チェックボックス
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: -20px;
-
-            display: block;
-            width: 10px;
-            height: 10px;
-
-            background-color: $main-color--w;
-            border: 1px solid $site-color02;
-            border-radius: 2px;
-            transform: translateY(-50%);
-            cursor: pointer;
-            @include min(500) {
-              left: -25px;
-            }
-          }
-          &.required {// 必須
-            position: relative;
-            &::after {
-              content: "必須";
-              position: absolute;
-              top: 50%;
-              right: -40px;
-              transform: translateY(-50%);
-
-              font-size: 1.1rem;
-              color: $main-color--w;
-              background: $main-color--red;
-              padding: 3px 5px 3px;
-              border-radius: 3px;
-              @include min(500) {
-                right: -45px;
-                padding: 4px 6px 3px;
-              }
-            }
-          }
-        }
-      }
-      &[type="checkbox"]:checked {
-        + label {
-          span {
-            &::after {
-              opacity: 1;
-            }
           }
         }
       }
@@ -339,84 +237,6 @@
         }
       }
     }
-    input {
-      vertical-align: middle;
-      &[type="checkbox"] {
-        display: none;
-        + label {
-          position: relative;
-          font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-          font-weight: bold;
-          color: $main-color--b;
-          cursor: pointer;
-          span {
-            &::after {
-              content: "" !important;
-              position: absolute;
-              top: 30%;
-              left: -21px;
-              display: block;
-              width: 0px;
-              height: 0px;
-              border-bottom: 2px solid $main-color--red;
-              border-left: 2px solid $main-color--red;
-              transform: rotate(-45deg) translateY(-50%);
-              transition: all 0.1s;
-              opacity: 0;
-              @include max(500) {
-                top: 25%;
-                left: -17px;
-              }
-            }
-          }
-          &::before {// チェックボックス
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: -20px;
-
-            display: block;
-            width: 10px;
-            height: 10px;
-            background-color: $main-color--w;
-            border: 1px solid $site-color02;
-            border-radius: 2px;
-            transform: translateY(-50%);
-            cursor: pointer;
-            @include min(500) {left: -25px;}
-          }
-          &.required {// 必須
-            position: relative;
-            &::after {
-              content: "必須";
-              position: absolute;
-              top: 50%;
-              right: -40px;
-              transform: translateY(-50%);
-
-              font-size: 1.1rem;
-              color: $main-color--w;
-              background: $main-color--red;
-              padding: 3px 5px 3px;
-              border-radius: 3px;
-              @include min(500) {
-                right: -45px;
-                padding: 4px 6px 3px;
-              }
-            }
-          }
-        }
-      }
-      &[type="checkbox"]:checked {
-        + label {
-          span {
-            &::after {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
   }
   // カード
   &.-card {
@@ -543,64 +363,12 @@
           line-height: 1.5;
         }
         .policyBox {// ポリシーボックス
-          background: white;
-          padding: 0;
+          background: none;
+          padding: 0 0 0 25px;
           text-align: left;
           label {
             font-size: 1rem;
             letter-spacing: 0.2rem;
-          }
-        }
-      }
-    }
-    input {
-      vertical-align: middle;
-      &[type="checkbox"] {
-        display: none;
-        + label {
-          position: relative;
-          color: $main-color--b;
-          // font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-          // font-weight: bold;
-          text-align: left;
-          padding-left: 20px;
-          cursor: pointer;
-          &::before {// チェックボックス
-            content: "";
-            position: absolute;
-            top: 50% !important;
-
-            display: block;
-            width: 10px;
-            height: 10px;
-            background-color: $main-color--w;
-            border: 1px solid $site-color02;
-            border-radius: 2px;
-            transform: translateY(-50%);
-            cursor: pointer;
-
-          }
-          &::after {// チェックボックスのチェックマーク
-            content: "" !important;
-            position: absolute;
-            top: 0%;
-            display: block;
-            width: 8px;
-            height: 5px;
-            border-bottom: 2px solid #df2323;
-            border-left: 2px solid #df2323;
-            // transform: rotate(-45deg);
-            transform: rotate(-45deg) translate(20%, 0%);
-            transition: all 0.1s;
-            opacity: 0;
-
-          }
-        }
-      }
-      &[type="checkbox"]:checked {
-        + label {
-          &::after {
-            opacity: 1;
           }
         }
       }
@@ -663,7 +431,7 @@
     }
   }
   // 同意
-  &--consent {
+  &--consent {// メディア、LP共通
     #error {// エラーテキスト
       display: none;
       font-size: clamp(1rem, 1.2vw, 1.5rem);
@@ -682,8 +450,87 @@
       @include min(500) {
         margin-bottom: 15px;
       }
+      &--inner {
+        display: inline-block;
+        width: auto;
+        margin: 0 auto;
+      }
+      input {
+        vertical-align: middle;
+        &[type="checkbox"] {
+          display: none;
+          + label {
+            position: relative;
+            font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+            font-weight: bold;
+            color: $main-color--b;
+            cursor: pointer;
+  
+            &::before {// チェックボックス
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: -20px;
+  
+              display: block;
+              width: 10px;
+              height: 10px;
+              background-color: $main-color--w;
+              border: 1px solid $site-color02;
+              border-radius: 2px;
+              transform: translateY(-50%);
+              cursor: pointer;
+              @include min(500) {left: -25px;}
+            }
+            &::after {// チェックボックスのチェックマーク
+              content: "" !important;
+              position: absolute;
+              top: 59%;
+              left: -20px;
+              display: block;
+              width: 8px;
+              height: 4px;
+              border-bottom: 2px solid #df2323;
+              border-left: 2px solid #df2323;
+              transform: rotate(-45deg) translate(50%, -50%);
+              transition: all 0.1s;
+              opacity: 0;
+              @include min(500) {left: -25px;}
+            }
+            &.required {// 必須
+              position: relative;
+              span{
+                &::after {
+                  content: "必須";
+                  position: absolute;
+                  top: 50%;
+                  right: -40px;
+                  transform: translateY(-50%);
+    
+                  font-size: 1.1rem;
+                  color: $main-color--w;
+                  background: $main-color--red;
+                  padding: 3px 5px 3px;
+                  border-radius: 3px;
+                  @include min(500) {
+                    right: -45px;
+                    padding: 4px 6px 3px;
+                  }
+                }  
+              }
+            }
+          }
+        }
+        &[type="checkbox"]:checked {
+          + label {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
-    p {
+    p {// 入力内容をご確認のうえ、次の画面へ進んでください。
       font-size: clamp(1rem, 1.2vw, 1.2rem);
       text-align: center;
     }
