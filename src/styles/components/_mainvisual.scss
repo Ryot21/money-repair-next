@@ -750,8 +750,8 @@
                 max-height: 480px !important;
             }
             @include min(768) {height: 30vh;}
-            @include min(1200) {height: 45vh;}
-            @include min(1400) {height: 50vh;}
+            @include min(1200) {height: 35vh;}
+            @include min(1400) {height: 40vh;}
 
             &.-rotate {// 回転
                 &::before {
@@ -910,6 +910,23 @@
                 }
             }
             &.-company {// 会社
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: url(/images/bg/company-bg.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+        .c-mainVisual--box {
+            &.-title {// h1_タイトル
+                top: 62%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include min(500) {top: 62%;}
+                @include min(768) {top: 58%;}
             }
         }
     }

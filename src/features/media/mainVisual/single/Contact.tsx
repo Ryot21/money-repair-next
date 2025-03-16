@@ -36,7 +36,7 @@ export default function ContactMainVisual({
     };
 
     return (
-        <div className={`c-mainVisual -single -bg-color06 ${customClass}`}>
+        <div className={`c-mainVisual -single  ${customClass}`}>
             <div className={`imgBox -${animationType}`}>
                 {animationType === "svg" && (
                 // svgの場合は、svgを描画する
@@ -148,7 +148,7 @@ export default function ContactMainVisual({
                 </div>
                 )}
             </div>
-            <div className={"c-mainVisual--box -center"}>
+            <div className={"c-mainVisual--box -title"}>
                 {/* ページタイトル */}
                 <h1 className={`c-page-title s-L -s18 -ws-n -center -b -ls-2 ${mvClass || ''} `}>{getTitle()}</h1>
             </div>
