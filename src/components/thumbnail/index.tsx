@@ -37,29 +37,32 @@ export default function Thumbnail({
           />
         )}
       </div>
+      {/* LPはカバーを表示しない */}
       {type !== "lp" && (
-        <>
-          <div className={"c-thumbnail--cover"}>
-            <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
-          </div>
-          <div className={"c-thumbnail--mark"}>
-            <Image
-              src={`/images/thumbnail/${type}-mark.svg`}
-              alt={`マネーリペア | ${
-                type === "interview"
-                  ? "ご利用者の声"
-                  : type === "news"
-                  ? "ニュース"
-                  : "お役立ち情報"
-              }`}
-              width={186}
-              height={16}
-            />
-          </div>
-        </>
+        <div className={"c-thumbnail--cover"}>
+          <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
+        </div>
       )}
-      {title && <div className={"c-thumbnail--title"}>{title}</div>}
-      {subTitle && <div className={"c-thumbnail--subTitle"}>{subTitle}</div>}
+      {/* LPとお役立ち情報はマークを表示しない */}
+      {type !== "lp" && type !== "information" && (
+        <div className={"c-thumbnail--mark"}>
+          <Image
+            src={`/images/thumbnail/${type}-mark.svg`}
+            alt={`マネーリペア | ${
+              type === "interview"
+                ? "ご利用者の声"
+                : type === "news"
+                ? "ニュース"
+                : "お役立ち情報"
+            }`}
+            width={186}
+            height={16}
+          />
+        </div>
+      )}
+      <div className={"c-thumbnail--title"}>{title}</div>
+      <div className={"c-thumbnail--subTitle"}>{subTitle}</div>
+      {/* LPは画像を表示しない */}
       {type !== "lp" && (
         <div className={"c-thumbnail--picter"}>
           <Image
