@@ -140,7 +140,7 @@
     }
   }
   &--intro {
-    margin-top: 10%;
+    margin-top: 5%;
     // 個別設定
     a {
       position: relative;
@@ -553,6 +553,7 @@
         h5,
         h6 {
           font-weight: bold;
+          word-break: auto-phrase;
           letter-spacing: 0.2rem;
           line-height: 1.5;
           margin-top: 10%;
