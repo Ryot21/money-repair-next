@@ -279,6 +279,94 @@
             letter-spacing: 0.2rem;
           }
         }
+        // ↓ ハイライト機能
+        .-marker{// マーカー
+          display: inline;
+          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1),;
+          background: linear-gradient(transparent 60%, #fff7b3 60%);
+          padding: 2px 0;
+          font-weight: bold;
+        }
+        .-slash{// スラッシュ
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::before,
+          &::after{
+            content: "";
+            width: 25px;
+            height: 1px;
+            background-color: #000;
+            margin: 0px 4px 4px;
+          }
+          &::before{transform: rotate(45deg);}
+          &::after{transform: rotate(-45deg);}
+        }
+        .-first{// 1文字目のみ大文字
+          &::first-letter {
+            color: $main-color--red;
+            font-size: 40px;
+            font-weight: bold;
+          }
+        }
+        // ↓ テーブル
+        table{
+          width: 100%;
+          border-collapse: collapse;
+          border-spacing: 0;
+          overflow: hidden;
+          tbody{
+            overflow-x: auto;
+          }
+          th,td{
+            padding: 10px 0;
+            text-align: center;  
+          }
+          td{
+            text-align: center;
+            border: 1px solid $main-color--Dgray;
+            box-shadow: 0px -3px 5px 1px $main-color--gray inset;
+            padding: 10px 5px;
+          }
+          tr{
+            p{
+              font-size: clamp(1rem, 1.5vw, 1.3rem);
+              text-align: left;
+              line-height: 1.5 !important;
+              word-break: break-all;
+              margin: 0;
+              @include min(1400){
+                word-break: auto-phrase;
+              }
+            }
+            &:nth-child(1){
+              background-color: $main-color--Dgray !important;
+              p{
+                color: $main-color--w;
+                text-align: center !important;
+                letter-spacing: .2rem;
+              }
+              td{
+                box-shadow: none;
+                border-left: 1px solid $main-color--w;
+                border-right: 1px solid $main-color--w;
+                &:first-child{
+                  border-left: 1px solid $main-color--Dgray;
+                }
+                &:last-child{
+                  border-right: 1px solid $main-color--Dgray;
+                }
+              }
+            }
+            &:nth-child(even){
+              background-color: $main-color--w;
+            }
+            &:nth-child(odd){
+              background-color: $main-color--gray;
+            }
+          }
+        }
       }
       &--intro{
         @include max(500) {
