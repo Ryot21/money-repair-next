@@ -321,7 +321,7 @@
                     width: 20%;
                 }
                 @include min(768) {
-                    top: 62%;
+                    top:46%;
                     left: 76%;
                     width: 23%;
                 }
@@ -410,9 +410,9 @@
                     width: 38%;
                 }
                 @include min(768) {
-                    top: 17%;
-                    left: 54%;
-                    width: 20%;
+                    top: 12%;
+                    left: 60%;
+                    width: 17%;
                 }
                 @include min(1400) {
                     top: 20%;
@@ -583,12 +583,12 @@
                     transform: translate(-18%, -50%);
                 }
                 @include min(768) {
-                    top: 44%;
+                    top: 43%;
                     left: 35%;
                     transform: translate(-18%, -50%);
                 }
                 @include min(1000) {
-                    top: 48%;
+                    top: 46.5%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }

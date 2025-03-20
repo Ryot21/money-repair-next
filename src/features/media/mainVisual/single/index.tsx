@@ -6,6 +6,10 @@ type Props = {
   animationType?: string;
 };
 
+// 【animationType】のついて
+// 各ページ内のLayout.tsxで設定
+// “rotate" or "slide" or "svg" or "company"
+
 export default function SingleMainVisual({
   title,
   mvClass,
