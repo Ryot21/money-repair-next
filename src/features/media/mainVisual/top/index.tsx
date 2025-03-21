@@ -173,7 +173,7 @@ export default function TopMainVisual() {
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
               <div className="a-fviewOutImg -tm05 -sp2">
                 <Image
-                  src="/images/mv/mv-06.jpg"
+                  src="/images/mv/mv-04.jpg"
                   alt=""
                   width={480}
                   height={320}
