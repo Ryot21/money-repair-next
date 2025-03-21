@@ -87,6 +87,8 @@
     &.-top {// TOPページ
         .imgBox {
             // 高さ
+            // min-height 要素の最小高さ
+            // max-height 要素の最大高さ
             height: 120vh;
             max-height: 840px;
             @include min(400) {
@@ -95,21 +97,14 @@
             }
             @include min(500) {
                 height: 100vh;
-
             }
             @include min(768) {
-                height: 100vh;
+                min-height: 830px;
                 max-height: 1020px;
             }
-            @include min(1400) {
-                max-height: 950px;
-            }
-            @include min(1500){
-                max-height: 950px;
-            }
-            @include min(1600){
-                max-height: 1200px;
-            }
+            @include min(1400){max-height: 950px;}
+            @include min(1500){max-height: 950px;}
+            @include min(1600){max-height: 1200px;}
 
             // 背景
             &.-dot {// 1.ドット背景

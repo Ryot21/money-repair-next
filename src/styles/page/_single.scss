@@ -173,6 +173,13 @@
     .p-single {
       &--intro,
       &--detail {
+        // テキスト間隔
+        p {
+          margin-bottom: 5%;
+          @include min(500) {
+            margin-bottom: 2.5%;
+          }
+        }
         // テキスト
         p,
         span,
@@ -557,13 +564,6 @@
           letter-spacing: 0.2rem;
           line-height: 1.5;
           margin-top: 10%;
-        }
-        // 個別設定
-        p {
-          margin-bottom: 5%;
-          @include min(500) {
-            margin-bottom: 2.5%;
-          }
         }
         span {
           font-weight: bold;
