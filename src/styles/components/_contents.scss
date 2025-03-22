@@ -53,12 +53,12 @@
     }
 
     &.-card {
-      padding: 10% 2.5% 10%;
+      padding: 5% 3.5% 5%;
       border-radius: 10px;
       border: 1px solid $site-color03;
       box-shadow: 0px 0px 5px #8080802b;
       @include min(768) {
-        padding: 6% 2.5% 5%;
+        padding: 5% 2.5% 5%;
       }
     }
   }

@@ -6,7 +6,7 @@ export default function ContactBottom() {
     <div id="sc-contact" className={"c-contents pdb5 pdb10s"}>
       <div className={"c-contents--inner -bg-white -card"}>
         <h2
-          className={"c-contents--title -contact -center -ls-2 -en-color03 pdb3 pdb10s"}
+          className={"c-contents--title -contact -center -ls-2 -en-color03 mgt5s pdb3 pdb5s"}
         >
           資料ダウンロード
         </h2>
