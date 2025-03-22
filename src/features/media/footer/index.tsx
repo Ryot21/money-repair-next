@@ -21,7 +21,7 @@ export default function Footer() {
                         {/* サイトマップ */}
                         <nav className={"siteMap c-fnav mgb10s"}>
                             <ul className={"c-flex -jc-st -h-cen"}>
-                                <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="/company">会社概要</Link></li>
+                                <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="/company">運営会社</Link></li>
                                 {/* <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="">利用規約</Link></li> */}
                                 <li className={"navItem"}><Link className={"c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5"} href="/privacy-policy">プライバシーポリシー</Link></li>
                             </ul>

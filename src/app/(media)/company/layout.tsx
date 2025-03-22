@@ -13,7 +13,7 @@ type Props = {
 
 export default function RootLayout({ children } : Props) {
     return (
-        <StaticSheet title="会社概要" animationType="company" mvClass="-company" contentClass="">
+        <StaticSheet title="運営会社" animationType="company" mvClass="-company" contentClass="">
             {children}
         </StaticSheet>
     )
