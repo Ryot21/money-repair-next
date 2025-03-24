@@ -29,10 +29,10 @@ export default async function Home() {
       </div>
 
       {/* 導入企業ロゴ */}
-      <LogoContents />
+      {/* <LogoContents /> */}
 
       {/* マネーリペアとは */}
-      <div id="sc01" className={"c-contents pdt10 pdt10s mgb5 mgb5s"}>
+      <div id="sc01" className={"c-contents pdt10 pdt10s"}>
         <div className={"c-contents--inner"}>
           <ul className={"c-flex -col1_2 -pc1_2 -jc-sb -h-top"}>
             <li className={"flexItem mgb10s"}>
@@ -64,7 +64,7 @@ export default async function Home() {
       </div>
 
       {/* ご利用者インタビュー */}
-      <InterviewArea />
+      {/* <InterviewArea /> */}
 
       {/* お役立ち情報 */}
       <InformationArea />
