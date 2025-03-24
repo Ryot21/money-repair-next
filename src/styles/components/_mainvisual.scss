@@ -578,12 +578,14 @@
                     transform: translate(-18%, -50%);
                 }
                 @include min(768) {
-                    top: 43%;
+                    top: 53%;
+                    // top: 43%;
                     left: 35%;
                     transform: translate(-18%, -50%);
                 }
                 @include min(1000) {
-                    top: 46.5%;
+                    top: 50%;
+                    // top: 46.5%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
