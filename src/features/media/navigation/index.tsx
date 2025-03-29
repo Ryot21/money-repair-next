@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import type { Category } from "@/types/microcms";
 
@@ -12,7 +12,7 @@ type HamburgerNavProps = {
 };
 
 export default function Navigation({
-  interviewCategories,
+  // interviewCategories,
   informationCategories,
 }: HamburgerNavProps) {
   // 現在のパスとクエリパラメータを取得
@@ -20,8 +20,6 @@ export default function Navigation({
   const searchParams = useSearchParams();
   // メニューの開閉状態を管理
   const [isOpen, setIsOpen] = useState(false);
-  // ドロップダウンメニューの表示状態を管理
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   // リンクがアクティブかどうかを判定する関数
   const isActive = (href: string) => {
@@ -35,29 +33,10 @@ export default function Navigation({
     return pathname === href || pathname.startsWith(href + "/");
   };
 
-  // ドロップダウンメニューの表示/非表示を切り替える関数
-  const toggleDropdown = (menuId: string) => {
-    setActiveDropdown(activeDropdown === menuId ? null : menuId);
-  };
-
   // リンククリック時の処理
   const handleLinkClick = () => {
     setIsOpen(false);
-    setActiveDropdown(null);
   };
-
-  // スクロール制御
-  useEffect(() => {
-    if (isOpen || activeDropdown) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen, activeDropdown]);
 
   return (
     <nav className={"c-hb-nav sp"}>
