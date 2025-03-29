@@ -200,7 +200,7 @@ export default function Header({
                                             href={`/information/category/${category.id}`}
                                             className={"c-link s-S -b -ls-2 -ws-n"}
                                           >
-                                            # {category.name}
+                                            #{category.name}
                                           </Link>
                                         </li>
                                       )
