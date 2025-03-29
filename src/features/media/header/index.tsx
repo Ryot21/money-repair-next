@@ -67,6 +67,11 @@ export default function Header({
     };
   }, [activeDropdown]);
 
+  // リンククリック時の処理
+  const handleLinkClick = () => {
+    setActiveDropdown(null);
+  };
+
   return (
     <>
       <HeaderScroll />
@@ -103,25 +108,37 @@ export default function Header({
                             ${ activeDropdown === "service" ? "-checked" : "" }`}
                             onClick={() => toggleDropdown("service")}
                           ><span>マネリペとは</span>
-                          </button>
+                          </button> 
                           <div className={`c-hnav--dropdown ${ activeDropdown === "service" ? "-checked" : "" }`}>
                             <div className="c-hnav--dropdown--inner">
                               <ul className="c-flex -col1_2 -pc2_1 -h-top -jc-sb">
                                 <li className="flexItem">
-                                  <p className="c-hnav--dropdown--title">サービス内容</p>
+                                  <p className="c-hnav--dropdown--title">
+                                    サービス内容
+                                  </p>
                                   <p className="c-hnav--dropdown--text">
                                     テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                                   </p>
-                                  <Link className={"c-link s-S -b -ls-2 -text"} href="/service">
+                                  <Link
+                                    className={"c-link s-S -b -ls-2 -text"}
+                                    href="/service"
+                                    onClick={handleLinkClick}
+                                  >
                                     マネリペとは
                                   </Link>
                                 </li>
                                 <li className="flexItem">
-                                  <p className="c-hnav--dropdown--title">マネリペ情報</p>
+                                  <p className="c-hnav--dropdown--title">
+                                    マネリペ情報
+                                  </p>
                                   <p className="c-hnav--dropdown--text">
                                     テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                                   </p>
-                                  <Link className={"c-link s-S -b -ls-2 -text"} href="/maneripe">
+                                  <Link
+                                    className={"c-link s-S -b -ls-2 -text"}
+                                    href="/maneripe"
+                                    onClick={handleLinkClick}
+                                  >
                                     記事一覧
                                   </Link>
                                 </li>
@@ -183,11 +200,17 @@ export default function Header({
                             <div className="c-hnav--dropdown--inner">
                               <ul className="c-flex -col1_2 -pc2_1 -h-top -jc-sb">
                                 <li className="flexItem">
-                                  <p className="c-hnav--dropdown--title">お役立ち情報</p>
+                                  <p className="c-hnav--dropdown--title">
+                                    お役立ち情報
+                                  </p>
                                   <p className="c-hnav--dropdown--text">
                                     テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                                   </p>
-                                  <Link className={"c-link s-S -b -ls-2 -text"} href="/information">
+                                  <Link
+                                    className={"c-link s-S -b -ls-2 -text"}
+                                    href="/information"
+                                    onClick={handleLinkClick}
+                                  >
                                     記事一覧
                                   </Link>
                                 </li>
@@ -195,10 +218,16 @@ export default function Header({
                                   <ul className={"c-hnav--archiveLists"}>
                                     {informationCategories.contents.map(
                                       (category: Category) => (
-                                        <li key={category.id} className={"archiveItem"}>
+                                        <li
+                                          key={category.id}
+                                          className={"archiveItem"}
+                                        >
                                           <Link
                                             href={`/information/category/${category.id}`}
-                                            className={"c-link s-S -b -ls-2 -ws-n"}
+                                            className={
+                                              "c-link s-S -b -ls-2 -ws-n"
+                                            }
+                                            onClick={handleLinkClick}
                                           >
                                             #{category.name}
                                           </Link>
