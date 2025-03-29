@@ -105,16 +105,28 @@ export default function Header({
                           ><span>マネリペとは</span>
                           </button>
                           <div className={`c-hnav--dropdown ${ activeDropdown === "service" ? "-checked" : "" }`}>
-                            <ul className={"c-hnav--archiveLists"}>
-                              <li className={"archiveItem"}>
-                                <Link
-                                  href="/maneripe"
-                                  className={"c-link s-S -b -ls-2 -ws-n"}
-                                >
-                                  # マネリペ情報
-                                </Link>
-                              </li>
-                            </ul>
+                            <div className="c-hnav--dropdown--inner">
+                              <ul className="c-flex -col1_2 -pc2_1 -h-top -jc-sb">
+                                <li className="flexItem">
+                                  <p className="c-hnav--dropdown--title">サービス内容</p>
+                                  <p className="c-hnav--dropdown--text">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                  </p>
+                                  <Link className={"c-link s-S -b -ls-2 -text"} href="/service">
+                                    マネリペとは
+                                  </Link>
+                                </li>
+                                <li className="flexItem">
+                                  <p className="c-hnav--dropdown--title">マネリペ情報</p>
+                                  <p className="c-hnav--dropdown--text">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                  </p>
+                                  <Link className={"c-link s-S -b -ls-2 -text"} href="/maneripe">
+                                    記事一覧
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </li>
                         {/* ご利用者の声 */}
@@ -127,23 +139,35 @@ export default function Header({
                           ><span>ご利用者の声</span>
                           </button>
                           <div className={`c-hnav--dropdown ${ activeDropdown === "interview" ? "-checked" : "" }`}>
-                            <ul className={"c-hnav--archiveLists"}>
-                              {interviewCategories.contents.map(
-                                (category: Category) => (
-                                  <li
-                                    key={category.id}
-                                    className={"archiveItem"}
-                                  >
-                                    <Link
-                                      href={`/interview/category/${category.id}`}
-                                      className={"c-link s-S -b"}
-                                    >
-                                      # {category.name}
-                                    </Link>
-                                  </li>
-                                )
-                              )}
-                            </ul>
+                            <div className="c-hnav--dropdown--inner">
+                              <ul className="c-flex -col1_2 -pc2_1 -h-top -jc-sb">
+                                <li className="flexItem">
+                                  <p className="c-hnav--dropdown--title">ご利用者の声</p>
+                                  <p className="c-hnav--dropdown--text">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                  </p>
+                                  <Link className={"c-link s-S -b -ls-2 -text"} href="/interview">
+                                    記事一覧
+                                  </Link>
+                                </li>
+                                <li className="flexItem">
+                                  <ul className={"c-hnav--archiveLists"}>
+                                    {interviewCategories.contents.map(
+                                    (category: Category) => (
+                                      <li key={category.id} className={"archiveItem"}>
+                                        <Link
+                                          href={`/interview/category/${category.id}`}
+                                          className={"c-link s-S -b"}
+                                        >
+                                          #{category.name}
+                                        </Link>
+                                      </li>
+                                    )
+                                    )}
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </li>
                         {/* お役立ち情報 */}
@@ -156,23 +180,35 @@ export default function Header({
                           </button>
                           {/* ドロップダウンメニュー */}
                           <div className={`c-hnav--dropdown ${ activeDropdown === "information" ? "-checked" : "" }`}>
-                            <ul className={"c-hnav--archiveLists"}>
-                              {informationCategories.contents.map(
-                                (category: Category) => (
-                                  <li
-                                    key={category.id}
-                                    className={"archiveItem"}
-                                  >
-                                    <Link
-                                      href={`/information/category/${category.id}`}
-                                      className={"c-link s-S -b -ls-2 -ws-n"}
-                                    >
-                                      # {category.name}
-                                    </Link>
-                                  </li>
-                                )
-                              )}
-                            </ul>
+                            <div className="c-hnav--dropdown--inner">
+                              <ul className="c-flex -col1_2 -pc2_1 -h-top -jc-sb">
+                                <li className="flexItem">
+                                  <p className="c-hnav--dropdown--title">お役立ち情報</p>
+                                  <p className="c-hnav--dropdown--text">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                  </p>
+                                  <Link className={"c-link s-S -b -ls-2 -text"} href="/information">
+                                    記事一覧
+                                  </Link>
+                                </li>
+                                <li className="flexItem">
+                                  <ul className={"c-hnav--archiveLists"}>
+                                    {informationCategories.contents.map(
+                                      (category: Category) => (
+                                        <li key={category.id} className={"archiveItem"}>
+                                          <Link
+                                            href={`/information/category/${category.id}`}
+                                            className={"c-link s-S -b -ls-2 -ws-n"}
+                                          >
+                                            # {category.name}
+                                          </Link>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </li>
                       </ul>
