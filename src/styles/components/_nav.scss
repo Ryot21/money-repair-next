@@ -3,12 +3,15 @@
 // Headerナビゲーション
 .c-hnav {
   // ナビゲーションリスト
-  &-lists {// ulタグ
+  // 「マネリペとは」、「ご利用者の声」、「お役立ち情報」
+  &-lists {
+    // ulタグ
     display: flex;
     flex-wrap: nowrap;
     justify-content: right;
     align-items: center;
-    .hnavItem {// liタグ
+    .hnavItem {
+      // liタグ
       width: auto;
       margin-left: 15px;
       @include min(1000) {
@@ -17,55 +20,15 @@
       a {
         display: inline-block;
         white-space: nowrap;
-      }
-      &.archiveItem {
-        position: relative;
-        &:hover {
-          .c-hnav--dropdown {
-            transform: translate(-50%, 0);
-            pointer-events: auto;
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-  // ドロップダウンメニュー
-  &--dropdown {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    width: auto;
-    height: auto;
-    background: $main-color--w;
-    border: 1px solid $main-color--b;
-
-    padding: 15px 15px 10px 15px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-
-    pointer-events: none;
-    will-change: transform;
-    opacity: 0;
-
-    transform: translate(-50%, -10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  // ドロップダウンリスト
-  //一覧ページ
-  &--archiveLists {// ulタグ
-    .archiveItem {// liタグ
-      margin-bottom: 10px;
-      a {
-        position: relative;
-        display: block;
-        &::before {
+        span {
+          position: relative;
+          display: block;
+          &::before {
           content: "";
           width: 0;
           height: 1px;
           background: $main-color--w;
           border-radius: 5px;
-
           position: absolute;
           bottom: -2px;
           left: 50%;
@@ -73,19 +36,69 @@
           opacity: 0;
           will-change: transform;
           transition: all 0.5s;
-        }
-        &:hover {
-          color: $site-color03;
-          &::before {
-            width: 90%;
-            background: $site-color03;
-            opacity: 1;
+          }
+          &:hover {
+            color: $site-color03;
+            &::before {
+              width: 90%;
+              background: $site-color03;
+              opacity: 1;
+            }
           }
         }
       }
     }
   }
-  // aタグ
+  // ドロップダウンメニュー
+  &--dropdown {
+    position: fixed;
+    top: 101%;
+    left: 50%;
+    width: 100vw;
+    height: auto;
+    background: $main-color--w;
+    border-top: 1px solid $main-color--gray;
+    border-bottom: 1px solid $main-color--gray;
+    padding: 15px 15px 10px 15px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+
+    &.-active {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  // ドロップダウンリスト
+  &--archiveLists {
+    // ulタグ
+    .archiveItem {
+      // liタグ
+      margin-bottom: 10px;
+      a {
+
+      }
+    }
+  }
+
+  // 共通 > フォント関係
+  &--link,
+  &--btn {
+    span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+      white-space: nowrap;
+      @include min(768) {
+        font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+      }
+    }
+  }
+  // aタグ + hover　の場合
   &--link {
     position: relative;
     &::before {
@@ -94,7 +107,6 @@
       height: 2px;
       background: $main-color--w;
       border-radius: 5px;
-
       position: absolute;
       bottom: -3px;
       left: 50%;
@@ -104,7 +116,7 @@
       transition: all 0.5s;
     }
     &:hover,
-    &.-active {
+    &.-active { // アクティブ時 + hover時
       color: $site-color03;
       &::before {
         width: 100%;
@@ -112,7 +124,7 @@
         opacity: 1;
       }
     }
-    &.-archive {
+    &.-triangle { // 三角形アイコン
       padding: 8px 15px 8px 0;
       &::before {
         bottom: 4px;
@@ -124,7 +136,7 @@
         position: absolute;
         top: 50%;
         right: 2%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(0deg); // 下向き
         background: $main-color--b;
         clip-path: polygon(0 0, 50% 100%, 100% 0);
         will-change: transform;
@@ -134,6 +146,7 @@
       &.-active {
         &::after {
           background: $site-color03;
+          transform: translateY(-50%) rotate(180deg); // 上向き
         }
       }
     }
@@ -152,25 +165,102 @@
       }
     }
   }
+  // buttonタグ + hover
+  &--btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    position: relative;
+    // ボタンの下線
+    span {
+      &::before {
+        content: "";
+        width: 0;
+        height: 2px;
+        background: $main-color--w;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        will-change: transform;
+        transition: all 0.5s;
+      }
+    }
+    &:hover {
+      span {
+        &::before {
+          width: 100%;
+          background: $site-color03;
+          opacity: 1;
+        }
+      }
+    }
+
+    // 三角形アイコン
+    &.-triangle {
+      padding: 8px 15px 8px 0;
+      &::after {
+        content: "";
+        width: 10px;
+        height: 7px;
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%) rotate(0deg); // 下向き
+        background: $main-color--b;
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+        will-change: transform;
+        transition: all 0.5s;
+      }
+      &:hover,
+      &.-active {
+        color: $site-color03;
+        &::after {
+          background: $site-color03;
+          transform: translateY(-50%) rotate(180deg); // 上向き
+        }
+      }
+    }
+  }
+
+  // オーバーレイ
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    transition: opacity 0.3s ease;
+  }
 }
 .c-navAreaBox {
   width: 100%;
-  will-change: transform;
+  // will-change: transform;
   transition: all 0.5s;
   overflow: visible;
 
   .c-navlists {
     display: flex;
     flex-wrap: nowrap;
-		justify-content: flex-end;
+    justify-content: flex-end;
     align-items: center;
     .navItem {
       &.-pageLink {
         // ページ内リンク
-        @include min(500) {width: 49%;}
-        @include min(1000) {max-width: 360px;}
+        @include min(500) {
+          width: 49%;
+        }
+        @include min(1000) {
+          max-width: 360px;
+        }
       }
-      &.-cvBtn {// cvボタン
+      &.-cvBtn {
+        // cvボタン
         width: auto;
         border-radius: 30px;
         will-change: transform;
@@ -195,14 +285,21 @@
             }
           }
         }
-        &.-cv01 {// cvボタン01
+        &.-cv01 {
+          // cvボタン01
           background: $site-color03;
           border: 1px solid $site-color03;
           margin-left: 10px;
-          @include min(1000) {margin-left: 20px;}
+          @include min(1000) {
+            margin-left: 20px;
+          }
           a {
-            @include min(768) {padding: 0.65rem 3rem 0.5rem 1.5rem;}
-            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
+            @include min(768) {
+              padding: 0.65rem 3rem 0.5rem 1.5rem;
+            }
+            @include min(1000) {
+              padding: 0.65rem 3.5rem 0.5rem 2rem;
+            }
           }
           &:hover {
             background: $main-color--w;
@@ -215,7 +312,8 @@
             }
           }
         }
-        &.-cv02 {// cvボタン02
+        &.-cv02 {
+          // cvボタン02
           @include min(500) {
             background: $main-color--red;
             border: 1px solid $main-color--red;
@@ -232,11 +330,16 @@
             }
           }
           a {
-            @include min(768) {padding: 0.65rem 3rem 0.5rem 1.5rem;}
-            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
+            @include min(768) {
+              padding: 0.65rem 3rem 0.5rem 1.5rem;
+            }
+            @include min(1000) {
+              padding: 0.65rem 3.5rem 0.5rem 2rem;
+            }
           }
         }
-        &.-cv03 {// オレンジ色のボタン_LPに使用
+        &.-cv03 {
+          // オレンジ色のボタン_LPに使用
           @include min(500) {
             background: $main-color--orange;
             border: 1px solid $main-color--orange;
@@ -254,8 +357,12 @@
             }
           }
           a {
-            @include min(768) {padding: 0.65rem 3rem 0.5rem 1.5rem;}
-            @include min(1000) {padding: 0.65rem 3.5rem 0.5rem 2rem;}
+            @include min(768) {
+              padding: 0.65rem 3rem 0.5rem 1.5rem;
+            }
+            @include min(1000) {
+              padding: 0.65rem 3.5rem 0.5rem 2rem;
+            }
           }
         }
       }
@@ -578,6 +685,87 @@
     right: 0;
     width: 11%;
   }
+
+  // ドロップダウンメニュー
+  &--dropdown {
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+
+    &.-active {
+      display: block;
+    }
+  }
+
+  // ドロップダウンリスト
+  &--archiveLists {
+    .hbNavCategoryItem {
+      margin-bottom: 10px;
+      a {
+        position: relative;
+        display: block;
+        &::before {
+          content: "";
+          width: 0;
+          height: 1px;
+          background: $main-color--w;
+          border-radius: 5px;
+          position: absolute;
+          bottom: -2px;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          will-change: transform;
+          transition: all 0.5s;
+        }
+        &:hover {
+          color: $main-color--yellow;
+          &::before {
+            width: 90%;
+            background: $main-color--yellow;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // ボタン
+  &--btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    color: $main-color--b;
+
+    &.-triangle {
+      padding: 8px 15px 8px 0;
+      &::after {
+        content: "";
+        width: 10px;
+        height: 7px;
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%) rotate(0deg); // 下向き
+        background: $main-color--b;
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+        will-change: transform;
+        transition: all 0.5s;
+      }
+      &:hover,
+      &.-active {
+        color: $site-color03;
+        &::after {
+          background: $site-color03;
+          transform: translateY(-50%) rotate(180deg); // 上向き
+        }
+      }
+    }
+  }
 }
 
 // フッターナビゲーション
@@ -621,7 +809,7 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    @include min(768){
+    @include min(768) {
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
@@ -634,8 +822,8 @@
       @include min(768) {
         width: auto;
         margin: 0 30px;
-        &:nth-child(1){
-          &::before{
+        &:nth-child(1) {
+          &::before {
             content: "";
             position: absolute;
             top: 0;
@@ -663,7 +851,6 @@
           }
         }
       }
-
     }
   }
 }

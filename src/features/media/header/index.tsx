@@ -7,6 +7,7 @@ import Link from "next/link";
 import Iconbutton from "@/components/elements/button/IconButton";
 import type { Category } from "@/types/microcms";
 import HeaderScroll from "./HeaderScroll";
+import { useState, useEffect } from "react";
 
 // Props型を定義
 type HeaderProps = {
@@ -16,16 +17,55 @@ type HeaderProps = {
 
 // クライアントコンポーネントとしてHeaderを実装
 export default function Header({
-  // interviewCategories,
+  interviewCategories,
   informationCategories,
 }: HeaderProps) {
   // 現在のパスを取得
   const pathname = usePathname();
+  // ドロップダウンメニューの表示状態を管理
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   // リンクがアクティブかどうかを判定する関数
   const isActive = (href: string) => {
     return pathname === href || pathname.startsWith(href + "/");
   };
+
+  // ドロップダウンメニューの表示/非表示を切り替える関数
+  const toggleDropdown = (menuId: string) => {
+    setActiveDropdown(activeDropdown === menuId ? null : menuId);
+  };
+
+  // 背景クリック時の処理
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      setActiveDropdown(null);
+    }
+  };
+
+  // ESCキーでのメニュー閉じる処理
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveDropdown(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscKey);
+    return () => window.removeEventListener("keydown", handleEscKey);
+  }, []);
+
+  // スクロール制御
+  useEffect(() => {
+    if (activeDropdown) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [activeDropdown]);
 
   return (
     <>
@@ -55,17 +95,21 @@ export default function Header({
                   <li className={"navItem -pageLink"}>
                     <nav className={"c-hnav"}>
                       <ul className={"c-hnav-lists"}>
-                        {/* マネーリペアの特徴 */}
+                        {/* サービス内容 > ドロップダウンメニュー */}
                         <li className={"hnavItem archiveItem"}>
-                          <Link
-                            className={`c-hnav--link -archive s-M -b -ls-2 -ws-n ${
+                          <button
+                            className={`c-hnav--btn -triangle ${
                               isActive("/service") ? "-active" : ""
                             }`}
-                            href="/service"
+                            onClick={() => toggleDropdown("service")}
                           >
-                            マネリペとは
-                          </Link>
-                          <div className={"c-hnav--dropdown"}>
+                            <span>マネリペとは</span>
+                          </button>
+                          <div
+                            className={`c-hnav--dropdown ${
+                              activeDropdown === "service" ? "-active" : ""
+                            }`}
+                          >
                             <ul className={"c-hnav--archiveLists"}>
                               <li className={"archiveItem"}>
                                 <Link
@@ -78,17 +122,21 @@ export default function Header({
                             </ul>
                           </div>
                         </li>
-                        {/* ご利用者の声 */}
-                        {/* <li className={"hnavItem archiveItem"}>
-                          <Link
-                            className={`c-hnav--link -archive s-M -b -ls-2 -ws-n ${
+                        {/* ご利用者の声 > ドロップダウンメニュー */}
+                        <li className={"hnavItem archiveItem"}>
+                          <button
+                            className={`c-hnav--btn -triangle ${
                               isActive("/interview") ? "-active" : ""
                             }`}
-                            href="/interview"
+                            onClick={() => toggleDropdown("interview")}
                           >
-                            ご利用者の声
-                          </Link>
-                          <div className={"c-hnav--dropdown"}>
+                            <span>ご利用者の声</span>
+                          </button>
+                          <div
+                            className={`c-hnav--dropdown ${
+                              activeDropdown === "interview" ? "-active" : ""
+                            }`}
+                          >
                             <ul className={"c-hnav--archiveLists"}>
                               {interviewCategories.contents.map(
                                 (category: Category) => (
@@ -107,19 +155,23 @@ export default function Header({
                               )}
                             </ul>
                           </div>
-                        </li> */}
-                        {/* お役立ち情報 */}
+                        </li>
+                        {/* お役立ち情報 > ドロップダウンメニュー */}
                         <li className={"hnavItem archiveItem"}>
-                          <Link
-                            className={`c-hnav--link -archive s-M -b -ls-2 -ws-n ${
+                          <button
+                            className={`c-hnav--btn -triangle ${
                               isActive("/information") ? "-active" : ""
                             }`}
-                            href="/information"
+                            onClick={() => toggleDropdown("information")}
                           >
-                            お役立ち情報
-                          </Link>
+                            <span>お役立ち情報</span>
+                          </button>
                           {/* ドロップダウンメニュー */}
-                          <div className={"c-hnav--dropdown"}>
+                          <div
+                            className={`c-hnav--dropdown ${
+                              activeDropdown === "information" ? "-active" : ""
+                            }`}
+                          >
                             <ul className={"c-hnav--archiveLists"}>
                               {informationCategories.contents.map(
                                 (category: Category) => (
@@ -219,6 +271,10 @@ export default function Header({
           </ul>
         </div>
       </header>
+      {/* オーバーレイ */}
+      {activeDropdown && (
+        <div className="c-hnav__overlay" onClick={handleOverlayClick}></div>
+      )}
     </>
   );
 }
