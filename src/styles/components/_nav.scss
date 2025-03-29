@@ -94,9 +94,9 @@
     }
     // ドロップダウン > テキスト
     &--text {
-      font-size: 1.2rem;
+      font-size: clamp(1.2rem, 1.2vw, 1.4rem);
       letter-spacing: .1rem;
-      line-height: 1.5;
+      line-height: 2;
       margin-bottom: 20px;
     }
   }

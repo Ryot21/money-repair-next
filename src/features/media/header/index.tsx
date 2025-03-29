@@ -161,7 +161,7 @@ export default function Header({
                                 <li className="flexItem">
                                   <p className="c-hnav--dropdown--title">ご利用者の声</p>
                                   <p className="c-hnav--dropdown--text">
-                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    マネーリペアを導入していただいた企業の『リアルな声』を集めました。実際に導入していただいた現場のお話を通じて、どのように金融知識が深まり、経済的な安心が得られたのかをご紹介します。ぜひマネーリペアが提供する価値をご確認ください。
                                   </p>
                                   <Link className={"c-link s-S -b -ls-2 -text"} href="/interview">
                                     記事一覧
@@ -204,7 +204,7 @@ export default function Header({
                                     お役立ち情報
                                   </p>
                                   <p className="c-hnav--dropdown--text">
-                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                  金融リテラシーが身に付くとライフプランに合わせた資金作りや家計のやりくり、節約などのお金の管理を合理的にできるようになります。 お金の管理が適切にできると「経済的に自立する」ことにつながります。
                                   </p>
                                   <Link
                                     className={"c-link s-S -b -ls-2 -text"}
