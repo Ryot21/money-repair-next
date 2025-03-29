@@ -28,11 +28,11 @@ export default function Footer() {
                         </nav>
                     </li>
                     <li className={"flexItem -snsArea"}>
-                        <ul className={"snsBox c-flex -sns -jc-sb mgb5 mgb10s"}>
-                            <li className={"flexItem -snsLogoArea"}>
+                        <ul className={"snsBox c-flex -sns -jc-sb -h-cen mgb5 mgb10s"}>
+                            <li className={"flexItem -snsLogoArea -x"}>
                                 <Link className={"c-link -img"} href="">
                                     <Image
-                                        src="images/logo/sns/x.svg"
+                                        src="/images/logo/sns/x.svg"
                                         alt="公式X"
                                         width={250}
                                         height={100}
@@ -40,9 +40,9 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li className={"flexItem -snsLogoArea"}>
-                                <Link className={"c-link -img"} href="">
+                                <Link className={"c-link -img"} href="https://www.facebook.com/profile.php?id=61573725519762">
                                     <Image
-                                        src="images/logo/sns/facebook.svg"
+                                        src="/images/logo/sns/facebook.svg"
                                         alt="公式Facebook"
                                         width={250}
                                         height={100}
@@ -50,10 +50,20 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li className={"flexItem -snsLogoArea"}>
-                                <Link className={"c-link -img"} href="">
+                                <Link className={"c-link -img"} href="https://www.instagram.com/money.repair/">
                                     <Image
                                         src="images/logo/sns/Instagram.svg"
                                         alt="公式Instagram"
+                                        width={250}
+                                        height={100}
+                                    />
+                                </Link>
+                            </li>
+                            <li className={"flexItem -snsLogoArea"}>
+                                <Link className={"c-link -img"} href="https://www.youtube.com/@moneyrepair">
+                                    <Image
+                                        src="/images/logo/sns/youtube.svg"
+                                        alt="公式YouTube"
                                         width={250}
                                         height={100}
                                     />
