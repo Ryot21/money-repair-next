@@ -95,21 +95,16 @@ export default function Header({
                   <li className={"navItem -pageLink"}>
                     <nav className={"c-hnav"}>
                       <ul className={"c-hnav-lists"}>
-                        {/* サービス内容 > ドロップダウンメニュー */}
+                        {/* サービス内容 */}
                         <li className={"hnavItem archiveItem"}>
-                          <button
-                            className={`c-hnav--btn -triangle ${
-                              isActive("/service") ? "-active" : ""
-                            }`}
+                          {/* アクティブ、チェック時 */}
+                          <button className={`c-hnav--btn -triangle 
+                            ${ isActive("/service") ? "-active" : ""}
+                            ${ activeDropdown === "service" ? "-checked" : "" }`}
                             onClick={() => toggleDropdown("service")}
-                          >
-                            <span>マネリペとは</span>
+                          ><span>マネリペとは</span>
                           </button>
-                          <div
-                            className={`c-hnav--dropdown ${
-                              activeDropdown === "service" ? "-active" : ""
-                            }`}
-                          >
+                          <div className={`c-hnav--dropdown ${ activeDropdown === "service" ? "-checked" : "" }`}>
                             <ul className={"c-hnav--archiveLists"}>
                               <li className={"archiveItem"}>
                                 <Link
@@ -122,21 +117,16 @@ export default function Header({
                             </ul>
                           </div>
                         </li>
-                        {/* ご利用者の声 > ドロップダウンメニュー */}
+                        {/* ご利用者の声 */}
                         <li className={"hnavItem archiveItem"}>
-                          <button
-                            className={`c-hnav--btn -triangle ${
-                              isActive("/interview") ? "-active" : ""
-                            }`}
+                          {/* アクティブ、チェック時 */}
+                          <button className={`c-hnav--btn -triangle 
+                            ${ isActive("/interview") ? "-active" : ""}
+                            ${ activeDropdown === "interview" ? "-checked" : "" }`}
                             onClick={() => toggleDropdown("interview")}
-                          >
-                            <span>ご利用者の声</span>
+                          ><span>ご利用者の声</span>
                           </button>
-                          <div
-                            className={`c-hnav--dropdown ${
-                              activeDropdown === "interview" ? "-active" : ""
-                            }`}
-                          >
+                          <div className={`c-hnav--dropdown ${ activeDropdown === "interview" ? "-checked" : "" }`}>
                             <ul className={"c-hnav--archiveLists"}>
                               {interviewCategories.contents.map(
                                 (category: Category) => (
@@ -156,22 +146,16 @@ export default function Header({
                             </ul>
                           </div>
                         </li>
-                        {/* お役立ち情報 > ドロップダウンメニュー */}
+                        {/* お役立ち情報 */}
                         <li className={"hnavItem archiveItem"}>
-                          <button
-                            className={`c-hnav--btn -triangle ${
-                              isActive("/information") ? "-active" : ""
-                            }`}
-                            onClick={() => toggleDropdown("information")}
-                          >
-                            <span>お役立ち情報</span>
+                          {/* アクティブ、チェック時 */}
+                          <button className={`c-hnav--btn -triangle 
+                            ${ isActive("/information") ? "-active" : ""}
+                            ${ activeDropdown === "information" ? "-checked" : "" }`}
+                            onClick={() => toggleDropdown("information")}><span>お役立ち情報</span>
                           </button>
                           {/* ドロップダウンメニュー */}
-                          <div
-                            className={`c-hnav--dropdown ${
-                              activeDropdown === "information" ? "-active" : ""
-                            }`}
-                          >
+                          <div className={`c-hnav--dropdown ${ activeDropdown === "information" ? "-checked" : "" }`}>
                             <ul className={"c-hnav--archiveLists"}>
                               {informationCategories.contents.map(
                                 (category: Category) => (
