@@ -367,9 +367,10 @@ export default function ContactForm({ customClass }: FormProps) {
                       value={formData.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      placeholder="sample@impreme.jp"
-                      className={errors.email ? "-error" : ""}
+                      placeholder="会社のメールアドレスを入力してください。"
+                      className={errors.email ? "-error" : "mgb1 mgb1s"}
                     />
+
                     {errors.email && (
                       <span className="s-SS -error">{errors.email}</span>
                     )}

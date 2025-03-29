@@ -318,7 +318,7 @@ export default function SideberContactForm({ customClass }: FormProps) {
                 value={formData.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                placeholder="sample@impreme.jp"
+                placeholder="会社のメールアドレスを入力してください。"
                 className={errors.email ? "-error" : ""}
               />
               {errors.email && (
