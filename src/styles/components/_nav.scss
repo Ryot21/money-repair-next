@@ -662,21 +662,28 @@
   }
   &__lists {
     .hbNavItem {
-      margin-bottom: 16.5px;
+      margin-bottom: 20px;
       will-change: transform;
       transition: 0.5s all;
       opacity: 0;
 
       a,
       label {
-        display: block;
+        display: inline-block;
         position: relative;
         transition: 0.5s all;
+        &::before{
+          color: $main-color--w;
+        }
         span {
           color: $main-color--w;
           transition: 0.5s all;
         }
         &.-active {
+          &::before{
+            color: $main-color--yellow;
+            font-size: 1.4rem;
+          }
           span {
             color: $main-color--yellow !important;
             font-weight: bold;
@@ -770,6 +777,28 @@
     bottom: 0;
     right: 0;
     width: 11%;
+  }
+  // テキスト
+  &__text {
+    color: $main-color--w;
+    font-size: 1.2rem;
+    font-family: $f-gothic01;
+    text-align: left;
+    letter-spacing: .2rem;
+    line-height: 2;
+    padding-left: 10px;
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: $main-color--w;
+      border-radius: 5px;
+    }
   }
 
   // ドロップダウンメニュー

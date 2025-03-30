@@ -12,7 +12,7 @@ type HamburgerNavProps = {
 };
 
 export default function Navigation({
-  // interviewCategories,
+  interviewCategories,
   informationCategories,
 }: HamburgerNavProps) {
   // 現在のパスとクエリパラメータを取得
@@ -59,7 +59,7 @@ export default function Navigation({
           {/* TOP */}
           <li className={"hbNavItem"}>
             <Link
-              className={isActive("/") ? "-active" : ""}
+              className={`c-link -text -ws-n ${isActive("/") ? "-active" : ""}`}
               href="/"
               onClick={handleLinkClick}
             >
@@ -67,9 +67,9 @@ export default function Navigation({
             </Link>
           </li>
           {/* マネリペとは */}
-          <li className={"hbNavItem"}>
+          <li className={"hbNavItem "}>
             <Link
-              className={isActive("/service") ? "-active" : ""}
+              className={`c-link -text -ws-n mgb2s ${isActive("/service") ? "-active" : ""}`}
               href="/service"
               onClick={handleLinkClick}
             >
@@ -77,11 +77,14 @@ export default function Navigation({
                 マネリペとは
               </span>
             </Link>
+            <p className="c-hb-nav__text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
           </li>
           {/* マネリペ情報 */}
-          <li className={"hbNavItem"}>
+          <li className={"hbNavItem "}>
             <Link
-              className={`mgb5 mgb5s ${isActive("/maneripe") ? "-active" : ""}`}
+              className={`c-link -text -ws-n mgb2s ${isActive("/maneripe") ? "-active" : ""}`}
               href="/maneripe"
               onClick={handleLinkClick}
             >
@@ -89,11 +92,14 @@ export default function Navigation({
                 マネリペ情報
               </span>
             </Link>
+            <p className="c-hb-nav__text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
           </li>
           {/* ご利用者の声 */}
-          {/* <li className={"hbNavItem c-borderBtm -dotted"}>
+          <li className={"hbNavItem "}>
             <Link
-              className={`mgb5 mgb5s ${
+              className={`c-link -text -ws-n mgb2s ${
                 isActive("/interview") ? "-active" : ""
               }`}
               href="/interview"
@@ -103,7 +109,10 @@ export default function Navigation({
                 ご利用者の声
               </span>
             </Link>
-            <ul className={"c-flex -col2 -jc-st"}>
+            <p className="c-hb-nav__text mgb5s">
+              マネーリペアを導入していただいた企業の『リアルな声』を集めました。
+            </p>
+            {/* <ul className={"c-flex -col2 -jc-st"}>
               {interviewCategories.contents.map((category: Category) => (
                 <li
                   key={category.id}
@@ -124,12 +133,12 @@ export default function Navigation({
                   </Link>
                 </li>
               ))}
-            </ul>
-          </li> */}
+            </ul> */}
+          </li>
           {/* お役立ち情報 */}
-          <li className={"hbNavItem c-borderBtm -dotted"}>
+          <li className={"hbNavItem"}>
             <Link
-              className={`mgb5 mgb5s ${
+              className={`c-link -text -ws-n mgb2s ${
                 isActive("/information") ? "-active" : ""
               }`}
               href="/information"
@@ -139,7 +148,10 @@ export default function Navigation({
                 お役立ち情報
               </span>
             </Link>
-            <ul className={"c-flex -col2 -jc-st"}>
+            <p className="c-hb-nav__text mgb5s">
+              金融リテラシーが身に付くとライフプランに合わせたお金の管理を合理的にできるようになります。
+            </p>
+            {/* <ul className={"c-flex -col2 -jc-st"}>
               {informationCategories.contents.map((category: Category) => (
                 <li
                   key={category.id}
@@ -160,12 +172,12 @@ export default function Navigation({
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </li>
           {/* お知らせ */}
           <li className={"hbNavItem"}>
             <Link
-              className={isActive("/news") ? "-active" : ""}
+              className={`c-link -text -ws-n mgb2s ${isActive("/news") ? "-active" : ""}`}
               href="/news"
               onClick={handleLinkClick}
             >
@@ -173,9 +185,9 @@ export default function Navigation({
             </Link>
           </li>
           {/* 資料ダウンロード */}
-          <li className={"hbNavItem"}>
+          {/* <li className={"hbNavItem"}>
             <Link
-              className={isActive("/contact?type=download") ? "-active" : ""}
+              className={`c-link -text -ws-n mgb2s ${isActive("/contact?type=download") ? "-active" : ""}`}
               href="/contact?type=download"
               onClick={handleLinkClick}
             >
@@ -183,11 +195,11 @@ export default function Navigation({
                 資料ダウンロード
               </span>
             </Link>
-          </li>
+          </li> */}
           {/* お問い合わせ */}
           <li className={"hbNavItem"}>
             <Link
-              className={isActive("/contact?type=contact") ? "-active" : ""}
+              className={`c-link -text -ws-n mgb2s ${isActive("/contact?type=contact") ? "-active" : ""}`}
               href="/contact?type=contact"
               onClick={handleLinkClick}
             >
