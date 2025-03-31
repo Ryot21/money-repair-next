@@ -11,13 +11,13 @@ import { useState, useEffect } from "react";
 
 // Props型を定義
 type HeaderProps = {
-  interviewCategories: { contents: Category[] };
+  // interviewCategories: { contents: Category[] };
   informationCategories: { contents: Category[] };
 };
 
 // クライアントコンポーネントとしてHeaderを実装
 export default function Header({
-  interviewCategories,
+  // interviewCategories,
   informationCategories,
 }: HeaderProps) {
   // 現在のパスを取得
