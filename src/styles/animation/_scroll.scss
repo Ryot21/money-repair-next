@@ -23,7 +23,6 @@
         background: #fff;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         border-radius: 30px;
-        // overflow: hidden;
     }
 }
 @keyframes sc-headerNavContact-gap {// header > ナビゲーション > Contact
@@ -43,26 +42,7 @@
 
         }
         &-wrapper{
-            // animation: sc-headerLogo-gap linear both;
-            // animation-range: contain 30% contain 60%;
-            // animation-timeline: scroll();
-            // will-change: transform;
-
-            // @include min(768){
-            //     animation: sc-header-gap linear both;
-            //     animation-range: contain 30% contain 60%;
-            //     animation-timeline: scroll();
-            //     will-change: transform;
-
-            // }
-
             .c-navAreaBox{
-                // .-pageLink{
-                //     animation: sc-headerNav-gap linear both;
-                //     animation-range: contain 30% contain 35%;
-                //     animation-timeline: view();
-                //     will-change: transform;
-                // }
                 .-contact{
                     animation: sc-headerNavContact-gap linear both;
                     animation-range: contain 30% contain 35%;

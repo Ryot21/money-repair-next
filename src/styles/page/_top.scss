@@ -4,11 +4,10 @@ body{
 	position: relative;
 	animation: fadeAnime 3s forwards;
 	@include min(768){animation: fadeAnime 2s forwards;}
-
 	main{
 		width: 100%;
-		overflow-y: scroll;
-		overflow-x: hidden;
+		// overflow-y: scroll;
+		// overflow-x: hidden;
 	}
 }
 
