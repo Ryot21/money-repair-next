@@ -57,7 +57,7 @@ function handleExistingMiddleware(request: NextRequest) {
 
     const response = NextResponse.next();
     response.headers.set('x-page-type', pageType);
-    response.headers.set('X-Robots-Tag', 'noindex');// 自然検索の許可が出たら削除
+    // response.headers.set('X-Robots-Tag', 'noindex');// 自然検索の許可が出たら削除
     return response;
 }
 
