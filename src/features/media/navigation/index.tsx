@@ -79,7 +79,7 @@ export default function Navigation({
               </span>
             </Link>
             <p className="c-hb-nav__text">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            マネーリペアは、従業員の金融リテラシー向上を支援し、お金の不安を解消するサービスです。
             </p>
           </li>
           {/* マネリペ情報 */}
@@ -94,11 +94,11 @@ export default function Navigation({
               </span>
             </Link>
             <p className="c-hb-nav__text">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            マネリペ情報は、ご利用者の声や相談事例・よくある質問を掲載し、利用方法、必要書類、相談後の流れを具体的に紹介しています。
             </p>
           </li>
           {/* ご利用者の声 */}
-          <li className={"hbNavItem "}>
+          {/* <li className={"hbNavItem "}>
             <Link
               className={`c-link -text -ws-n mgb2s ${
                 isActive("/interview") ? "-active" : ""
@@ -113,29 +113,7 @@ export default function Navigation({
             <p className="c-hb-nav__text mgb5s">
               マネーリペアを導入していただいた企業の『リアルな声』を集めました。
             </p>
-            {/* <ul className={"c-flex -col2 -jc-st"}>
-              {interviewCategories.contents.map((category: Category) => (
-                <li
-                  key={category.id}
-                  className={"hbNavCategoryItem flexItem mgb5 mgb5s"}
-                >
-                  <Link
-                    className={`s-M -s14 -b -left pdl7s ${
-                      isActive(`/interview/category/${category.id}`)
-                        ? "-active"
-                        : ""
-                    }`}
-                    href={`/interview/category/${category.id}`}
-                    onClick={handleLinkClick}
-                  >
-                    <span className={"s-S -s14 -b -left pdl7s"}>
-                      {category.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul> */}
-          </li>
+          </li> */}
           {/* お役立ち情報 */}
           <li className={"hbNavItem"}>
             <Link

@@ -146,8 +146,7 @@ export default function Header({
                           </div>
                         </li>
                         {/* ご利用者の声 */}
-                        <li className={"hnavItem archiveItem"}>
-                          {/* アクティブ、チェック時 */}
+                        {/* <li className={"hnavItem archiveItem"}>
                           <button className={`c-hnav--btn -triangle 
                             ${ isActive("/interview") ? "-active" : ""}
                             ${ activeDropdown === "interview" ? "-checked" : "" }`}
@@ -185,7 +184,7 @@ export default function Header({
                               </ul>
                             </div>
                           </div>
-                        </li>
+                        </li> */}
                         {/* お役立ち情報 */}
                         <li className={"hnavItem archiveItem"}>
                           {/* アクティブ、チェック時 */}
