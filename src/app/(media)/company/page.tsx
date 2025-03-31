@@ -21,10 +21,11 @@ export default function Page() {
                         <dt>TEL / <br className="sp" />FAX</dt>
                         <dd>03-6264-7047 / 03-6264-7048</dd>
                     </div>
-                    <div className="p-company__list">
+                    
+                    {/* <div className="p-company__list">
                         <dt>メール<br className="sp" />アドレス</dt>
                         <dd>info@impreme.jp</dd>
-                    </div>
+                    </div> */}
                     <div className="p-company__list">
                         <dt>事業内容</dt>
                         <dd>
