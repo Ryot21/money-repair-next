@@ -6,9 +6,6 @@ import HeaderContainer from "@/features/media/header/HeaderContainer";
 import NavigationContainer from "@/features/media/navigation/NavigationContainer";
 import Footer from "@/features/media/footer";
 
-// Google Tag Manager
-import { GoogleTagManager } from "@next/third-parties/google";
-
 /**
  * メディアサイト用のメタデータ
  * - メディアサイトのページにのみ適用される
@@ -42,8 +39,6 @@ export default async function MediaLayout({
       <NavigationContainer />
       {children}
       <Footer />
-      {/* メディア用 > Google Tag Manager */}
-      <GoogleTagManager gtmId="GTM-MW3QDMR6" />
     </PageTypeWrapper>
     
   );

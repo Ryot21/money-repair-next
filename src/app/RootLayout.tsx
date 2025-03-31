@@ -1,4 +1,5 @@
 import "@/styles/globals.scss";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 /**
  * 全ページ共通のHTML構造を提供するコンポーネント
@@ -22,6 +23,8 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning>{children}</body>
+      {/* メディア用 > Google Tag Manager */}
+      <GoogleTagManager gtmId="GTM-MW3QDMR6" />
     </html>
   );
 }
