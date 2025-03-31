@@ -47,7 +47,7 @@ export default async function Article({ data }: Props) {
           }}
         />
         {/* 3. お悩み */}
-        <div className={"c-card -t04 mgt15 mgt15s"}>
+        <div className={"c-card -t04 mgt10 mgt15s"}>
           {data.captionLists && (
             <ul className={"c-card-lists"}>
               <li className={"c-card-item"}>

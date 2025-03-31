@@ -775,7 +775,6 @@
           word-break: auto-phrase;
           letter-spacing: 0.2rem;
           line-height: 1.5;
-          margin-top: 10%;
         }
         span {
           font-weight: bold;
@@ -812,8 +811,11 @@
           // 中タイトル
           position: relative;
           font-size: clamp(1.5rem, 2vw, 2.4rem);
-          padding: 2% 2%;
+          padding: 2% 2% 2% 4%;
           margin-bottom: 3%;
+          @include min(500) {
+            padding: 2% 2%;
+          }
           &::before {
             content: "";
             position: absolute;
