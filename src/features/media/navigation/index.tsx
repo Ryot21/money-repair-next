@@ -3,18 +3,19 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
-import type { Category } from "@/types/microcms";
+// import type { Category } from "@/types/microcms";
 
 // Props型を定義
-type HamburgerNavProps = {
-  interviewCategories: { contents: Category[] };
-  informationCategories: { contents: Category[] };
-};
+// type HamburgerNavProps = {
+  // interviewCategories: { contents: Category[] };
+  // informationCategories: { contents: Category[] };
+// };
 
 export default function Navigation({
-  interviewCategories,
-  informationCategories,
-}: HamburgerNavProps) {
+  // interviewCategories,
+  // informationCategories,
+// }: HamburgerNavProps) {
+}) {
   // 現在のパスとクエリパラメータを取得
   const pathname = usePathname();
   const searchParams = useSearchParams();
