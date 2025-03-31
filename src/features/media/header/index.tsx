@@ -57,15 +57,13 @@ export default function Header({
   // スクロール制御
   useEffect(() => {
     if (activeDropdown) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
+    }
+    return () => {
+      document.body.style.overflowY = "scroll";
     };
-    // else {
-    //   document.body.style.overflow = "auto";
-    // }
-
-    // return () => {
-    //   document.body.style.overflow = "auto";
-    // };
   }, [activeDropdown]);
 
   // リンククリック時の処理
