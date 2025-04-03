@@ -1,4 +1,4 @@
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Page() {
     return (
@@ -7,7 +7,7 @@ export default function Page() {
                 <dl>
                     <div className="p-company__list">
                         <dt>会社名</dt>
-                        <dd>株式会社インプレーム</dd>
+                        <dd><Link className="c-link s-S -ls-2 -ws-n -color03" href="https://impreme.jp/" target="_blank">株式会社インプレーム</Link></dd>
                     </div>
                     <div className="p-company__list">
                         <dt>代表取締役</dt>
@@ -46,7 +46,11 @@ export default function Page() {
                         <dt>所属金融商品<br className="sp" />取引業者</dt>
                         <dd>
                             東海東京証券株式会社　東海財務局長（金商）第140号<br />
-                            加入協会：日本証券業協会、一般社団法人金融先物取引業協会、一般社団法人第二種金融商品取引業協会、一般社団法人日本投資顧問業協会、一般社団法人日本STO協会
+                            加入協会：<Link className="c-link s-S -ls-2 -ws-n -color03" href="https://www.jsda.or.jp/" target="_blank">日本証券業協会</Link>、
+                            <Link className="c-link s-S -ls-2 -ws-n -color03" href="https://www.ffaj.or.jp/" target="_blank">一般社団法人金融先物取引業協会</Link>、
+                            <Link className="c-link s-S -ls-2 -ws-n -color03" href="https://www.t2fifa.or.jp/" target="_blank">一般社団法人第二種金融商品取引業協会</Link>、
+                            <Link className="c-link s-S -ls-2 -ws-n -color03" href="https://www.jiaa.or.jp/" target="_blank">一般社団法人日本投資顧問業協会</Link>、
+                            <Link className="c-link s-S -ls-2 -ws-n -color03" href="https://jstoa.or.jp/" target="_blank">一般社団法人日本STO協会</Link>
                         </dd>
                     </div>
                 </dl>
