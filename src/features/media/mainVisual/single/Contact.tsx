@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams, usePathname } from 'next/navigation';
-import Breadcrumb from "@/features/media/breadcrumb";
+// import Breadcrumb from "@/features/media/breadcrumb";
 
 
 type Props = {
@@ -153,9 +153,9 @@ export default function ContactMainVisual({
                 <h1 className={`c-page-title s-L -s18 -ws-n -center -b -ls-2 ${mvClass || ''} `}>{getTitle()}</h1>
             </div>
             {/* パンくず */}
-            <div className={"c-mainVisual--box -breadcrumb"}>
+            {/* <div className={"c-mainVisual--box -breadcrumb"}>
                 <Breadcrumb />
-            </div>
+            </div> */}
         </div>
     );
 }

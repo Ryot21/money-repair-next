@@ -1,5 +1,6 @@
 // 共通レイアウト
 import SingleMainVisual from "@/features/media/mainVisual/single";
+import Breadcrumb from "@/features/media/breadcrumb";
 
 type Props = {
     children       : React.ReactNode;
@@ -14,6 +15,9 @@ export default function StaticSheet({ children, title, mvClass, contentClass, an
         <main>
             {/* メインビジュアル */}
             <SingleMainVisual title={title} mvClass={mvClass} animationType={animationType} />
+
+            {/* パンくずリスト */}
+            <Breadcrumb />
 
             {/* コンテンツ */}
             <div className={`c-contents pdt5 pdt10s pdb5 pdb10s ${contentClass || ''} `} >

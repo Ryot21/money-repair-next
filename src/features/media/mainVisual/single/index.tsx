@@ -1,4 +1,4 @@
-import Breadcrumb from "@/features/media/breadcrumb";
+// import Breadcrumb from "@/features/media/breadcrumb";
 
 type Props = {
   title: string;
@@ -139,9 +139,9 @@ export default function SingleMainVisual({
         </h1>
       </div>
       {/* パンくず */}
-      <div className={"c-mainVisual--box -breadcrumb"}>
+      {/* <div className={"c-mainVisual--box -breadcrumb"}>
         <Breadcrumb />
-      </div>
+      </div> */}
     </div>
   );
 }

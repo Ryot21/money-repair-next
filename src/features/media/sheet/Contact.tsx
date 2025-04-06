@@ -1,5 +1,6 @@
 // 共通レイアウト
 import ContactMainVisual from "@/features/media/mainVisual/single/Contact";
+import Breadcrumb from "@/features/media/breadcrumb";
 
 type Props = {
     children       : React.ReactNode;
@@ -18,8 +19,11 @@ export default function ContactSheet({ children, mvClass, customClass, contentCl
             {/* メインビジュアル */}
             <ContactMainVisual mvClass={mvClass} customClass={customClass} animationType={animationType}/>
 
+            {/* パンくずリスト */}
+            <Breadcrumb />
+
             {/* コンテンツ */}
-            <div className={`c-contents pdt5 pdt10s pdb5 pdb10s ${contentClass || ''} `} >
+            <div className={`c-contents pdt5 pdt15s pdb5 pdb10s ${contentClass || ''} `} >
                 <div className="c-contents--inner">
                     {children}
                 </div>

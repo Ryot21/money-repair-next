@@ -1,4 +1,4 @@
-import Sheet from "@/features/media/sheet";
+import ArticleSheet from "@/features/media/sheet/Article";
 
 export const metadata = {
     title: "お役立ち情報",
@@ -16,8 +16,8 @@ export const revalidate = 600;
 
 export default function RootLayout({ children } : Props) {
     return (
-        <Sheet title="お役立ち情報" mvClass="-information" contentClass="" animationType="svg">
+        <ArticleSheet title="お役立ち情報" mvClass="-information" animationType="svg">
             {children}
-        </Sheet>
+        </ArticleSheet>
     )
 }

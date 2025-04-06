@@ -1,4 +1,4 @@
-import Sheet from "@/features/media/sheet";
+import ArticleSheet from "@/features/media/sheet/Article";
 
 export const metadata = {
     title: "マネリペ情報",
@@ -16,8 +16,8 @@ export const revalidate = 600;
 
 export default function RootLayout({ children } : Props) {
     return (
-        <Sheet title="マネリペ情報" mvClass="-maneripe" contentClass="" animationType="svg">
+        <ArticleSheet title="マネリペ情報" mvClass="-maneripe" animationType="svg">
             {children}
-        </Sheet>
+        </ArticleSheet>
     )
 }
