@@ -400,8 +400,9 @@
         letter-spacing: .2rem;
         line-height: 1.7;
         @include min(500){
-            font-size: clamp(1.6rem, 1.7vw, 2.2rem);
-            line-height: 2;
+            font-size: clamp(1.6rem, 1.7vw, 2.4rem);
+            font-weight: bold;
+            line-height: 1.5;
         }
     }
     &--LpCtaTitle{// コンテンツ > CTA

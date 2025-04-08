@@ -27,7 +27,7 @@ export default function Lp01MainVisual() {
                             </h1>
                         </div>
                         {/* 注釈 */}
-                        <p className="text -blue -ls-2">企業向け金融リテラシーコーチング型サービス</p>
+                        <p className="text -blue -ls-2">金融リテラシーコーチング福利厚生サービス</p>
                     </div>
                     {/* ================= cv ================= */}
                     <div className="c-contentsBox -cta">
