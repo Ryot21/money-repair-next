@@ -221,7 +221,8 @@ export default function TopMainVisual() {
             </div>
             <div className="a-fade -tm15 -sp1">{/* 注釈 */}
               <p className="text -blue -ls-2">
-                企業向け金融リテラシーコーチング型サービス
+                {/* 企業向け金融リテラシーコーチング型サービス */}
+                金融リテラシーコーチング福利厚生サービス
               </p>
             </div>
           </div>
