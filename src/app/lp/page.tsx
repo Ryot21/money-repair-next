@@ -7,8 +7,8 @@ import Lp01MainVisual from "@/features/lp/mainVisual/Lp01";
 import LpCta from "@/features/lp/cta";
 // import LpCtaBottom from "@/features/lp/cta/LpBottom";
 // 投稿関係
-import LogoContents from "@/components/slider/logo/LogoContents";
-import LpInterviewArea from "@/features/lp/interview/Content";
+// import LogoContents from "@/components/slider/logo/LogoContents";
+// import LpInterviewArea from "@/features/lp/interview/Content";
 
 // Q&A関係
 import Accordion from "@/components/accordion";
@@ -57,7 +57,7 @@ export default async function Home() {
 
       <div className="c-contents -bg-white">
         {/* 導入企業ロゴ */}
-        <LogoContents />
+        {/* <LogoContents /> */}
         {/* こんなお悩みはありませんか？ */}
         <div id="sc01" className={"c-contents pdt7 pdt5s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
@@ -362,7 +362,7 @@ export default async function Home() {
                     資産管理システムの提供
                   </h3>
                   <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                    運用している有価証券、不動産、保険などあらゆる金融商品を一括管理でき、キャッシュフローを可視化することが出来ます。ライフプランシミュレーションを作成することも可能です
+                    運用している有価証券、不動産、保険などあらゆる金融商品を一括管理でき、<span className="-b -red">キャッシュフローを可視化する</span>ことが出来ます。ライフプランシミュレーションを作成することも可能です
                   </p>
                 </li>
                 <li className={"flexItem"}>
@@ -390,21 +390,21 @@ export default async function Home() {
               理由
             </h2>
             <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
-              {/* 1. 圧倒的なコストパフォーマンス */}
+              {/* 1. 金融リテラシーを向上させる福利厚生プログラムです。 */}
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -No -No01">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s18 -b -ls-2 -lh-1_5 mgb4 mgb5s">
-                      1人当たり月500円といった
+                      従業員の可処分所得の増加
                       <br />
-                      圧倒的なコストパフォーマンス
+                      モチベーションを高める！
                     </h3>
-                    <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
+                    {/* <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
                       説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-                    </p>
+                    </p> */}
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc04-A.png"
+                        src="/images/Lp/sc02-C.png"
                         alt="マネーリペアを説明する図"
                         width={480}
                         height={320}
@@ -413,7 +413,7 @@ export default async function Home() {
                   </div>
                 </div>
               </li>
-              {/* 2. 個別相談がつくことで */}
+              {/* 2. 個別相談がつくことで精度の高い提案で削減事例多数 */}
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -No -No02">
                   <div className="c-card--inner">
@@ -422,9 +422,9 @@ export default async function Home() {
                       <br />
                       精度の高い提案で削減事例多数
                     </h3>
-                    <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
+                    {/* <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
                       説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-                    </p>
+                    </p> */}
                     <div className="imgBox">
                       <Image
                         src="/images/Lp/sc04-B.png"
@@ -436,18 +436,18 @@ export default async function Home() {
                   </div>
                 </div>
               </li>
-              {/* 3. 従業員へのアンケートを元に */}
+              {/* 3. 従業員の定着率UP、採用率UPにつながります！ */}
               <li className={"flexItem"}>
                 <div className="c-card -lp -No -No03">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s16 -b -ls-2 -lh-1_5 mgb4 mgb5s">
-                      従業員へのアンケートを
+                      従業員の定着率UP、
                       <br />
-                      元にしたカリキュラム作成
+                      採用率UPにつながります！
                     </h3>
-                    <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
+                    {/* <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
                       説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-                    </p>
+                    </p> */}
                     <div className="imgBox">
                       <Image
                         src="/images/Lp/sc04-C.png"
@@ -497,8 +497,8 @@ export default async function Home() {
                       効果<span className="-b">を</span>発揮
                       <span className="-b">します。</span>
                     </h3>
-                    <p className="s-M -b -left -ls-2 -lh-2 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-M -left -ls-2 -lh-2 mgb5 mgb5s">
+                    企業が金融教育を導入することは従業員への福利厚生としてだけでなく、企業の持続的な成長にも繋がる様々なメリットをもたらします。また金融勉強会を通じて、従業員は経済的な不安から解放され、<span className="-b -red">仕事に集中できる</span>ようになります。
                     </p>
                   </li>
                 </ul>
@@ -520,15 +520,15 @@ export default async function Home() {
               様々<span className="-b">な</span>お金
               <span className="-b">の</span>問題
             </h2>
-            <ul className={"c-flex -col2_4 -h-top -jc-st mgb2 mgb5s"}>
+            <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
               <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      税金の適正化/節税
+                      企業の固定費の削減
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                     </p>
                   </div>
                 </div>
@@ -537,10 +537,10 @@ export default async function Home() {
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      生命保険の見直し
+                      従業員の資産を守り....
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                    若年層だけでなく、中高年層向けの金融教育も重要視されています。特に資産防衛や詐欺防止の観点から、世代別の教育プログラムを用意します。
                     </p>
                   </div>
                 </div>
@@ -549,22 +549,22 @@ export default async function Home() {
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      資産運用
+                      退職金制度の設立
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                     </p>
                   </div>
                 </div>
               </li>
-              <li className={"flexItem mgb2 mgb5s"}>
+              {/* <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
                       投資信託
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                      株式や債券などに分散投資する金融商品です。少額から始められ、プロに運用を任せられるのが特徴で、初心者の方でも利用しやすい資産運用の手段です。
                     </p>
                   </div>
                 </div>
@@ -575,8 +575,8 @@ export default async function Home() {
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
                       NISA
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                      年間一定額までの投資に対して、得られた配当金や売却益が非課税となる制度です。少額からの資産形成を支援するために設けられ、初心者の方でも始めやすく、長期的な投資に適しています。
                     </p>
                   </div>
                 </div>
@@ -587,8 +587,8 @@ export default async function Home() {
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
                       iDeco
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                      ご自身で掛金を拠出・運用しながら老後資金を積み立てる制度です。掛金が全額所得控除されるなど税制優遇があり、将来の年金に上乗せする形で受け取ることが可能です。
                     </p>
                   </div>
                 </div>
@@ -599,8 +599,8 @@ export default async function Home() {
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
                       ふるさと納税
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                      応援したい自治体に寄付を行うことで、少額の自己負担で所得税や住民税が控除される制度です。寄付先からは地域の特産品などのお礼の品が受け取れることもあり、税金の適正化と地域貢献が同時にできる仕組みです。
                     </p>
                   </div>
                 </div>
@@ -611,12 +611,12 @@ export default async function Home() {
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
                       年金
                     </h3>
-                    <p className="s-SS -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
+                      高齢や障害・死亡時に備えて、国が給付する公的保険制度です。現役時代に保険料を納めることで、将来、老齢年金・障害年金・遺族年金などを受け取ることができ、生活の安定を支える仕組みです。
                     </p>
                   </div>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -684,7 +684,7 @@ export default async function Home() {
         {/* cta */}
         <LpCta />
         {/* 導入実績 */}
-        <LpInterviewArea />
+        {/* <LpInterviewArea /> */}
         {/* 申し込みから導入までの流れ */}
         <div id="sc08" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>

@@ -57,11 +57,11 @@ export default function LpHeader(){
                           </Link>
                         </li>
                         {/* #sc07 */}
-                        <li className={"hnavItem"}>
+                        {/* <li className={"hnavItem"}>
                           <Link href="#sc07" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
                             導入事例
                           </Link>
-                        </li>
+                        </li> */}
                         {/* #Q&A */}
                         <li className={"hnavItem"}>
                           <Link href="#Q&A" className={`c-hnav--link s-M -b -white -ls-2 -ws-n`}>
