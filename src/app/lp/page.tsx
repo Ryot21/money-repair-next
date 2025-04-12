@@ -152,11 +152,11 @@ export default async function Home() {
               <br />
               給料を上げずに、1人当たりの所得を
               <br className="sp" />
-              月々
+              年間約
               <span className="s-ML -kome -b -color02 pdr1 pdr1s">
                 150,000円
               </span>
-              高めることが可能です！
+              高めることが可能です！<span className="s-SS">*個人差あります</span>
             </p>
             <ul className={"c-flex -col3 -flow -h-cen -jc-sb mgb5 mgb5s"}>
               <li className={"flexItem"}>
@@ -528,7 +528,7 @@ export default async function Home() {
                       企業の固定費の削減
                     </h3>
                     <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    弊社サービスで固定費を抑えつつ、社員満足度も向上にも繋がります。コストをかけずに選ばれる会社へのお手伝いします。
                     </p>
                   </div>
                 </div>
@@ -537,10 +537,10 @@ export default async function Home() {
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      従業員の資産を守り....
+                      採用問題
                     </h3>
                     <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                    若年層だけでなく、中高年層向けの金融教育も重要視されています。特に資産防衛や詐欺防止の観点から、世代別の教育プログラムを用意します。
+                      採用力を強化するなら福利厚生の充実が鍵。弊社サービス導入で、働きやすさをPRし、他社と差がつく採用ブランディングを実現します。
                     </p>
                   </div>
                 </div>
@@ -549,74 +549,14 @@ export default async function Home() {
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      退職金制度の設立
+                      退職金制度の導入
                     </h3>
                     <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    人材定着と企業の信頼性向上へ、退職金制度の導入をサポートします。最適な設計で、安心と満足を提供する仕組みづくりをお手伝いします。
                     </p>
                   </div>
                 </div>
               </li>
-              {/* <li className={"flexItem mgb2 mgb5s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      投資信託
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                      株式や債券などに分散投資する金融商品です。少額から始められ、プロに運用を任せられるのが特徴で、初心者の方でも利用しやすい資産運用の手段です。
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem mgb2 mgb5s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      NISA
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                      年間一定額までの投資に対して、得られた配当金や売却益が非課税となる制度です。少額からの資産形成を支援するために設けられ、初心者の方でも始めやすく、長期的な投資に適しています。
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem mgb2 mgb5s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      iDeco
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                      ご自身で掛金を拠出・運用しながら老後資金を積み立てる制度です。掛金が全額所得控除されるなど税制優遇があり、将来の年金に上乗せする形で受け取ることが可能です。
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem mgb5s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      ふるさと納税
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                      応援したい自治体に寄付を行うことで、少額の自己負担で所得税や住民税が控除される制度です。寄付先からは地域の特産品などのお礼の品が受け取れることもあり、税金の適正化と地域貢献が同時にできる仕組みです。
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem mgb5s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      年金
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                      高齢や障害・死亡時に備えて、国が給付する公的保険制度です。現役時代に保険料を納めることで、将来、老齢年金・障害年金・遺族年金などを受け取ることができ、生活の安定を支える仕組みです。
-                    </p>
-                  </div>
-                </div>
-              </li> */}
             </ul>
           </div>
         </div>
@@ -693,12 +633,12 @@ export default async function Home() {
               <span className="-b">までの</span>流れ
             </h2>
             <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
-              {/* 1. WEBサイトから申し込み */}
+              {/* 1. WEBサイトからお問い合わせ */}
               <li className={"flexItem mgb5 mgb10s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      1. WEBサイトから申し込み
+                      1. WEBサイトからお問い合わせ
                     </h3>
                     <div className="imgBox">
                       <Image
@@ -714,17 +654,17 @@ export default async function Home() {
                       <Link href="#contact" className="c-link -b -red">
                         申し込みフォーム
                       </Link>
-                      からお申し込みください。
+                      からお問い合わせください。
                     </p>
                   </div>
                 </div>
               </li>
-              {/* 2. 導入決定後のお打合せ */}
+              {/* 2. お見積り */}
               <li className={"flexItem mgb5 mgb10s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      2. 導入決定後のお打合せ
+                      2. お見積り
                     </h3>
                     <div className="imgBox">
                       <Image
@@ -736,12 +676,12 @@ export default async function Home() {
                       />
                     </div>
                     <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      ご担当者様と今後の進め方を擦り合わせいたします。
+                      従業員数に応じて、工数やお見積りをお出しします。
                     </p>
                   </div>
                 </div>
               </li>
-              {/* 3. 従業員様への導入説明会 */}
+              {/* 3. お申し込み + 導入後の打ち合わせ */}
               <li className={"flexItem mgb5 mgb10s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
@@ -758,73 +698,73 @@ export default async function Home() {
                       />
                     </div>
                     <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      貴社へ訪問、もしくはオンラインミーティングなどで説明を致します。
+                      ご契約を行い、従業員様の悩み事をヒアリングし、年間のコーチング計画の打ち合わせを行います。
                     </p>
                   </div>
                 </div>
               </li>
-              {/* 4. 公式LINEに友達追加 */}
+              {/* 4. 相談予約アプリ */}
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      4. 公式LINEに友達追加
+                      4. 相談予約アプリの導入
                     </h3>
                     <div className="imgBox">
                       <Image
                         src="/images/Lp/sc08-D.png"
-                        alt="公式LINEに友達追加している様子"
+                        alt="相談予約アプリを導入している様子"
                         className="mgb5 mgb5s"
                         width={480}
                         height={320}
                       />
                     </div>
                     <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      マネーリペアの公式LINEアカウントを従業員様にご登録いただきます。
+                      個別相談なども可能ですので、相談予約の出来るアプリを導入します。
                     </p>
                   </div>
                 </div>
               </li>
-              {/* 5. 税金の無料診断 */}
+              {/* 5. コーチングや相談の開始 */}
               <li className={"flexItem mgb10s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      5. 税金の無料診断
+                      5. コーチングや相談の開始
                     </h3>
                     <div className="imgBox">
                       <Image
                         src="/images/Lp/sc08-E.png"
-                        alt="税金の無料診断を実施している様子"
+                        alt="コーチングを実施している様子"
                         className="mgb5 mgb5s"
                         width={480}
                         height={320}
                       />
                     </div>
                     <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      初回電話を5~10分、2回目の電話を20分させていただき、税金の払い過ぎを診断します。
+                      年間計画を元にコーチングを行います。
                     </p>
                   </div>
                 </div>
               </li>
-              {/* 6. 個別FP相談 */}
+              {/* 6. フィードバック */}
               <li className={"flexItem mgb5s"}>
                 <div className="c-card -lp -lp05">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      6. 個別FP相談
+                      6. フィードバック
                     </h3>
                     <div className="imgBox">
                       <Image
                         src="/images/Lp/sc08-F.png"
-                        alt="個別FP相談を実施している様子"
+                        alt="フィードバックを行っている様子"
                         className="mgb5 mgb5s"
                         width={480}
                         height={320}
                       />
                     </div>
                     <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      生命保険や住宅の住み替え、NISAやふるさと納税制度の活用方法等をお伝えします。
+                      従業員様の反応や、経済効果の測定をし、フィードバックを行います。
                     </p>
                   </div>
                 </div>
