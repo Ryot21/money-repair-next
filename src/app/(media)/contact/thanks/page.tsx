@@ -1,4 +1,5 @@
 import ContactStep from "@/features/media/step";
+import Button from "@/components/elements/button";
 
 export default function Page() {
   return (
@@ -9,28 +10,22 @@ export default function Page() {
         </div>
         <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
           <div className="c-contents--inner">
-              <p className="s-ML -center -ls-1 -lh-2">
-              ご回答後はできる限り早急に
+            <p className="s-L -center -ls-1 -lh-2 mgb5 mgb5s">
+              このたびは
               <br />
-              <span className="s-ML -b -ls-1 -lh-2">
-                  『<span className="s-ML -b -red">03-6264-7047</span>』
-              </span>
-              よりご連絡いたします。
+              資料ダウンロードのお申し込みをいただき、
               <br />
-              <br />
-              また、弊社営業時間外の場合、
-              <br />
-              <span className="s-ML -b -ls-1 -lh-2">担当者の携帯番号</span>から
-              <br className="sp" />
-              お電話する場合がございます。
+              誠にありがとうございます。
               <br />
               <br />
-              お忙しい中、
+              3営業日を目安にマネリぺの担当者より
               <br />
-              お時間を割いてご回答いただきましたこと、
-              <br />
-              心より感謝申し上げます。
-              </p>
+              マネリぺに関する資料をお送りいたします。
+            </p>
+            {/* ボタン */}
+            <div className={"c-contents--btnArea"}>
+              <Button href="/lp" customAreaClass="-center" customClass="-btn -maru -blue">トップへ戻る</Button>
+            </div>
           </div>
         </div>
     </>

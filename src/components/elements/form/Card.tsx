@@ -93,7 +93,7 @@ export default function CardContactForm({ customClass }: FormProps) {
       formDataToSubmit.append("email", formData.email);
 
       const response = await fetch(
-        "https://money-repair.form.newt.so/v1/8rMUtk02T",
+        "https://money-repair-media.form.newt.so/v1/F8CLJ-h_T",
         {
           method: "POST",
           body: formDataToSubmit,

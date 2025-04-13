@@ -11,7 +11,7 @@ export default function LpOtherMainVisual({
   animationType = "rotate",
 }: Props) {
   return (
-    <div className={"c-contents -imgBg -fv -single"}>
+    <div className={"c-mainVisual -single"}>
       <div className={`imgBox -${animationType}`}>
         {animationType === "svg" && (
           <div className="slash_position">

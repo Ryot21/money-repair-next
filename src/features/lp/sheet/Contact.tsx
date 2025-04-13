@@ -3,11 +3,12 @@ import LpOtherMainVisual from "@/features/lp/mainVisual/Others";
 
 type Props = {
     children: React.ReactNode;
-    contentClass?: string;
+    animationType?: "rotate" | "slide" | "svg"; // SVGタイプを追加
     mvClass?: string;
+    contentClass?: string;
 }
 
-export default function LpContactSheet({ children, contentClass, mvClass }: Props) {
+export default function LpContactSheet({ children, mvClass, contentClass, animationType }: Props) {
 
 
     
@@ -17,6 +18,7 @@ export default function LpContactSheet({ children, contentClass, mvClass }: Prop
             <LpOtherMainVisual
                 title="資料ダウンロード"
                 mvClass={mvClass}
+                animationType={animationType}
             />
 
             {/* コンテンツ */}
