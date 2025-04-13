@@ -10,31 +10,31 @@ export default function LpFooter() {
                     <ul className={"c-fnav--lists__lp"}>
                         {/* #sc02 */}
                         <li className={"LpnavItem"}>
-                            <Link href="#sc02" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="/lp#sc02" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 マネーリペアとは
                             </Link>
                         </li>
                         {/* #sc03 */}
                         <li className={"LpnavItem"}>
-                            <Link href="#sc03" className={`c-fnav--link -archive s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="/lp#sc03" className={`c-fnav--link -archive s-M -b -white -ls-2 -ws-n`}>
                                 サービス内容
                             </Link>
                         </li>
                         {/* #sc04 */}
                         <li className={"LpnavItem"}>
-                            <Link href="#sc04" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="/lp#sc04" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 選ばれる理由
                             </Link>
                         </li>
                         {/* #sc07 */}
-                        <li className={"LpnavItem"}>
-                            <Link href="#sc07" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                        {/* <li className={"LpnavItem"}>
+                            <Link href="/lp#sc07" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 導入事例
                             </Link>
-                        </li>
+                        </li> */}
                         {/* #Q&A */}
                         <li className={"LpnavItem"}>
-                            <Link href="#Q&A" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="/lp#Q&A" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 Q&A
                             </Link>
                         </li>

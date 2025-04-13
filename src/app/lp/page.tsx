@@ -399,12 +399,9 @@ export default async function Home() {
                       <br />
                       モチベーションを高める！
                     </h3>
-                    {/* <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-                    </p> */}
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc02-C.png"
+                        src="/images/Lp/sc04-B.png"
                         alt="マネーリペアを説明する図"
                         width={480}
                         height={320}
@@ -418,16 +415,13 @@ export default async function Home() {
                 <div className="c-card -lp -No -No02">
                   <div className="c-card--inner">
                     <h3 className="s-ML -s16 -b -ls-2 -lh-1_5 mgb4 mgb5s">
-                      個別相談がつくことで
+                      従業員の経済的不安を解消し、
                       <br />
-                      精度の高い提案で削減事例多数
+                      仕事への集中を促します！
                     </h3>
-                    {/* <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-                    </p> */}
                     <div className="imgBox">
                       <Image
-                        src="/images/Lp/sc04-B.png"
+                        src="/images/Lp/sc04-A.png"
                         alt="お金が溜まっている様子"
                         width={480}
                         height={320}
@@ -445,9 +439,6 @@ export default async function Home() {
                       <br />
                       採用率UPにつながります！
                     </h3>
-                    {/* <p className="s-S -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-                    </p> */}
                     <div className="imgBox">
                       <Image
                         src="/images/Lp/sc04-C.png"
