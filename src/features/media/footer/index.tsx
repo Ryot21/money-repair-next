@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer id="footer" className={"c-footer -bg-color03 pdt5 pdt10s pdb5 pdb5s"}>
+        <footer id="footer" className={"c-footer -bg-color03 pdt3 pdt10s pdb3 pdb5s"}>
             <div className={"c-footer-wrapper"}>
                 <ul className={"c-flex -footer -jc-sb"}>
                     <li className={"flexItem -logoArea"}>
