@@ -121,7 +121,7 @@ export default function TopMainVisual() {
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item02}`}>
               <div className="a-fviewOutImg -tm05 -sp15">
                 <Image
-                  src="/images/mv/mv-01.jpg"
+                  src="/images/mv/20250516/mv-01.jpg"
                   alt=""
                   width={480}
                   height={320}
@@ -134,7 +134,7 @@ export default function TopMainVisual() {
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item03}`}>
               <div className="a-fviewInImg -tm1 -sp05">
                 <Image
-                  src="/images/mv/mv-10.jpg"
+                  src="/images/mv/20250516/mv-10.jpg"
                   alt=""
                   width={480}
                   height={320}
@@ -147,7 +147,7 @@ export default function TopMainVisual() {
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
               <div className="a-fviewInImg -tm1 -sp1">
                 <Image
-                  src="/images/mv/mv-02.jpg"
+                  src="/images/mv/20250516/mv-02.jpg"
                   alt=""
                   width={480}
                   height={320}
@@ -160,7 +160,7 @@ export default function TopMainVisual() {
             <div className={`js-parallax ${styles.parallaxItem} ${styles.item04}`}>
               <div className="a-fviewInImg -tm1 -sp15">
                 <Image
-                  src="/images/mv/mv-03.jpg"
+                  src="/images/mv/20250516/mv-03.jpg"
                   alt=""
                   width={480}
                   height={320}

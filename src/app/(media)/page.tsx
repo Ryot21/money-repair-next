@@ -51,8 +51,8 @@ export default async function Home() {
             <li className={"flexItem"}>
               <div className={"imgBox c-img -borderBox -solid"}>
                 <Image
-                  // src="/images/item/service/top-service.png"
-                  src="/images/mv/mv-02.jpg"
+                  // src="/images/mv/mv-02.jpg"
+                  src="/images/mv/mv-04.jpg"
                   alt="実際の導入説明会の写真"
                   width={480}
                   height={320}
