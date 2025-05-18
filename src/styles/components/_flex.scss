@@ -324,7 +324,7 @@
         }
         .logo {
           width: 50%;
-          max-width: 250px;
+          max-width: 200px;
           @include max(500) {
             margin: 0 auto;
           }
@@ -348,15 +348,16 @@
   &.-sns {
     width: 100%;
     @include min(768) {
-      width: 60%;
+      width: 40%;
       margin-right: 0;
       margin-left: auto;
     }
     .flexItem {
       &.-snsLogoArea {
-        width: 19%;
+        width: 14%;
         @include min(768) {
           width: 18%;
+          max-width: 40px;
         }
         &.-x {
           width: 10%;
