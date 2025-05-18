@@ -36,7 +36,20 @@ export default async function Home() {
         <div className={"c-contents--inner"}>
           <ul className={"c-flex -col1_2 -pc1_2 -jc-sb -h-top"}>
             <li className={"flexItem mgb10s"}>
-              <h2 className={"s-L -s30 -left -b mgl0 mgl0s mgb2 mgb3s"}>マネーリペアとは</h2>
+              {/* <h2 className={"s-L -s30 -left -b mgl0 mgl0s mgb2 mgb3s"}>マネリペとは</h2> */}
+              <h2 className={"mgb2 mgb3s"}>
+                <div className="imgBox c-img -logo">
+                  <Image
+                    src="/images/logo/mp/money-repair-logo_b03.svg"
+                    alt="マネリペ"
+                    width={210}
+                    height={60}
+                  />
+                </div>
+                <span className="s-ML -left -b -ls-2 pdl1 pdl2s">とは</span>
+
+              </h2>
+
               <h3 className={"s-ML -s14 -b -left -lh-1_5 -ls-2 mgb2 mgb3s"}>
                 企業の従業員様向けに金融・投資・税務の教育を<br/>
                 実施する福利厚生プログラム

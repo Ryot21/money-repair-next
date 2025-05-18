@@ -2,6 +2,12 @@
 .c-img{
     border-radius: 10px;
     overflow: hidden;
+    &.-logo{
+        display: inline-block;
+        width: 30%;
+        max-width: 130px !important;
+        border-radius: auto;
+    }
     &.-borderBox{
         &.-double{
             border: 4px double $site-color03;

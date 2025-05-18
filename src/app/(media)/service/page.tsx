@@ -9,7 +9,17 @@ export default function Page() {
         {/* ロゴ */}
         <LogoMark />
         <h2 className={"c-contents--title -center -b-btm -ls-2 mgb5 mgb10s"}>
-          マネーリペア<span>（マネリペ）とは</span>
+          {/* マネーリペア<span>（マネリペ）とは</span> */}
+          <div className="imgBox c-img -logo">
+            <Image
+              src="/images/logo/mp/money-repair-logo_b03.svg"
+              alt="マネリペ"
+              width={210}
+              height={60}
+            />
+          </div>
+          <span className="s-ML -left -b -ls-2 pdl1 pdl2s">とは</span>
+
         </h2>
         <p className={"s-ML -s12 -center -ls-2 -lh-2"}>
           金融のプロが貴社の従業員に対して
