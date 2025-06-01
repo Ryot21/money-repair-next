@@ -9,6 +9,7 @@ $breakpoints: (
     1000: 1000px,
     1100: 1100px,
     1200: 1200px,
+    1280: 1280px,
     1400: 1400px,
     1500: 1500px,
     1600: 1600px,
@@ -38,7 +39,7 @@ $breakpoints: (
 	.pc{display: none !important;}
     .tb-pc{display: block !important;}
 }
-@include min(1000){
+@include min(1280){
     .sp{display: none !important;}
     .tb{display: none !important;}
 	.pc{display: block !important;}

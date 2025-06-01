@@ -208,30 +208,40 @@ td {
     color: $main-color--yellow !important;
   }
 
-  &.-color01 {
+  &.-c01 {
     color: $site-color01 !important;
   }
-  &.-color02 {
+  &.-c02 {
     color: $site-color02 !important;
   }
-  &.-color03 {
+  &.-c03 {
     color: $site-color03 !important;
   }
-  &.-color04 {
+  &.-c04 {
     color: $site-color04 !important;
   }
-  &.-house_c01 {
-    color: $house-color01;
+  // LP独自のカラー
+  &.-lp_c01 {
+    color: $lp-color01 !important;
   }
-  &.-house_c02 {
-    color: $house-color02;
+  &.-lp_c02 {
+    color: $lp-color02 !important;
   }
-  &.-house_c03 {
-    color: $house-color03;
+  &.-lp_c03 {
+    color: $lp-color03 !important;
   }
-  &.-house_c04 {
-    color: $house-color04;
-  }
+  // &.-house_c01 {
+  //   color: $house-color01;
+  // }
+  // &.-house_c02 {
+  //   color: $house-color02;
+  // }
+  // &.-house_c03 {
+  //   color: $house-color03;
+  // }
+  // &.-house_c04 {
+  //   color: $house-color04;
+  // }
 
   // SOLD OUT時に使用する
   &.-grayOut {
