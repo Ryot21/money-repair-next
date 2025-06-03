@@ -1,4 +1,4 @@
-import LpContactSheet from "@/features/lp/sheet/Contact";
+import LpContactSheet from "@/features/lp01/sheet/Contact";
 
 export const metadata = {
   title: "マネーリペア | 資料ダウンロード",

@@ -13,9 +13,10 @@
     .hnavItem {
       // liタグ
       width: auto;
-      margin-left: 5px;
+      margin-left: 15px;
       @include min(1000) {
-        margin-left: 30px;
+        // margin-left: 30px;
+        margin-left: 15px;
       }
       a {
         display: inline-block;
@@ -451,6 +452,61 @@
             }
           }
         }
+        &.-cv04 {
+          // 紺色のボタン_LPに使用
+          @include min(500) {
+            background: $lp-color01;
+            border: 1px solid $lp-color01;
+            margin-left: 2%;
+            &:hover {
+              border: 1px solid $lp-color03;
+              transition: all 0.3s;
+              will-change: transform;
+              transform: scale(1.025);
+            }
+          }
+          a {
+            @include min(768) {
+              padding: 0rem 2rem 0.5rem 2rem;
+            }
+            @include min(1280) {
+              padding: 0.5rem 3rem 0.5rem 2rem;
+            }
+            span{
+              color: $main-color--w;
+              font-weight: bold;
+              float: left;
+            }
+          }
+        }
+        &.-cv05 {
+          // 薄い水色のボタン_LPに使用
+          @include min(500) {
+            background: $lp-color02;
+            border: 1px solid $lp-color02;
+            margin-left: 1%;
+            &:hover {
+              border: 1px solid $lp-color03;
+              transition: all 0.3s;
+              will-change: transform;
+              transform: scale(1.025);
+            }
+          }
+          a {
+            @include min(768) {
+              padding: 0rem 2rem 0.5rem 2rem;
+            }
+            @include min(1280) {
+              padding: 0.5rem 3rem 0.5rem 2rem;
+            }
+            span{
+              color: $lp-color03;
+              font-weight: bold;
+              float: left;
+            }
+          }
+        }
+
       }
     }
   }
@@ -583,7 +639,6 @@
         height: 2px;
         width: 50px;
         border-radius: 3px;
-        // background: $main-color--w;
         background: $main-color--w;
         border: 1px solid $site-color03;
         // box-shadow: 1px 1px 1px $main-color--w;
@@ -641,9 +696,10 @@
     right: 0;
 
     /* ハンバーガーメニュー内の幅 */
-    width: 90%;
+    width: 100%;
+    // width: 90%;
     height: 100%;
-    padding: 10% 10% 0 10%;
+    // padding: 15% 10% 0 10%;
     background: $site-color03;
     /* 滑らかに表示 */
     transition: 0.2s ease-in-out;
@@ -661,12 +717,15 @@
     }
   }
   &__lists {
+    padding: 0 5%;
     .hbNavItem {
       margin-bottom: 20px;
       will-change: transform;
       transition: 0.5s all;
       opacity: 0;
-
+      &.-center{
+        text-align: center;
+      }
       a,
       label {
         display: inline-block;
@@ -765,13 +824,13 @@
       pointer-events: none;
     }
   }
-  &__logo {
-    position: absolute;
-    bottom: 0%;
-    left: 73%;
-    transform: translateX(-50%);
-    width: 30%;
-  }
+  // &__logo {
+    // position: absolute;
+    // bottom: 0%;
+    // left: 73%;
+    // transform: translateX(-50%);
+    // width: 30%;
+  // }
   &__icon {
     position: absolute;
     bottom: 0;
@@ -877,6 +936,89 @@
         &::after {
           background: $site-color03;
           transform: translateY(-50%) rotate(180deg); // 上向き
+        }
+      }
+    }
+  }
+
+  // LP用ナビゲーション > カラー変更
+  &.-LP{
+    .c-hb-nav{
+      &__logo {
+        position: absolute;
+        top: 1.25%;
+        left: 5%;
+        width: 140px;
+      }
+      &__content{
+        width: 100%;
+        background: $main-color--w;
+        &::before{
+          display: none;
+        }
+        &:checked ~ .c-hb-nav__button {
+          span {
+            color: $main-color--w !important;
+          }
+        }
+      }
+      &__button{
+        span{
+          color: $site-color03 !important;
+          &::before,
+          &::after{
+            background: $main-color--w;
+          }
+        }
+      }
+      &__lists{
+        margin-top: 30%;
+        .hbNavItem{
+          a,
+          label{
+            &::before{
+              color: $site-color03;
+            }
+            span{
+              color: $site-color03;
+            }
+          }
+        }
+      }
+      &__text{
+        color: $site-color03;
+        &::before{
+          background: $site-color03;
+        }
+      }
+      &__contact{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+
+        .contactItem{
+          margin-bottom: 20px;
+          will-change: transform;
+          transition: 0.5s all;
+          // opacity: 0;
+        }
+      }
+    }
+    .hbNavItem{
+      a,
+      label{
+        span{
+          color: $main-color--w;
+        }
+      }
+    } 
+    .hbNavCategoryItem{
+      a,
+      label{
+        span{
+          color: $main-color--w;
         }
       }
     }

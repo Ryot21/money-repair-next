@@ -18,6 +18,6 @@ export const metadata: Metadata = {
     images: ["/images/sns/ogp_1200_630.jpg"],
   },
   alternates: {
-    canonical: "https://money-repair.jp/lp",
+    canonical: "https://money-repair.jp/lp02",
   },
 };

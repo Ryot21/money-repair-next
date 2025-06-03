@@ -2,13 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 // コンポーネント
-import Lp01MainVisual from "@/features/lp/mainVisual/Lp01";
+import LpMainVisual from "@/features/lp02/mainVisual";
 // import Button from "@/components/elements/button";
-import LpCta from "@/features/lp/cta";
-// import LpCtaBottom from "@/features/lp/cta/LpBottom";
+import LpCta from "@/features/lp02/cta";
+// import LpCtaBottom from "@/features/lp02/cta/LpBottom";
+
 // 投稿関係
 // import LogoContents from "@/components/slider/logo/LogoContents";
-// import LpInterviewArea from "@/features/lp/interview/Content";
+// import LpInterviewArea from "@/features/lp02/interview/Content";
 
 // Q&A関係
 import Accordion from "@/components/accordion";
@@ -53,7 +54,7 @@ export default async function Home() {
   return (
     <main>
       {/* メインビジュアル */}
-      <Lp01MainVisual />
+      <LpMainVisual />
 
       <div className="c-contents -bg-white">
         {/* 導入企業ロゴ */}
@@ -132,10 +133,7 @@ export default async function Home() {
           </div>
         </div>
         {/* お悩みを解決するためには？ */}
-        <div
-          id="sc02"
-          className={"c-contents -bg-color01 pdt7 pdt15s pdb7 pdb15s"}
-        >
+        <div id="sc02" className={"c-contents -bg-color01 pdt7 pdt15s pdb7 pdb15s"}>
           {/* メリット */}
           <div className="c-contents--inner mgb10 mgb20s">
             <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">

@@ -2,13 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 // コンポーネント
-import Lp01MainVisual from "@/features/lp/mainVisual/Lp01";
+import LpMainVisual from "@/features/lp01/mainVisual";
 // import Button from "@/components/elements/button";
-import LpCta from "@/features/lp/cta";
-// import LpCtaBottom from "@/features/lp/cta/LpBottom";
+import LpCta from "@/features/lp01/cta";
+// import LpCtaBottom from "@/features/lp01/cta/LpBottom";
+
 // 投稿関係
 // import LogoContents from "@/components/slider/logo/LogoContents";
-// import LpInterviewArea from "@/features/lp/interview/Content";
+// import LpInterviewArea from "@/features/lp01/interview/Content";
 
 // Q&A関係
 import Accordion from "@/components/accordion";
@@ -53,7 +54,7 @@ export default async function Home() {
   return (
     <main>
       {/* メインビジュアル */}
-      <Lp01MainVisual />
+      <LpMainVisual />
 
       <div className="c-contents -bg-white">
         {/* 導入企業ロゴ */}
@@ -61,7 +62,7 @@ export default async function Home() {
         {/* こんなお悩みはありませんか？ */}
         <div id="sc01" className={"c-contents pdt7 pdt5s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
               経営者・総務・人事<span className="-b">の</span>皆さん
               <br />
               <span className="-b">こういう</span>お悩み
@@ -138,8 +139,8 @@ export default async function Home() {
         >
           {/* メリット */}
           <div className="c-contents--inner mgb10 mgb20s">
-            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">
-              <span className="-kana -b">マネーリペア</span>
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s">
+              <span className="-kana -b">マネリペ</span>
               <span className="-b">を</span>導入
               <span className="-b">することで</span>
               <br />
@@ -218,10 +219,10 @@ export default async function Home() {
               </li>
             </ul>
           </div>
-          {/* マネーリペアとは */}
+          {/* マネリペとは */}
           <div className="c-contents--inner mgb5 mgb10s">
-            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">
-              <span className="-kana -b">マネーリペア</span>
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s">
+              <span className="-kana -b">マネリペ</span>
               <span className="-b">とは</span>
             </h2>
             <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
@@ -245,7 +246,7 @@ export default async function Home() {
                   企業にとって社員の方々はとても『大切な財産』です。しかし、急激な物価高騰の波に対応できず、大切な社員を流出させてしまうかも知れません。個々の社員の金融リテラシーを上げることにより、限られた給与でも『可処分所得』を上げる事ができます。
                 </p>
                 <p className="s-M -ls-2 -ls-1_5_s -lh-2">
-                  マネーリペアとは、大切な社員の『将来に向けたお金の不安』を解決するためのサービスです。長年続いたデフレにより凝り固まった誤ったお金の知識を修復し、正しい金融知識を身につけご自身で適切な判断ができるようにすることが大切なのです。
+                  マネリペとは、大切な社員の『将来に向けたお金の不安』を解決するためのサービスです。長年続いたデフレにより凝り固まった誤ったお金の知識を修復し、正しい金融知識を身につけご自身で適切な判断ができるようにすることが大切なのです。
                 </p>
               </li>
             </ul>
@@ -256,7 +257,7 @@ export default async function Home() {
               <div className="c-card--inner">
                 <h2
                   className={
-                    "c-contents--LpMainTitle -b-btm -lp -c01 mgb5 mgb10s"
+                    "c-contents--LpMainTitle -b-btm -lp -c03 mgb5 mgb10s"
                   }
                 >
                   金融リテラシー<span className="-b">を</span>習得
@@ -287,14 +288,14 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        {/* マネーリペアで出来ること */}
+        {/* マネリペで出来ること */}
         <div
           id="sc03"
           className={"c-contents -bg-white pdt7 pdt15s pdb5 pdb5s"}
         >
           <div className="c-contents--inner">
-            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb7 mgb10s">
-              <span className="-kana -b">マネーリペア</span>
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
+              <span className="-kana -b">マネリペ</span>
               <span className="-b">で</span>出来<span className="-b">る</span>事
               <span className="-b"></span>
             </h2>
@@ -384,8 +385,8 @@ export default async function Home() {
         {/* 選ばれる理由 */}
         <div id="sc04" className={"c-contents pdt7 pdt20s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              <span className="-kana -b">マネーリペア</span>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
+              <span className="-kana -b">マネリペ</span>
               <span className="-b">が</span>選<span className="-b">ばれる</span>
               理由
             </h2>
@@ -402,7 +403,7 @@ export default async function Home() {
                     <div className="imgBox">
                       <Image
                         src="/images/Lp/sc04-B.png"
-                        alt="マネーリペアを説明する図"
+                        alt="マネリペを説明する図"
                         width={480}
                         height={320}
                       />
@@ -503,8 +504,8 @@ export default async function Home() {
           className={"c-contents -bg-color07 pdt7 pdt20s pdb7 pdb15s"}
         >
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              <span className="-kana -b">マネーリペア</span>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
+              <span className="-kana -b">マネリペ</span>
               <span className="-b">で</span>解決
               <span className="-b">できる</span>
               <br className="" />
@@ -551,11 +552,11 @@ export default async function Home() {
             </ul>
           </div>
         </div>
-        {/* マネーリペアを導入すると */}
+        {/* マネリペを導入すると */}
         <div id="sc06" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              <span className="-kana -b">マネーリペア</span>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
+              <span className="-kana -b">マネリペ</span>
               <span className="-b">を</span>導入
               <span className="-b">することで</span>
               <br className="" />
@@ -619,7 +620,7 @@ export default async function Home() {
         {/* 申し込みから導入までの流れ */}
         <div id="sc08" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
               申し込み<span className="-b">から</span>導入
               <span className="-b">までの</span>流れ
             </h2>
@@ -766,7 +767,7 @@ export default async function Home() {
         {/* Q&A */}
         <div id="Q&A" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
               よくある質問
             </h2>
             <Accordion items={faqItems} />

@@ -2,9 +2,9 @@ import { metadata } from "./metadata";
 import { headers } from "next/headers";
 import PageTypeWrapper from "@/components/PageTypeWrapper";
 import ScrollToTop from "@/components/ScrollToTop";
-import LpHeader from "@/features/lp/header";
-import LpNavigation from "@/features/lp/navigation";
-import LpFooter from "@/features/lp/footer";
+import LpHeader from "@/features/lp01/header";
+import LpNavigation from "@/features/lp01/navigation";
+import LpFooter from "@/features/lp01/footer";
 
 /**
  * LPページ用のメタデータ

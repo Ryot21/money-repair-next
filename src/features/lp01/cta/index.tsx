@@ -7,7 +7,7 @@ export default function LpCta(){
             <div className="c-contents--inner">
                 <ul className="c-flex -col1_2 -pc1_2 -h-top -jc-sb">
                     <li className="flexItem mgb10s" style={{zIndex: 3}}>
-                        <h2 className="c-contents--LpCtaTitle -b-btm -left -c01 mgb5 mgb8s">
+                        <h2 className="c-contents--LpCtaTitle -b-btm -left -c03 mgb5 mgb8s">
                             もっと詳しく知りたい方へ
                         </h2>
                         <p className="s-M -left -ls-2 -lh-2 mgb5 mgb10s">
