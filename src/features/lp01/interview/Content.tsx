@@ -1,5 +1,5 @@
 // LP > ご利用者の声エリア
-import LpInterviewList from "@/features/lp/interview/PostList";
+import LpInterviewList from "@/features/lp01/interview/PostList";
 
 // 投稿関係
 import { getInterviewsList } from "@/features/media/api/microcms/getInterview";

@@ -1,6 +1,6 @@
 // 投稿リスト > ご利用者の声
 import Thumbnail from "@/components/thumbnail";
-import LpClient from "@/features/lp/client";
+import LpClient from "@/features/lp01/client";
 import type { Interview } from "@/types/microcms";
 
 type Props = {
