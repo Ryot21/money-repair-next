@@ -72,13 +72,47 @@ export default async function Home() {
           <div className="c-contents--inner">
             <div className="c-card -lp_02 -sc02">
               <div className="c-card--inner">
-                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb3 mgb4s">
+                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
                   マネーリペアは離職率を下げて<br className="sp" />エンゲージメントを高める<br /><br className="sp" />
                   <span className="s-L -s18 -b -blue -marker pdr1 pdr0s">金融リテラシー向上をサポートする</span><br className="sp" />福利厚生です。
                 </p>
                 <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">“中小・ベンチャー・<br className="sp" />中堅企業でも実績多数”</p>
               </div>
             </div>
+          </div>
+        </div>
+        {/* SC03 導入効果 */}
+        <div className="c-contents -bg-lp02-sc03 pdt7 pdt15s pdb7 pdb15s">
+          <div className="c-contents--inner">
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 pdt1 pdt2s mgb7 mgb10s">
+              マネリペの導入効果
+            </h2>
+            <ul className="c-flex -col1_3 -h-top -jc-sb">
+              <li className="flexItem mgb5s">
+                <Image
+                  src="/images/Lp/ver02/sc03-item01.png"
+                  alt="早期就職率-5%ダウンを実現"
+                  width={320}
+                  height={320}
+                />
+              </li>
+              <li className="flexItem mgb5s">
+                <Image
+                  src="/images/Lp/ver02/sc03-item02.png"
+                  alt="社員利用率40%以上アップ"
+                  width={320}
+                  height={320}
+                />
+              </li>
+              <li className="flexItem ">
+                <Image
+                  src="/images/Lp/ver02/sc03-item03.png"
+                  alt="可処分所得平均26万円アップ"
+                  width={320}
+                  height={320}
+                />
+              </li>
+            </ul>
           </div>
         </div>
 
