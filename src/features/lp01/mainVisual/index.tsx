@@ -9,7 +9,7 @@ export default function Lp01MainVisual() {
 
     return (
         <div id="js-parallaxArea" className={styles.parallaxArea}>
-            <div className={`c-mainVisual -LP`}>
+            <div className={`c-mainVisual -LP -LP01`}>
                 <div className={"c-contents--inner"}>
                     {/* 背景の切り替えができる */}
                     <div className={"imgBox"}></div>

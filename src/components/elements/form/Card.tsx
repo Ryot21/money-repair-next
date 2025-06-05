@@ -1,5 +1,5 @@
 "use client";
-// LPに使用するカード型のフォーム
+// LPに使用するカード型のフォーム（目的なし）
 
 import Link from "next/link";
 import { useState, useEffect, useCallback, useMemo } from "react";

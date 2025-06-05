@@ -904,11 +904,12 @@
     }
 
     // ===================== LP関係 =====================
-    &.-LP {
+    &.-LP {// LP ベース設定
         position: relative;
-        background: #d5edfc;
         overflow: hidden;
-        .c-contents--inner {position: relative;}
+    }
+    &.-LP01 {
+        background: #d5edfc;
         .imgBox {
             height: 150vh;
             max-height: 1080px !important;
@@ -1220,6 +1221,117 @@
                 }
                 @include min(1200){
                     top: 77%;
+                }
+            }
+        }
+    }
+    &.-LP02 {
+        background: $lp-color04;
+        .imgBox {
+            margin-top: 60px;
+            width: auto;
+            height: auto;
+            max-width: none !important;
+            max-height: none !important;
+
+            // height: 150vh;
+            // max-height: 1080px !important;
+
+            @include min(500) {
+                min-height: 500px !important;
+            }
+            @include min(1800) {
+                max-height: 960px !important;
+            }
+            @include min(2000) {
+                max-height: 960px !important;
+            }
+        }
+        .c-contentsBox {
+
+            &.-comments01 {
+                width: 95%;
+                max-width: 1150px;
+                position: absolute;
+                top: 29%;
+                left: 50%;
+                transform: translate(-50%, -45%);
+                z-index: 5;
+                @include min(768) {
+                    width: 60%;
+                    top: 57%;
+                    left: 31.5%;
+                }
+                @include min(1000) {
+                    width: 60%;
+                    top: 53%;
+                    left: 33.5%;
+                }
+                @include min(1200) {
+                    width: 60%;
+                    top: 52%;
+                    left: 34.5%;
+                }
+                @include min(1400) {
+                    top: 50%;
+                    left: 34.5%;
+                }
+                @include min(1600) {
+                    left: 37.5%;
+                }
+                @include min(1800) {
+                    width: 55%;
+                    left: 36.5%;
+                }
+                @include min(2000) {
+                    left: 39.5%;
+                }
+                @include min(2300) {
+                    left: 43.5%;
+                }
+            }
+
+            &.-cta {
+                width: 90%;
+                max-width: 420px;
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 7;
+
+                @include min(768) {
+                    width: 35%;
+                    top: 17.5%;
+                    left: 77%;
+                }
+                @include min(1000) {
+                    width: 33%;
+                    top: 17.5%;
+                    left: 78%;
+                }
+                @include min(1400) {
+                    left: 78%;
+                }
+                @include min(1800){
+                    top: 30.5%;
+                    left: 75%;
+                }
+                @include min(2000){
+                    width: 20%;
+                    // top: 40.5%;
+                    left: 75%;
+                }
+                @include min(2500){
+                    // top: 45.5%;
+                    left: 73%;
+                }
+                @include min(2800){
+                    left: 70%;
+                }
+                @include min(2900) {
+                    // top: 45.5%;
+                    left: 68%;
                 }
             }
         }
