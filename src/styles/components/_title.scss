@@ -460,4 +460,42 @@
         &.-en-color03{&::before{color: $site-color03;}}
         &.-en-color04{&::before{color: $site-color04;}}
     }
+    &--LpListTitle{// コンテンツ > セクション > リストタイトル
+        position: relative;
+        color: $main-color--w;
+        font-size: 1.6rem;
+        font-weight: bold;
+        letter-spacing: .2rem;
+        line-height: 1.5;
+        padding: 10px 15px 10px 5.5rem;
+        @include min(1000){
+            padding: 10px 15px 10px 6rem;
+            font-size: clamp(1.6rem, 1.7vw, 2.2rem);
+            font-weight: bold;
+            line-height: 1.5;
+        }
+        @include min(1200){padding: 10px 15px 10px 7rem}
+        @include min(1200){padding: 10px 15px 10px 7.5rem;}
+        &::before{
+            position: absolute;
+            top: 50%;
+            left: 1.5rem;
+            transform: translate(0, -50%);
+            font-size: clamp(2.8rem, 2.5vw, 4rem);
+            font-weight: bold;
+            letter-spacing: -.1rem;
+        }
+        &.-t01{
+            background: $site-color02;
+            &::before{content: "01";}
+        }
+        &.-t02{
+            background: $lp-color06;
+            &::before{content: "02";}
+        }
+        &.-t03{
+            background: $lp-color08;
+            &::before{content: "03";}
+        }
+    }
 }

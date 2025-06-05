@@ -68,7 +68,7 @@ export default async function Home() {
         {/* <LogoContents /> */}
 
         {/* SC02 簡単な説明 */}
-        <div className="c-contents -bg-lp02-sc02 pdt7 pdt15s pdb7 pdb15s">
+        <div id="sc02" className="c-contents -bg-lp02-sc02 pdt7 pdt15s pdb7 pdb15s">
           <div className="c-contents--inner">
             <div className="c-card -lp_02 -sc02">
               <div className="c-card--inner">
@@ -82,7 +82,7 @@ export default async function Home() {
           </div>
         </div>
         {/* SC03 導入効果 */}
-        <div className="c-contents -bg-lp02-sc03 pdt7 pdt15s pdb7 pdb15s">
+        <div id="sc03" className="c-contents -bg-lp02-sc03 pdt7 pdt15s pdb7 pdb15s">
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 pdt1 pdt2s mgb7 mgb10s">
               マネリペの導入効果
@@ -119,326 +119,95 @@ export default async function Home() {
             </p>
           </div>
         </div>
-        {/* SC04 導入効果 */}
-
-        {/* こんなお悩みはありませんか？ */}
-        <div id="sc01" className={"c-contents pdt7 pdt5s pdb7 pdb15s"}>
-          <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              経営者・総務・人事<span className="-b">の</span>皆さん
-              <br />
-              <span className="-b">こういう</span>お悩み
-              <span className="-b">は</span>ありませんか？
-            </h2>
-            <ul className={"c-flex -col2_4 -h-cen -jc-sb mgb2 mgb5s"}>
-              <li className={"flexItem mgb5s"}>
-                <div className="c-card -lp -lp01">
-                  <div className="c-card--inner">
-                    <p className="s-M -b -ls-2 -lh-2 -ws-n">
-                      社員の定着率や
-                      <br />
-                      従業員満足度が
-                      <br />
-                      低く定着しない
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem mgb5s"}>
-                <div className="c-card -lp -lp01">
-                  <div className="c-card--inner">
-                    <p className="s-M -b -ls-2 -lh-2 -ws-n">
-                      従業員満足度につながる
-                      <br />
-                      ユニークな福利厚生が
-                      <br />
-                      提供できていない
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem mgb5s"}>
-                <div className="c-card -lp -lp01">
-                  <div className="c-card--inner">
-                    <p className="s-M -b -ls-2 -lh-2 -ws-n">
-                      社員の給料を
-                      <br />
-                      アップさせる余裕がない
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem mgb5s"}>
-                <div className="c-card -lp -lp01">
-                  <div className="c-card--inner">
-                    <p className="s-M -b -ls-2 -lh-2 -ws-n">
-                      採用において
-                      <br />
-                      魅力的な福利厚生による
-                      <br />
-                      差別化ができていない
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <div className="c-contents">
-              <div className="imgBox w30 w75s">
-                <Image
-                  src="/images/Lp/sc01.png"
-                  alt="悩む男女"
-                  width={408}
-                  height={217}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* お悩みを解決するためには？ */}
-        <div id="sc02" className={"c-contents -bg-color01 pdt7 pdt15s pdb7 pdb15s"}>
-          {/* メリット */}
-          <div className="c-contents--inner mgb10 mgb20s">
-            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">
-              <span className="-kana -b">マネーリペア</span>
-              <span className="-b">を</span>導入
-              <span className="-b">することで</span>
-              <br />
-              <span className="-b">その</span>お悩み
-              <span className="-b">を</span>解決
-              <span className="-b">できます</span>
-            </h2>
-            <p className="s-M -b -center -ls-2 -lh-2 -ws-n mgb5 mgb10s">
-              従業員の「金融リテラシー向上」をご支援し、
-              <br />
-              給料を上げずに、1人当たりの所得を
-              <br className="sp" />
-              年間約
-              <span className="s-ML -kome -b -color02 pdr1 pdr1s">
-                150,000円
-              </span>
-              高めることが可能です！<span className="s-SS">*個人差あります</span>
-            </p>
-            <ul className={"c-flex -col3 -flow -h-cen -jc-sb mgb5 mgb5s"}>
-              <li className={"flexItem"}>
-                <div className="c-card -lp -lp02">
-                  <div className="c-card--inner">
-                    <p className="s-M -s10 -b -ls-2 -ls-1_s -lh-2 -ws-n">
-                      社員に対して
-                      <br className="sp" />
-                      金融教育セミナーを実施
-                    </p>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc02-A.png"
-                        alt="金融セミナーを受けている様子"
-                        width={414}
-                        height={231}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem"}>
-                <div className="c-card -lp -lp02">
-                  <div className="c-card--inner">
-                    <p className="s-M -s10 -b -ls-2 -ls-1_s -lh-2 -ws-n">
-                      従業員満足度が
-                      <br className="sp" />
-                      すごく高まる
-                    </p>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc02-B.png"
-                        alt="従業員が満足している様子"
-                        width={414}
-                        height={231}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className={"flexItem"}>
-                <div className="c-card -lp -lp02">
-                  <div className="c-card--inner">
-                    <p className="s-M -s10 -b -ls-2 -ls-1_s -lh-2 -ws-n">
-                      離職率の低下
-                      <br className="sp" />
-                      採用競争力の向上
-                    </p>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc02-C.png"
-                        alt="喜んでいる様子"
-                        width={414}
-                        height={231}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          {/* マネーリペアとは */}
-          <div className="c-contents--inner mgb5 mgb10s">
-            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s">
-              <span className="-kana -b">マネーリペア</span>
-              <span className="-b">とは</span>
-            </h2>
-            <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
-              <li className={"flexItem mgb10s"}>
-                <div className="imgBox w90s">
-                  <Image
-                    src="/images/Lp/sc02-D.png"
-                    alt="バランスの良い金融情報の図表"
-                    width={414}
-                    height={231}
-                  />
-                </div>
-              </li>
-              <li className={"flexItem"}>
-                <h3 className="c-contents--LpTitle mgb4 mgb5s">
-                  企業の従業員様向けに金融・投資・税務の教育を
-                  <br className="pc" />
-                  実施する福利厚生プログラム
-                </h3>
-                <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                  企業にとって社員の方々はとても『大切な財産』です。しかし、急激な物価高騰の波に対応できず、大切な社員を流出させてしまうかも知れません。個々の社員の金融リテラシーを上げることにより、限られた給与でも『可処分所得』を上げる事ができます。
-                </p>
-                <p className="s-M -ls-2 -ls-1_5_s -lh-2">
-                  マネーリペアとは、大切な社員の『将来に向けたお金の不安』を解決するためのサービスです。長年続いたデフレにより凝り固まった誤ったお金の知識を修復し、正しい金融知識を身につけご自身で適切な判断ができるようにすることが大切なのです。
-                </p>
-              </li>
-            </ul>
-          </div>
-          {/* 何ができる？ */}
-          <div className="c-contents--inner ">
-            <div className="c-card -lp -lp03">
-              <div className="c-card--inner">
-                <h2
-                  className={
-                    "c-contents--LpMainTitle -b-btm -lp -c01 mgb5 mgb10s"
-                  }
-                >
-                  金融リテラシー<span className="-b">を</span>習得
-                  <span className="-b">して</span>
-                  <br />
-                  純資産<span className="-b">を</span>増
-                  <span className="-b">やすことが</span>可能
-                  <span className="-b">に</span>
-                </h2>
-                <p className="s-M -s10 -center -ls-2 -lh-2 mgb5 mgb10s">
-                  バランスシートに置き換えて考えるとわかりやすいですが、
-                  <br />
-                  金融リテラシーという知的財産を付けることにより、
-                  <br />
-                  可処分所得を増やすことが出来ると同時に、
-                  <br />
-                  有価証券などで運用し純資産を伸ばすことが期待できます。
-                </p>
-                <div className="imgBox w80 w90s">
-                  <Image
-                    src="/images/Lp/sc02-E.png"
-                    alt="資産・負債・純資産の図式"
-                    width={1014}
-                    height={557}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* マネーリペアで出来ること */}
-        <div
-          id="sc03"
-          className={"c-contents -bg-white pdt7 pdt15s pdb5 pdb5s"}
-        >
+        {/* SC04 マネリペで出来ること */}
+        <div id="sc04" className={"c-contents -bg-white pdt7 pdt15s pdb5 pdb5s"}>
           <div className="c-contents--inner">
-            <h2 className="c-contents--LpMainTitle -b-btm -c01 mgb7 mgb10s">
-              <span className="-kana -b">マネーリペア</span>
-              <span className="-b">で</span>出来<span className="-b">る</span>事
-              <span className="-b"></span>
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
+              マネリペで出来ること<br />
+              固定費を上げずに“可処分所得”を<br className="sp" />増やす新しい福利厚生
             </h2>
             <div className="mgb10 mgb10s">
               {/* 1. 金融勉強会 */}
-              <ul className={"c-flex -col1_2 -h-top -jc-sb mgb10 mgb15s"}>
-                <li className={"flexItem mgb5s"}>
-                  <h3 className="c-contents--LpTitle mgb4 mgb5s">
-                    金融勉強会で知識の習得と
-                    <br />
-                    金融知識を当たり前に
-                  </h3>
-                  <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                    金融知識の「当たり前」を学ぶ環境をご提供いたします。
-                    <br />
-                    【勉強会の一例】
-                    <br />
-                    ・源泉徴収票の読み取り方、節税
-                    <br />
-                    ・経済動向、情報の取方、ニュースの見方
-                    <br />
-                    ・四季報、財務諸表、株式分析
-                  </p>
-                </li>
-                <li className={"flexItem"}>
-                  <div className="imgBox">
-                    <Image
-                      src="/images/Lp/sc03-A.png"
-                      alt="金融勉強会の様子"
-                      width={480}
-                      height={320}
-                    />
-                  </div>
-                </li>
-              </ul>
+              <div className=" c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s mgb5 mgb10s">
+                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
+                  <li className={"flexItem mgb5s"}>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/ver02/sc04-item01.png"
+                        alt="金融勉強会の様子"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                  </li>
+                  <li className={"flexItem"}>
+                    <h3 className="c-contents--LpListTitle -t01 mgb1 mgb3s">
+                      社内で「金融勉強会」を開催<br />
+                      公式LINEにて情報発信サービスも提供
+                    </h3>
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                      従業員様からのニーズに基づき、関心の高いテーマで金融勉強会を実施いたします。また、公式LINEを通じて、マーケットの動向や日々の生活に役立つ時事情報などを定期的に配信。必要な情報をタイムリーにお届けし、従業員様の金融リテラシー向上をサポートいたします。
+                    </p>
+                  </li>
+                </ul>
+              </div>
               {/* 2. 個別相談 */}
-              <ul className={"c-flex -col1_2 -r -h-top -jc-sb mgb10 mgb15s"}>
-                <li className={"flexItem mgb5s"}>
-                  <h3 className="c-contents--LpTitle mgb4 mgb5s">
-                    個別相談も可能！
-                    <br className="tb-pc" />
-                    専属FP相談窓口の提供
-                  </h3>
-                  <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                    NISA、iDeCo、ふるさと納税などあらゆる相談が可能です。ライフサイクルによって、教育資金、住宅、老後資金など不安になるようなイベントも多くありますので、専門家によるアドバイスが可能です。
-                  </p>
-                </li>
-                <li className={"flexItem"}>
-                  <div className="imgBox">
-                    <Image
-                      src="/images/Lp/sc03-B.png"
-                      alt="個人相談の様子"
-                      width={480}
-                      height={320}
-                    />
-                  </div>
-                </li>
-              </ul>
-              {/* 3. 家計管理 */}
-              <ul className={"c-flex -col1_2 -h-top -jc-sb mgb10 mgb15s"}>
-                <li className={"flexItem mgb5s"}>
-                  <h3 className="c-contents--LpTitle mgb4 mgb5s">
-                    家計管理も可能！
-                    <br />
-                    資産管理システムの提供
-                  </h3>
-                  <p className="s-M -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                    運用している有価証券、不動産、保険などあらゆる金融商品を一括管理でき、<span className="-b -red">キャッシュフローを可視化する</span>ことが出来ます。ライフプランシミュレーションを作成することも可能です
-                  </p>
-                </li>
-                <li className={"flexItem"}>
-                  <div className="imgBox">
-                    <Image
-                      src="/images/Lp/sc03-C.png"
-                      alt="家計管理ができて喜んでいる様子"
-                      width={480}
-                      height={320}
-                    />
-                  </div>
-                </li>
-              </ul>
+              <div className=" c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s mgb5 mgb10s">
+                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb mgb5 mgb10s"}>
+                  <li className={"flexItem mgb5s"}>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/ver02/sc04-item02.png"
+                        alt="個別相談の絵"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                  </li>
+                  <li className={"flexItem"}>
+                    <h3 className="c-contents--LpListTitle -t02 mgb1 mgb3s">
+                      個別相談も可能！<br />
+                      専属金融相談窓口の設置
+                    </h3>
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                    弊社専属のファイナンシャルプランナーが最低1人御社専属の担当となり、LINEやお電話で気軽に相談ができます。従業員様の2親等までのご親族様まで、無料で相談が可能です。
+                    （ご相談は基本24時間365日対応しています。）
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              {/* 3. 金融勉強会 */}
+              <div className=" c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s">
+                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
+                  <li className={"flexItem mgb5s"}>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/ver02/sc04-item03.png"
+                        alt="システム"
+                        width={480}
+                        height={320}
+                      />
+                    </div>
+                  </li>
+                  <li className={"flexItem"}>
+                    <h3 className="c-contents--LpListTitle -t03 mgb1 mgb3s">
+                      家計管理も可能！<br />
+                      資産管理システムの提供
+                    </h3>
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                      従業員様向けに、通常月額3,000円～5,000円の本格的なライフプランシミュレーションシステムを無料でご提供。収支の可視化で無駄を削減し、キャッシュフローを改善。将来のライフイベント費用や老後資金の不足額を明確にし、資産形成を強力にサポートします。
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+
+
+
+
+
         {/* cta */}
         <LpCta />
         {/* 選ばれる理由 */}
