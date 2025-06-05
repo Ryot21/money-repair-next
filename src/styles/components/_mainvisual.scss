@@ -934,14 +934,16 @@
             &.-comments01 {// 縦文
                 position: absolute;
                 top: 8%;
-                left: 0;
                 z-index: 11;
+                @include max(500){
+                    left: 7%;
+                }
                 @include min(400){
                     top: 7%;
                 }
                 @include min(500) {
                     top: 110px;
-                    left: 0;
+                    left: 8%;
                 }
     
                 // ピックアップ
@@ -1062,25 +1064,28 @@
             // コンタクト
             &.-cta {
                 position: absolute;
-                top: 60%;
-                left: 0;
-    
-                width: 100%;
+                top: 58%;    
+                width: 85%;
                 z-index: 11;
+                @include max(500){
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
                 @include min(500) {
-                top: 42%;
-                width: 100%;
-                max-width: 370px;
+                    top: 42%;
+                    left: 5%;
+                    max-width: 370px;
                 }
                 @include min(768) {
-                top: 42%;
-                width: 55%;
-                max-width: 350px;
+                    top: 42%;
+                    left: 8%;
+                    width: 55%;
+                    max-width: 350px;
                 }
                 @include min(1000) {
-                top: 45%;
-                width: 40%;
-                max-width: 450px;
+                    top: 45%;
+                    width: 40%;
+                    max-width: 450px;
                 }
             }
             // 英字
@@ -1210,17 +1215,22 @@
                 position: absolute;
                 top: 26%;
                 left: 0;
-                width: 100%;
+                width: 85%;
                 z-index: 7;
+                @include max(500){
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
                 @include min(768){
                     top: 80.5%;
-                    right: 0;
+                    right: 5%;
                     transform: translateY(-50%);
                     left: auto;
                     width: auto;
                 }
                 @include min(1200){
                     top: 77%;
+                    right: 15%;
                 }
             }
         }

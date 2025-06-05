@@ -563,10 +563,9 @@
   &.-t06 {// LP_ここがポイント！！で使用
     position: relative;
     background: $main-color--w;
-    // background: $site-color01;
-    border: none;
+    border: 3px solid $site-color03;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: visible;
     @include min(500){display: none;}
     @include min(900){display: block;}
