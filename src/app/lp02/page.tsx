@@ -57,8 +57,31 @@ export default async function Home() {
       <LpMainVisual />
 
       <div className="c-contents -bg-white">
-        {/* 導入企業ロゴ */}
+        {/* SC01 導入企業ロゴ */}
+        {/* <div className="c-contents -bg-lp02-logo">
+          <div className="c-contents--inner">
+            <h2 className="c-contents--LpMainTitle -c01 pdt1 pdt2s pdb1 pdb2s mgb5 mgb10s">
+              \ 様々な業界の企業にご利用いただいています！ /
+            </h2>
+          </div>
+        </div> */}
         {/* <LogoContents /> */}
+
+        {/* SC02 簡単な説明 */}
+        <div className="c-contents -bg-lp02-sc02 pdt7 pdt15s pdb7 pdb15s">
+          <div className="c-contents--inner">
+            <div className="c-card -lp_02 -sc02">
+              <div className="c-card--inner">
+                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb3 mgb4s">
+                  マネーリペアは離職率を下げて<br className="sp" />エンゲージメントを高める<br /><br className="sp" />
+                  <span className="s-L -s18 -b -blue -marker pdr1 pdr0s">金融リテラシー向上をサポートする</span><br className="sp" />福利厚生です。
+                </p>
+                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">“中小・ベンチャー・<br className="sp" />中堅企業でも実績多数”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* こんなお悩みはありませんか？ */}
         <div id="sc01" className={"c-contents pdt7 pdt5s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>

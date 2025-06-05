@@ -29,6 +29,10 @@
         background-repeat: no-repeat;
       }
     }
+
+    // LP02
+    &-lp02-logo {background: $lp-color05 !important;}
+    &-lp02-sc02 {background: $lp-color06 !important;}
   }
 
   &--inner {// コンテンツ幅

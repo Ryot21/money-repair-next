@@ -742,6 +742,17 @@
       }
     }
   }
+  &.-lp_02{// LP02
+    &.-sc02{
+      border: none;
+      border-radius: 15px;
+      .c-card--inner{
+        padding: 25px 15px;
+        @include min(768){padding: 35px 15px;}
+      }
+    }
+
+  }
 }
 
 // 目次 > アクティブ状態
