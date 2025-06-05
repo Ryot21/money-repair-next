@@ -544,6 +544,9 @@
       background: white;
       padding: 20px 20px;
     }
+    .c-card--label{
+      margin-bottom: 15px;
+    }
     .c-form{
       &.-card{
         .c-form--item{
@@ -594,7 +597,6 @@
 
   &.-lp {// LP用
     text-align: center;
-
     &.-lp01 {// セクション01
       position: relative;
       height: 150px;

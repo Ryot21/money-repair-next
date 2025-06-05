@@ -205,7 +205,7 @@ export default function CardContactForm({ customClass }: FormProps) {
   return (
     <div className="c-card -t05">
       <div className="c-card--inner">
-        <p className="-b -color03 mgb3 mgb5s">1分でわかる資料ダウンロード</p>
+        <p className="c-card--label -b -color03 mgb5s">1分でわかる資料ダウンロード</p>
         <form
           className={`c-form ${customClass}`}
           onSubmit={handleConfirm}

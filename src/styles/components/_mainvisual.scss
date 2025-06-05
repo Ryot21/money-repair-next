@@ -945,6 +945,9 @@
                     top: 110px;
                     left: 8%;
                 }
+                @include min(1000){
+                    top: 120px;
+                }
     
                 // ピックアップ
                 .pickup {
