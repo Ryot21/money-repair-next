@@ -296,7 +296,7 @@
 	// 最大値
 	.mgt3,
 	.mgt4,
-	.mgt5{@include min(1800){margin-top: min(15%, 20px) !important;}}
+	.mgt5{@include min(1800){margin-top: min(15%, 50px) !important;}}
 	.mgt6,
 	.mgt7,
 	.mgt8,
@@ -307,7 +307,7 @@
 
 	.mgb3,
 	.mgb4,
-	.mgb5{@include min(1800){margin-bottom: min(15%, 20px) !important;}}
+	.mgb5{@include min(1800){margin-bottom: min(15%, 50px) !important;}}
 	.mgb6,
 	.mgb7,
 	.mgb8,
@@ -323,7 +323,7 @@
 	// 最大値
 	.pdt3,
 	.pdt4,
-	.pdt5{@include min(1800){padding-top: min(15%, 20px) !important;}}
+	.pdt5{@include min(1800){padding-top: min(15%, 50px) !important;}}
 	.pdt6,
 	.pdt7,
 	.pdt8,
@@ -335,7 +335,7 @@
 	// 最大値
 	.pdb3,
 	.pdb4,
-	.pdb5{@include min(1800){padding-bottom: min(15%, 20px) !important;}}
+	.pdb5{@include min(1800){padding-bottom: min(15%, 50px) !important;}}
 	.pdb6,
 	.pdb7,
 	.pdb8,

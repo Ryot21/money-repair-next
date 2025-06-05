@@ -41,28 +41,28 @@
         background: linear-gradient(transparent 60%, #fff7b3 60%);
         padding: 2px 0;
         font-weight: bold;
-        }
-        .-slash{// スラッシュ
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &::before,
-        &::after{
-            content: "";
-            width: 25px;
-            height: 1px;
-            background-color: #000;
-            margin: 0px 4px 4px;
-        }
-        &::before{transform: rotate(45deg);}
-        &::after{transform: rotate(-45deg);}
-        }
-        .-first{// 1文字目のみ大文字
+    }
+    .-slash{// スラッシュ
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before,
+    &::after{
+        content: "";
+        width: 25px;
+        height: 1px;
+        background-color: #000;
+        margin: 0px 4px 4px;
+    }
+    &::before{transform: rotate(45deg);}
+    &::after{transform: rotate(-45deg);}
+    }
+    .-first{// 1文字目のみ大文字
         &::first-letter {
             color: $main-color--red;
             font-size: 40px;
             font-weight: bold;
         }
-        }
+    }
 }

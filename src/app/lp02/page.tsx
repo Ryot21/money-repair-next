@@ -87,7 +87,7 @@ export default async function Home() {
             <h2 className="c-contents--LpMainTitle -b-btm -c03 pdt1 pdt2s mgb7 mgb10s">
               マネリペの導入効果
             </h2>
-            <ul className="c-flex -col1_3 -h-top -jc-sb mgb5 mgb5s">
+            <ul className="c-flex -col1_3 -h-top -jc-sb mgb2 mgb5s">
               <li className="flexItem pdr5s pdl5s mgb5s">
                 <Image
                   src="/images/Lp/ver02/sc03-item01.png"
@@ -153,7 +153,7 @@ export default async function Home() {
               </div>
               {/* 2. 個別相談 */}
               <div className=" c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s mgb5 mgb10s">
-                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb mgb5 mgb10s"}>
+                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
                   <li className={"flexItem mgb5s"}>
                     <div className="imgBox">
                       <Image
@@ -214,7 +214,7 @@ export default async function Home() {
               過去5年分の自己申告（年末調整や確定申告）をプロの目線で確認し、<br className="tb-pc" />本来は使えていた税制優遇や控除を最大限に活用。<br className="tb-pc" />
               年間1,500人以上の相談を受けて、<br className="sp" />60%以上の方が<span className="s-L -s12 -b -blue -marker">年平均30万円</span>以上損している！？
             </p>
-            <div className="c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s">
+            <div className="c-contents -bg-color01 pdt2 pdt5s pdr2 pdr5s pdl2 pdl5s">
               <div className="c-contents--inner -lp-item mgb5 mgb5s">
                 <Image
                   src="/images/Lp/ver02/sc05-item01.png"
@@ -247,7 +247,7 @@ export default async function Home() {
                   height={520}
                 />
               </div>
-              <p className="s-Ss -s10 -blue -center -ls-2 -lh-1_5 mgb5 mgb10s">
+              <p className="s-Ss -s10 -blue -center -ls-2 -lh-1_5">
                 ※マネーリペアのサービスは「ASTELLA Partners 会計事務所」に監修していただいております。
               </p>
             </div>
@@ -382,80 +382,45 @@ export default async function Home() {
 
           </div>
         </div>
-
-
-        {/* 選ばれる理由 */}
-        <div id="sc04" className={"c-contents pdt7 pdt20s pdb5 pdb10s"}>
+        {/* SC08 選ばれる理由 */}
+        <div id="sc08" className={"c-contents -bg-lp02-sc02 pdt7 pdt15s pdb10 pdb10s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              <span className="-kana -b">マネーリペア</span>
-              <span className="-b">が</span>選<span className="-b">ばれる</span>
-              理由
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
+              マネリペの選ばれる理由
             </h2>
             <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
               {/* 1. 金融リテラシーを向上させる福利厚生プログラムです。 */}
-              <li className={"flexItem mgb10s"}>
-                <div className="c-card -lp -No -No01">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s18 -b -ls-2 -lh-1_5 mgb4 mgb5s">
-                      従業員の可処分所得の増加
-                      <br />
-                      モチベーションを高める！
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc04-B.png"
-                        alt="マネーリペアを説明する図"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc08-item01.png"
+                  alt="従業員の可処分所得の増加モチベーションを高める！"
+                  width={640}
+                  height={454}
+                />
               </li>
               {/* 2. 個別相談がつくことで精度の高い提案で削減事例多数 */}
-              <li className={"flexItem mgb10s"}>
-                <div className="c-card -lp -No -No02">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s16 -b -ls-2 -lh-1_5 mgb4 mgb5s">
-                      従業員の経済的不安を解消し、
-                      <br />
-                      仕事への集中を促します！
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc04-A.png"
-                        alt="お金が溜まっている様子"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc08-item02.png"
+                  alt="個別相談で50%以上が税金削減・還付の対象に"
+                  width={640}
+                  height={454}
+                />
               </li>
               {/* 3. 従業員の定着率UP、採用率UPにつながります！ */}
-              <li className={"flexItem"}>
-                <div className="c-card -lp -No -No03">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s16 -b -ls-2 -lh-1_5 mgb4 mgb5s">
-                      従業員の定着率UP、
-                      <br />
-                      採用率UPにつながります！
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc04-C.png"
-                        alt="従業員が喜んでいる様子"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s"}>
+                <Image
+                  src="/images/Lp/ver02/sc08-item03.png"
+                  alt="会社員500名に金融リテラシー調査を実施、結果を基にサービスを提供"
+                  width={640}
+                  height={454}
+                />
               </li>
             </ul>
           </div>
         </div>
+
+
         {/* 石橋 > 説明 */}
         <div
           id="sc04-02"
