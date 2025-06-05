@@ -290,7 +290,7 @@ export default async function Home() {
         {/* cta02 */}
         <Lp02Cta />
         {/* SC07 課題 */}
-        <div id="sc07" className={"c-contents pdt7 pdt15s pdb5 pdb5s"}>
+        <div id="sc07" className={"c-contents pdt7 pdt15s pdb10 pdb5s"}>
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
               経営者・総務・人事の皆さん<br />

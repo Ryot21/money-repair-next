@@ -754,6 +754,7 @@
     &.-sc07{
       position: relative;
       height: 150px;
+      background: $site-color01;
       overflow: inherit;
       @include min(500) {
         height: 200px;
@@ -763,7 +764,6 @@
         top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: $main-color--w;
       }
       .imgBox{
         position: absolute;
