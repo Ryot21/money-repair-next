@@ -287,10 +287,103 @@ export default async function Home() {
             </div>
           </div>
         </div>
-
-
         {/* cta02 */}
         <Lp02Cta />
+        {/* SC07 課題 */}
+        <div id="sc07" className={"c-contents pdt7 pdt15s pdb5 pdb5s"}>
+          <div className="c-contents--inner">
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
+              経営者・総務・人事の皆さん<br />
+              このような課題はありませんか？
+            </h2>
+            <ul className="c-flex -col1_3 -h-top -jc-sb mgb10 mgb5s">
+              <li className="flexItem pdr5s pdl5s mgb5s">
+                <Image
+                  src="/images/Lp/ver02/sc07-item01.png"
+                  alt="1.「従来型福利厚生の限界」"
+                  width={374}
+                  height={306}
+                />
+              </li>
+              <li className="flexItem pdr5s pdl5s mgb5s">
+                <Image
+                  src="/images/Lp/ver02/sc07-item02.png"
+                  alt="2.「金融不安が離職の原因に」"
+                  width={374}
+                  height={306}
+                />
+              </li>
+              <li className="flexItem pdr5s pdl5s ">
+                <Image
+                  src="/images/Lp/ver02/sc07-item03.png"
+                  alt="3.「費用対効果への懸念」"
+                  width={374}
+                  height={306}
+                />
+              </li>
+            </ul>
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
+              そのお悩みを解決できます！
+            </h2>
+            <p className="s-ML -b -blue -center -ls-2 -lh-2 mgb10 mgb5s">
+              従業員の「金融リテラシー向上」をご支援し、給料を上げずに、<br />
+              税金を適正化することで1人当たりの可処分所得を年間約<span className="-b -marker -kome pdr1 pdr1s">200,000円</span>最適化することが可能です！<span className="s-SS -s10 -blue">*個人差あります</span>
+            </p>
+            <ul className={"c-flex -col3 -flow -h-cen -jc-sb mgb5 mgb5s"}>
+              <li className={"flexItem"}>
+                <div className="c-card -lp_02 -sc07 -item01">
+                  <div className="c-card--inner">
+                    <p className="s-M -s10 -b -blue -center -ls-2 -ls-1_s -lh-2 -ws-n">
+                      社員に対して<br className="sp" />金融教育セミナーを実施
+                    </p>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/ver02/sc07-02-item01.png"
+                        alt="金融セミナーを受けている様子"
+                        width={200}
+                        height={160}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem"}>
+                <div className="c-card -lp_02 -sc07 -item02">
+                  <div className="c-card--inner">
+                    <p className="s-M -s10 -b -blue -center -ls-2 -ls-1_s -lh-2 -ws-n">
+                      従業員満足度が<br className="sp" />すごく高まる
+                    </p>
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/ver02/sc07-02-item02.png"
+                        alt="従業員が満足している様子"
+                        width={200}
+                        height={160}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem"}>
+                <div className="c-card -lp_02 -sc07 -item03">
+                  <div className="c-card--inner">
+                    <div className="imgBox">
+                      <Image
+                        src="/images/Lp/ver02/sc07-02-item03.png"
+                        alt="離職率の低下・採用競争力の向上"
+                        width={200}
+                        height={160}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+
         {/* 選ばれる理由 */}
         <div id="sc04" className={"c-contents pdt7 pdt20s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
