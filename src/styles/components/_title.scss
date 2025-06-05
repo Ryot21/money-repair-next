@@ -459,6 +459,16 @@
         &.-en-color02{&::before{color: $site-color02;}}
         &.-en-color03{&::before{color: $site-color03;}}
         &.-en-color04{&::before{color: $site-color04;}}
+
+        &.-white{
+            color: $main-color--w !important;
+            &.-b-btm{
+                &::after{
+                    background: $main-color--w !important;
+                    border-bottom: 3px dotted $main-color--w;
+                }
+            }
+        }
     }
     &--LpListTitle{// コンテンツ > セクション > リストタイトル
         position: relative;

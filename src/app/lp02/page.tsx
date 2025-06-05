@@ -4,7 +4,7 @@ import Image from "next/image";
 // コンポーネント
 import LpMainVisual from "@/features/lp02/mainVisual";
 // import Button from "@/components/elements/button";
-import LpCta from "@/features/lp02/cta";
+import Lp02Cta from "@/features/lp02/cta";
 // import LpCtaBottom from "@/features/lp02/cta/LpBottom";
 
 // 投稿関係
@@ -214,7 +214,7 @@ export default async function Home() {
               過去5年分の自己申告（年末調整や確定申告）をプロの目線で確認し、<br className="tb-pc" />本来は使えていた税制優遇や控除を最大限に活用。<br className="tb-pc" />
               年間1,500人以上の相談を受けて、<br className="sp" />60%以上の方が<span className="s-L -s12 -b -blue -marker">年平均30万円</span>以上損している！？
             </p>
-            <div className="c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s mgb5 mgb10s">
+            <div className="c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s">
               <div className="c-contents--inner -lp-item mgb5 mgb5s">
                 <Image
                   src="/images/Lp/ver02/sc05-item01.png"
@@ -236,8 +236,8 @@ export default async function Home() {
                   src="/images/Lp/ver02/sc05-item02.png"
                   alt="過去5年間で26万円税金の適正化"
                   className="tb-pc"
-                  width={782}
-                  height={332}
+                  width={1564}
+                  height={664}
                 />
                 <Image
                   src="/images/Lp/ver02/sc05-item02s.png"
@@ -253,12 +253,44 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        {/* SC06 比較 */}
+        <div id="sc06" className={"c-contents -bg-color01 pdt7 pdt15s pdb5 pdb5s"}>
+        <div className="c-contents--inner">
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
+              従来型の福利厚生サービスとの比較
+            </h2>
+            <p className="s-ML -b -blue -left -ls-2 mgb2 mgb5s">1.マネーリペアの「旧来型運用」vs「現在の運用」の比較</p>
+            <div className="c-contents mgb10 mgb10s">
+              <Image
+                src="/images/Lp/ver02/sc06-item01.png"
+                alt="従来型の福利厚生サービスとの比較"
+                className="tb-pc"
+                width={2012}
+                height={832}
+              />
+              <Image
+                src="/images/Lp/ver02/sc06-item01s.png"
+                alt="従来型の福利厚生サービスとの比較"
+                className="sp"
+                width={334}
+                height={622}
+              />
+            </div>
+            <p className="s-ML -b -blue -left -ls-2 mgb5s">2.他の金融リテラシー向上サービスとの比較</p>
+            <div className="c-contents mgb10 mgb10s">
+              <Image
+                src="/images/Lp/ver02/sc06-item02.png"
+                alt="比較表"
+                width={2012}
+                height={892}
+              />
+            </div>
+          </div>
+        </div>
 
 
-
-
-        {/* cta */}
-        <LpCta />
+        {/* cta02 */}
+        <Lp02Cta />
         {/* 選ばれる理由 */}
         <div id="sc04" className={"c-contents pdt7 pdt20s pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
@@ -490,8 +522,7 @@ export default async function Home() {
             </ul>
           </div>
         </div>
-        {/* cta */}
-        <LpCta />
+
         {/* 導入実績 */}
         {/* <LpInterviewArea /> */}
         {/* 申し込みから導入までの流れ */}
@@ -650,8 +681,7 @@ export default async function Home() {
             <Accordion items={faqItems} />
           </div>
         </div>
-        {/* cta */}
-        <LpCta />
+
       </div>
     </main>
   );

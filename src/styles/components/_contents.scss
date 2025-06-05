@@ -314,6 +314,46 @@
       }
     }
   }
+  &.-Lp02Cta{// LP02 > CTAエリア
+    position: relative;
+    background: radial-gradient(#2460AD, #3FA8DD);
+    &::before{
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 0;
+      width: 14%;
+      height: 70%;
+      background: url("/images/Lp/ver02/mv-parts-02.png") no-repeat;
+      background-size: contain;
+      opacity: 0.05;
+      z-index: 1;
+      @include max(768){
+        top: 50%;
+        left: 0;
+        width: 54%;
+        height: 70%;
+      }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 2%;
+      width: 350px;
+      height: 30%;
+      background: url("/images/Lp/ver02/mv-parts-03.png") no-repeat;
+      background-size: contain;
+      opacity: 0.05;
+      z-index: 1;
+      @include max(768){
+        top: 0;
+        right: 2%;
+        width: 250px;
+        height: 30%;
+      }
+    }
+  }
 
   // 三角形
   &.-triangle{
