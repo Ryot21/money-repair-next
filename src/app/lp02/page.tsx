@@ -203,7 +203,56 @@ export default async function Home() {
             </div>
           </div>
         </div>
-
+        {/* SC05 事例 */}
+        <div id="sc05" className={"c-contents -bg-color01 pdt7 pdt15s pdb5 pdb5s"}>
+          <div className="c-contents--inner">
+            <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
+              実際にマネリペをご利用いただき<br />
+              “可処分所得”が増加した事例
+            </h2>
+            <p className="s-ML -s12 -blue -center -ls-2 -lh-2 mgb7 mgb10s">
+              過去5年分の自己申告（年末調整や確定申告）をプロの目線で確認し、<br className="tb-pc" />本来は使えていた税制優遇や控除を最大限に活用。<br className="tb-pc" />
+              年間1,500人以上の相談を受けて、<br className="sp" />60%以上の方が<span className="s-L -s12 -b -blue -marker">年平均30万円</span>以上損している！？
+            </p>
+            <div className="c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s mgb5 mgb10s">
+              <div className="c-contents--inner -lp-item mgb5 mgb5s">
+                <Image
+                  src="/images/Lp/ver02/sc05-item01.png"
+                  alt="BeforeAfter"
+                  className="tb-pc"
+                  width={551}
+                  height={284}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc05-item01s.png"
+                  alt="BeforeAfter"
+                  className="sp"
+                  width={248}
+                  height={631}
+                />
+              </div>
+              <div className="mgb1 mgb1s">
+                <Image
+                  src="/images/Lp/ver02/sc05-item02.png"
+                  alt="過去5年間で26万円税金の適正化"
+                  className="tb-pc"
+                  width={782}
+                  height={332}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc05-item02s.png"
+                  alt="過去5年間で26万円税金の適正化"
+                  className="sp"
+                  width={291}
+                  height={520}
+                />
+              </div>
+              <p className="s-Ss -s10 -blue -center -ls-2 -lh-1_5 mgb5 mgb10s">
+                ※マネーリペアのサービスは「ASTELLA Partners 会計事務所」に監修していただいております。
+              </p>
+            </div>
+          </div>
+        </div>
 
 
 
