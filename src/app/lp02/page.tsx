@@ -419,10 +419,14 @@ export default async function Home() {
             </ul>
           </div>
         </div>
-        {/* SC09  解決できるあらゆる問題 */}
+
+        {/* 導入実績 */}
+        {/* <LpInterviewArea /> */}
+
+        {/* SC09 解決できるあらゆる問題 */}
         <div id="sc09" className={"c-contents -triangle pdt7 pdt20s pdb7 pdb10s pdb20s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb10 mgb10s"}>
               マネリペで解決できる<br />
               お金に関するあらゆる問題
             </h2>
@@ -533,230 +537,119 @@ export default async function Home() {
         </div>
         {/* cta02 */}
         <Lp02Cta />
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {/* マネーリペアを導入すると */}
-        <div id="sc06" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
+        {/* SC10 申し込みから導入までの流れ */}
+        <div id="sc10" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              <span className="-kana -b">マネーリペア</span>
-              <span className="-b">を</span>導入
-              <span className="-b">することで</span>
-              <br className="" />
-              従業員の満足度<span className="-b">や</span>企業の魅力が向上
-              <span className="-b">し、</span>離職率の低下
-              <span className="-b">につながります。</span>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb10 mgb10s"}>
+              申し込みから導入までの流れ
             </h2>
-            <ul className={"c-flex -col3 -h-top -jc-sb mgb2 mgb5s"}>
-              <li className={"flexItem mgb5s"}>
-                <p className="s-M -s10 -b -center -ls-2 -lh-1_5 mgb5 mgb5s">
-                  社員とご家族の
-                  <br className="tb-pc" />
-                  金融リテラシーの向上
-                </p>
-                <div className="imgBox">
-                  <Image
-                    src="/images/Lp/sc06-A.png"
-                    alt="ご家族が悩んでいる様子"
-                    width={480}
-                    height={320}
-                  />
-                </div>
-              </li>
-              <li className={"flexItem mgb5s"}>
-                <p className="s-M -s10 -b -center -ls-2 -lh-1_5 mgb5 mgb5s">
-                  新入社員採用時の
-                  <br className="tb-pc" />
-                  アピールポイント
-                </p>
-                <div className="imgBox">
-                  <Image
-                    src="/images/Lp/sc06-B.png"
-                    alt="ビジネス街の写真"
-                    width={480}
-                    height={320}
-                  />
-                </div>
-              </li>
-              <li className={"flexItem mgb5s"}>
-                <p className="s-M -s10 -b -center -ls-2 -lh-1_5 mgb5 mgb5s">
-                  社員の会社満足度の向上、
-                  <br className="tb-pc" />
-                  離職率低下
-                </p>
-                <div className="imgBox">
-                  <Image
-                    src="/images/Lp/sc06-C.png"
-                    alt="従業員が話し合っている様子"
-                    width={480}
-                    height={320}
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* 導入実績 */}
-        {/* <LpInterviewArea /> */}
-        {/* 申し込みから導入までの流れ */}
-        <div id="sc08" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
-          <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              申し込み<span className="-b">から</span>導入
-              <span className="-b">までの</span>流れ
-            </h2>
-            <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
+            <ul className={"c-flex -h-top -jc-st mgb2 mgb5s -lp-flow"}>
               {/* 1. WEBサイトからお問い合わせ */}
-              <li className={"flexItem mgb5 mgb10s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      1. WEBサイトからお問い合わせ
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc08-A.png"
-                        alt="申し込みの様子"
-                        className="mgb5 mgb5s"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      サイト内の
-                      <Link href="#contact" className="c-link -b -red">
-                        申し込みフォーム
-                      </Link>
-                      からお問い合わせください。
-                    </p>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb5 mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc10-item01.png"
+                  alt="1.WEBサイトから問い合わせ"
+                  className="tb-pc"
+                  width={2012}
+                  height={336}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc10-item01s.png"
+                  alt="1.WEBサイトから問い合わせ"
+                  className="sp"
+                  width={335}
+                  height={387}
+                />
               </li>
               {/* 2. お見積り */}
-              <li className={"flexItem mgb5 mgb10s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      2. お見積り
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc08-B.png"
-                        alt="打ち合わせの様子"
-                        className="mgb5 mgb5s"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      従業員数に応じて、工数やお見積りをお出しします。
-                    </p>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb5 mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc10-item02.png"
+                  alt="2.お見積り"
+                  className="tb-pc"
+                  width={2012}
+                  height={336}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc10-item02s.png"
+                  alt="2.お見積り"
+                  className="sp"
+                  width={335}
+                  height={387}
+                />
               </li>
               {/* 3. お申し込み + 導入後の打ち合わせ */}
-              <li className={"flexItem mgb5 mgb10s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      3. 従業員様への導入説明会
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc08-C.png"
-                        alt="導入説明会を実施している様子"
-                        className="mgb5 mgb5s"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      ご契約を行い、従業員様の悩み事をヒアリングし、年間のコーチング計画の打ち合わせを行います。
-                    </p>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb5 mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc10-item03.png"
+                  alt="3.従業員様への導入説明会"
+                  className="tb-pc"
+                  width={2012}
+                  height={336}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc10-item03s.png"
+                  alt="3.従業員様への導入説明会"
+                  className="sp"
+                  width={335}
+                  height={387}
+                />
               </li>
               {/* 4. 相談予約アプリ */}
-              <li className={"flexItem mgb10s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      4. 相談予約アプリの導入
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc08-D.png"
-                        alt="相談予約アプリを導入している様子"
-                        className="mgb5 mgb5s"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      個別相談なども可能ですので、相談予約の出来るアプリを導入します。
-                    </p>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb5 mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc10-item04.png"
+                  alt="4.相談予約アプリの導入"
+                  className="tb-pc"
+                  width={2012}
+                  height={336}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc10-item04s.png"
+                  alt="4.相談予約アプリの導入"
+                  className="sp"
+                  width={335}
+                  height={387}
+                />
               </li>
               {/* 5. コーチングや相談の開始 */}
-              <li className={"flexItem mgb10s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      5. コーチングや相談の開始
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc08-E.png"
-                        alt="コーチングを実施している様子"
-                        className="mgb5 mgb5s"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      年間計画を元にコーチングを行います。
-                    </p>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb5 mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc10-item05.png"
+                  alt="5.コーチングや相談の開始"
+                  className="tb-pc"
+                  width={2012}
+                  height={336}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc10-item05s.png"
+                  alt="5.コーチングや相談の開始"
+                  className="sp"
+                  width={335}
+                  height={387}
+                />
               </li>
               {/* 6. フィードバック */}
-              <li className={"flexItem mgb5s"}>
-                <div className="c-card -lp -lp05">
-                  <div className="c-card--inner">
-                    <h3 className="s-ML -s18 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      6. フィードバック
-                    </h3>
-                    <div className="imgBox">
-                      <Image
-                        src="/images/Lp/sc08-F.png"
-                        alt="フィードバックを行っている様子"
-                        className="mgb5 mgb5s"
-                        width={480}
-                        height={320}
-                      />
-                    </div>
-                    <p className="s-S -s16 -b -left -ls-2 -lh-1_5 mgb5 mgb5s">
-                      従業員様の反応や、経済効果の測定をし、フィードバックを行います。
-                    </p>
-                  </div>
-                </div>
+              <li className={"flexItem pdr5s pdl5s mgb5 mgb10s"}>
+                <Image
+                  src="/images/Lp/ver02/sc10-item06.png"
+                  alt="6.フィードバック"
+                  className="tb-pc"
+                  width={2012}
+                  height={336}
+                />
+                <Image
+                  src="/images/Lp/ver02/sc10-item06s.png"
+                  alt="6.フィードバック"
+                  className="sp"
+                  width={335}
+                  height={387}
+                />
               </li>
             </ul>
           </div>
         </div>
+        
         {/* Q&A */}
         <div id="Q&A" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
