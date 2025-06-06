@@ -12,7 +12,7 @@ export default async function LpInterviewArea() {
   });
 
   return (
-    <div id="sc07" className={"c-contents pdt10 pdt20s pdb5 pdb0s"}>
+    <div id="interview" className={"c-contents pdt10 pdt20s pdb5 pdb0s"}>
       <div className={"c-contents--inner"}>
         {/* タイトル */}
         <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>

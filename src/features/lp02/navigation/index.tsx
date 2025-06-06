@@ -46,15 +46,23 @@ export default function LpNavigation() {
         <ul className={"c-hb-nav__lists"}>
           {/* サービス内容 */}
           <li className={"hbNavItem -center"}>
-            <Link href="/lp02#sc03" onClick={handleLinkClick}>
+            <Link href="/lp02#sc04" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5"}>
                 サービス内容
               </span>
             </Link>
           </li>
+          {/* 他社比較 */}
+          <li className={"hbNavItem -center"}>
+            <Link href="/lp02#sc06" onClick={handleLinkClick}>
+              <span className={"s-ML -s18 -b -ls-2 pdr5"}>
+                他社比較
+              </span>
+            </Link>
+          </li>
           {/* 選ばれる理由 */}
           <li className={"hbNavItem -center"}>
-            <Link href="/lp02#sc04" onClick={handleLinkClick}>
+            <Link href="/lp02#sc08" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5"}>
                 選ばれる理由
               </span>
@@ -62,9 +70,17 @@ export default function LpNavigation() {
           </li>
           {/* 導入事例 */}
           <li className={"hbNavItem -center"}>
-            <Link href="/lp02#sc07" onClick={handleLinkClick}>
+            <Link href="/lp02#interview" onClick={handleLinkClick}>
               <span className={"s-ML -s18 -b -ls-2 pdr5"}>
                 導入事例
+              </span>
+            </Link>
+          </li>
+          {/* 申し込みから導入までの流れ */}
+          <li className={"hbNavItem -center"}>
+            <Link href="/lp02#sc10" onClick={handleLinkClick}>
+              <span className={"s-ML -s18 -b -ls-2 pdr5"}>
+                導入までの流れ
               </span>
             </Link>
           </li>

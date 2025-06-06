@@ -8,34 +8,34 @@ export default function LpFooter() {
                 {/* サイト内リンク */}
                 <nav className={"c-fnav mgb3 mgb2s"}>
                     <ul className={"c-fnav--lists__lp"}>
-                        {/* #sc02 */}
+                        {/* #サービス内容 */}
                         <li className={"LpnavItem"}>
-                            <Link href="/lp#sc02" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
-                                マネーリペアとは
-                            </Link>
-                        </li>
-                        {/* #sc03 */}
-                        <li className={"LpnavItem"}>
-                            <Link href="/lp#sc03" className={`c-fnav--link -archive s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="/lp02#sc04" className={`c-fnav--link -archive s-M -b -white -ls-2 -ws-n`}>
                                 サービス内容
                             </Link>
                         </li>
-                        {/* #sc04 */}
+                        {/* #他社比較 */}
                         <li className={"LpnavItem"}>
-                            <Link href="/lp#sc04" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="/lp02#sc06" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                                他社比較
+                            </Link>
+                        </li>
+                        {/* #選ばれる理由 */}
+                        <li className={"LpnavItem"}>
+                            <Link href="/lp02#sc08" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 選ばれる理由
                             </Link>
                         </li>
-                        {/* #sc07 */}
+                        {/* #導入事例 */}
                         {/* <li className={"LpnavItem"}>
-                            <Link href="/lp#sc07" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                            <Link href="/lp02#interview" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
                                 導入事例
                             </Link>
                         </li> */}
-                        {/* #Q&A */}
+                        {/* #よくある質問 */}
                         <li className={"LpnavItem"}>
-                            <Link href="/lp#Q&A" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
-                                Q&A
+                            <Link href="/lp02#Q&A" className={`c-fnav--link s-M -b -white -ls-2 -ws-n`}>
+                                よくある質問
                             </Link>
                         </li>
                     </ul>
