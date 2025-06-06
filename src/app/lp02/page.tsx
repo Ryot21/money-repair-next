@@ -649,11 +649,10 @@ export default async function Home() {
             </ul>
           </div>
         </div>
-        
         {/* Q&A */}
         <div id="Q&A" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb10 mgb10s"}>
               よくある質問
             </h2>
             <Accordion items={faqItems} />
