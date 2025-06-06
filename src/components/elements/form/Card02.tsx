@@ -218,7 +218,7 @@ export default function CardContactForm({ customClass }: FormProps) {
 
   // 入力画面
   return (
-    <div className="c-card -t05">
+    <div className="c-card -t05  a-fade -tm05 -sp05">
       <Image
         src="/images/SVG/Lp/ver02/contact-label.svg"
         alt="3分でわかる資料ダウンロード"

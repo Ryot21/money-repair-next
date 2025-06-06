@@ -27,7 +27,7 @@ export default function LpMainVisual() {
                     />
                 </div>
                 {/* ================= 注釈 ================= */}
-                <div className={"c-contentsBox -comments01"}>
+                <div className={"c-contentsBox -comments01 a-fade -tm05 -sp05"}>
                     <Image
                         src="/images/Lp/ver02/mv-text.png"
                         // src="/images/SVG/Lp/ver02/mv-text.svg"
