@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // コンポーネント
 import LpMainVisual from "@/features/lp02/mainVisual";
+import ScrollContainer from "@/features/lp02/scrollContainer";
 // import Button from "@/components/elements/button";
 import Lp02Cta from "@/features/lp02/cta";
 // import LpCtaBottom from "@/features/lp02/cta/LpBottom";
@@ -68,21 +69,39 @@ export default async function Home() {
         {/* <LogoContents /> */}
 
         {/* SC02 簡単な説明 */}
-        <div id="sc02" className="c-contents -bg-lp02-sc02 pdt7 pdt15s pdb7 pdb15s">
+        <div
+          id="sc02"
+          className="c-contents -bg-lp02-sc02 pdt7 pdt15s pdb7 pdb15s"
+        >
           <div className="c-contents--inner">
             <div className="c-card -lp_02 -sc02">
               <div className="c-card--inner">
                 <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
-                  マネーリペアは離職率を下げて<br className="sp" />エンゲージメントを高める<br /><br className="sp" />
-                  <span className="s-L -s18 -b -blue -marker pdr1 pdr0s">金融リテラシー向上をサポートする</span><br className="sp" />福利厚生です。
+                  マネーリペアは離職率を下げて
+                  <br className="sp" />
+                  エンゲージメントを高める
+                  <br />
+                  <br className="sp" />
+                  <span className="s-L -s18 -b -blue -marker pdr1 pdr0s">
+                    金融リテラシー向上をサポートする
+                  </span>
+                  <br className="sp" />
+                  福利厚生です。
                 </p>
-                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">“中小・ベンチャー・<br className="sp" />中堅企業でも実績多数”</p>
+                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">
+                  “中小・ベンチャー・
+                  <br className="sp" />
+                  中堅企業でも実績多数”
+                </p>
               </div>
             </div>
           </div>
         </div>
         {/* SC03 導入効果 */}
-        <div id="sc03" className="c-contents -bg-lp02-sc03 pdt7 pdt15s pdb7 pdb15s">
+        <div
+          id="sc03"
+          className="c-contents -bg-lp02-sc03 pdt7 pdt15s pdb7 pdb15s"
+        >
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 pdt1 pdt2s mgb7 mgb10s">
               マネリペの導入効果
@@ -114,17 +133,24 @@ export default async function Home() {
               </li>
             </ul>
             <p className="s-Ss -s10 -blue -right -ls-2 -lh-1_5 -ws-n mgb5 mgb10s">
-              ※1.マネーリペア顧客調査2025年度<br />
+              ※1.マネーリペア顧客調査2025年度
+              <br />
               ※2.マネーリペア500名のユーザーを対象とした調査に基づく
             </p>
           </div>
         </div>
         {/* SC04 マネリペで出来ること */}
-        <div id="sc04" className={"c-contents -bg-white pdt7 pdt15s pdb5 pdb5s"}>
+        <div
+          id="sc04"
+          className={"c-contents -bg-white pdt7 pdt15s pdb5 pdb5s"}
+        >
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
-              マネリペで出来ること<br />
-              固定費を上げずに“可処分所得”を<br className="sp" />増やす新しい福利厚生
+              マネリペで出来ること
+              <br />
+              固定費を上げずに“可処分所得”を
+              <br className="sp" />
+              増やす新しい福利厚生
             </h2>
             <div className="mgb10 mgb10s">
               {/* 1. 金融勉強会 */}
@@ -142,7 +168,8 @@ export default async function Home() {
                   </li>
                   <li className={"flexItem"}>
                     <h3 className="c-contents--LpListTitle -t01 mgb1 mgb3s">
-                      社内で「金融勉強会」を開催<br />
+                      社内で「金融勉強会」を開催
+                      <br />
                       公式LINEにて情報発信サービスも提供
                     </h3>
                     <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
@@ -166,7 +193,8 @@ export default async function Home() {
                   </li>
                   <li className={"flexItem"}>
                     <h3 className="c-contents--LpListTitle -t02 mgb1 mgb3s">
-                      個別相談も可能！<br />
+                      個別相談も可能！
+                      <br />
                       専属金融相談窓口の設置
                     </h3>
                     <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
@@ -205,10 +233,14 @@ export default async function Home() {
           </div>
         </div>
         {/* SC05 事例 */}
-        <div id="sc05" className={"c-contents -bg-color01 pdt7 pdt15s pdb5 pdb5s"}>
+        <div
+          id="sc05"
+          className={"c-contents -bg-color01 pdt7 pdt15s pdb5 pdb5s"}
+        >
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
-              実際にマネリペをご利用いただき<br />
+              実際にマネリペをご利用いただき
+              <br />
               “可処分所得”が増加した事例
             </h2>
             <p className="s-ML -s12 -blue -center -ls-2 -lh-2 mgb7 mgb10s">
@@ -256,18 +288,24 @@ export default async function Home() {
                 />
               </div>
               <p className="s-Ss -s10 -blue -center -ls-2 -lh-1_5">
-                ※マネーリペアのサービスは「ASTELLA Partners 会計事務所」に監修していただいております。
+                ※マネーリペアのサービスは「ASTELLA Partners
+                会計事務所」に監修していただいております。
               </p>
             </div>
           </div>
         </div>
         {/* SC06 比較 */}
-        <div id="sc06" className={"c-contents -bg-color01 pdt7 pdt15s pdb5 pdb5s"}>
+        <div
+          id="sc06"
+          className={"c-contents -bg-color01 pdt7 pdt15s pdb5 pdb5s"}
+        >
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
               従来型の福利厚生サービスとの比較
             </h2>
-            <p className="s-ML -b -blue -left -ls-2 mgb2 mgb5s">1.マネーリペアの「旧来型運用」vs「現在の運用」の比較</p>
+            <p className="s-ML -b -blue -left -ls-2 mgb2 mgb5s">
+              1.マネーリペアの「旧来型運用」vs「現在の運用」の比較
+            </p>
             <div className="c-contents mgb10 mgb10s">
               <Image
                 src="/images/Lp/ver02/sc06-item01.png"
@@ -284,16 +322,11 @@ export default async function Home() {
                 height={622}
               />
             </div>
-            <p className="s-ML -b -blue -left -ls-2 mgb5s">2.他の金融リテラシー向上サービスとの比較</p>
+            <p className="s-ML -b -blue -left -ls-2 mgb5s">
+              2.他の金融リテラシー向上サービスとの比較
+            </p>
             <div className="c-contents mgb10 mgb10s">
-              <div className="sp-scroll-container">
-                <Image
-                  src="/images/Lp/ver02/sc06-item02.png"
-                  alt="比較表"
-                  width={2012}
-                  height={892}
-                />
-              </div>
+              <ScrollContainer />
             </div>
           </div>
         </div>
@@ -303,7 +336,8 @@ export default async function Home() {
         <div id="sc07" className={"c-contents pdt7 pdt15s pdb10 pdb5s"}>
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
-              経営者・総務・人事の皆さん<br />
+              経営者・総務・人事の皆さん
+              <br />
               このような課題はありませんか？
             </h2>
             <ul className="c-flex -col1_3 -h-top -jc-sb mgb10 mgb5s">
@@ -336,15 +370,21 @@ export default async function Home() {
               そのお悩みを解決できます！
             </h2>
             <p className="s-ML -b -blue -center -ls-2 -lh-2 mgb10 mgb5s">
-              従業員の「金融リテラシー向上」をご支援し、給料を上げずに、<br />
-              税金を適正化することで1人当たりの可処分所得を年間約<span className="-b -marker -kome pdr1 pdr1s">200,000円</span>最適化することが可能です！<span className="s-SS -s10 -blue">*個人差あります</span>
+              従業員の「金融リテラシー向上」をご支援し、給料を上げずに、
+              <br />
+              税金を適正化することで1人当たりの可処分所得を年間約
+              <span className="-b -marker -kome pdr1 pdr1s">200,000円</span>
+              最適化することが可能です！
+              <span className="s-SS -s10 -blue">*個人差あります</span>
             </p>
             <ul className={"c-flex -col3 -flow -h-cen -jc-sb mgb5 mgb5s"}>
               <li className={"flexItem"}>
                 <div className="c-card -lp_02 -sc07 -item01">
                   <div className="c-card--inner">
                     <p className="s-M -s10 -b -blue -center -ls-2 -ls-1_s -lh-2 -ws-n">
-                      社員に対して<br className="sp" />金融教育セミナーを実施
+                      社員に対して
+                      <br className="sp" />
+                      金融教育セミナーを実施
                     </p>
                     <div className="imgBox">
                       <Image
@@ -361,7 +401,9 @@ export default async function Home() {
                 <div className="c-card -lp_02 -sc07 -item02">
                   <div className="c-card--inner">
                     <p className="s-M -s10 -b -blue -center -ls-2 -ls-1_s -lh-2 -ws-n">
-                      従業員満足度が<br className="sp" />すごく高まる
+                      従業員満足度が
+                      <br className="sp" />
+                      すごく高まる
                     </p>
                     <div className="imgBox">
                       <Image
@@ -392,7 +434,10 @@ export default async function Home() {
           </div>
         </div>
         {/* SC08 選ばれる理由 */}
-        <div id="sc08" className={"c-contents -bg-lp02-sc02 pdt7 pdt15s pdb10 pdb10s"}>
+        <div
+          id="sc08"
+          className={"c-contents -bg-lp02-sc02 pdt7 pdt15s pdb10 pdb10s"}
+        >
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
               マネリペの選ばれる理由
@@ -433,10 +478,14 @@ export default async function Home() {
         {/* <LpInterviewArea /> */}
 
         {/* SC09 解決できるあらゆる問題 */}
-        <div id="sc09" className={"c-contents -triangle pdt7 pdt20s pdb7 pdb10s pdb20s"}>
+        <div
+          id="sc09"
+          className={"c-contents -triangle pdt7 pdt20s pdb7 pdb10s pdb20s"}
+        >
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb10 mgb10s"}>
-              マネリペで解決できる<br />
+              マネリペで解決できる
+              <br />
               お金に関するあらゆる問題
             </h2>
             <ul className={"c-flex -col2_4 -h-top -jc-st mgb2"}>
@@ -567,7 +616,10 @@ export default async function Home() {
         {/* cta02 */}
         <Lp02Cta />
         {/* SC10 申し込みから導入までの流れ */}
-        <div id="sc10" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
+        <div
+          id="sc10"
+          className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}
+        >
           <div className={"c-contents--inner"}>
             <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb10 mgb10s"}>
               申し込みから導入までの流れ

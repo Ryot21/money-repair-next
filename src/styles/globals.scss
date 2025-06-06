@@ -79,31 +79,4 @@
 // Lottie
 @import "./animation/lottie";
 
-// モバイル表示時の横スクロール用スタイル
-.sp-scroll-container {
-  @media screen and (max-width: 500px) {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
 
-    img {
-      min-width: 800px; // 画像の最小幅を設定
-    }
-
-    .scroll-hint {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      z-index: 1;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-
-      &.hidden {
-        opacity: 0;
-      }
-    }
-  }
-}
