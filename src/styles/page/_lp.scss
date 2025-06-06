@@ -6,7 +6,7 @@
             margin: auto;
             @include min(500) {width: 85%;}
             @include min(768) {width: 90%;}
-            @include min(1600) {max-width: 1180px;}
+            @include min(1400) {max-width: 1180px;}
 
             &.-bg-color01 {background: $site-color01;}
             &.-bg-color02 {background: $site-color02;}
@@ -63,6 +63,16 @@
             color: $main-color--red;
             font-size: 40px;
             font-weight: bold;
+        }
+    }
+
+    // 画像
+    .imgBox{
+        &.w20{
+            max-width: 150px;
+        }
+        &.w30{
+            min-width: 250px;
         }
     }
 }

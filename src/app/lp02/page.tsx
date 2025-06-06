@@ -419,106 +419,133 @@ export default async function Home() {
             </ul>
           </div>
         </div>
-
-
-        {/* 石橋 > 説明 */}
-        <div
-          id="sc04-02"
-          className={
-            "c-contents -bg-color01 -triangle pdt7 pdt20s pdb7 pdb10s pdb20s"
-          }
-        >
+        {/* SC09  解決できるあらゆる問題 */}
+        <div id="sc09" className={"c-contents -triangle pdt7 pdt20s pdb7 pdb10s pdb20s"}>
           <div className={"c-contents--inner"}>
-            <div className="c-card -lp -lp04 -Profile">
-              <div className="c-card--inner">
-                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
-                  <li className={"flexItem mgb10s"}>
-                    <div
-                      className="imgBox"
-                      style={{
-                        borderRadius: "5px",
-                        border: "1px solid lightgray",
-                      }}
-                    >
-                      <Image
-                        src="/images/Lp/sc04-D.png"
-                        alt="石橋が説明する内容"
-                        width={320}
-                        height={320}
-                      />
-                    </div>
-                  </li>
-                  <li className={"flexItem mgb15s"}>
-                    <h3 className="c-contents--LpMainTitle -b -left -ls-2 -lh-1_5 mgb4 mgb5s">
-                      「離職率減少」<span className="-b">と</span>
-                      <br className="" />
-                      「社員モチベーションアップ」<span className="-b">に</span>
-                      効果<span className="-b">を</span>発揮
-                      <span className="-b">します。</span>
-                    </h3>
-                    <p className="s-M -left -ls-2 -lh-2 mgb5 mgb5s">
-                    企業が金融教育を導入することは従業員への福利厚生としてだけでなく、企業の持続的な成長にも繋がる様々なメリットをもたらします。また金融勉強会を通じて、従業員は経済的な不安から解放され、<span className="-b -red">仕事に集中できる</span>ようになります。
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* 考えられる問題 */}
-        <div
-          id="sc05"
-          className={"c-contents -bg-color07 pdt7 pdt20s pdb7 pdb15s"}
-        >
-          <div className={"c-contents--inner"}>
-            <h2 className={"c-contents--LpMainTitle -b-btm -c01 mgb5 mgb10s"}>
-              <span className="-kana -b">マネーリペア</span>
-              <span className="-b">で</span>解決
-              <span className="-b">できる</span>
-              <br className="" />
-              様々<span className="-b">な</span>お金
-              <span className="-b">の</span>問題
+            <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb5 mgb10s"}>
+              マネリペで解決できる<br />
+              お金に関するあらゆる問題
             </h2>
-            <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
+            <ul className={"c-flex -col2_4 -h-top -jc-st mgb2"}>
               <li className={"flexItem mgb2 mgb5s"}>
-                <div className="c-card -lp -lp05">
+                <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      企業の固定費の削減
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                    弊社サービスで固定費を抑えつつ、社員満足度も向上にも繋がります。コストをかけずに選ばれる会社へのお手伝いします。
-                    </p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">税金の適正化/節税</p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2 mgb5s"}>
-                <div className="c-card -lp -lp05">
+                <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      採用問題
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                      採用力を強化するなら福利厚生の充実が鍵。弊社サービス導入で、働きやすさをPRし、他社と差がつく採用ブランディングを実現します。
-                    </p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">iDeCo</p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2 mgb5s"}>
-                <div className="c-card -lp -lp05">
+                <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <h3 className="s-ML -s14 -b -center -ls-2 -lh-1_5 mgb4 mgb5s">
-                      退職金制度の導入
-                    </h3>
-                    <p className="s-SS -left -ls-2 -lh-2 mgb5 mgb5s">
-                    人材定着と企業の信頼性向上へ、退職金制度の導入をサポートします。最適な設計で、安心と満足を提供する仕組みづくりをお手伝いします。
-                    </p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">生命保険の見直し</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp_02 -sc09">
+                  <div className="c-card--inner">
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">ふるさと納税</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp_02 -sc09">
+                  <div className="c-card--inner">
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">資産運用</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2 mgb5s"}>
+                <div className="c-card -lp_02 -sc09">
+                  <div className="c-card--inner">
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">投資信託</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2"}>
+                <div className="c-card -lp_02 -sc09">
+                  <div className="c-card--inner">
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">NISA</p>
+                  </div>
+                </div>
+              </li>
+              <li className={"flexItem mgb2"}>
+                <div className="c-card -lp_02 -sc09">
+                  <div className="c-card--inner">
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">年金問題</p>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
         </div>
+        {/* 考えられる問題 */}
+        <div className={"c-contents -bg-color01 pdt7 pdt20s pdb7 pdb15s"}>
+          <div className={"c-contents--inner"}>
+            <h2 className={"s-ML -b-btm -c03 -center -ls-2 -lh-2 mgb5 mgb10s"}>
+              「マネーリペア」を導入することで<br />
+              社員の満足度や、企業の魅力が向上し、<br className="sp" /><span className="s-L -c03 -b -marker">離職率低下</span>につながります。
+            </h2>
+            <div className="c-contents">
+              <div className="imgBox w20 w75s">
+                <Image
+                  src="/images/Lp/ver02/sc09-item01.png"
+                  alt="喜ぶ女性"
+                  width={140}
+                  height={157}
+                />
+              </div>
+            </div>
+            <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
+              <li className={"flexItem pdr5s pdl5s mgb5s"}>
+                <Image
+                  src="/images/Lp/ver02/sc09-02-item01.png"
+                  alt="1.従業員と家族の金融リテラシーの向上"
+                  width={640}
+                  height={480}
+                />
+              </li>
+              <li className={"flexItem pdr5s pdl5s mgb5s"}>
+                <Image
+                  src="/images/Lp/ver02/sc09-02-item02.png"
+                  alt="2.採用時のアピールポイントとして採用"
+                  width={640}
+                  height={480}
+                />
+              </li>
+              <li className={"flexItem pdr5s pdl5s"}>
+                <Image
+                  src="/images/Lp/ver02/sc09-02-item03.png"
+                  alt="3.社員の満足度の向上、離職率低下に貢献"
+                  width={640}
+                  height={480}
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* cta02 */}
+        <Lp02Cta />
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* マネーリペアを導入すると */}
         <div id="sc06" className={"c-contents pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
