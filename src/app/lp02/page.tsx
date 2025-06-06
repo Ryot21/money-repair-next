@@ -170,8 +170,8 @@ export default async function Home() {
                       専属金融相談窓口の設置
                     </h3>
                     <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                    弊社専属のファイナンシャルプランナーが最低1人御社専属の担当となり、LINEやお電話で気軽に相談ができます。従業員様の2親等までのご親族様まで、無料で相談が可能です。
-                    （ご相談は基本24時間365日対応しています。）
+                      弊社専属のファイナンシャルプランナーが最低1人御社専属の担当となり、LINEやお電話で気軽に相談ができます。従業員様の2親等までのご親族様まで、無料で相談が可能です。
+                      （ご相談は基本24時間365日対応しています。）
                     </p>
                   </li>
                 </ul>
@@ -191,7 +191,8 @@ export default async function Home() {
                   </li>
                   <li className={"flexItem"}>
                     <h3 className="c-contents--LpListTitle -t03 mgb1 mgb3s">
-                      家計管理も可能！<br />
+                      家計管理も可能！
+                      <br />
                       資産管理システムの提供
                     </h3>
                     <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
@@ -211,8 +212,15 @@ export default async function Home() {
               “可処分所得”が増加した事例
             </h2>
             <p className="s-ML -s12 -blue -center -ls-2 -lh-2 mgb7 mgb10s">
-              過去5年分の自己申告（年末調整や確定申告）をプロの目線で確認し、<br className="tb-pc" />本来は使えていた税制優遇や控除を最大限に活用。<br className="tb-pc" />
-              年間1,500人以上の相談を受けて、<br className="sp" />60%以上の方が<span className="s-L -s12 -b -blue -marker">年平均30万円</span>以上損している！？
+              過去5年分の自己申告（年末調整や確定申告）をプロの目線で確認し、
+              <br className="tb-pc" />
+              本来は使えていた税制優遇や控除を最大限に活用。
+              <br className="tb-pc" />
+              年間1,500人以上の相談を受けて、
+              <br className="sp" />
+              60%以上の方が
+              <span className="s-L -s12 -b -blue -marker">年平均30万円</span>
+              以上損している！？
             </p>
             <div className="c-contents -bg-color01 pdt2 pdt5s pdr2 pdr5s pdl2 pdl5s">
               <div className="c-contents--inner -lp-item mgb5 mgb5s">
@@ -255,7 +263,7 @@ export default async function Home() {
         </div>
         {/* SC06 比較 */}
         <div id="sc06" className={"c-contents -bg-color01 pdt7 pdt15s pdb5 pdb5s"}>
-        <div className="c-contents--inner">
+          <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
               従来型の福利厚生サービスとの比較
             </h2>
@@ -278,12 +286,14 @@ export default async function Home() {
             </div>
             <p className="s-ML -b -blue -left -ls-2 mgb5s">2.他の金融リテラシー向上サービスとの比較</p>
             <div className="c-contents mgb10 mgb10s">
-              <Image
-                src="/images/Lp/ver02/sc06-item02.png"
-                alt="比較表"
-                width={2012}
-                height={892}
-              />
+              <div className="sp-scroll-container">
+                <Image
+                  src="/images/Lp/ver02/sc06-item02.png"
+                  alt="比較表"
+                  width={2012}
+                  height={892}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -379,7 +389,6 @@ export default async function Home() {
                 </div>
               </li>
             </ul>
-
           </div>
         </div>
         {/* SC08 選ばれる理由 */}
@@ -434,56 +443,72 @@ export default async function Home() {
               <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">税金の適正化/節税</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      税金の適正化/節税
+                    </p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">iDeCo</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      iDeCo
+                    </p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">生命保険の見直し</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      生命保険の見直し
+                    </p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">ふるさと納税</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      ふるさと納税
+                    </p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">資産運用</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      資産運用
+                    </p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2 mgb5s"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">投資信託</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      投資信託
+                    </p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">NISA</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      NISA
+                    </p>
                   </div>
                 </div>
               </li>
               <li className={"flexItem mgb2"}>
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
-                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">年金問題</p>
+                    <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
+                      年金問題
+                    </p>
                   </div>
                 </div>
               </li>
@@ -494,8 +519,12 @@ export default async function Home() {
         <div className={"c-contents -bg-color01 pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"s-ML -b-btm -c03 -center -ls-2 -lh-2 mgb5 mgb10s"}>
-              「マネーリペア」を導入することで<br />
-              社員の満足度や、企業の魅力が向上し、<br className="sp" /><span className="s-L -c03 -b -marker">離職率低下</span>につながります。
+              「マネーリペア」を導入することで
+              <br />
+              社員の満足度や、企業の魅力が向上し、
+              <br className="sp" />
+              <span className="s-L -c03 -b -marker">離職率低下</span>
+              につながります。
             </h2>
             <div className="c-contents">
               <div className="imgBox w20 w75s">
@@ -658,7 +687,6 @@ export default async function Home() {
             <Accordion items={faqItems} />
           </div>
         </div>
-
       </div>
     </main>
   );
