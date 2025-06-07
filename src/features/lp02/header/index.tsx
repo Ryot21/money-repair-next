@@ -4,7 +4,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Iconbutton from "@/components/elements/button/IconButton";
-import Iconbutton02 from "@/components/elements/button/IconButton02";
 // import HeaderScroll from "./HeaderScroll";
 
 
@@ -74,12 +73,12 @@ export default function LpHeader(){
                     </nav>
                   </li>
                   {/* 資料ダウンロード */}
-                  <li className={"navItem -cvBtn -cv04"}>
-                    <Iconbutton href="/lp02#cta">
-                      <span className="pc s-M -s13 -b -ls-1">資料ダウンロード（無料）</span>
+                  <li className={"navItem"}>
+                    <Iconbutton href="/lp02#cta" customClass="cvBtn -navy02">
+                      <span className="pc">資料ダウンロード</span>
                       <Image
                         src="/images/SVG/download.svg"
-                        className="-svg mgb1"
+                        className="svgIcon mgb1"
                         alt="資料ダウンロード"
                         width={18}
                         height={18}
@@ -87,17 +86,17 @@ export default function LpHeader(){
                     </Iconbutton>
                   </li>
                   {/* お問い合わせはこちら */}
-                  <li className={"navItem -cvBtn -cv05"}>
-                    <Iconbutton02 href="/lp02#cta">
-                    <span className="pc s-M -s13 -b -ls-1">お問い合わせはこちら</span>
-                    <Image
-                        src="/images/SVG/mail02.svg"
-                        className="-svg mgb2"
+                  <li className={"navItem"}>
+                    <Iconbutton href="/lp02#cta" customClass="cvBtn -lightBlue">
+                      <span className="pc s-M -s13 -b -ls-1">お問い合わせはこちら</span>
+                      <Image
+                        src="/images/SVG/mail-blue.svg"
+                        className="svgIcon mgb1"
                         alt="資料ダウンロード"
                         width={18}
                         height={18}
                       />
-                    </Iconbutton02>
+                    </Iconbutton>
                   </li>
                 </ul>
               </div>

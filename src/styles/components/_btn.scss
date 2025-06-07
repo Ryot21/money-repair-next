@@ -29,3 +29,71 @@ button { // 通常
     border-radius: 5px;
   }
 }
+
+// ヘッダーのボタン
+.cvBtn {
+  display: inline-flex;
+  margin-left: 5%;
+  padding: 8px 14px 7px 15px;
+  margin-left: 10px;
+
+  // cvボタン
+  width: auto;
+  border-radius: 30px;
+  will-change: transform;
+  transition: all 0.5s;
+  @include min(1000) {margin-left: 20px;}
+
+  span{
+    font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+  }
+  .svgIcon{
+    width: 18px !important;
+    @include min(1000) {margin-left: 4px;}
+  }
+  &:hover {transform: scale(1.025);}
+
+  &.-navy {
+    background: $site-color03;
+    border: 1px solid $site-color03;
+    span{color: $main-color--w;}
+    &:hover {
+      background: $site-color02;
+    }
+  }
+  &.-red {
+    background: $main-color--Dred;
+    border: 1px solid $main-color--Dred;
+    &:hover {
+      background: $main-color--red;
+    }
+    span{color: $main-color--w;}
+  }
+  &.-orange {
+    background: $main-color--Dorange;
+    border: 1px solid $main-color--Dorange;
+    &:hover {background: $main-color--orange;}
+    span{color: $main-color--w;}
+
+  }
+  &.-navy02 {
+    background: $lp-color01;
+    border: 1px solid $lp-color01;
+    &:hover {
+      background: $lp-color06;
+      border: 1px solid $lp-color03;
+    }
+    span{color: $main-color--w;}
+  }
+  &.-lightBlue {
+    background: $lp-color02;
+    border: 1px solid $lp-color02;
+    &:hover {
+      background: $site-color07;
+      border: 1px solid $lp-color03;
+    }
+    span{color: $lp-color03;}
+  }
+}
