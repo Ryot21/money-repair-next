@@ -13,7 +13,8 @@ export type ContactState = {
 export type FormStep = "input" | "confirm" | "thanks";
 
 // フォームデータの型定義
-export type FormData = {// メディアサイト用
+export type FormData = {
+  // メディアサイト用
   purpose: string;
   company: string;
   name: string;
@@ -22,7 +23,9 @@ export type FormData = {// メディアサイト用
   message: string;
 };
 
-export type LpFormData = {// LP用
+export type LpFormData = {
+  // LP用
+  purpose: string;
   company: string;
   name: string;
   phone: string;

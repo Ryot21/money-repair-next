@@ -1247,11 +1247,11 @@
             max-width: none !important;
             max-height: none !important;
 
-            // height: 150vh;
-            // max-height: 1080px !important;
-
-            @include min(500) {
-                min-height: 500px !important;
+            @include max(500) {
+                max-height: 1000px !important;
+            }
+            @include min(768) {
+                min-height: 550px !important;
             }
             @include min(1800) {
                 max-height: 960px !important;
@@ -1266,7 +1266,7 @@
                 width: 95%;
                 max-width: 1150px;
                 position: absolute;
-                top: 29%;
+                top: 33%;
                 left: 50%;
                 transform: translate(-50%, -45%);
                 z-index: 5;

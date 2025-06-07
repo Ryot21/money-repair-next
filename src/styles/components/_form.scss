@@ -314,9 +314,9 @@
     .c-form {
       &--item {
         position: relative;
-        margin-bottom: 10px;
-        @include min(500) {
-          margin-bottom: 15px;
+        margin-bottom: 10px !important;
+        @include min(768) {
+          margin-bottom: 15px !important;
         }
         span {
           position: absolute;
@@ -539,5 +539,6 @@
   // ボタン
   &--btn {
     text-align: center;
+    margin-bottom: 10px;
   }
 }

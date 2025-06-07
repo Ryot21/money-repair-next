@@ -42,7 +42,7 @@ export default function LpFooter() {
                 </nav>
                 {/* ロゴ */}
                 <div className={"logo -lp mgb3 mgb5s"}>
-                    <Link href="/lp#top" className={"c-link -img"}>
+                    <Link href="/lp02#top" className={"c-link -img"}>
                         <Image
                             src="/images/logo/mp/money-repair-logo_w.svg"
                             alt="福利厚生で金融教育するならマネーリペア"

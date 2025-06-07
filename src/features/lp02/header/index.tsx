@@ -20,7 +20,7 @@ export default function LpHeader(){
             {/* Header > ロゴ */}
             <li className={"headerItem flexItem -logoArea"}>
               <div className={"logo"}>
-                <Link href="/lp#top" className={"c-link -img"}>
+                <Link href="/lp02#top" className={"c-link -img"}>
                   <Image
                     src="/images/logo/mp/money-repair-logo_b.svg"
                     alt="福利厚生で金融教育するならマネーリペア"

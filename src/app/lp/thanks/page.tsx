@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className="c-contents pdt5 pdt10s pdb5 pdb10s">
       <div className="c-contents--inner">
-        <p className="s-L -center -ls-1 -lh-2 mgb5 mgb5s">
+        <p className="s-ML -center -ls-1 -lh-2 mgb10 mgb10s">
           このたびは
           <br />
           資料ダウンロードのお申し込みをいただき、

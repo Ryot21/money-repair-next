@@ -4,7 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { formatPhoneNumber, validateField } from "@/utils/validation";
 import type {
   ContactState,
@@ -16,6 +16,8 @@ import type {
 
 export default function CardContactForm({ customClass }: FormProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type");
   // フォームの状態管理
   const [step, setStep] = useState<FormStep>("input");
   // 送信状態の管理
@@ -23,6 +25,12 @@ export default function CardContactForm({ customClass }: FormProps) {
 
   // フォームデータの状態管理を簡素化
   const [formData, setFormData] = useState<LpFormData>({
+    purpose:
+      type === "download"
+        ? "資料ダウンロード"
+        : type === "contact"
+        ? "お問い合わせ"
+        : "",
     company: "",
     name: "",
     phone: "",
@@ -38,15 +46,22 @@ export default function CardContactForm({ customClass }: FormProps) {
   });
 
   // メモ化されたフォーム変更ハンドラー
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    if (name === "phone") {
-      const formattedValue = formatPhoneNumber(value);
-      setFormData((prev) => ({ ...prev, phone: formattedValue }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
-  }, []);
+  const handleChange = useCallback(
+    (
+      e: React.ChangeEvent<
+        HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+      >
+    ) => {
+      const { name, value } = e.target;
+      if (name === "phone") {
+        const formattedValue = formatPhoneNumber(value);
+        setFormData((prev) => ({ ...prev, phone: formattedValue }));
+      } else {
+        setFormData((prev) => ({ ...prev, [name]: value }));
+      }
+    },
+    []
+  );
 
   // メモ化されたバリデーション処理
   const handleBlur = useCallback((e: React.FocusEvent<HTMLInputElement>) => {
@@ -65,8 +80,9 @@ export default function CardContactForm({ customClass }: FormProps) {
 
   // フォームの有効性をメモ化
   const isFormValidMemo = useMemo(() => {
-    const { company, name, phone, email } = formData;
+    const { purpose, company, name, phone, email } = formData;
     return (
+      purpose.trim() !== "" &&
       company.trim() !== "" &&
       name.trim() !== "" &&
       phone.trim() !== "" &&
@@ -88,13 +104,14 @@ export default function CardContactForm({ customClass }: FormProps) {
 
     try {
       const formDataToSubmit = new FormData();
-      formDataToSubmit.append("company", formData.company);
-      formDataToSubmit.append("name", formData.name);
-      formDataToSubmit.append("phone", formData.phone);
-      formDataToSubmit.append("email", formData.email);
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSubmit.append(key, value);
+      });
 
+      // Newtのフォームエンドポイントに送信
+      // https://app.newt.so/money-repair/apps/contact
       const response = await fetch(
-        "https://money-repair-media.form.newt.so/v1/F8CLJ-h_T",
+        "https://money-repair.form.newt.so/v1/9v5NPwe1M",
         {
           method: "POST",
           body: formDataToSubmit,
@@ -111,6 +128,7 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
 
       setFormData({
+        purpose: "",
         company: "",
         name: "",
         phone: "",
@@ -118,7 +136,7 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
       setIsAgreed(false);
 
-      router.push("/lp/thanks");
+      router.push("/lp02/thanks");
     } catch (error) {
       console.error("Error:", error);
       setSubmitStatus({
@@ -149,22 +167,20 @@ export default function CardContactForm({ customClass }: FormProps) {
   if (step === "confirm") {
     return (
       <div className="c-card -t05">
-        <div className="imgBox">
-          <Image
-            src="/images/SVG/Lp/ver02/contact-label.svg"
-            alt="3分でわかる資料ダウンロード"
-            width={334}
-            height={50}
-          />
-        </div>
+        <Image
+          src="/images/SVG/Lp/ver02/contact-label.svg"
+          alt="3分でわかる資料ダウンロード"
+          width={334}
+          height={50}
+        />
         <div className="c-card--inner">
           <div className={`c-form ${customClass}`}>
             <table className="c-form--inner mgb5 mgb5s">
               <tbody>
                 <tr>
-                  <th className="s-S -s16 -b -ls-2">会社名</th>
+                  <th className="s-S -s16 -b -ls-2">目的</th>
                   <td>
-                    <p className="s-SS -s12 -ls-2">{formData.company}</p>
+                    <p className="s-SS -s12 -ls-2">{formData.purpose}</p>
                   </td>
                 </tr>
                 <tr>
@@ -226,12 +242,26 @@ export default function CardContactForm({ customClass }: FormProps) {
         height={50}
       />
       <div className="c-card--inner">
-        {/* <p className="-b -color03 mgb3 mgb5s">1分でわかる資料ダウンロード</p> */}
         <form
           className={`c-form ${customClass}`}
           onSubmit={handleConfirm}
           method="POST"
         >
+          {/* 目的 */}
+          <div className="c-form--item">
+            <select
+              id="purpose"
+              name="purpose"
+              value={formData.purpose}
+              onChange={handleChange}
+              required
+            >
+              <option value="">選択して下さい</option>
+              <option value="資料ダウンロード">資料ダウンロード</option>
+              <option value="お問い合わせ">お問い合わせ</option>
+            </select>
+            <span>目的</span>
+          </div>
           {/* 会社名 */}
           <div className="c-form--item">
             <input
@@ -241,6 +271,7 @@ export default function CardContactForm({ customClass }: FormProps) {
               value={formData.company}
               onChange={handleChange}
               placeholder=" "
+              required
             />
             <span>会社名</span>
           </div>
@@ -253,6 +284,7 @@ export default function CardContactForm({ customClass }: FormProps) {
               value={formData.name}
               onChange={handleChange}
               placeholder=" "
+              required
             />
             <span>ご担当者名</span>
           </div>
@@ -314,7 +346,7 @@ export default function CardContactForm({ customClass }: FormProps) {
             )}
 
             {/* 送信 */}
-            <div className="c-form--btn mgb5 mgb5s">
+            <div className="c-form--btn">
               <button
                 type="submit"
                 value="確認する"
@@ -328,7 +360,11 @@ export default function CardContactForm({ customClass }: FormProps) {
           </div>
           {/* プライバシーポリシー */}
           <p className="c-form--consentText -lh-2 -ls-2">
-            ※お客様にお求めのコンテンツを提供するために、上記で送信された個人情報についてインプレームが<Link href="/privacy-policy" className="-color03 b-text">プライバシーポリシー</Link>に基づき利用することに同意します。
+            ※お客様にお求めのコンテンツを提供するために、上記で送信された個人情報についてインプレームが
+            <Link href="/privacy-policy" className="-color03 b-text">
+              プライバシーポリシー
+            </Link>
+            に基づき利用することに同意します。
           </p>
         </form>
       </div>

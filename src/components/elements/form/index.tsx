@@ -107,6 +107,7 @@ export default function ContactForm({ customClass }: FormProps) {
       });
 
       // Newtのフォームエンドポイントに送信
+      // https://app.newt.so/money-repair-media/apps/contact
       const response = await fetch(
         "https://money-repair-media.form.newt.so/v1/YktRisGz0",
         {

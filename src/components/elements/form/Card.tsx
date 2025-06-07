@@ -22,6 +22,7 @@ export default function CardContactForm({ customClass }: FormProps) {
 
   // フォームデータの状態管理を簡素化
   const [formData, setFormData] = useState<LpFormData>({
+    // purpose: "",
     company: "",
     name: "",
     phone: "",
@@ -92,8 +93,10 @@ export default function CardContactForm({ customClass }: FormProps) {
       formDataToSubmit.append("phone", formData.phone);
       formDataToSubmit.append("email", formData.email);
 
+      // Newtのフォームエンドポイントに送信
+      // https://app.newt.so/money-repair/apps/contact
       const response = await fetch(
-        "https://money-repair-media.form.newt.so/v1/F8CLJ-h_T",
+        "https://money-repair.form.newt.so/v1/8rMUtk02T",
         {
           method: "POST",
           body: formDataToSubmit,
@@ -110,6 +113,7 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
 
       setFormData({
+        // purpose: "",
         company: "",
         name: "",
         phone: "",
