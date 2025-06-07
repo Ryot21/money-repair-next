@@ -77,9 +77,9 @@ export default async function Home() {
             <div className="c-card -lp_02 -sc02">
               <div className="c-card--inner">
                 <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
-                  マネーリペアは離職率を下げて
+                <span className="s-ML -b -blue">マネリペ</span>は離職率を下げて
                   <br className="sp" />
-                  エンゲージメントを高める
+                  エンゲージメントを高め、
                   <br />
                   <br className="sp" />
                   <span className="s-L -s18 -b -blue -marker pdr1 pdr0s">
@@ -252,7 +252,7 @@ export default async function Home() {
               <br className="sp" />
               60%以上の方が
               <span className="s-L -s12 -b -blue -marker">年平均30万円</span>
-              以上損している！？
+              以上損しています！
             </p>
             <div className="c-contents -bg-color01 pdt2 pdt5s pdr2 pdr5s pdl2 pdl5s">
               <div className="c-contents--inner -lp-item mgb5 mgb5s">
@@ -493,7 +493,7 @@ export default async function Home() {
                 <div className="c-card -lp_02 -sc09">
                   <div className="c-card--inner">
                     <p className="s-ML -s14 -b -blue -center -ls-2 -lh-1_5">
-                      税金の適正化/節税
+                      税金の適正化
                     </p>
                   </div>
                 </div>

@@ -33,12 +33,13 @@ export default function ScrollContainer() {
         <Image
           src="/images/Lp/ver02/scroll-hint.png"
           alt="スクロールできます"
+          className="sp"
           width={130}
           height={130}
         />
       </div>
       <Image
-        src="/images/Lp/ver02/sc06-item02.png"
+        src="/images/SVG/Lp/ver02/hikaku-table.svg"
         alt="比較表"
         width={2012}
         height={892}
