@@ -86,8 +86,8 @@ export default function Breadcrumb({
             case "company":
               label = "運営会社";
               break;
-            case "terms":
-              label = "ご利用規約";
+            case "rules":
+              label = "利用規約";
               break;
             case "privacy-policy":
               label = "プライバシーポリシー";
