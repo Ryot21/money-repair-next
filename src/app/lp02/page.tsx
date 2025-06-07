@@ -133,9 +133,9 @@ export default async function Home() {
               </li>
             </ul>
             <p className="s-Ss -s10 -blue -right -ls-2 -lh-1_5 -ws-n mgb5 mgb10s">
-              ※1.マネーリペア顧客調査2025年度
+              ※1.マネリペ顧客調査2025年度
               <br />
-              ※2.マネーリペア500名のユーザーを対象とした調査に基づく
+              ※2.マネリペ500名のユーザーを対象とした調査に基づく
             </p>
           </div>
         </div>
@@ -288,7 +288,7 @@ export default async function Home() {
                 />
               </div>
               <p className="s-Ss -s10 -blue -center -ls-2 -lh-1_5">
-                ※マネーリペアのサービスは「ASTELLA Partners
+                ※マネリペのサービスは「ASTELLA Partners
                 会計事務所」に監修していただいております。
               </p>
             </div>
@@ -304,7 +304,7 @@ export default async function Home() {
               従来型の福利厚生サービスとの比較
             </h2>
             <p className="s-ML -b -blue -left -ls-2 mgb2 mgb5s">
-              1.マネーリペアの「旧来型運用」vs「現在の運用」の比較
+              1.マネリペの「旧来型運用」vs「現在の運用」の比較
             </p>
             <div className="c-contents mgb10 mgb10s">
               <Image
@@ -568,7 +568,7 @@ export default async function Home() {
         <div className={"c-contents -bg-color01 pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>
             <h2 className={"s-ML -b-btm -c03 -center -ls-2 -lh-2 mgb5 mgb10s"}>
-              「マネーリペア」を導入することで
+              「マネリペ」を導入することで
               <br />
               社員の満足度や、企業の魅力が向上し、
               <br className="sp" />

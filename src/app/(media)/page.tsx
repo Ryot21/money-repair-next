@@ -31,7 +31,7 @@ export default async function Home() {
       {/* 導入企業ロゴ */}
       {/* <LogoContents /> */}
 
-      {/* マネーリペアとは */}
+      {/* マネリペとは */}
       <div id="sc01" className={"c-contents pdt10 pdt10s"}>
         <div className={"c-contents--inner"}>
           <ul className={"c-flex -col1_2 -pc1_2 -jc-sb -h-top"}>

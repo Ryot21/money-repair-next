@@ -7,15 +7,17 @@ import Link from "next/link";
 
 // Props型を定義
 // type HamburgerNavProps = {
-  // interviewCategories: { contents: Category[] };
-  // informationCategories: { contents: Category[] };
+// interviewCategories: { contents: Category[] };
+// informationCategories: { contents: Category[] };
 // };
 
-export default function Navigation({
-  // interviewCategories,
-  // informationCategories,
-// }: HamburgerNavProps) {
-}) {
+export default function Navigation(
+  {
+    // interviewCategories,
+    // informationCategories,
+    // }: HamburgerNavProps) {
+  }
+) {
   // 現在のパスとクエリパラメータを取得
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -70,7 +72,9 @@ export default function Navigation({
           {/* マネリペとは */}
           <li className={"hbNavItem "}>
             <Link
-              className={`c-link -text -ws-n mgb2s ${isActive("/service") ? "-active" : ""}`}
+              className={`c-link -text -ws-n mgb2s ${
+                isActive("/service") ? "-active" : ""
+              }`}
               href="/service"
               onClick={handleLinkClick}
             >
@@ -79,13 +83,15 @@ export default function Navigation({
               </span>
             </Link>
             <p className="c-hb-nav__text">
-            マネーリペアは、従業員の金融リテラシー向上を支援し、お金の不安を解消するサービスです。
+              マネリペは、従業員の金融リテラシー向上を支援し、お金の不安を解消するサービスです。
             </p>
           </li>
           {/* マネリペ情報 */}
           <li className={"hbNavItem "}>
             <Link
-              className={`c-link -text -ws-n mgb2s ${isActive("/maneripe") ? "-active" : ""}`}
+              className={`c-link -text -ws-n mgb2s ${
+                isActive("/maneripe") ? "-active" : ""
+              }`}
               href="/maneripe"
               onClick={handleLinkClick}
             >
@@ -111,7 +117,7 @@ export default function Navigation({
               </span>
             </Link>
             <p className="c-hb-nav__text mgb5s">
-              マネーリペアを導入していただいた企業の『リアルな声』を集めました。
+              マネリペを導入していただいた企業の『リアルな声』を集めました。
             </p>
           </li> */}
           {/* お役立ち情報 */}
@@ -156,7 +162,9 @@ export default function Navigation({
           {/* お知らせ */}
           <li className={"hbNavItem"}>
             <Link
-              className={`c-link -text -ws-n mgb2s ${isActive("/news") ? "-active" : ""}`}
+              className={`c-link -text -ws-n mgb2s ${
+                isActive("/news") ? "-active" : ""
+              }`}
               href="/news"
               onClick={handleLinkClick}
             >
@@ -178,7 +186,9 @@ export default function Navigation({
           {/* お問い合わせ */}
           <li className={"hbNavItem"}>
             <Link
-              className={`c-link -text -ws-n mgb2s ${isActive("/contact?type=contact") ? "-active" : ""}`}
+              className={`c-link -text -ws-n mgb2s ${
+                isActive("/contact?type=contact") ? "-active" : ""
+              }`}
               href="/contact?type=contact"
               onClick={handleLinkClick}
             >

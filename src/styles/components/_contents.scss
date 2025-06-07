@@ -5,17 +5,35 @@
 }
 
 .c-contents {
-  &.-bg{
-    &-color01 {background: $site-color01 !important;}
-    &-color02 {background: $site-color02 !important;}
-    &-color03 {background: $site-color03 !important;}
-    &-color04 {background: $site-color04 !important;}
-    &-color05 {background: $site-color05 !important;}
-    &-color06 {background: $site-color06 !important;}
-    &-color07 {background: $site-color07 !important;}
-    &-white {background: $main-color--w !important;}
-    &-gray {background: $main-color--gray !important;}
-    &-img{
+  &.-bg {
+    &-color01 {
+      background: $site-color01 !important;
+    }
+    &-color02 {
+      background: $site-color02 !important;
+    }
+    &-color03 {
+      background: $site-color03 !important;
+    }
+    &-color04 {
+      background: $site-color04 !important;
+    }
+    &-color05 {
+      background: $site-color05 !important;
+    }
+    &-color06 {
+      background: $site-color06 !important;
+    }
+    &-color07 {
+      background: $site-color07 !important;
+    }
+    &-white {
+      background: $main-color--w !important;
+    }
+    &-gray {
+      background: $main-color--gray !important;
+    }
+    &-img {
       &-sc08 {
         background-image: url(/images/Lp/sc08-bg.png);
         background-size: cover;
@@ -31,25 +49,52 @@
     }
 
     // LP02
-    &-lp02-logo {background: $lp-color05 !important;}
-    &-lp02-sc02 {background: $lp-color09 !important;}
-    &-lp02-sc03 {background: $site-color01 !important;}
+    &-lp02-logo {
+      background: $lp-color05 !important;
+    }
+    &-lp02-sc02 {
+      background: $lp-color09 !important;
+    }
+    &-lp02-sc03 {
+      background: $site-color01 !important;
+    }
   }
 
-  &--inner {// コンテンツ幅
+  &--inner {
+    // コンテンツ幅
     width: 92.5%;
     margin: auto;
-    @include max(500) {max-width: 375px;}
-    @include min(500) {width: 85%;}
-    @include min(768) {width: 90%;}
-    @include min(1600) {max-width: 1380px;}
-    @include min(1800) {max-width: 1500px;}
+    @include max(500) {
+      max-width: 375px;
+    }
+    @include min(500) {
+      width: 85%;
+    }
+    @include min(768) {
+      width: 90%;
+    }
+    @include min(1600) {
+      max-width: 1380px;
+    }
+    @include min(1800) {
+      max-width: 1500px;
+    }
 
-    &.-bg-color01 {background: $site-color01;}
-    &.-bg-color02 {background: $site-color02;}
-    &.-bg-color03 {background: $site-color03;}
-    &.-bg-white {background: $main-color--w;}
-    &.-bg-gray {background: $main-color--gray;}
+    &.-bg-color01 {
+      background: $site-color01;
+    }
+    &.-bg-color02 {
+      background: $site-color02;
+    }
+    &.-bg-color03 {
+      background: $site-color03;
+    }
+    &.-bg-white {
+      background: $main-color--w;
+    }
+    &.-bg-gray {
+      background: $main-color--gray;
+    }
     &.-bg-img01 {
       background-image: url(/images/Lp/sc08-bg.png);
       background-size: cover;
@@ -73,14 +118,22 @@
     }
   }
   &--banner {
-    &.-ver01 {// お客様の声
+    &.-ver01 {
+      // お客様の声
       width: 90%;
       margin: auto;
-      @include min(500) {width: 85%;}
-      @include min(768) {width: 50%;}
-      @include min(1600) {max-width: 768px;}
+      @include min(500) {
+        width: 85%;
+      }
+      @include min(768) {
+        width: 50%;
+      }
+      @include min(1600) {
+        max-width: 768px;
+      }
     }
-    &.-ver02 {// お役立ち情報
+    &.-ver02 {
+      // お役立ち情報
       width: 100%;
     }
   }
@@ -115,7 +168,8 @@
         width: 100%;
         height: 100%;
       }
-      &.-latestNews {// 最新のお知らせ
+      &.-latestNews {
+        // 最新のお知らせ
         position: absolute;
         bottom: 0;
         left: 0;
@@ -160,33 +214,45 @@
       }
     }
   }
-  &.-logoArea{// 導入実績
+  &.-logoArea {
+    // 導入実績
     position: relative;
-    
+
     &::before,
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       top: 0;
       width: 50px;
       height: 100%;
       z-index: 1;
-      @include min(768){
+      @include min(768) {
         width: 100px;
       }
     }
     // 背景 > site-color01用
-    &::before{
+    &::before {
       left: -5px;
-      background: linear-gradient(.25turn, $site-color01, 50%, rgb(245, 251, 255, 0.1));
+      background: linear-gradient(
+        0.25turn,
+        $site-color01,
+        50%,
+        rgb(245, 251, 255, 0.1)
+      );
     }
     // 背景 > site-color01用
-    &::after{
+    &::after {
       right: -5px;
-      background: linear-gradient(.75turn, $site-color01, 50%, rgb(245, 251, 255, 0.1));
+      background: linear-gradient(
+        0.75turn,
+        $site-color01,
+        50%,
+        rgb(245, 251, 255, 0.1)
+      );
     }
   }
-  &.-serviceBox{// マネーリペアとは
+  &.-serviceBox {
+    // マネリペとは
     position: relative;
     padding: 12% 5% 25% 5%;
     border-radius: 10px;
@@ -219,7 +285,7 @@
         transform: translateY(-50%);
         padding: 0.5% 2.5% 0.5% 1%;
       }
-      &::after{
+      &::after {
         content: "サービス";
         color: $main-color--b;
         font-size: 1rem;
@@ -227,7 +293,7 @@
         top: 2px;
         left: 12px;
         padding-bottom: 2px;
-        @include min(768){
+        @include min(768) {
           font-size: 1.2rem;
           top: 5px;
         }
@@ -261,7 +327,7 @@
         transform: translateY(-50%);
         width: 35%;
       }
-      img{
+      img {
         width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: cover;
@@ -270,10 +336,16 @@
     }
   }
 
-  &.-LpCta{// LP > CTAエリア
+  &.-LpCta {
+    // LP > CTAエリア
     position: relative;
-    background:linear-gradient(0deg, rgb(73, 103, 142, .5) 0%, rgb(73, 103, 142, .1) 50%, rgb(73, 103, 142, .3) 100%);
-    &::before{
+    background: linear-gradient(
+      0deg,
+      rgb(73, 103, 142, 0.5) 0%,
+      rgb(73, 103, 142, 0.1) 50%,
+      rgb(73, 103, 142, 0.3) 100%
+    );
+    &::before {
       content: "";
       position: absolute;
       top: 2%;
@@ -284,16 +356,16 @@
       background-size: contain;
       opacity: 0.5;
       z-index: 1;
-      @include min(768){
+      @include min(768) {
         top: 5%;
-        left: 5%; 
-        width: 30%; 
+        left: 5%;
+        width: 30%;
         max-width: 420px;
         height: 15%;
         max-height: 170px;
       }
     }
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       bottom: 2%;
@@ -304,9 +376,9 @@
       background-size: contain;
       opacity: 0.5;
       z-index: 1;
-      @include min(768){
+      @include min(768) {
         bottom: 5%;
-        right: 5%;  
+        right: 5%;
         width: 75%;
         max-width: 1180px;
         height: 20%;
@@ -314,10 +386,11 @@
       }
     }
   }
-  &.-Lp02Cta{// LP02 > CTAエリア
+  &.-Lp02Cta {
+    // LP02 > CTAエリア
     position: relative;
-    background: radial-gradient(#2460AD, #3FA8DD);
-    &::before{
+    background: radial-gradient(#2460ad, #3fa8dd);
+    &::before {
       content: "";
       position: absolute;
       top: 30%;
@@ -328,14 +401,14 @@
       background-size: contain;
       opacity: 0.05;
       z-index: 1;
-      @include max(768){
+      @include max(768) {
         top: 50%;
         left: 0;
         width: 54%;
         height: 70%;
       }
     }
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -346,7 +419,7 @@
       background-size: contain;
       opacity: 0.05;
       z-index: 1;
-      @include max(768){
+      @include max(768) {
         top: 0;
         right: 2%;
         width: 250px;
@@ -356,9 +429,9 @@
   }
 
   // 三角形
-  &.-triangle{
+  &.-triangle {
     position: relative;
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       top: 0;
@@ -368,16 +441,16 @@
       height: 5%;
       background: $main-color--w;
       clip-path: polygon(0 0, 100% 0, 50% 100%);
-      @include min(500){
+      @include min(500) {
         width: 20%;
         height: 10%;
       }
     }
   }
   // 応援しているイラスト
-  &.-support{
+  &.-support {
     position: relative;
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       bottom: 0;
@@ -387,18 +460,18 @@
       background: url("/images/Lp/ouen.png") no-repeat center center;
       background-size: contain;
       z-index: 10;
-      @include min(1000){
+      @include min(1000) {
         bottom: -5%;
 
         width: 180px;
         height: 180px;
       }
-      @include min(1400){
+      @include min(1400) {
         bottom: 0;
         width: 200px;
         height: 200px;
       }
-      @include min(1600){
+      @include min(1600) {
         width: 250px;
         height: 250px;
       }

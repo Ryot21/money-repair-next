@@ -48,7 +48,7 @@ export default function Thumbnail({
         <div className={"c-thumbnail--mark"}>
           <Image
             src={`/images/thumbnail/${type}-mark.svg`}
-            alt={`マネーリペア | ${
+            alt={`マネリペ | ${
               type === "interview"
                 ? "ご利用者の声"
                 : type === "news"

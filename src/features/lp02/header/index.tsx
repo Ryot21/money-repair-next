@@ -6,10 +6,8 @@ import Link from "next/link";
 import Iconbutton from "@/components/elements/button/IconButton";
 // import HeaderScroll from "./HeaderScroll";
 
-
 // クライアントコンポーネントとしてHeaderを実装
-export default function LpHeader(){
-
+export default function LpHeader() {
   return (
     <>
       {/* <HeaderScroll /> */}
@@ -22,7 +20,7 @@ export default function LpHeader(){
                 <Link href="/lp02#top" className={"c-link -img"}>
                   <Image
                     src="/images/logo/mp/money-repair-logo_b.svg"
-                    alt="福利厚生で金融教育するならマネーリペア"
+                    alt="福利厚生で金融教育するならマネリペ"
                     width={200}
                     height={50}
                     priority
@@ -40,25 +38,37 @@ export default function LpHeader(){
                       <ul className={"c-hnav-lists"}>
                         {/* #sc04 */}
                         <li className={"hnavItem"}>
-                          <Link href="/lp02#sc04" className={`c-hnav--link s-M -s13 -b -ls-1 -ws-n`}>
+                          <Link
+                            href="/lp02#sc04"
+                            className={`c-hnav--link s-M -s13 -b -ls-1 -ws-n`}
+                          >
                             サービス内容
                           </Link>
                         </li>
                         {/* #sc08 */}
                         <li className={"hnavItem"}>
-                          <Link href="/lp02#sc08" className={`c-hnav--link s-M -s13 -b -ls-1 -ws-n`}>
+                          <Link
+                            href="/lp02#sc08"
+                            className={`c-hnav--link s-M -s13 -b -ls-1 -ws-n`}
+                          >
                             選ばれる理由
                           </Link>
                         </li>
                         {/* #interview */}
                         <li className={"hnavItem"}>
-                          <Link href="/lp02#interview" className={`c-hnav--link s-M -b -s13 -ls-1 -ws-n`}>
+                          <Link
+                            href="/lp02#interview"
+                            className={`c-hnav--link s-M -b -s13 -ls-1 -ws-n`}
+                          >
                             導入事例
                           </Link>
                         </li>
                         {/* #Q&A */}
                         <li className={"hnavItem"}>
-                          <Link href="/lp02#Q&A" className={`c-hnav--link s-M -s13 -b -ls-1 -ws-n`}>
+                          <Link
+                            href="/lp02#Q&A"
+                            className={`c-hnav--link s-M -s13 -b -ls-1 -ws-n`}
+                          >
                             よくある質問
                           </Link>
                         </li>
@@ -67,9 +77,7 @@ export default function LpHeader(){
                   </li>
                   <li>
                     <nav className={"c-hnav"}>
-                      <ul className={"c-hnav-lists"}>
-                        
-                      </ul>
+                      <ul className={"c-hnav-lists"}></ul>
                     </nav>
                   </li>
                   {/* 資料ダウンロード */}
@@ -88,7 +96,9 @@ export default function LpHeader(){
                   {/* お問い合わせはこちら */}
                   <li className={"navItem"}>
                     <Iconbutton href="/lp02#cta" customClass="cvBtn -lightBlue">
-                      <span className="pc s-M -s13 -b -ls-1">お問い合わせはこちら</span>
+                      <span className="pc s-M -s13 -b -ls-1">
+                        お問い合わせはこちら
+                      </span>
                       <Image
                         src="/images/SVG/mail-blue.svg"
                         className="svgIcon mgb1"
@@ -105,5 +115,5 @@ export default function LpHeader(){
         </div>
       </header>
     </>
-  )
+  );
 }

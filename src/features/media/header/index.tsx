@@ -83,7 +83,7 @@ export default function Header({
                 <Link href="/" className={"c-link -img"}>
                   <Image
                     src="/images/logo/mp/money-repair-logo_b.svg"
-                    alt="福利厚生で金融教育するならマネーリペア"
+                    alt="福利厚生で金融教育するならマネリペ"
                     width={200}
                     height={50}
                     priority
@@ -102,13 +102,19 @@ export default function Header({
                         {/* サービス内容 */}
                         <li className={"hnavItem archiveItem"}>
                           {/* アクティブ、チェック時 */}
-                          <button className={`c-hnav--btn -triangle 
-                            ${ isActive("/service") ? "-active" : ""}
-                            ${ activeDropdown === "service" ? "-checked" : "" }`}
+                          <button
+                            className={`c-hnav--btn -triangle 
+                            ${isActive("/service") ? "-active" : ""}
+                            ${activeDropdown === "service" ? "-checked" : ""}`}
                             onClick={() => toggleDropdown("service")}
-                          ><span>マネリペとは</span>
-                          </button> 
-                          <div className={`c-hnav--dropdown ${ activeDropdown === "service" ? "-checked" : "" }`}>
+                          >
+                            <span>マネリペとは</span>
+                          </button>
+                          <div
+                            className={`c-hnav--dropdown ${
+                              activeDropdown === "service" ? "-checked" : ""
+                            }`}
+                          >
                             <div className="c-hnav--dropdown--inner">
                               <ul className="c-flex -col1_2 -pc2_1 -h-top -jc-sb">
                                 <li className="flexItem">
@@ -116,7 +122,7 @@ export default function Header({
                                     サービス内容
                                   </p>
                                   <p className="c-hnav--dropdown--text">
-                                    マネーリペアは、従業員の金融リテラシー向上を支援し、お金の不安を解消するサービスです。税金、不動産、保険、有価証券の専門家が、税負担の軽減や可処分所得UPなど包括的なアドバイスを提供し、従業員の経済的安定と企業の活性化に貢献します。
+                                    マネリペは、従業員の金融リテラシー向上を支援し、お金の不安を解消するサービスです。税金、不動産、保険、有価証券の専門家が、税負担の軽減や可処分所得UPなど包括的なアドバイスを提供し、従業員の経済的安定と企業の活性化に貢献します。
                                   </p>
                                   <Link
                                     className={"c-link s-S -b -ls-2 -text"}
@@ -159,7 +165,7 @@ export default function Header({
                                 <li className="flexItem">
                                   <p className="c-hnav--dropdown--title">ご利用者の声</p>
                                   <p className="c-hnav--dropdown--text">
-                                    マネーリペアを導入していただいた企業の『リアルな声』を集めました。実際に導入していただいた現場のお話を通じて、どのように金融知識が深まり、経済的な安心が得られたのかをご紹介します。ぜひマネーリペアが提供する価値をご確認ください。
+                                    マネリペを導入していただいた企業の『リアルな声』を集めました。実際に導入していただいた現場のお話を通じて、どのように金融知識が深まり、経済的な安心が得られたのかをご紹介します。ぜひマネリペが提供する価値をご確認ください。
                                   </p>
                                   <Link className={"c-link s-S -b -ls-2 -text"} href="/interview">
                                     記事一覧
@@ -188,13 +194,22 @@ export default function Header({
                         {/* お役立ち情報 */}
                         <li className={"hnavItem archiveItem"}>
                           {/* アクティブ、チェック時 */}
-                          <button className={`c-hnav--btn -triangle 
-                            ${ isActive("/information") ? "-active" : ""}
-                            ${ activeDropdown === "information" ? "-checked" : "" }`}
-                            onClick={() => toggleDropdown("information")}><span>お役立ち情報</span>
+                          <button
+                            className={`c-hnav--btn -triangle 
+                            ${isActive("/information") ? "-active" : ""}
+                            ${
+                              activeDropdown === "information" ? "-checked" : ""
+                            }`}
+                            onClick={() => toggleDropdown("information")}
+                          >
+                            <span>お役立ち情報</span>
                           </button>
                           {/* ドロップダウンメニュー */}
-                          <div className={`c-hnav--dropdown ${ activeDropdown === "information" ? "-checked" : "" }`}>
+                          <div
+                            className={`c-hnav--dropdown ${
+                              activeDropdown === "information" ? "-checked" : ""
+                            }`}
+                          >
                             <div className="c-hnav--dropdown--inner">
                               <ul className="c-flex -col1_2 -pc2_1 -h-top -jc-sb">
                                 <li className="flexItem">
@@ -202,7 +217,8 @@ export default function Header({
                                     お役立ち情報
                                   </p>
                                   <p className="c-hnav--dropdown--text">
-                                  金融リテラシーが身に付くとライフプランに合わせた資金作りや家計のやりくり、節約などのお金の管理を合理的にできるようになります。 お金の管理が適切にできると「経済的に自立する」ことにつながります。
+                                    金融リテラシーが身に付くとライフプランに合わせた資金作りや家計のやりくり、節約などのお金の管理を合理的にできるようになります。
+                                    お金の管理が適切にできると「経済的に自立する」ことにつながります。
                                   </p>
                                   <Link
                                     className={"c-link s-S -b -ls-2 -text"}
@@ -243,7 +259,10 @@ export default function Header({
                   </li>
                   {/* 資料請求 */}
                   <li className={"navItem"}>
-                    <Iconbutton href="/contact?type=download" customClass="cvBtn -navy">
+                    <Iconbutton
+                      href="/contact?type=download"
+                      customClass="cvBtn -navy"
+                    >
                       <span className="pc">資料ダウンロード</span>
                       <Image
                         src="/images/SVG/download.svg"
@@ -256,7 +275,10 @@ export default function Header({
                   </li>
                   {/* お問い合せ */}
                   <li className={"navItem"}>
-                    <Iconbutton href="/contact?type=contact" customClass="cvBtn -red">
+                    <Iconbutton
+                      href="/contact?type=contact"
+                      customClass="cvBtn -red"
+                    >
                       <span className="pc">お問い合わせ</span>
                       <Image
                         src="/images/SVG/mail-white.svg"

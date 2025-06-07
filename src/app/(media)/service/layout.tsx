@@ -1,7 +1,7 @@
 import Sheet from "@/features/media/sheet";
 
 export const metadata = {
-  title: "マネーリペアの特徴",
+  title: "マネリペの特徴",
 };
 
 type Props = {

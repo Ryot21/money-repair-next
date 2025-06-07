@@ -27,7 +27,7 @@ export default async function Page() {
         <div className={"c-contents pdt2 pdb5 pdb10s"}>
           <div className={"c-contents--inner"}>
             <p className={"s-M -s12 -center -ls-2 -lh-2"}>
-              マネーリペアをご利用された方々の
+              マネリペをご利用された方々の
               <span className={"s-M -s12 -b -ls-2"}>率直な体験談</span>
               を集めました。
               <br className={"tb-pc"} />
@@ -40,7 +40,7 @@ export default async function Page() {
                 経済的な安心が得られたのかをご紹介します。
               </span>
               <br className={"tb-pc"} />
-              ぜひマネーリペアが提供する価値をご確認ください。
+              ぜひマネリペが提供する価値をご確認ください。
             </p>
           </div>
         </div>

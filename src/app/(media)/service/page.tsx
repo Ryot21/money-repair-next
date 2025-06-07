@@ -4,12 +4,12 @@ import LogoMark from "@/components/lottie/LogoMark";
 export default function Page() {
   return (
     <div>
-      {/* マネーリペアとは */}
+      {/* マネリペとは */}
       <div className={"c-contents--introduction  pdt5s mgb5s"}>
         {/* ロゴ */}
         <LogoMark />
         <h2 className={"c-contents--title -center -b-btm -ls-2 mgb5 mgb10s"}>
-          {/* マネーリペア<span>（マネリペ）とは</span> */}
+          {/* マネリペ<span>とは</span> */}
           <div className="imgBox c-img -logo">
             <Image
               src="/images/logo/mp/money-repair-logo_b03.svg"
@@ -66,7 +66,7 @@ export default function Page() {
                   <Image
                     className={"w70 w100s"}
                     src="/images/logo/mp/money-repair-logo_w.svg"
-                    alt="マネーリペア"
+                    alt="マネリペ"
                     width={202}
                     height={42}
                   />

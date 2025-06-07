@@ -6,7 +6,9 @@ export default function ContactBottom() {
     <div id="sc-contact" className={"c-contents pdb5 pdb10s"}>
       <div className={"c-contents--inner -bg-white -card"}>
         <h2
-          className={"c-contents--title -contact -center -ls-2 -en-color03 mgt5s pdb3 pdb5s"}
+          className={
+            "c-contents--title -contact -center -ls-2 -en-color03 mgt5s pdb3 pdb5s"
+          }
         >
           資料ダウンロード
         </h2>
@@ -19,13 +21,13 @@ export default function ContactBottom() {
           を<br className={"sp"} />
           トータルサポートいたします。
           <br />
-          <span className={"-b"}>『マネーリペア』をぜひご利用ください。</span>
+          <span className={"-b"}>『マネリペ』をぜひご利用ください。</span>
         </p>
         {/* パンフレット・2024年版 */}
         <div className={"imgBox w80 w100s pdb5 pdb10s"}>
           <Image
             src="/images/item/pf-2024.png"
-            alt="マネーリペア2024"
+            alt="マネリペ2024"
             width={1024}
             height={339}
           />
@@ -40,7 +42,13 @@ export default function ContactBottom() {
               >
                 <span className={"-f-gothic01 -b"}>お役立ち資料</span>はこちら
               </p>
-              <Button href="/contact?type=download" customAreaClass="-center" customClass="-btn -maru -orange -icon -arrow">資料ダウンロード</Button>
+              <Button
+                href="/contact?type=download"
+                customAreaClass="-center"
+                customClass="-btn -maru -orange -icon -arrow"
+              >
+                資料ダウンロード
+              </Button>
             </li>
             <li className={"cvItem"}>
               <p
@@ -50,7 +58,13 @@ export default function ContactBottom() {
               >
                 お気軽にお問い合わせ下さい。
               </p>
-              <Button href="/contact?type=contact" customAreaClass="-center" customClass="-btn -maru -red -icon -mail">お問い合わせ</Button>
+              <Button
+                href="/contact?type=contact"
+                customAreaClass="-center"
+                customClass="-btn -maru -red -icon -mail"
+              >
+                お問い合わせ
+              </Button>
             </li>
           </ul>
         </div>

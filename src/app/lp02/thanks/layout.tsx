@@ -1,7 +1,7 @@
 import LpContactSheet from "@/features/lp02/sheet/Contact";
 
 export const metadata = {
-  title: "マネーリペア | 資料ダウンロード",
+  title: "マネリペ | 資料ダウンロード",
   description: "資料ダウンロードありがとうございました。",
 };
 

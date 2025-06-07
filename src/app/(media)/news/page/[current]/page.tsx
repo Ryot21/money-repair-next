@@ -44,7 +44,7 @@ export default async function Page({ params }: Props) {
           <div className={"c-contents pdt2 pdb5 pdb10s"}>
             <div className={"c-contents--inner"}>
               <p className={"s-M -s12 -center -ls-2 -lh-2"}>
-                マネーリペアに関連する
+                マネリペに関連する
                 <span className={"s-M -s12 -b -ls-2"}>資産形成</span>
                 に役立つ記事を発信しています。
                 <br className={"tb-pc"} />

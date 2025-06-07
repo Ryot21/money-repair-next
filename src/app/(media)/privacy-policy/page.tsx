@@ -2,11 +2,6 @@
 export default function Page() {
     return (
         <>
-            {/* 個人情報の取り扱いについて */}
-            {/* <h2 className="pITitle s-M -s14 -b -ls-2 mgb1 mgb2s">個人情報の取り扱いについて</h2>
-            <p className="pIText s-S -lh-1_5 -ls-2 mgb2 mgb5s">
-                以下の個人情報保護方針によくお読みになり、同意の上、お問い合わせに進んでください。
-            </p> */}
             {/* プライバシーポリシー */}
             <div className="p-static">
                 <h3 className="s-M -b -left -ls-2">個人情報に関する取扱いについて</h3>
@@ -101,7 +96,7 @@ export default function Page() {
                         <p>
                             （所在地）東京都千代田区岩本町2-19-9丸栄ビル5階
                             <br />
-                            （名称）マネーリペア運営事務局（株式会社インプレーム内）
+                            （名称）マネリペ運営事務局（株式会社インプレーム内）
                             <br />
                             （電話）03-6264-7047（受付時間：月曜日～金曜日 10時～18時）
                         </p>
