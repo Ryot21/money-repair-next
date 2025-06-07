@@ -22,7 +22,7 @@ export default function CardContactForm({ customClass }: FormProps) {
 
   // フォームデータの状態管理を簡素化
   const [formData, setFormData] = useState<LpFormData>({
-    // purpose: "",
+    purpose: "",
     company: "",
     name: "",
     phone: "",
@@ -113,7 +113,7 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
 
       setFormData({
-        // purpose: "",
+        purpose: "",
         company: "",
         name: "",
         phone: "",
