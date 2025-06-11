@@ -171,6 +171,7 @@
   &.-maneripe,
   &.-news {
     .p-single {
+      &--read,
       &--intro,
       &--detail {
         // テキスト間隔
@@ -314,10 +315,16 @@
           &::after{transform: rotate(-45deg);}
         }
         .-first{// 1文字目のみ大文字
+          display: block;
+          font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+          font-weight: bold;
+          text-shadow: 6px 5px 1px #ebebeb;
+
           &::first-letter {
-            color: $main-color--red;
-            font-size: 40px;
-            font-weight: bold;
+            color: $main-color--Dgray;
+            font-size: clamp(2.8rem, 2.5vw, 4rem);
+            text-shadow: none;
+            box-shadow: 6px 5px 1px #ebebeb;
           }
         }
         // ↓ テーブル
@@ -393,6 +400,21 @@
       }
     }
     .p-single {
+      &--subTitle{
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        line-height: 2;
+        margin: auto !important;
+      }
+      &--read{
+        p{
+          position: relative;
+          line-height: 2;
+          letter-spacing: 0.2rem;
+          margin-bottom: 10%;
+          @include min(500) {margin-bottom: 5%;}  
+        }
+      }
       &--detail {
         .man {
           font-weight: bold;
@@ -410,9 +432,9 @@
           border-radius: 8px;
           overflow: hidden;
           @include min(500) {
-            width: 33%;
+            width: 35%;
             min-width: 300px;
-            max-width: 320px;
+            max-width: 400px;
           }
           &.-right {
             float: right;
@@ -441,12 +463,13 @@
           h2 {
             margin-bottom: 5%;
             @include min(500) {
-              margin-bottom: 2%;
+              margin-bottom: 1%;
             }
             span {
               position: relative;
               display: table;
-              font-size: clamp(1.6rem, 2vw, 3rem);
+              color: $site-color03;
+              font-size: clamp(1.6rem, 2vw, 2.4rem);
               font-weight: bold;
               letter-spacing: 0.2rem;
               padding-left: 15px;

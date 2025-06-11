@@ -46,6 +46,8 @@ export type Interview = {// ご利用者インタビュー
     thumbnailAlt:   string;        // サムネイル_alt
     mainTitle:      string;        // メインタイトル
     subTitle:       string;        // サブタイトル
+    read:           string;        // 導入文
+    article1Title:  string;        // 本文1_見出し
     article1Body:   string;        // 本文1
     article1Image:  MicroCMSImage; // 本文1
     article2Title:  string;        // 本文2_見出し
@@ -53,6 +55,15 @@ export type Interview = {// ご利用者インタビュー
     article2Image:  MicroCMSImage; // 本文2
     article3Title?: string;        // 本文3_見出し
     article3Body?:  string;        // 本文3
+    article3Image?: MicroCMSImage; // 本文3
+    article4Title?: string;        // 本文4_見出し
+    article4Body?:  string;        // 本文4
+    article4Image?: MicroCMSImage; // 本文4
+    article5Title?: string;        // 本文5_見出し
+    article5Body?:  string;        // 本文5
+    article5Image?: MicroCMSImage; // 本文5
+
+
     publishedAt:    string;        // 更新日
     createdAt:      string;        // 作成日
 } & MicroCMSListContent;

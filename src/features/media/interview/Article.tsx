@@ -52,9 +52,14 @@ export default function Article({ data }: Props) {
           <h1>{data.mainTitle}</h1>
           <Date date={data.publishedAt || data.createdAt} />
         </div>
+        {/* 導入文 */}
+        <div className="p-single--read">
+          <p className="p-single--subTitle">{data.subTitle}</p>
+          <p dangerouslySetInnerHTML={{ __html: data.read || "" }}></p>
+        </div>
         {/* 詳細エリア */}
         <div className="p-single--detail mgb5">
-          {/* 写真１枚目 */}
+          {/* セクション1 */}
           <div className="imgBox -right -w100s">
             <Image
               src={data.article1Image.url}
@@ -63,12 +68,16 @@ export default function Article({ data }: Props) {
               height={320}
             />
           </div>
-          <div
-            className="detail01"
-            dangerouslySetInnerHTML={{ __html: data.article1Body || "" }}
-          ></div>
+          <div className="detail01">
+            <h2>
+              <span>{data.article1Title}</span>
+            </h2>
+            <div
+              dangerouslySetInnerHTML={{ __html: data.article2Body || "" }}
+            ></div>
+          </div>
 
-          {/* 写真２枚目 */}
+          {/* セクション2 */}
           <div className="imgBox -left -w100s">
             <Image
               src={data.article2Image.url}
@@ -86,7 +95,17 @@ export default function Article({ data }: Props) {
             ></div>
           </div>
 
-          {/* 写真３枚目 */}
+          {/* セクション3 */}
+          {data.article3Image && (
+            <div className="imgBox -right -w100s">
+              <Image
+                src={data.article3Image.url}
+                alt="インタビュー風景"
+                width={480}
+                height={320}
+              />
+            </div>
+          )}
           {data.article3Title && data.article3Body && (
             <div className="detail03">
               <h2>
@@ -94,6 +113,50 @@ export default function Article({ data }: Props) {
               </h2>
               <div
                 dangerouslySetInnerHTML={{ __html: data.article3Body || "" }}
+              ></div>
+            </div>
+          )}
+
+          {/* セクション4 */}
+          {data.article4Image && (
+            <div className="imgBox -left -w100s">
+              <Image
+                src={data.article4Image.url}
+                alt="インタビュー風景"
+                width={480}
+                height={320}
+              />
+            </div>
+          )}
+          {data.article4Title && data.article4Body && (
+            <div className="detail03">
+              <h2>
+                <span>{data.article4Title}</span>
+              </h2>
+              <div
+                dangerouslySetInnerHTML={{ __html: data.article4Body || "" }}
+              ></div>
+            </div>
+          )}
+
+          {/* セクション5 */}
+          {data.article5Image && (
+            <div className="imgBox -right -w100s">
+              <Image
+                src={data.article5Image.url}
+                alt="インタビュー風景"
+                width={480}
+                height={320}
+              />
+            </div>
+          )}
+          {data.article5Title && data.article5Body && (
+            <div className="detail03">
+              <h2>
+                <span>{data.article5Title}</span>
+              </h2>
+              <div
+                dangerouslySetInnerHTML={{ __html: data.article5Body || "" }}
               ></div>
             </div>
           )}
