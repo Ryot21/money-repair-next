@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://money-repair.jp/lp"),
+  metadataBase: new URL("https://money-repair.jp/lp02"),
   title: {
     template: "%s | 役立つ金融知識をお届けします。",
     default: "マネリペ | 役立つ金融知識をお届けします。",
