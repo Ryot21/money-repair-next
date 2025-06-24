@@ -9,7 +9,7 @@ import { formatPhoneNumber, validateField } from "@/utils/validation";
 import type {
   ContactState,
   FormStep,
-  LpFormData,
+  Lp02FormData,
   FormErrors,
   Props as FormProps,
 } from "@/types/form";
@@ -24,7 +24,7 @@ export default function CardContactForm({ customClass }: FormProps) {
   const [submitStatus, setSubmitStatus] = useState<ContactState>(null);
 
   // フォームデータの状態管理を簡素化
-  const [formData, setFormData] = useState<LpFormData>({
+  const [formData, setFormData] = useState<Lp02FormData>({
     purpose:
       type === "download"
         ? "資料ダウンロード"
