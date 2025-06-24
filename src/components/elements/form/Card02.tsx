@@ -32,6 +32,13 @@ export default function CardContactForm({ customClass }: FormProps) {
         ? "お問い合わせ"
         : "",
     company: "",
+    post:
+      type === "download"
+        ? "資料ダウンロード"
+        : type === "contact"
+        ? "お問い合わせ"
+        : "",
+    department: "",
     name: "",
     phone: "",
     email: "",
@@ -80,11 +87,13 @@ export default function CardContactForm({ customClass }: FormProps) {
 
   // フォームの有効性をメモ化
   const isFormValidMemo = useMemo(() => {
-    const { purpose, company, name, phone, email } = formData;
+    const { purpose, company, name, post, department, phone, email } = formData;
     return (
       purpose.trim() !== "" &&
       company.trim() !== "" &&
       name.trim() !== "" &&
+      post.trim() !== "" &&
+      department.trim() !== "" &&
       phone.trim() !== "" &&
       email.trim() !== "" &&
       isAgreed &&
@@ -131,6 +140,8 @@ export default function CardContactForm({ customClass }: FormProps) {
         purpose: "",
         company: "",
         name: "",
+        post: "",
+        department: "",
         phone: "",
         email: "",
       });
@@ -187,6 +198,18 @@ export default function CardContactForm({ customClass }: FormProps) {
                   <th className="s-S -s16 -b -ls-2">会社名</th>
                   <td>
                     <p className="s-SS -s12 -ls-2">{formData.company}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th className="s-S -s16 -b -ls-2">役職</th>
+                  <td>
+                    <p className="s-SS -s12 -ls-2">{formData.post}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th className="s-S -s16 -b -ls-2">部署名</th>
+                  <td>
+                    <p className="s-SS -s12 -ls-2">{formData.department}</p>
                   </td>
                 </tr>
                 <tr>
@@ -275,6 +298,49 @@ export default function CardContactForm({ customClass }: FormProps) {
             />
             <span>会社名</span>
           </div>
+          <ul className="c-flex -col2 -jc-sb">
+            <li className="flexItem">
+              {/* 役職 */}
+              <div className="c-form--item">
+                <select
+                  id="post"
+                  name="post"
+                  value={formData.post}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">選択してください</option>
+                  <option value="代表取締役">代表取締役</option>
+                  <option value="部長">部長</option>
+                  <option value="課長">課長</option>
+                  <option value="担当者">担当者</option>
+                  <option value="その他">その他</option>
+                </select>
+                <span>役職</span>
+              </div>
+            </li>
+            <li className="flexItem">
+              {/* 部署名 */}
+              <div className="c-form--item">
+                <select
+                  id="department"
+                  name="department"
+                  value={formData.department}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">選択してください</option>
+                  <option value="営業部">営業部</option>
+                  <option value="総務部">総務部</option>
+                  <option value="人事部">人事部</option>
+                  <option value="経理部">経理部</option>
+                  <option value="情報システム部">情報システム部</option>
+                  <option value="その他">その他</option>
+                </select>
+                <span>部署名</span>
+              </div>
+            </li>
+          </ul>
           {/* ご担当者名 */}
           <div className="c-form--item">
             <input

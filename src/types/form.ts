@@ -27,6 +27,8 @@ export type LpFormData = {
   // LP用
   purpose: string;
   company: string;
+  post: string;
+  department: string;
   name: string;
   phone: string;
   email: string;

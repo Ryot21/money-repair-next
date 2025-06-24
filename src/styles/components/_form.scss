@@ -316,6 +316,9 @@
         position: relative;
         margin-bottom: 10px !important;
         @include min(768) {
+          margin-bottom: 10px !important;
+        }
+        @include min(1280) {
           margin-bottom: 15px !important;
         }
         span {
@@ -333,8 +336,11 @@
         }
         input,textarea,select {
           width: 100%;
-          padding: 6px 10px;
+          padding: 10px;
           @include min(500) {
+            padding: 9px 5px;
+          }
+          @include min(1280) {
             padding: 10px 15px;
           }
           &:focus + span,

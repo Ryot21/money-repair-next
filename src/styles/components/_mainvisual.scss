@@ -1251,7 +1251,7 @@
                 max-height: 1000px !important;
             }
             @include min(768) {
-                min-height: 550px !important;
+                min-height: 600px !important;
             }
             @include min(1800) {
                 max-height: 960px !important;
@@ -1308,7 +1308,7 @@
                 width: 90%;
                 max-width: 420px;
                 position: absolute;
-                top: 55%;
+                top: 47%;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 7;
@@ -1320,14 +1320,14 @@
                 }
                 @include min(1000) {
                     width: 33%;
-                    top: 17.5%;
+                    top: 16.5%;
                     left: 78%;
                 }
                 @include min(1400) {
                     left: 78%;
                 }
                 @include min(1800){
-                    top: 30.5%;
+                    top: 27.5%;
                     left: 75%;
                 }
                 @include min(2000){
