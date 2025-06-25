@@ -33,7 +33,7 @@
     display: block;
     background: white;
     border-radius: 4px;
-    border: 1px solid $main-color--w;
+    border: 5px solid $main-color--w;
     box-shadow: 0px 3px 2px #8080802b;
     will-change: transform;
     transition: all 0.3s;
@@ -52,8 +52,8 @@
     }
     &:hover {
       top: 0.5rem;
-      background: $main-color--gray;
-      border: 1px solid $site-color03;
+      // background: $main-color--gray;
+      // border: 5px solid $site-color02;
       border-radius: 10px;
 
       .imgBox {
