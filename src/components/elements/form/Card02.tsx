@@ -32,16 +32,12 @@ export default function CardContactForm({ customClass }: FormProps) {
         ? "お問い合わせ"
         : "",
     company: "",
-    post:
-      type === "download"
-        ? "資料ダウンロード"
-        : type === "contact"
-        ? "お問い合わせ"
-        : "",
+    post: "",
     department: "",
     name: "",
     phone: "",
     email: "",
+    considerationStage: "",
   });
 
   // プライバシーポリシーの同意状態
@@ -144,6 +140,7 @@ export default function CardContactForm({ customClass }: FormProps) {
         department: "",
         phone: "",
         email: "",
+        considerationStage: "",
       });
       setIsAgreed(false);
 
@@ -186,7 +183,7 @@ export default function CardContactForm({ customClass }: FormProps) {
         />
         <div className="c-card--inner">
           <div className={`c-form ${customClass}`}>
-            <table className="c-form--inner mgb5 mgb5s">
+            <table className="c-form--inner">
               <tbody>
                 <tr>
                   <th className="s-S -s16 -b -ls-2">目的</th>
@@ -201,15 +198,9 @@ export default function CardContactForm({ customClass }: FormProps) {
                   </td>
                 </tr>
                 <tr>
-                  <th className="s-S -s16 -b -ls-2">役職</th>
+                  <th className="s-S -s16 -b -ls-2">役職・部署</th>
                   <td>
-                    <p className="s-SS -s12 -ls-2">{formData.post}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th className="s-S -s16 -b -ls-2">部署名</th>
-                  <td>
-                    <p className="s-SS -s12 -ls-2">{formData.department}</p>
+                    <p className="s-SS -s12 -ls-2">{formData.post} {formData.department}</p>
                   </td>
                 </tr>
                 <tr>
@@ -230,6 +221,14 @@ export default function CardContactForm({ customClass }: FormProps) {
                     <p className="s-SS -s12 -ls-2">{formData.email}</p>
                   </td>
                 </tr>
+                {/* <tr>
+                  <th className="s-S -s16 -b -ls-2">検討段階</th>
+                  <td>
+                    <p className="s-SS -s12 -ls-2">
+                      {formData.considerationStage}
+                    </p>
+                  </td>
+                </tr> */}
               </tbody>
             </table>
 
@@ -387,6 +386,51 @@ export default function CardContactForm({ customClass }: FormProps) {
             {errors.email && (
               <p className="s-SS -error mgt1 mgt1s">{errors.email}</p>
             )}
+          </div>
+          {/* 検討段階 */}
+          <div className="c-form--item -radioBtn">
+            <ul className="c-flex -radio">
+              <li className="flexItem">
+                <p className="s-SS -b -left -ls-2" style={{ paddingTop: 8 }}>検討段階</p>
+              </li>
+              <li className="flexItem">
+                <div className="c-flex -jc-end">
+                  <label>
+                    <input
+                      type="radio"
+                      name="considerationStage"
+                      value="情報収集中"
+                      checked={formData.considerationStage === "情報収集中"}
+                      onChange={handleChange}
+                      required
+                    />{" "}
+                    <pre>調べ中</pre>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="considerationStage"
+                      value="検討中"
+                      checked={formData.considerationStage === "検討中"}
+                      onChange={handleChange}
+                      required
+                    />{" "}
+                    <pre>検討中</pre>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="considerationStage"
+                      value="すぐに導入したい"
+                      checked={formData.considerationStage === "すぐに導入したい"}
+                      onChange={handleChange}
+                      required
+                    />{" "}
+                    <pre>すぐに<br />導入したい！</pre>
+                  </label>
+                </div>
+              </li>
+            </ul>
           </div>
           {/* 送信ボタン */}
           <div id="chk_policy" className="c-form--consent">

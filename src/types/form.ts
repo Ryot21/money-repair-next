@@ -41,6 +41,7 @@ export type Lp02FormData = {
   name: string;
   phone: string;
   email: string;
+  considerationStage: string; // 検討段階
 };
 
 // フォームエラーの型定義

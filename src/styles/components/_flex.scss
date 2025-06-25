@@ -457,4 +457,23 @@
       }
     }
   }
+  // LP_ラジオボタン
+  &.-radio {
+    .flexItem {
+      width: 100%;
+      @include max(1000){
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+      @include min(1000){
+        &:nth-child(1) {
+          width: 23%;
+        }
+        &:nth-child(2) {
+          width: 77%;
+        }
+      }
+    }
+  }
 }

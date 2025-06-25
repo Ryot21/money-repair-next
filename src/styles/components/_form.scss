@@ -26,7 +26,9 @@
         position: relative;
         text-align: left;
         padding: 20px 15px;
-        @include min(500) {padding: 15px;}
+        @include min(500) {
+          padding: 15px;
+        }
         @include max(500) {
           width: 100%;
           background-image: linear-gradient(45deg, #e4ebf445, #e4ebf480);
@@ -34,7 +36,9 @@
       }
       td {
         padding: 20px 5px 20px 30px;
-        @include min(500) {padding: 15px;}
+        @include min(500) {
+          padding: 15px;
+        }
 
         input[type="submit"],
         input[type="text"],
@@ -61,43 +65,54 @@
             background: #e9f5fb;
             border: 1px solid $main-color--gray;
           }
-          &::placeholder {color: #ccc;}
+          &::placeholder {
+            color: #ccc;
+          }
           @include max(500) {
             &#purpose,
             &#company,
             &#name,
             &#email,
             &#phone,
-            &#message {width: 100% !important;}
+            &#message {
+              width: 100% !important;
+            }
           }
           @include min(500) {
-            &#purpose {// 目的
+            &#purpose {
+              // 目的
               width: 65%;
               max-width: 190px;
             }
-            &#company {// 会社名
+            &#company {
+              // 会社名
               width: 75%;
               max-width: 300px;
             }
-            &#name {// ご担当者名
+            &#name {
+              // ご担当者名
               width: 55%;
               max-width: 180px;
             }
-            &#email {// メールアドレス
+            &#email {
+              // メールアドレス
               width: 80%;
               max-width: 400px;
             }
-            &#phone {// 電話番号
+            &#phone {
+              // 電話番号
               width: 45%;
               max-width: 150px;
             }
-            &#message {// お問い合わせ内容
+            &#message {
+              // お問い合わせ内容
               resize: none;
               width: 100%;
               height: 300px;
             }
           }
-          &#submit {// ボタン
+          &#submit {
+            // ボタン
             width: 100%;
             padding: 0;
             border: none;
@@ -108,7 +123,8 @@
   }
   // サイドバー
   &.-sideber {
-    .required {// ＊（必須）
+    .required {
+      // ＊（必須）
       span {
         position: relative;
         &::after {
@@ -156,7 +172,9 @@
             background: #e9f5fb;
             border: 1px solid $main-color--gray;
           }
-          &::placeholder {color: #ccc;}
+          &::placeholder {
+            color: #ccc;
+          }
 
           // 共通
           &#purpose,
@@ -164,24 +182,32 @@
           &#name,
           &#email,
           &#phone,
-          &#message{width: 100% !important;}
+          &#message {
+            width: 100% !important;
+          }
 
-          &#message{// お問い合わせ内容
+          &#message {
+            // お問い合わせ内容
             resize: none;
             width: 100%;
             height: 150px;
           }
-          &#submit {// ボタン
+          &#submit {
+            // ボタン
             width: 100%;
             padding: 0;
             border: none;
           }
         }
-        p {padding-left: 5% !important;}
+        p {
+          padding-left: 5% !important;
+        }
       }
     }
     // 個人情報の取り扱いについて
-    .pITitle {margin-bottom: 3% !important;}
+    .pITitle {
+      margin-bottom: 3% !important;
+    }
     .pIText {
       font-size: 1.2rem;
       margin-bottom: 3% !important;
@@ -240,7 +266,8 @@
   }
   // カード
   &.-card {
-    .required {// ＊（必須）
+    .required {
+      // ＊（必須）
       span {
         position: relative;
         &::after {
@@ -287,7 +314,9 @@
             background: #e9f5fb;
             border: 1px solid $main-color--gray;
           }
-          &::placeholder {color: #ccc;}
+          &::placeholder {
+            color: #ccc;
+          }
 
           // 共通
           &#purpose,
@@ -295,20 +324,26 @@
           &#name,
           &#email,
           &#phone,
-          &#message{width: 100% !important;}
+          &#message {
+            width: 100% !important;
+          }
 
-          &#message{// お問い合わせ内容
+          &#message {
+            // お問い合わせ内容
             resize: none;
             width: 100%;
             height: 150px;
           }
-          &#submit {// ボタン
+          &#submit {
+            // ボタン
             width: 100%;
             padding: 0;
             border: none;
           }
         }
-        p {padding-left: 5% !important;}
+        p {
+          padding-left: 5% !important;
+        }
       }
     }
     .c-form {
@@ -323,18 +358,20 @@
         }
         span {
           position: absolute;
-          inset: .7rem auto auto 1rem;
+          inset: 0.7rem auto auto 1rem;
           color: $main-color--b;
           font-size: 1.2rem;
           transition-property: inset, font-size, color, background;
-          transition-duration: .2s;
+          transition-duration: 0.2s;
           transition-timing-function: ease;
           pointer-events: none;
           @include min(500) {
             inset: 1rem auto auto 1rem;
           }
         }
-        input,textarea,select {
+        input,
+        textarea,
+        select {
           width: 100%;
           padding: 10px;
           @include min(500) {
@@ -345,22 +382,68 @@
           }
           &:focus + span,
           &:not(:placeholder-shown) + span {
-            font-size: .8rem;
+            font-size: 0.8rem;
             color: $site-color02;
             background: $main-color--w;
-            inset: -.5em auto auto 1rem;
-            padding: 0 .5em;
+            inset: -0.5em auto auto 1rem;
+            padding: 0 0.5em;
+          }
+        }
+        &.-radioBtn {
+          label {
+            position: relative;
+            display: block;
+            width: calc(33.333% - 1rem);
+            height: 33px;
+            text-align: center;
+            cursor: pointer;
+
+            background: $main-color--w;
+            border: 1px solid $main-color--b;
+            border-radius: 3px;
+            transition: all .3s;
+            &:nth-child(1){margin-right: 1rem;}
+            &:nth-child(2){margin: 0 .5rem;}
+            &:nth-child(3){margin-left: 1rem;}
+            pre {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              margin: auto;
+              line-height: 1.2;
+
+              font-size: 1.1rem;
+              font-weight: bold;
+              letter-spacing: 0.1rem;
+            }
+            input[type="radio"] {
+              display: none;
+            }
+            // ホバー時
+            &:hover{
+              background: $main-color--gray;
+            }
+            // 選択時
+            &:has(input:checked) {
+              background: $lp-color01;
+              color: #fff;
+              border: 1px solid $site-color03;
+              transform: scale(1.1);
+              z-index: 1;
+            }
           }
         }
       }
       &--consentText {
-        font-size: 1rem;
-        letter-spacing: .2rem;
+        font-size: .8rem;
+        letter-spacing: 0.2rem;
         line-height: 1.5;
       }
       // 同意
       &--consent {
-        #error {// エラーテキスト
+        #error {
+          // エラーテキスト
           display: none;
           font-size: 1rem;
           color: $main-color--red;
@@ -368,7 +451,8 @@
           letter-spacing: 0.2rem;
           line-height: 1.5;
         }
-        .policyBox {// ポリシーボックス
+        .policyBox {
+          // ポリシーボックス
           background: none;
           padding: 0 0 0 25px;
           text-align: left;
@@ -437,8 +521,10 @@
     }
   }
   // 同意
-  &--consent {// メディア、LP共通
-    #error {// エラーテキスト
+  &--consent {
+    // メディア、LP共通
+    #error {
+      // エラーテキスト
       display: none;
       font-size: clamp(1rem, 1.2vw, 1.5rem);
       color: $main-color--red;
@@ -446,7 +532,8 @@
       letter-spacing: 0.2rem;
       line-height: 1.5;
     }
-    .policyBox {// ポリシーボックス
+    .policyBox {
+      // ポリシーボックス
       font-size: 1rem;
       text-align: center;
       letter-spacing: 0.2rem;
@@ -471,13 +558,13 @@
             font-weight: bold;
             color: $main-color--b;
             cursor: pointer;
-  
-            &::before {// チェックボックス
+
+            &::before {
+              // チェックボックス
               content: "";
               position: absolute;
               top: 50%;
               left: -20px;
-  
               display: block;
               width: 10px;
               height: 10px;
@@ -486,9 +573,12 @@
               border-radius: 2px;
               transform: translateY(-50%);
               cursor: pointer;
-              @include min(500) {left: -25px;}
+              @include min(500) {
+                left: -20px;
+              }
             }
-            &::after {// チェックボックスのチェックマーク
+            &::after {
+              // チェックボックスのチェックマーク
               content: "" !important;
               position: absolute;
               top: 59%;
@@ -501,18 +591,21 @@
               transform: rotate(-45deg) translate(50%, -50%);
               transition: all 0.1s;
               opacity: 0;
-              @include min(500) {left: -25px;}
+              @include min(500) {
+                left: -20px;
+              }
             }
-            &.required {// 必須
+            &.required {
+              // 必須
               position: relative;
-              span{
+              span {
                 &::after {
                   content: "必須";
                   position: absolute;
                   top: 50%;
                   right: -40px;
                   transform: translateY(-50%);
-    
+
                   font-size: 1.1rem;
                   color: $main-color--w;
                   background: $main-color--red;
@@ -522,7 +615,7 @@
                     right: -45px;
                     padding: 4px 6px 3px;
                   }
-                }  
+                }
               }
             }
           }
@@ -536,7 +629,8 @@
         }
       }
     }
-    p {// 入力内容をご確認のうえ、次の画面へ進んでください。
+    p {
+      // 入力内容をご確認のうえ、次の画面へ進んでください。
       font-size: clamp(1rem, 1.2vw, 1.2rem);
       text-align: center;
     }
@@ -545,6 +639,7 @@
   // ボタン
   &--btn {
     text-align: center;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 }

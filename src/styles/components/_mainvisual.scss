@@ -1248,10 +1248,10 @@
             max-height: none !important;
 
             @include max(500) {
-                max-height: 1000px !important;
+                max-height: 1080px !important;
             }
             @include min(768) {
-                min-height: 600px !important;
+                min-height: 620px !important;
             }
             @include min(1800) {
                 max-height: 960px !important;

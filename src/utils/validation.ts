@@ -148,7 +148,7 @@ export const formatPhoneNumber = (value: string): string => {
 export const validateField = (name: string, value: string): string => {
   if (name === "phone") {
     if (!value) {
-      return "電話番号を入力してください";
+      return "会社の電話番号を入力してください";
     }
     if (!validatePhoneNumber(value)) {
       return "正しい電話番号を入力してください";
@@ -157,7 +157,7 @@ export const validateField = (name: string, value: string): string => {
 
   if (name === "email") {
     if (!value) {
-      return "メールアドレスを入力してください";
+      return "会社のメールアドレスを入力してください";
     }
     if (!validateEmail(value)) {
       return "正しいメールアドレスを入力してください";
