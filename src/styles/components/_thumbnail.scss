@@ -57,6 +57,13 @@
         }
     }
 
+    // アスペクト比
+    // &.-as3_2{
+    //     .imgBox{
+    //         img{aspect-ratio: 3 / 2;}
+    //     }
+    // }
+
     // 共通
     &--title,
     &--subTitle{// タイトル

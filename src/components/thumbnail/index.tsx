@@ -43,25 +43,24 @@ export default function Thumbnail({
           <span className={"c-thumbnail--cover__text"}>詳細を見る</span>
         </div>
       )}
-      {/* LPとお役立ち情報はマークを表示しない */}
-      {type !== "lp" && type !== "information" && (
+      {/* LPとお役立ち情報・ご利用者の声は、マークを表示しない */}
+      {type !== "lp" && type !== "information" && type !== "interview" && (
         <div className={"c-thumbnail--mark"}>
           <Image
             src={`/images/thumbnail/${type}-mark.svg`}
-            alt={`マネリペ | ${
-              type === "interview"
-                ? "ご利用者の声"
-                : type === "news"
-                ? "ニュース"
-                : "お役立ち情報"
-            }`}
+            alt={`マネリペ | ${type === "news" ? "ニュース" : "お役立ち情報"}`}
             width={186}
             height={16}
           />
         </div>
       )}
-      <div className={"c-thumbnail--title"}>{title}</div>
-      <div className={"c-thumbnail--subTitle"}>{subTitle}</div>
+      {/* interviewの時はタイトルとサブタイトルを表示しない */}
+      {type !== "interview" && (
+        <div className={"c-thumbnail--title"}>{title}</div>
+      )}
+      {type !== "interview" && (
+        <div className={"c-thumbnail--subTitle"}>{subTitle}</div>
+      )}
       {/* LPは画像を表示しない */}
       {type !== "lp" && (
         <div className={"c-thumbnail--picter"}>
