@@ -707,7 +707,7 @@
         border-bottom: 1px solid $site-color03;
         .imgBox {
             width: 100lvw;
-            height: 30vh;
+            height: 20vh;
             max-height: 190px !important;
             background: linear-gradient(
                 220deg,
@@ -718,8 +718,8 @@
     
             @include min(500) {
                 height: 20vh;
-                min-height: 360px !important;
-                max-height: 480px !important;
+                min-height: 340px !important;
+                max-height: 340px !important;
             }
             @include min(768) {height: 30vh;}
             @include min(1200) {height: 35vh;}

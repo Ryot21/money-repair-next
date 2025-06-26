@@ -5,7 +5,7 @@ import type { Interview } from "@/types/microcms";
 import Date from "@/components/elements/date";
 import CategoryLink from "@/components/elements/category/CategoryLink";
 import Client from "@/features/media/client";
-// import Thumbnail from "@/components/thumbnail";
+import Thumbnail from "@/components/thumbnail";
 
 type Props = {
   data: Interview;
@@ -16,7 +16,7 @@ export default function Article({ data }: Props) {
     <>
 
       {/* サムネイルコンポーネント | 2025/03/10追加 */}
-      {/* <div className="c-contents--banner -ver01">
+      <div className="c-contents--banner -ver01">
         <div className="mgb5 mgb10s">
           <Thumbnail
             type="interview"
@@ -28,9 +28,10 @@ export default function Article({ data }: Props) {
             subTitle={data.subTitle}
           />
         </div>
-      </div> */}
+      </div>
       {/* 記事詳細 */}
-      <div className="c-contents--inner -bg-white -card ">
+      {/* <div className="c-contents--inner -bg-white -card "> */}
+      <div className="-bg-white -card mgb5">
         {/* タイトルエリア */}
         <div className="p-single--title">
           {/* 日付 */}
@@ -54,11 +55,11 @@ export default function Article({ data }: Props) {
         </div>
         {/* 導入文 */}
         <div className="p-single--read">
-          <p className="p-single--subTitle">{data.subTitle}</p>
+          {/* <p className="p-single--subTitle">{data.subTitle}</p> */}
           <p dangerouslySetInnerHTML={{ __html: data.read || "" }}></p>
         </div>
         {/* 詳細エリア */}
-        <div className="p-single--detail mgb5">
+        <div className="p-single--detail mgb10">
           {/* セクション1 */}
           <div className="imgBox -right -w100s">
             <Image

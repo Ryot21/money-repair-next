@@ -34,7 +34,7 @@ button { // 通常
 .cvBtn {
   display: inline-flex;
   margin-left: 5%;
-  padding: 8px 14px 7px 15px;
+  padding: 7px 14px 7px 13px;
   margin-left: 10px;
 
   // cvボタン
@@ -42,8 +42,11 @@ button { // 通常
   border-radius: 30px;
   will-change: transform;
   transition: all 0.5s;
-  @include min(1000) {margin-left: 20px;}
-
+  @include min(1000) {
+    padding: 8px 14px 7px 10px;
+    margin-left: 20px;
+  }
+  @include min(1280) {padding: 8px 14px 7px 15px;}
   span{
     font-size: clamp(1.2rem, 1.5vw, 1.6rem);
     font-weight: bold;

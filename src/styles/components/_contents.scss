@@ -62,7 +62,7 @@
 
   &--inner {
     // コンテンツ幅
-    width: 92.5%;
+    width: 100%;
     margin: auto;
     @include max(500) {
       max-width: 375px;
@@ -120,7 +120,7 @@
   &--banner {
     &.-ver01 {
       // お客様の声
-      width: 90%;
+      width: 100%;
       margin: auto;
       @include min(500) {
         width: 85%;
