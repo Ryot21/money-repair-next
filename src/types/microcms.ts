@@ -9,6 +9,13 @@ export type Client = {// 投稿者
     name:        string;        // 取引先企業名
     icon:        MicroCMSImage; // アイコン
     address:     string;        // 住所
+    businessArea: {             // 事業内容リスト
+        business01: string;
+        business02: string;
+        business03: string;
+        business04: string;
+        business05: string;
+    };
     description: string;        // 企業説明
     logo?:       MicroCMSImage; // ロゴ
     url:         string;        // URL

@@ -11,7 +11,7 @@ export default function Poster({ poster }: PosterProps) {
     
     return (
         <>
-           {posters.map((poster, index) => (
+            {posters.map((poster, index) => (
                 <div key={index} className={"c-card -t01 mgb10 mgb10s"}>
                     <ul className={"c-card-lists"}>
                         <li className={"c-card-item"}>
