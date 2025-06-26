@@ -25,11 +25,11 @@ export async function generateMetadata({
 
     return {
         title: `マネリペ情報 | ${data.mainTitle}`,
-        description: data.read,
+        description: data.read.replace(/<[^>]+>/g, ""),
         // その他のメタデータ
         openGraph: {
             title: `マネリペ情報 | ${data.mainTitle}`,
-            description: data.read,
+            description: data.read.replace(/<[^>]+>/g, ""),
             // images: [data.thumbnail?.url ?? ""],
         },
     };
