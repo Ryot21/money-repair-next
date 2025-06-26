@@ -24,11 +24,11 @@ export async function generateMetadata({
     }).catch(notFound);
 
     return {
-        title: data.mainTitle,
+        title: `マネリペ情報 | ${data.mainTitle}`,
         description: data.read,
         // その他のメタデータ
         openGraph: {
-            title: data.mainTitle,
+            title: `マネリペ情報 | ${data.mainTitle}`,
             description: data.read,
             // images: [data.thumbnail?.url ?? ""],
         },

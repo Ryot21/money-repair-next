@@ -25,11 +25,11 @@ export async function generateMetadata({
 
   return {
     title: `ご利用者の声 | ${data.company}`,
-    description: data.read,
+    description: data.read.replace(/<[^>]+>/g, ""),
     // その他のメタデータ
     openGraph: {
         title: `ご利用者の声 | ${data.company}`,
-        description: data.read,
+        description: data.read.replace(/<[^>]+>/g, ""),
         images: [data.thumbnail?.url ?? ""],
     },
   };

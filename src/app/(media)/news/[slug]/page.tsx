@@ -24,11 +24,11 @@ export async function generateMetadata({
     }).catch(notFound);
 
     return {
-        title: data.title,
+        title: `お知らせ | ${data.title}`,
         description: data.article,
         // その他のメタデータ
         openGraph: {
-            title: data.title,
+            title: `お知らせ | ${data.title}`,
             description: data.article,
             // images: [data.thumbnail?.url ?? ""],
         },
