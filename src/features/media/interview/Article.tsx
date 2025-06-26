@@ -31,7 +31,7 @@ export default function Article({ data }: Props) {
       </div>
       {/* 記事詳細 */}
       {/* <div className="c-contents--inner -bg-white -card "> */}
-      <div className="-bg-white -card mgb5">
+      <div className="mgb5">
         {/* タイトルエリア */}
         <div className="p-single--title">
           {/* 日付 */}

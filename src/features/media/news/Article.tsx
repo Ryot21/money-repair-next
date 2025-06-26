@@ -10,7 +10,8 @@ type Props = {
 export default async function Article({ data }: Props) {
 
   return (
-    <div className="c-contents--inner -bg-white -card ">
+    // <div className="c-contents--inner -bg-white -card ">
+    <div className="mgb5">
         {/* 1. タイトルエリア */}
         <div className={"p-single--title"}>
           {/* 日付 */}
@@ -25,9 +26,7 @@ export default async function Article({ data }: Props) {
         {/* 2. コンテンツ */}
         <div className={"p-single--detail -info mgb10 mgb20s"} dangerouslySetInnerHTML={{ __html: data.article || "" }}></div>
         {/* 3. 投稿者 */}
-        <div className=" w80 w100s">
-          <Poster poster={data.poster} />
-        </div>
+        <Poster poster={data.poster} />
     </div>
   );
 }

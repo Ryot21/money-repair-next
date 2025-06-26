@@ -108,7 +108,9 @@ export default async function Article({ data }: Props) {
           dangerouslySetInnerHTML={{ __html: data.article || "" }}
         ></div>
         {/* 7. 投稿者 */}
-        <Poster poster={data.poster} />
+        <div className="mgb10 mgb10s">
+          <Poster poster={data.poster} />
+        </div>
         {/* 8. ピックアップ */}
         <Recommend data={data} />
         {/* 9. 同カテゴリー > 別記事紹介 */}

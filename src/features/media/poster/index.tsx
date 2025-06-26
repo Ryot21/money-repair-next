@@ -12,7 +12,7 @@ export default function Poster({ poster }: PosterProps) {
     return (
         <>
             {posters.map((poster, index) => (
-                <div key={index} className={"c-card -t01 mgb10 mgb10s"}>
+                <div key={index} className={"c-card -t01 w80 w100s"}>
                     <ul className={"c-card-lists"}>
                         <li className={"c-card-item"}>
                             <div className="imgBox">
@@ -27,13 +27,13 @@ export default function Poster({ poster }: PosterProps) {
                             </div>
                         </li>
                         <li className={"c-card-item"}>
-                            <span className={"postman"}>この記事を書いた人</span>
-                            <p className={"name"}>{poster.name}
+                            <span className={"postman mgb1 mgb2s"}>この記事を書いた人</span>
+                            <p className={"name mgb1"}>{poster.name}
                                 <br className={"sp"} />
                                 <span className={"jobTitle"}>{poster.officialPosition}</span>
                             </p>
-                            <p>{poster.description}</p>
-                            <Link href={`${poster.url}`} className={"c-link -logo"}>{poster.url}</Link>
+                            <p className="description -lh-1_5 mgb2 mgb5s">{poster.description}</p>
+                            <Link href={`${poster.url}`} className={"c-link -logo -blue mgb2 mgb5s"}>{poster.url}</Link>
                         </li>
                     </ul>
                 </div>
