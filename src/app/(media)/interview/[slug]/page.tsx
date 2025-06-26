@@ -24,13 +24,13 @@ export async function generateMetadata({
   }).catch(notFound);
 
   return {
-    title: `マネリペ | ご利用者の声 ${data.company}`,
+    title: `ご利用者の声 | ${data.company}`,
     description: data.read,
     // その他のメタデータ
     openGraph: {
-        title: `マネリペ | ご利用者の声 ${data.company}`,
+        title: `ご利用者の声 | ${data.company}`,
         description: data.read,
-      images: [data.thumbnail?.url ?? ""],
+        images: [data.thumbnail?.url ?? ""],
     },
   };
 }
