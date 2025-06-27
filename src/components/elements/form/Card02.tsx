@@ -103,6 +103,9 @@ export default function CardContactForm({ customClass }: FormProps) {
     setIsFormValid(isFormValidMemo);
   }, [isFormValidMemo]);
 
+  // gclidを取得
+  const gclid = searchParams.get("gclid"); 
+
   // メモ化された送信処理を簡素化
   const handleSubmit = useCallback(async () => {
     if (!isFormValid) return;
@@ -144,7 +147,12 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
       setIsAgreed(false);
 
-      router.push("/lp02/thanks");
+      // gclidがあればサンクスページに引き継ぐ
+      if (gclid) {
+        router.push(`/lp02/thanks?gclid=${encodeURIComponent(gclid)}`);
+      } else {
+        router.push("/lp02/thanks");
+      }
     } catch (error) {
       console.error("Error:", error);
       setSubmitStatus({
@@ -153,7 +161,7 @@ export default function CardContactForm({ customClass }: FormProps) {
           "エラーが発生しました。しばらく時間をおいて再度お試しください。",
       });
     }
-  }, [formData, isFormValid, router]);
+  }, [formData, isFormValid, router, gclid]);
 
   // メモ化された確認画面遷移処理
   const handleConfirm = useCallback(
