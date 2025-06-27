@@ -62,7 +62,7 @@
 
   &--inner {
     // コンテンツ幅
-    width: 100%;
+    width: 90%;
     margin: auto;
     @include max(500) {
       max-width: 355px;
