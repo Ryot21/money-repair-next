@@ -665,15 +665,11 @@
                     }
                     }
                     span {
-                    background: linear-gradient(
-                        55deg,
-                        $site-color03 0%,
-                        #5399df 100%
-                    );
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    filter: drop-shadow(1px 1px 1px $main-color--gray);
+                        background: linear-gradient(55deg,$site-color03 0%,#5399df 100%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(1px 1px 1px $main-color--gray);
                     }
                 }
                 .text {

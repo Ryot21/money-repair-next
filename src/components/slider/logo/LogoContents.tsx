@@ -7,13 +7,14 @@ export default function LogoContents() {
     // ロゴセクションのメインコンテナ
     <div id="logoSection" className={"c-contents pdt5 pdt8s"}>
         {/* セクションタイトル */}
-        <div className={"c-contents--inner"}>
-            <h2 className={"c-logo--title pdb3 pdb3s"}>
-                <span>多くのお客様にご好評いただいております！！</span>
-            </h2>
+        <h2 className={"c-logo--title c-page-atTitle"}>
+            <span className="at -blue">大手企業</span><span>から</span><span className="at -purple">スタートアップ</span><span>まで</span>大好評！！
+        </h2>
+        <p className="s-kome -ls-1 -center pdb3 pdb3s">※下記ロゴは、全て適切に許諾取得しています。</p>
 
+        {/* <div className={"c-contents--inner"}> */}
             {/* 右方向に流れるスライダー */}
-            <div className="c-contents -logoArea">
+            <div className="c-contents -logoArea mgb1 mgb5s">
                 <div className={"swiper swiper-Logo -right mgb1 mgb3s"}>
                     <Suspense fallback={<div>Loading...</div>}>
                         <LogoWrapper />
@@ -25,7 +26,7 @@ export default function LogoContents() {
                     </Suspense>
                 </div>
             </div>
-        </div>
+        {/* </div> */}
     </div>
   );
 }
