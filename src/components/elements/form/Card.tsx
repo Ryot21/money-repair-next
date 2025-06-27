@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { formatPhoneNumber, validateField } from "@/utils/validation";
 import type {
   ContactState,
@@ -15,6 +15,7 @@ import type {
 
 export default function CardContactForm({ customClass }: FormProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   // フォームの状態管理
   const [step, setStep] = useState<FormStep>("input");
   // 送信状態の管理
@@ -36,6 +37,26 @@ export default function CardContactForm({ customClass }: FormProps) {
     phone: "",
     email: "",
   });
+
+  // gclidをlocalStorageに保存（初回マウント時）
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const gclidParam = searchParams.get("gclid");
+      if (gclidParam) {
+        localStorage.setItem("gclid", gclidParam);
+      }
+    }
+  }, [searchParams]);
+
+  // gclid取得関数（searchParams優先、なければlocalStorage）
+  const getGclid = useCallback(() => {
+    if (typeof window !== "undefined") {
+      const gclidParam = searchParams.get("gclid");
+      if (gclidParam) return gclidParam;
+      return localStorage.getItem("gclid") || "";
+    }
+    return "";
+  }, [searchParams]);
 
   // メモ化されたフォーム変更ハンドラー
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -94,7 +115,6 @@ export default function CardContactForm({ customClass }: FormProps) {
       formDataToSubmit.append("email", formData.email);
 
       // Newtのフォームエンドポイントに送信
-      // https://app.newt.so/money-repair/apps/contact
       const response = await fetch(
         "https://money-repair.form.newt.so/v1/8rMUtk02T",
         {
@@ -121,7 +141,13 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
       setIsAgreed(false);
 
-      router.push("/lp/thanks");
+      // gclidを取得してサンクスページに引き継ぐ
+      const gclid = getGclid();
+      if (gclid) {
+        router.push(`/lp/thanks?gclid=${encodeURIComponent(gclid)}`);
+      } else {
+        router.push("/lp/thanks");
+      }
     } catch (error) {
       console.error("Error:", error);
       setSubmitStatus({
@@ -130,7 +156,7 @@ export default function CardContactForm({ customClass }: FormProps) {
           "エラーが発生しました。しばらく時間をおいて再度お試しください。",
       });
     }
-  }, [formData, isFormValid, router]);
+  }, [formData, isFormValid, router, getGclid]);
 
   // メモ化された確認画面遷移処理
   const handleConfirm = useCallback(
@@ -209,7 +235,9 @@ export default function CardContactForm({ customClass }: FormProps) {
   return (
     <div className="c-card -t05">
       <div className="c-card--inner">
-        <p className="c-card--label -b -color03 mgb5s">1分でわかる資料ダウンロード</p>
+        <p className="c-card--label -b -color03 mgb5s">
+          1分でわかる資料ダウンロード
+        </p>
         <form
           className={`c-form ${customClass}`}
           onSubmit={handleConfirm}
@@ -311,7 +339,11 @@ export default function CardContactForm({ customClass }: FormProps) {
           </div>
           {/* プライバシーポリシー */}
           <p className="c-form--consentText -lh-2 -ls-2">
-            ※お客様にお求めのコンテンツを提供するために、上記で送信された個人情報についてインプレームが<Link href="/privacy-policy" className="-color03 b-text">プライバシーポリシー</Link>に基づき利用することに同意します。
+            ※お客様にお求めのコンテンツを提供するために、上記で送信された個人情報についてインプレームが
+            <Link href="/privacy-policy" className="-color03 b-text">
+              プライバシーポリシー
+            </Link>
+            に基づき利用することに同意します。
           </p>
         </form>
       </div>
