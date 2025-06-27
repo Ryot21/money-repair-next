@@ -1,10 +1,13 @@
+"use client";
+
 // import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
 // コンポーネント
 import LpMainVisual from "@/features/lp02/mainVisual";
 import ScrollContainer from "@/features/lp02/scrollContainer";
-// import Button from "@/components/elements/button";
+import StickyButton from "@/components/elements/button/StickyButton";
 import Lp02Cta from "@/features/lp02/cta";
 // import LpCtaBottom from "@/features/lp02/cta/LpBottom";
 
@@ -48,15 +51,13 @@ const faqItems: AccordionItem[] = [
   },
 ];
 
-// ISR
-export const revalidate = 3600;
-
-export default async function Home() {
+export default function Home() {
   return (
     <main>
-      {/* メインビジュアル */}
-      <LpMainVisual />
-
+      {/* 追従ボタンの表示・非表示トリガー */}
+      <div id="stickyDisplayTrigger">
+        <LpMainVisual />
+      </div>
       <div className="c-contents -bg-white">
         {/* SC01 導入企業ロゴ */}
         {/* <div className="c-contents -bg-lp02-logo">
@@ -77,7 +78,8 @@ export default async function Home() {
             <div className="c-card -lp_02 -sc02">
               <div className="c-card--inner">
                 <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
-                <span className="s-ML -b -blue">マネリペ</span>は離職率を下げて
+                  <span className="s-ML -b -blue">マネリペ</span>
+                  は離職率を下げて
                   <br className="sp" />
                   エンゲージメントを高め、
                   <br />
@@ -89,9 +91,9 @@ export default async function Home() {
                   福利厚生です。
                 </p>
                 <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">
-                  “中小・ベンチャー・
+                  &quot;中小・ベンチャー・
                   <br className="sp" />
-                  中堅企業でも実績多数”
+                  中堅企業でも実績多数&quot;
                 </p>
               </div>
             </div>
@@ -148,7 +150,7 @@ export default async function Home() {
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
               マネリペで出来ること
               <br />
-              固定費を上げずに“可処分所得”を
+              固定費を上げずに&quot;可処分所得&quot;を
               <br className="sp" />
               増やす新しい福利厚生
             </h2>
@@ -241,7 +243,7 @@ export default async function Home() {
             <h2 className="c-contents--LpMainTitle -b-btm -c03 mgb7 mgb10s">
               実際にマネリペをご利用いただき
               <br />
-              “可処分所得”が増加した事例
+              &quot;可処分所得&quot;が増加した事例
             </h2>
             <p className="s-ML -s12 -blue -center -ls-2 -lh-2 mgb7 mgb10s">
               過去5年分の自己申告（年末調整や確定申告）をプロの目線で確認し、
@@ -330,6 +332,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        
         {/* cta02 */}
         <Lp02Cta />
         {/* SC07 課題 */}
@@ -613,8 +616,10 @@ export default async function Home() {
             </ul>
           </div>
         </div>
+        
         {/* cta02 */}
         <Lp02Cta />
+        
         {/* SC10 申し込みから導入までの流れ */}
         <div
           id="sc10"
@@ -740,6 +745,15 @@ export default async function Home() {
           </div>
         </div>
       </div>
+      <StickyButton targetId="stickyDisplayTrigger" href="#cta" customClass="">
+        <Image
+          src="/images/Lp/ver02/contact-btn.png"
+          className=""
+          alt="お役立ち資料をダウンロード"
+          width={351}
+          height={107}
+        />
+      </StickyButton>
     </main>
   );
 }
