@@ -196,6 +196,7 @@
     &.-company    {&::before{content: "- COMPANY -"; white-space: nowrap;}}// 会社概要
     &.-rules      {&::before{content: "-TERMS OF RULES -"; white-space: nowrap;}}// 利用規約
     &.-privacyPolicy{&::before{content: "- PRIVACY POLICY -"; white-space: nowrap;}}// プライバシーポリシー
+    &.-solicitationPolicy{&::before{content: "- SOLICITATION POLICY -"; white-space: nowrap;}}// 勧誘方針
 }
 
 // 各ページ > 注目タイトル

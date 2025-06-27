@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://money-repair.jp"),
   title: {
-    template: "%s | 役立つ金融知識をお届けするメディアサイト",
+    template: "%s | マネリペ 役立つ金融知識をお届けするメディアサイト",
     default: "マネリペ | 役立つ金融知識をお届けするメディアサイト",
   },
   description:
