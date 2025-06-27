@@ -103,8 +103,25 @@ export default function CardContactForm({ customClass }: FormProps) {
     setIsFormValid(isFormValidMemo);
   }, [isFormValidMemo]);
 
-  // gclidを取得
-  const gclid = searchParams.get("gclid"); 
+  // gclidをlocalStorageに保存（初回マウント時）
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const gclidParam = searchParams.get("gclid");
+      if (gclidParam) {
+        localStorage.setItem("gclid", gclidParam);
+      }
+    }
+  }, [searchParams]);
+
+  // gclid取得関数（searchParams優先、なければlocalStorage）
+  const getGclid = useCallback(() => {
+    if (typeof window !== "undefined") {
+      const gclidParam = searchParams.get("gclid");
+      if (gclidParam) return gclidParam;
+      return localStorage.getItem("gclid") || "";
+    }
+    return "";
+  }, [searchParams]);
 
   // メモ化された送信処理を簡素化
   const handleSubmit = useCallback(async () => {
@@ -117,7 +134,6 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
 
       // Newtのフォームエンドポイントに送信
-      // https://app.newt.so/money-repair/apps/contact
       const response = await fetch(
         "https://money-repair.form.newt.so/v1/9v5NPwe1M",
         {
@@ -147,7 +163,8 @@ export default function CardContactForm({ customClass }: FormProps) {
       });
       setIsAgreed(false);
 
-      // gclidがあればサンクスページに引き継ぐ
+      // gclidを取得してサンクスページに引き継ぐ
+      const gclid = getGclid();
       if (gclid) {
         router.push(`/lp02/thanks?gclid=${encodeURIComponent(gclid)}`);
       } else {
@@ -161,7 +178,7 @@ export default function CardContactForm({ customClass }: FormProps) {
           "エラーが発生しました。しばらく時間をおいて再度お試しください。",
       });
     }
-  }, [formData, isFormValid, router, gclid]);
+  }, [formData, isFormValid, router, getGclid]);
 
   // メモ化された確認画面遷移処理
   const handleConfirm = useCallback(
@@ -208,7 +225,9 @@ export default function CardContactForm({ customClass }: FormProps) {
                 <tr>
                   <th className="s-S -s16 -b -ls-2">役職・部署</th>
                   <td>
-                    <p className="s-SS -s12 -ls-2">{formData.post} {formData.department}</p>
+                    <p className="s-SS -s12 -ls-2">
+                      {formData.post} {formData.department}
+                    </p>
                   </td>
                 </tr>
                 <tr>
@@ -399,7 +418,9 @@ export default function CardContactForm({ customClass }: FormProps) {
           <div className="c-form--item -radioBtn">
             <ul className="c-flex -radio">
               <li className="flexItem">
-                <p className="s-SS -b -left -ls-2" style={{ paddingTop: 8 }}>検討段階</p>
+                <p className="s-SS -b -left -ls-2" style={{ paddingTop: 8 }}>
+                  検討段階
+                </p>
               </li>
               <li className="flexItem">
                 <div className="c-flex -jc-end">
@@ -430,11 +451,17 @@ export default function CardContactForm({ customClass }: FormProps) {
                       type="radio"
                       name="considerationStage"
                       value="すぐに導入したい"
-                      checked={formData.considerationStage === "すぐに導入したい"}
+                      checked={
+                        formData.considerationStage === "すぐに導入したい"
+                      }
                       onChange={handleChange}
                       required
                     />{" "}
-                    <pre>すぐに<br />導入したい！</pre>
+                    <pre>
+                      すぐに
+                      <br />
+                      導入したい！
+                    </pre>
                   </label>
                 </div>
               </li>
