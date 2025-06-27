@@ -198,6 +198,43 @@
     &.-privacyPolicy{&::before{content: "- PRIVACY POLICY -"; white-space: nowrap;}}// プライバシーポリシー
 }
 
+// 各ページ > 注目タイトル
+.c-page-atTitle {
+    color: $main-color--b;
+    font-size: clamp(20px, 2.5vw, 48px);
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    span {
+        font-size: clamp(1.4rem, 2vw, 2.8rem);
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+
+        &.at{
+            font-size: clamp(20px, 2.5vw, 48px);
+            padding-right: 1px;
+            letter-spacing: 0.1rem;
+            // グラデーション
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(1px 1px 1px $main-color--gray);
+            @include min(768){
+                padding-right: 4px;
+            }
+            &.-blue{
+                background: linear-gradient(55deg,$site-color03 0%,#5399df 100%);
+                background-clip: text;
+                letter-spacing: 0.2rem;
+            } 
+            &.-purple{
+                background: linear-gradient(55deg,#5b40df 0%,#9120aa 100%);
+                background-clip: text;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+
 // サービスページ > サービス内容内のタイトル
 .c-service--title{
     position: relative;
@@ -283,8 +320,8 @@
     }
 }
 
-// ロゴセクション > タイトル
-.c-logo--title{
+// タイトル > 万歳
+.c-banzai--title{
     text-align: center;
     margin: 0 auto;
 
