@@ -74,7 +74,7 @@ export default function Article({ data }: Props) {
               <span>{data.article1Title}</span>
             </h2>
             <div
-              dangerouslySetInnerHTML={{ __html: data.article2Body || "" }}
+              dangerouslySetInnerHTML={{ __html: data.article1Body || "" }}
             ></div>
           </div>
 
