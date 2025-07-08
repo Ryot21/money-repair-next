@@ -69,6 +69,15 @@ export type Interview = {// ご利用者インタビュー
     article5Title?: string;        // 本文5_見出し
     article5Body?:  string;        // 本文5
     article5Image?: MicroCMSImage; // 本文5
+    article6Title?: string;        // 本文6_見出し
+    article6Body?:  string;        // 本文6
+    article6Image?: MicroCMSImage; // 本文6
+    article7Title?: string;        // 本文7_見出し
+    article7Body?:  string;        // 本文7
+    article7Image?: MicroCMSImage; // 本文7
+    article8Title?: string;        // 本文8_見出し
+    article8Body?:  string;        // 本文8
+    article8Image?: MicroCMSImage; // 本文8
 
 
     publishedAt:    string;        // 更新日

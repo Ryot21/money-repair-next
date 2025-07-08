@@ -60,7 +60,7 @@ export default function Article({ data }: Props) {
         </div>
         {/* 詳細エリア */}
         <div className="p-single--detail mgb10">
-          {/* セクション1 */}
+          {/* セクション1 右寄せ */}
           <div className="imgBox -right -w100s">
             <Image
               src={data.article1Image.url}
@@ -78,7 +78,7 @@ export default function Article({ data }: Props) {
             ></div>
           </div>
 
-          {/* セクション2 */}
+          {/* セクション2 左寄せ */}
           <div className="imgBox -left -w100s">
             <Image
               src={data.article2Image.url}
@@ -96,7 +96,7 @@ export default function Article({ data }: Props) {
             ></div>
           </div>
 
-          {/* セクション3 */}
+          {/* セクション3 右寄せ */}
           {data.article3Image && (
             <div className="imgBox -right -w100s">
               <Image
@@ -118,7 +118,7 @@ export default function Article({ data }: Props) {
             </div>
           )}
 
-          {/* セクション4 */}
+          {/* セクション4 左寄せ */}
           {data.article4Image && (
             <div className="imgBox -left -w100s">
               <Image
@@ -140,7 +140,7 @@ export default function Article({ data }: Props) {
             </div>
           )}
 
-          {/* セクション5 */}
+          {/* セクション5 右寄せ */}
           {data.article5Image && (
             <div className="imgBox -right -w100s">
               <Image
@@ -161,6 +161,74 @@ export default function Article({ data }: Props) {
               ></div>
             </div>
           )}
+
+          {/* セクション6 左寄せ */}
+          {data.article6Image && (
+            <div className="imgBox -left -w100s">
+              <Image
+                src={data.article6Image.url}
+                alt="インタビュー風景"
+                width={480}
+                height={320}
+              />
+            </div>
+          )}
+          {data.article6Title && data.article6Body && (
+            <div className="detail03">
+              <h2>
+                <span>{data.article6Title}</span>
+              </h2>
+              <div
+                dangerouslySetInnerHTML={{ __html: data.article6Body || "" }}
+              ></div>
+            </div>
+          )}
+
+          {/* セクション7 右寄せ */}
+          {data.article7Image && (
+            <div className="imgBox -right -w100s">
+              <Image
+                src={data.article7Image.url}
+                alt="インタビュー風景"
+                width={480}
+                height={320}
+              />
+            </div>
+          )}
+          {data.article7Title && data.article7Body && (
+            <div className="detail03">
+              <h2>
+                <span>{data.article7Title}</span>
+              </h2>
+              <div
+                dangerouslySetInnerHTML={{ __html: data.article7Body || "" }}
+              ></div>
+            </div>
+          )}
+
+          {/* セクション8 左寄せ */}
+          {data.article8Image && (
+            <div className="imgBox -left -w100s">
+              <Image
+                src={data.article8Image.url}
+                alt="インタビュー風景"
+                width={480}
+                height={320}
+              />
+            </div>
+          )}
+          {data.article8Title && data.article8Body && (
+            <div className="detail03">
+              <h2>
+                <span>{data.article8Title}</span>
+              </h2>
+              <div
+                dangerouslySetInnerHTML={{ __html: data.article8Body || "" }}
+              ></div>
+            </div>
+          )}
+
+
         </div>
         {/* 投稿者 */}
         <Client client={data.client} />
