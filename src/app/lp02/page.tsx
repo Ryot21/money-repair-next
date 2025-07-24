@@ -68,41 +68,10 @@ export default function Home() {
           </div>
         </div> */}
         {/* <LogoContents /> */}
-
-        {/* SC02 簡単な説明 */}
+        {/* SC02 導入効果 */}
         <div
           id="sc02"
-          className="c-contents -bg-lp02-sc02 pdt7 pdt15s pdb7 pdb15s"
-        >
-          <div className="c-contents--inner">
-            <div className="c-card -lp_02 -sc02">
-              <div className="c-card--inner">
-                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
-                  <span className="s-ML -b -blue">マネリペ</span>
-                  は離職率を下げて
-                  <br className="sp" />
-                  エンゲージメントを高め、
-                  <br />
-                  <br className="sp" />
-                  <span className="s-L -s18 -b -blue -marker pdr1 pdr0s">
-                    金融リテラシー向上をサポートする
-                  </span>
-                  <br className="sp" />
-                  福利厚生です。
-                </p>
-                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">
-                  &quot;中小・ベンチャー・
-                  <br className="sp" />
-                  中堅企業でも実績多数&quot;
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* SC03 導入効果 */}
-        <div
-          id="sc03"
-          className="c-contents -bg-lp02-sc03 pdt7 pdt15s pdb7 pdb15s"
+          className="c-contents -bg-lp02-sc03 pdb7 pdb15s"
         >
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 pdt1 pdt2s mgb7 mgb10s">
@@ -141,6 +110,56 @@ export default function Home() {
             </p>
           </div>
         </div>
+        {/* SC03 簡単な説明 */}
+        <div
+          id="sc03"
+          className="c-contents -bg-lp02-sc02 pdt7 pdt15s pdb7 pdb15s"
+        >
+          <div className="c-contents--inner">
+            <div className="c-card -lp_02 -sc02">
+              <div className="c-card--inner">
+                {/* <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
+                  <span className="s-ML -b -blue">マネリペ</span>
+                  は離職率を下げて
+                  <br className="sp" />
+                  エンゲージメントを高め、
+                  <br />
+                  <br className="sp" />
+                  <span className="s-L -s18 -b -blue -marker pdr1 pdr0s">
+                    金融リテラシー向上をサポートする
+                  </span>
+                  <br className="sp" />
+                  福利厚生です。
+                </p>
+                <p className="s-ML -s14 -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">
+                  &quot;中小・ベンチャー・
+                  <br className="sp" />
+                  中堅企業でも実績多数&quot;
+                </p> */}
+                <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
+                  導入企業で、<br className="sp" />こんな成果が出ています。
+                </p>
+                <p className="-center mgb1 mgb4s">
+                  ✔️<span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">離職率を平均○％改善</span>
+                  <br />
+                  ✔️<span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">社内エンゲージメント向上</span>
+                  <br />
+                  ✔️<span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">金融リテラシーの底上げ</span>
+                </p>
+                <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
+                  &quot;中小・ベンチャー・
+                  <br className="sp" />
+                  中堅企業でも実績多数&quot;
+                </p> 
+                <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">
+                  可処分所得を増やすことで、<br className="sp" />社員も企業も成長する環境づくりを<br className="sp" />サポートします。
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* SC04 マネリペで出来ること */}
         <div
           id="sc04"
