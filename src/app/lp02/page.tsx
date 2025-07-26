@@ -165,10 +165,10 @@ export default function Home() {
                   <br className="sp" />
                   中堅企業でも実績多数&quot;
                 </p> 
-                <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center">
+                <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
                   可処分所得を増やすことで、<br className="sp" />社員も企業も成長する環境づくりを<br className="sp" />サポートします。
                 </p>
-
+                <p className="s-SS -right -blue -ls-2 pdr5 pdr5s">※業種によります</p>
               </div>
             </div>
           </div>
