@@ -373,12 +373,12 @@
         textarea,
         select {
           width: 100%;
-          padding: 10px;
+          padding: 6px;
           @include min(500) {
-            padding: 9px 5px;
+            padding: 7px 5px;
           }
           @include min(1280) {
-            padding: 10px 15px;
+            padding: 8px 10px;
           }
           &:focus + span,
           &:not(:placeholder-shown) + span {

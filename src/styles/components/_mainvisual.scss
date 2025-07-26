@@ -1262,7 +1262,7 @@
                 width: 95%;
                 max-width: 1150px;
                 position: absolute;
-                top: 30%;
+                top: 29%;
                 left: 50%;
                 transform: translate(-50%, -45%);
                 z-index: 5;
@@ -1299,12 +1299,23 @@
                     left: 43.5%;
                 }
             }
+            &.-arrow {
+                position: absolute;
+                top: 37%;
+                left: -90px;
+                width: 100%;
+                z-index: 1;
+                @include min(768) {
+                    top: 15%;
+                    left: 0;
+                }
+            }
 
             &.-cta {
                 width: 90%;
                 max-width: 420px;
                 position: absolute;
-                top: 45%;
+                top: 50%;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 7;
@@ -1315,9 +1326,9 @@
                     left: 77%;
                 }
                 @include min(1000) {
-                    width: 33%;
+                    width: 30%;
                     top: 16.5%;
-                    left: 78%;
+                    left: 80%;
                 }
                 @include min(1400) {
                     left: 78%;
