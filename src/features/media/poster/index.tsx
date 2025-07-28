@@ -12,7 +12,7 @@ export default function Poster({ poster }: PosterProps) {
     return (
         <>
             {posters.map((poster, index) => (
-                <div key={index} className={"c-card -t01 w80 w100s"}>
+                <div key={index} className={"c-card -t01 w80 w100s mgb10 mgb10s"}>
                     <ul className={"c-card-lists"}>
                         <li className={"c-card-item"}>
                             <div className="imgBox">

@@ -11,13 +11,13 @@ import { useState, useEffect } from "react";
 
 // Props型を定義
 type HeaderProps = {
-  // interviewCategories: { contents: Category[] };
+  interviewCategories: { contents: Category[] };
   informationCategories: { contents: Category[] };
 };
 
 // クライアントコンポーネントとしてHeaderを実装
 export default function Header({
-  // interviewCategories,
+  interviewCategories,
   informationCategories,
 }: HeaderProps) {
   // 現在のパスを取得
@@ -152,7 +152,7 @@ export default function Header({
                           </div>
                         </li>
                         {/* ご利用者の声 */}
-                        {/* <li className={"hnavItem archiveItem"}>
+                        <li className={"hnavItem archiveItem"}>
                           <button className={`c-hnav--btn -triangle 
                             ${ isActive("/interview") ? "-active" : ""}
                             ${ activeDropdown === "interview" ? "-checked" : "" }`}
@@ -190,7 +190,7 @@ export default function Header({
                               </ul>
                             </div>
                           </div>
-                        </li> */}
+                        </li>
                         {/* お役立ち情報 */}
                         <li className={"hnavItem archiveItem"}>
                           {/* アクティブ、チェック時 */}

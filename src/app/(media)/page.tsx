@@ -7,7 +7,7 @@ import Button from "@/components/elements/button";
 
 // 投稿関係
 // import LogoContents from "@/components/slider/logo/LogoContents";
-// import InterviewArea from "@/features/media/interview/Content";
+import InterviewArea from "@/features/media/interview/Content";
 import InformationArea from "@/features/media/information/Content";
 import ManeripeArea from "@/features/media/maneripe/Content";
 import NewsArea from "@/features/media/news/Content";
@@ -62,7 +62,7 @@ export default async function Home() {
               </div>
             </li>
             <li className={"flexItem"}>
-              <div className={"imgBox c-img -borderBox -solid"}>
+              <div className={"imgBox c-img -radius -sh -p01 -left"}>
                 <Image
                   // src="/images/mv/mv-02.jpg"
                   src="/images/mv/mv-04.jpg"
@@ -77,7 +77,7 @@ export default async function Home() {
       </div>
 
       {/* ご利用者インタビュー */}
-      {/* <InterviewArea /> */}
+      <InterviewArea />
 
       {/* お役立ち情報 */}
       <InformationArea />

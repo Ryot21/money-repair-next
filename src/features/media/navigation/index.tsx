@@ -104,7 +104,7 @@ export default function Navigation(
             </p>
           </li>
           {/* ご利用者の声 */}
-          {/* <li className={"hbNavItem "}>
+          <li className={"hbNavItem "}>
             <Link
               className={`c-link -text -ws-n mgb2s ${
                 isActive("/interview") ? "-active" : ""
@@ -119,7 +119,7 @@ export default function Navigation(
             <p className="c-hb-nav__text mgb5s">
               マネリペを導入していただいた企業の『リアルな声』を集めました。
             </p>
-          </li> */}
+          </li>
           {/* お役立ち情報 */}
           <li className={"hbNavItem"}>
             <Link
