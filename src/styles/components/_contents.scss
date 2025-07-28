@@ -319,8 +319,8 @@
       width: 45%;
       height: auto;
       border-radius: 10px;
-      box-shadow: 5px 3px 2px 0px #63636314;
-      overflow: hidden;
+      // box-shadow: 5px 3px 2px 0px #63636314;
+      // overflow: hidden;
       @include min(768) {
         top: 47%;
         left: 60%;

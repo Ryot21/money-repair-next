@@ -136,6 +136,11 @@
                 @include min(1400){width: 50%;}
                 @include min(1600){width: 40%;}
             }
+            &--picter{
+                img{
+                    border-bottom: 2px solid $main-color--gray;
+                }
+            }
         }
     }
     // &.-news{

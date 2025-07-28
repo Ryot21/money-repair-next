@@ -150,7 +150,7 @@ export default function Page() {
               </p>
             </div>
             <div className={"picArea"}>
-              <div className={"imgBox"}>
+              <div className={"imgBox c-img -radius -right -p02"}>
                 <Image
                   src="/images/mv/mv-04.jpg"
                   alt="金融勉強会の実際の画像"
@@ -183,7 +183,7 @@ export default function Page() {
               </p>
             </div>
             <div className={"picArea"}>
-              <div className={"imgBox"}>
+              <div className={"imgBox c-img -radius -right -p03"}>
                 <Image
                   src="/images/mv/mv-05.jpg"
                   alt="実際の相談風景"
@@ -214,7 +214,7 @@ export default function Page() {
               </p>
             </div>
             <div className={"picArea"}>
-              <div className={"imgBox"}>
+              <div className={"imgBox c-img -radius -right -p05"}>
                 <Image
                   src="/images/mv/mv-13.png"
                   alt="資産管理システムを紹介している画像"

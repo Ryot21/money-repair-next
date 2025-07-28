@@ -81,6 +81,7 @@
   }
   &--data {
     padding: 2% 3% 3%;
+    // border-top: 1px solid $site-color03;
     will-change: transform;
     transition: all 0.5s;
     @include min(768) {
