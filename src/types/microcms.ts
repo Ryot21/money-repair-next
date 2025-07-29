@@ -17,6 +17,9 @@ export type Client = {// 投稿者
         business05: string;
     };
     description: string;        // 企業説明
+    purpose?:    string;        // LP > 導入した目的
+    clincher?:   string;        // LP > 導入した決め手
+    result?:     string;        // LP > 結果
     logo?:       MicroCMSImage; // ロゴ
     url:         string;        // URL
 } & MicroCMSListContent;

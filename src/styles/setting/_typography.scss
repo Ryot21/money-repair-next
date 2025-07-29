@@ -163,6 +163,11 @@ td {
   &.-ws-n {
     white-space: nowrap;
   }
+  // 折り返し
+  &.-wb-k {
+    text-wrap: pretty;
+    word-break: keep-all;
+  }
 
   // 縦組み
   &.-tate {

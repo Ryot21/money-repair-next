@@ -81,6 +81,56 @@
     }
   }
 
+  .flexItem{
+    &.-border{
+      position: relative;
+      &.-left{
+        @include max(768){
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-top: 1px dotted $main-color--Dgray;
+          }
+        }
+        @include min(768){
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -15px;
+            height: 100%;
+            border-left: 1px dotted $main-color--Dgray;
+          }
+        }
+      }
+      &.-right{
+        @include max(768){
+          &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            border-bottom: 1px dotted $main-color--Dgray;
+          }
+        }
+        @include min(768){
+          &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -15px;
+            height: 100%;
+            border-left: 1px dotted $main-color--Dgray;
+          }
+        }
+      }
+    }
+  }
+
   // コンテンツ_カラム（sp:pc 1:2）
   &.-col1_2 {
     .flexItem {

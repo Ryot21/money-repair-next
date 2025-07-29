@@ -9,7 +9,6 @@ import LpCta from "@/features/lp01/cta";
 
 // 投稿関係
 // import LogoContents from "@/components/slider/logo/LogoContents";
-// import LpInterviewArea from "@/features/lp01/interview/Content";
 
 // Q&A関係
 import Accordion from "@/components/accordion";
@@ -616,7 +615,7 @@ export default async function Home() {
         {/* cta */}
         <LpCta />
         {/* 導入実績 */}
-        {/* <LpInterviewArea /> */}
+        
         {/* 申し込みから導入までの流れ */}
         <div id="sc08" className={"c-contents -bg-img-sc08 -support pdt7 pdt20s pdb7 pdb15s"}>
           <div className={"c-contents--inner"}>

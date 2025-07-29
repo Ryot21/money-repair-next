@@ -41,6 +41,9 @@
         background: linear-gradient(transparent 60%, #fff7b3 60%);
         padding: 2px 0;
         font-weight: bold;
+        &.-o{background: linear-gradient(transparent 60%, #edac2b7c 60%);}
+        &.-y{background: linear-gradient(transparent 60%, #faeaa57a 60%);}
+        &.-b{background: linear-gradient(transparent 60%, #34bde76d 60%);}
     }
     .-slash{// スラッシュ
     position: relative;

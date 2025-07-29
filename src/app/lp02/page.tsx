@@ -1,5 +1,3 @@
-"use client";
-
 // import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -7,13 +5,13 @@ import React from "react";
 // コンポーネント
 import LpMainVisual from "@/features/lp02/mainVisual";
 import ScrollContainer from "@/features/lp02/scrollContainer";
-import StickyButton from "@/components/elements/button/StickyButton";
+import StickyButtonWrapper from "@/components/elements/button/sticky/StickyButtonWrapper";
 import Lp02Cta from "@/features/lp02/cta";
 // import LpCtaBottom from "@/features/lp02/cta/LpBottom";
 
 // 投稿関係
 // import LogoContents from "@/components/slider/logo/LogoContents";
-// import LpInterviewArea from "@/features/lp02/interview/Content";
+import InterviewContents from "@/components/slider/interview/InterviewContents";
 
 // Q&A関係
 import Accordion from "@/components/accordion";
@@ -60,33 +58,44 @@ export default function Home() {
       </div>
       <div className="c-contents -bg-white">
         {/* SC01 導入企業ロゴ */}
-        {/* <div className="c-contents -bg-lp02-logo">
+        <div className="c-contents -bg-lp02-logo">
           <div className="c-contents--inner">
-            <h2 className="c-contents--LpMainTitle -c01 pdt1 pdt2s pdb1 pdb2s mgb5 mgb10s">
-              \ 様々な業界の企業にご利用いただいています！ /
+            <h2 className="c-contents--LpMainTitle -c01 pdt1 pdt2s pdb1 pdb2s">
+              \ 様々な業界の企業に<br className="sp"/>ご利用いただいています！ /
             </h2>
           </div>
-        </div> */}
+        </div>
         {/* <LogoContents /> */}
 
-        <div className="c-contents -bg-lp02-sc03 pdb7 pdb15s">
+        <div className="c-contents -bg-lp02-sc03 pdt5 pdt10s pdb7 pdb15s">
           <div className="c-contents--inner">
             <p className="s-ML -s14 -b -blue -ls-2 -lh-3 -lh-1_5_s -center">
-              なぜ今、<br className="sp" />福利厚生に“<span className="s-ML -s18 -b -blue -marker">金融教育</span>”が必要なのか？
-              <br /><br className="sp" />
-              物価高や税負担で、<br className="sp" />社員の可処分所得は減少傾向。
-              <br /><br className="sp" />
-              生活不安が転職を招き、<br className="sp" /><span className="s-ML -s18 -b -blue -marker">採用・定着</span>が企業の課題になっています。
-              <br /><br className="sp" />↓<br className="sp" />
-              給与を変えずに手元を増やす福利厚生が<br className="sp" />注目されています。
+              なぜ今、
+              <br className="sp" />
+              福利厚生に&quot;
+              <span className="s-ML -s18 -b -blue -marker">金融教育</span>
+              &quot;が必要なのか？
+              <br />
+              <br className="sp" />
+              物価高や税負担で、
+              <br className="sp" />
+              社員の可処分所得は減少傾向。
+              <br />
+              <br className="sp" />
+              生活不安が転職を招き、
+              <br className="sp" />
+              <span className="s-ML -s18 -b -blue -marker">採用・定着</span>
+              が企業の課題になっています。
+              <br />
+              <br className="sp" />↓<br className="sp" />
+              給与を変えずに手元を増やす福利厚生が
+              <br className="sp" />
+              注目されています。
             </p>
           </div>
         </div>
         {/* SC02 導入効果 */}
-        <div
-          id="sc02"
-          className="c-contents -bg-lp02-sc03 pdb7 pdb15s"
-        >
+        <div id="sc02" className="c-contents -bg-lp02-sc03 pdb7 pdb15s">
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -b-btm -c03 pdt1 pdt2s mgb7 mgb10s">
               マネリペの導入効果
@@ -151,24 +160,41 @@ export default function Home() {
                   中堅企業でも実績多数&quot;
                 </p> */}
                 <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb2 mgb4s">
-                  導入企業で、<br className="sp" />こんな成果が出ています。
+                  導入企業で、
+                  <br className="sp" />
+                  こんな成果が出ています。
                 </p>
                 <p className="-center mgb3 mgb4s">
-                  ✔️<span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">離職率を平均15%改善</span>
+                  ✔️
+                  <span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">
+                    離職率を平均15%改善
+                  </span>
                   <br />
-                  ✔️<span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">社内エンゲージメント向上</span>
+                  ✔️
+                  <span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">
+                    社内エンゲージメント向上
+                  </span>
                   <br />
-                  ✔️<span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">金融リテラシーの底上げ</span>
+                  ✔️
+                  <span className="s-L -s18 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -marker pdl1 pdl1s">
+                    金融リテラシーの底上げ
+                  </span>
                 </p>
                 <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
                   &quot;中小・ベンチャー・
                   <br className="sp" />
                   中堅企業でも実績多数&quot;
-                </p> 
-                <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
-                  可処分所得を増やすことで、<br className="sp" />社員も企業も成長する環境づくりを<br className="sp" />サポートします。
                 </p>
-                <p className="s-SS -right -blue -ls-2 pdr5 pdr5s">※業種によります</p>
+                <p className="s-ML -s14 -b -blue -ls-2 -lh-2 -lh-1_5_s -ws-n -center mgb1 mgb4s">
+                  可処分所得を増やすことで、
+                  <br className="sp" />
+                  社員も企業も成長する環境づくりを
+                  <br className="sp" />
+                  サポートします。
+                </p>
+                <p className="s-SS -right -blue -ls-2 pdr5 pdr5s">
+                  ※業種によります
+                </p>
               </div>
             </div>
           </div>
@@ -365,7 +391,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {/* cta02 */}
         <Lp02Cta />
         {/* SC07 課題 */}
@@ -511,7 +537,7 @@ export default function Home() {
         </div>
 
         {/* 導入実績 */}
-        {/* <LpInterviewArea /> */}
+        <InterviewContents />
 
         {/* SC09 解決できるあらゆる問題 */}
         <div
@@ -649,10 +675,10 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        
+
         {/* cta02 */}
         <Lp02Cta />
-        
+
         {/* SC10 申し込みから導入までの流れ */}
         <div
           id="sc10"
@@ -778,15 +804,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <StickyButton targetId="stickyDisplayTrigger" href="#cta" customClass="">
-        <Image
-          src="/images/Lp/ver02/contact-btn.png"
-          className=""
-          alt="お役立ち資料をダウンロード"
-          width={351}
-          height={107}
-        />
-      </StickyButton>
+      <StickyButtonWrapper />
     </main>
   );
 }

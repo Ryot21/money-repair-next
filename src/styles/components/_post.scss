@@ -114,4 +114,30 @@
       }
     }
   }
+
+  // LP02 > インタビュー関係
+  &--thumbnailBox{
+    background: $gr-blue;
+    &__inner{
+      padding: 5%;
+      @include min(768){
+        padding: 2% 5%;
+      }
+    }
+  }
+  &--box{
+    background: $main-color--w;
+    &__inner{
+      min-height: 390px;
+      padding: 10px 20px;
+      @include min(768){
+        min-height: 170px;
+      }
+    }
+    &__btm{
+      padding: 10px 10px;
+      background: $site-color05;
+      text-align: center;
+    }
+  }
 }

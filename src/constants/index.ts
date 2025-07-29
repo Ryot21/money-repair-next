@@ -14,3 +14,6 @@ export const NEWS_PAGE_LIST_LIMIT = 10;
 // マネリペ情報
 export const MANERIPE_TOP_LIST_LIMIT = 3;
 export const MANERIPE_PAGE_LIST_LIMIT = 10;
+
+// LP
+export const INTERVIEW_LP_LIST_LIMIT = 3;
