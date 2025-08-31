@@ -57,7 +57,7 @@ export default function ClientInterviewSwiper({ contents }: Props) {
           <li key={article.id} className={"c-post--item c-card"}>
             <div className="c-post--thumbnailBox">
               <div className="c-post--thumbnailBox__inner">
-                <ul className="c-flex -col1_2 -pc2_1 -jc-sb">
+                <ul className="c-flex -col1_2 -pc2_1 -lp -jc-sb">
                   <li className="flexItem mgb5s">
                     <Thumbnail
                       type="lp"
@@ -68,9 +68,9 @@ export default function ClientInterviewSwiper({ contents }: Props) {
                     />
                   </li>
                   <li className="flexItem">
-                    <p className="s-M -s12 -white -b -left -ls-2 -lh-1_5 -wb-k mgb1 mgb1s w75">{article.article1Title}</p>
-                    <h3 className="s-L -s18 -white -b  -left -ls-2 -lh-1_5 mgb2 mgb2s">{article.mainTitle}</h3>
-                    <h3 className="s-LL -s10 -white -b -right -ls-4 -lh-1_5">{article.company}</h3>
+                    <p className="s-M -s10 -white -b -left -ls-2 -lh-1_5 -wb-k mgb1 mgb1s w75">{article.article1Title}</p>
+                    <h3 className="s-LL -s20 -yellow -b -left -ls-2 -lh-1_3 mgb2 mgb2s">{article.mainTitle}</h3>
+                    <p className="s-L -s10 -white -b -right -ls-4 -lh-1_5">{article.company}</p>
 
                   </li>
                 </ul>

@@ -6,7 +6,7 @@ import ContactBottom from "@/features/media/contact/bottom";
 import Button from "@/components/elements/button";
 
 // 投稿関係
-// import LogoContents from "@/components/slider/logo/LogoContents";
+import LogoContents from "@/components/slider/logo/LogoContents";
 import InterviewArea from "@/features/media/interview/Content";
 import InformationArea from "@/features/media/information/Content";
 import ManeripeArea from "@/features/media/maneripe/Content";
@@ -29,10 +29,14 @@ export default async function Home() {
       </div>
 
       {/* 導入企業ロゴ */}
-      {/* <LogoContents /> */}
+      <div className="c-contents -bg-white">
+        <div className="c-contents--inner">
+          <LogoContents />
+        </div>
+      </div>
 
       {/* マネリペとは */}
-      <div id="sc01" className={"c-contents pdt10 pdt10s"}>
+      <div id="sc01" className={"c-contents pdt5 pdb5 pdt10s pdb10s"}>
         <div className={"c-contents--inner"}>
           <ul className={"c-flex -col1_2 -pc1_2 -jc-sb -h-top"}>
             <li className={"flexItem mgb10s"}>
@@ -77,13 +81,15 @@ export default async function Home() {
       </div>
 
       {/* ご利用者インタビュー */}
-      <InterviewArea />
+      <div className="c-contents -bg-img01">
+          <InterviewArea />
+      </div>
 
       {/* お役立ち情報 */}
       <InformationArea />
 
       {/* マネリペ情報 / お知らせ */}
-      <div className={"c-contents pdt10 mgb5 mgb5s"}>
+      <div className={"c-contents pdt5 mgb5 mgb5s"}>
         <div className={"c-contents--inner"}>
           <ul className={"c-flex -col1_2 -jc-sb -h-top"}>
             <li className={"flexItem"}>

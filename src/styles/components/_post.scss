@@ -135,9 +135,12 @@
       }
     }
     &__btm{
-      padding: 10px 10px;
+      padding: 15px 2.5px;
       background: $site-color05;
       text-align: center;
+      @include min(500){
+        padding: 10px 10px;
+      }
     }
   }
 }

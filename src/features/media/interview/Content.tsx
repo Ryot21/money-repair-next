@@ -12,7 +12,7 @@ export default async function InterviewArea() {
   });
 
   return (
-    <div id="sc02" className={"c-contents pdt10 pdt20s mgb5s"}>
+    <div id="sc02" className={"c-contents pdt5 pdb5 pdt15s pdb10s"}>
       <div className={"c-contents--inner"}>
         {/* タイトル */}
         <h2 className={"c-contents--title -interview  -center -ls-2 -en-color03 pdb5 pdb5s"}>

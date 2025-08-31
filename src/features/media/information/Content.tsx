@@ -12,7 +12,7 @@ export default async function InformationArea() {
   });
 
   return (
-    <div id="sc03" className={"c-contents pdt10 pdt20s mgb5s"}>
+    <div id="sc03" className={"c-contents pdt5 pdb5 pdt15s pdb10s"}>
       <div className={"c-contents--inner"}>
         {/* タイトル */}
         <h2 className={"c-contents--title -information -center -ls-2 -en-color03 pdb5 pdb5s"}>

@@ -223,7 +223,7 @@
       content: "";
       position: absolute;
       top: 0;
-      width: 50px;
+      width: 25px;
       height: 100%;
       z-index: 1;
       @include min(768) {
@@ -233,22 +233,14 @@
     // 背景 > site-color01用
     &::before {
       left: -5px;
-      background: linear-gradient(
-        0.25turn,
-        $site-color01,
-        50%,
-        rgb(245, 251, 255, 0.1)
-      );
+      background: linear-gradient(0.25turn, $main-color--w, 75%, rgba(0, 0, 0, 0));
+      // background: linear-gradient(0.25turn,$site-color01,50%,rgb(245, 251, 255, 0.1));
     }
     // 背景 > site-color01用
     &::after {
       right: -5px;
-      background: linear-gradient(
-        0.75turn,
-        $site-color01,
-        50%,
-        rgb(245, 251, 255, 0.1)
-      );
+      background: linear-gradient(0.75turn, $main-color--w, 75%, rgba(0, 0, 0, 0));
+      // background: linear-gradient(0.75turn,$site-color01,50%,rgb(245, 251, 255, 0.1));
     }
   }
   &.-serviceBox {

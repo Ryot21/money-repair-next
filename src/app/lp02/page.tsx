@@ -10,7 +10,7 @@ import Lp02Cta from "@/features/lp02/cta";
 // import LpCtaBottom from "@/features/lp02/cta/LpBottom";
 
 // 投稿関係
-// import LogoContents from "@/components/slider/logo/LogoContents";
+import LogoContents from "@/components/slider/logo/LogoContents";
 import InterviewContents from "@/components/slider/interview/InterviewContents";
 
 // Q&A関係
@@ -65,9 +65,9 @@ export default function Home() {
             </h2>
           </div>
         </div>
-        {/* <LogoContents /> */}
+        <LogoContents />
 
-        <div className="c-contents -bg-lp02-sc03 pdt5 pdt10s pdb7 pdb15s">
+        <div className="c-contents -bg-lp02-sc03 pdt5 pdt10s pdb5 pdb10s">
           <div className="c-contents--inner">
             <p className="s-ML -s14 -b -blue -ls-2 -lh-3 -lh-1_5_s -center">
               なぜ今、
@@ -126,7 +126,7 @@ export default function Home() {
                 />
               </li>
             </ul>
-            <p className="s-Ss -s10 -blue -right -ls-2 -lh-1_5 -ws-n mgb5 mgb10s">
+            <p className="s-SS -s10 -blue -right -ls-2 -lh-1_5 -ws-n">
               ※1.マネリペ顧客調査2025年度
               <br />
               ※2.マネリペ500名のユーザーを対象とした調査に基づく

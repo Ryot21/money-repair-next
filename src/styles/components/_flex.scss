@@ -151,6 +151,18 @@
           }
         }
       }
+      &.-lp{
+        .flexItem {
+          @include min(768) {
+            &:nth-child(1) {
+              width: 45%;
+            }
+            &:nth-child(2) {
+              width: 50%;
+            }
+          }
+        }
+      }
     }
     &.-pc1_2 {
       .flexItem {

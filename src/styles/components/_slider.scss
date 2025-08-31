@@ -64,6 +64,7 @@
   // インタビュー関係
   &.swiper-Interview {
     .swiper-slide {
+      opacity: 0 !important;
       @include max(768) {
         margin: 0 1.5%;
       }
@@ -98,6 +99,10 @@
           }
         }
       }
+    }
+
+    .swiper-slide-active {
+      opacity: 1 !important;
     }
   }
 

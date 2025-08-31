@@ -10,7 +10,7 @@ export default function InterviewContents() {
       </h2>
       <div className={"c-contents--inner"}>
         <div className="c-contents mgb1 mgb5s">
-          <div className={"swiper swiper-Logo -right mgb1 mgb3s"}>
+          <div className={"swiper swiper-Interview -right mgb1 mgb3s"}>
             <Suspense fallback={<div>Loading...</div>}>
               <InterviewWrraper />
             </Suspense>

@@ -123,7 +123,7 @@ export default function Page() {
         </div>
       </div>
       {/* サービス内容一覧 */}
-      <div className={"c-contents pdt20 pdt20s mgb10 mgb5s"}>
+      <div className={"c-contents pdt15 pdt20s mgb10 mgb5s"}>
         <div className={"c-contents--inner"}>
           {/* 01 */}
           <div className={"c-contents -serviceBox -item01"}>

@@ -11,7 +11,7 @@ export default function ClientLogoSwiper({ clients }: { clients: Client[] }) {
   const slideSettings = {
     0: {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 5,
     },
     500: {
       slidesPerView: 4,
@@ -27,7 +27,7 @@ export default function ClientLogoSwiper({ clients }: { clients: Client[] }) {
     <Swiper
       modules={[Autoplay]} // 自動スライド機能を有効化
       breakpoints={slideSettings} // レスポンシブ設定を適用
-      spaceBetween={20} // スライド間の余白
+      // spaceBetween={30} // スライド間の余白
       slidesPerView={"auto"} // SSRとCSRの差異によるハイドレーションエラー対策
       centeredSlides={true} // スライドを中央寄せに
       loop={true} // 無限ループを有効化
