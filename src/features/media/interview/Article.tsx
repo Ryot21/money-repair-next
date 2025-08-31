@@ -14,7 +14,6 @@ type Props = {
 export default function Article({ data }: Props) {
   return (
     <>
-
       {/* サムネイルコンポーネント | 2025/03/10追加 */}
       <div className="c-contents--banner -ver01">
         <div className="mgb5 mgb10s">
@@ -51,7 +50,11 @@ export default function Article({ data }: Props) {
           </ul>
           {/* タイトル */}
           <h1>{data.mainTitle}</h1>
-          <Date date={data.publishedAt || data.createdAt} />
+          <Date
+            publishedAt={data.publishedAt}
+            createdAt={data.createdAt}
+            updatedAt={data.updatedAt}
+          />
         </div>
         {/* 導入文 */}
         <div className="p-single--read">
@@ -227,8 +230,6 @@ export default function Article({ data }: Props) {
               ></div>
             </div>
           )}
-
-
         </div>
         {/* 投稿者 */}
         <Client client={data.client} />

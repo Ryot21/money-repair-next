@@ -9,7 +9,6 @@ type Props = {
   contents: Information[];
 };
 
-
 export default function InformationList({ contents }: Props) {
   if (contents.length === 0) {
     return <p>記事がありません。</p>;
@@ -17,7 +16,10 @@ export default function InformationList({ contents }: Props) {
   return (
     <ul className={`c-post--lists c-flex -col2M1_3 -jc-st -h-top`}>
       {contents.map((article) => (
-        <li key={article.id} className={"c-post--item -card flexItem_M mgb3 mgb10s"}>
+        <li
+          key={article.id}
+          className={"c-post--item -card flexItem_M mgb3 mgb10s"}
+        >
           <Link href={`/information/${article.id}`} className={"c-post--link"}>
             {/* バナー画像 */}
             <Thumbnail
@@ -34,7 +36,11 @@ export default function InformationList({ contents }: Props) {
               <div className={"c-date mgb2 mgb1s"}>
                 <ul className={"c-date__lists c-flex -col2"}>
                   <li className={"c-date__item"}>
-                    <Date date={article.publishedAt || article.createdAt} />
+                    <Date
+                      publishedAt={article.publishedAt}
+                      createdAt={article.createdAt}
+                      updatedAt={article.updatedAt}
+                    />
                   </li>
                   <li className={"c-date__item"}>
                     <ul className={"c-post--category__lists c-flex -h-cen"}>

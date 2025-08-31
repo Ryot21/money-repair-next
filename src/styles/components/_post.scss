@@ -2,8 +2,9 @@
 
 .c-post {
   // 記事 > リスト
-  &--item {// liタグ
-    &.-card{
+  &--item {
+    // liタグ
+    &.-card {
       @include min(768) {
         &:nth-child(1),
         &:nth-child(4),
@@ -25,7 +26,7 @@
           margin-left: 1%;
         }
       }
-  }
+    }
   }
   &--link {
     position: relative;
@@ -63,7 +64,7 @@
         transform: translate(-50%, -50%) scale(0.99);
       }
       .c-thumbnail--cover {
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, 0.5);
         opacity: 1;
         z-index: 2;
       }
@@ -85,17 +86,19 @@
     will-change: transform;
     transition: all 0.5s;
     @include min(768) {
-      padding: 10px 12px 20px
+      padding: 10px 12px 20px;
     }
   }
   // 記事 > カテゴリー
   &--category {
-    &__lists {// ulタグ
+    &__lists {
+      // ulタグ
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
     }
-    &__item {// liタグ
+    &__item {
+      // liタグ
       width: auto;
       padding: 2px 5px 2px;
       margin-right: 5px;
@@ -116,29 +119,29 @@
   }
 
   // LP02 > インタビュー関係
-  &--thumbnailBox{
+  &--thumbnailBox {
     background: $gr-blue;
-    &__inner{
+    &__inner {
       padding: 5%;
-      @include min(768){
+      @include min(768) {
         padding: 2% 5%;
       }
     }
   }
-  &--box{
+  &--box {
     background: $main-color--w;
-    &__inner{
+    &__inner {
       min-height: 390px;
       padding: 10px 20px;
-      @include min(768){
+      @include min(768) {
         min-height: 170px;
       }
     }
-    &__btm{
+    &__btm {
       padding: 15px 2.5px;
       background: $site-color05;
       text-align: center;
-      @include min(500){
+      @include min(500) {
         padding: 10px 10px;
       }
     }
