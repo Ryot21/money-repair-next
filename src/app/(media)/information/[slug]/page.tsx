@@ -26,11 +26,11 @@ export async function generateMetadata({
   }).catch(notFound);
 
   return {
-    title: `ご利用者の声 | ${data.mainTitle}`,
+    title: `${data.mainTitle}`,
     description: data.read.replace(/<[^>]+>/g, ""),
     // その他のメタデータ
     openGraph: {
-      title: `ご利用者の声 | ${data.mainTitle}`,
+      title: `${data.mainTitle}`,
       description: data.read.replace(/<[^>]+>/g, ""),
       images: [data.thumbnail.url],
     },
