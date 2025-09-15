@@ -36,7 +36,8 @@ export default function Recommend({ data }: Props) {
           </li>
           <li className={"c-card-item"}>
             <Date
-              date={data.recommend.publishedAt || data.recommend.createdAt}
+              publishedAt={data.recommend.publishedAt}
+              createdAt={data.recommend.createdAt}
             />
             <h5>{data.recommend?.mainTitle}</h5>
             <div
