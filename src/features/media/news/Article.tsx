@@ -21,7 +21,7 @@ export default async function Article({ data }: Props) {
           </ul>
           {/* タイトル */}
           <h1>{data.title}</h1>
-          <Date date={data.publishedAt || data.createdAt} />
+          <Date publishedAt={data.publishedAt} createdAt={data.createdAt} />
         </div>
         {/* 2. コンテンツ */}
         <div className={"p-single--detail -info mgb10 mgb20s"} dangerouslySetInnerHTML={{ __html: data.article || "" }}></div>

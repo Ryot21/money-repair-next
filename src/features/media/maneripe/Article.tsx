@@ -36,7 +36,7 @@ export default async function Article({ data }: Props) {
           </ul>
           {/* タイトル */}
           <h1>{data.mainTitle}</h1>
-          <Date date={data.publishedAt || data.createdAt} />
+          <Date publishedAt={data.publishedAt} createdAt={data.createdAt} />
         </div>
         {/* 2. バナー */}
         <Thumbnail
