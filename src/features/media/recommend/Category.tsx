@@ -44,7 +44,10 @@ export default function Category({ currentArticle, relatedArticles }: Props) {
                 <div className={"c-date mgb2 mgb4s"}>
                   <ul className={"c-date__lists c-flex -col2"}>
                     <li className={"c-date__item"}>
-                      <Date date={article.publishedAt || article.createdAt} />
+                      <Date
+                        publishedAt={article.publishedAt}
+                        createdAt={article.createdAt}
+                      />
                     </li>
                     <li className={"c-date__item mgt4s"}>
                       <ul className={"c-post--category__lists c-flex -h-cen"}>
