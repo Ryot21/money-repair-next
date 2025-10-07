@@ -20,7 +20,7 @@
 	display: inline-block;
 	padding-right: 25px;
 	&::before {
-		content: "<";
+		content: ">"; // 変更
 		position: absolute;
 		top: 40%;
 		right: 10px;
