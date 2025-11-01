@@ -424,6 +424,7 @@ export default function CardContactForm({ customClass }: FormProps) {
               </li>
               <li className="flexItem">
                 <div className="c-flex -jc-end">
+                  {/* 情報収集中 */}
                   <label>
                     <input
                       type="radio"
@@ -435,18 +436,8 @@ export default function CardContactForm({ customClass }: FormProps) {
                     />{" "}
                     <pre>調べ中</pre>
                   </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="considerationStage"
-                      value="検討中"
-                      checked={formData.considerationStage === "検討中"}
-                      onChange={handleChange}
-                      required
-                    />{" "}
-                    <pre>検討中</pre>
-                  </label>
-                  <label>
+                  {/* すぐに導入したい */}
+                  <label className="-point">
                     <input
                       type="radio"
                       name="considerationStage"
@@ -462,6 +453,18 @@ export default function CardContactForm({ customClass }: FormProps) {
                       <br />
                       導入したい！
                     </pre>
+                  </label>
+                  {/* 検討中 */}
+                  <label>
+                    <input
+                      type="radio"
+                      name="considerationStage"
+                      value="検討中"
+                      checked={formData.considerationStage === "検討中"}
+                      onChange={handleChange}
+                      required
+                    />{" "}
+                    <pre>検討中</pre>
                   </label>
                 </div>
               </li>
@@ -492,6 +495,10 @@ export default function CardContactForm({ customClass }: FormProps) {
 
             {/* 送信 */}
             <div className="c-form--btn">
+              {/* キャンペーンテキスト */}
+              <p className="s-SS -b -center -ls-2 -red">
+              \ 先着100社限定 月500円/人 /
+              </p>
               <button
                 type="submit"
                 value="確認する"

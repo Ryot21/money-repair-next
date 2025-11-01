@@ -423,6 +423,8 @@
             // ホバー時
             &:hover{
               background: $main-color--gray;
+              text-shadow: 1px 1px 0 white;
+              transform: scale(1.1);
             }
             // 選択時
             &:has(input:checked) {
@@ -432,8 +434,22 @@
               transform: scale(1.1);
               z-index: 1;
             }
+            // ポイント
+            &.-point{
+              background: $lp-color02;
+              color: $lp-color06;
+              text-shadow: 1px 1px 0 white;
+              z-index: 1;
+              &:hover{
+                background: $lp-color06;
+                color: $main-color--w;
+                text-shadow: none;
+              }
+            }
           }
+
         }
+
       }
       &--consentText {
         font-size: .8rem;
@@ -541,7 +557,7 @@
       padding: 16px 0;
       margin-bottom: 10px;
       @include min(500) {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
       &--inner {
         display: inline-block;
@@ -641,5 +657,8 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    button{
+      margin-top: 5px;
+    }
   }
 }
