@@ -1,6 +1,7 @@
 // import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+// import Link from "next/link";
 
 // コンポーネント
 import LpMainVisual from "@/features/lp02/mainVisual";
@@ -16,6 +17,9 @@ import InterviewContents from "@/components/slider/interview/InterviewContents";
 // Q&A関係
 import Accordion from "@/components/accordion";
 import type { AccordionItem } from "@/types/accordion";
+
+// 離脱防止ポップアップ（クライアントコンポーネントとしてラッピング）
+import ExitIntentPopupWrapper from "@/features/lp02/exitIntent/ExitIntentPopupWrapper";
 
 const faqItems: AccordionItem[] = [
   {
@@ -61,11 +65,16 @@ export default function Home() {
         <div className="c-contents -bg-lp02-logo">
           <div className="c-contents--inner">
             <h2 className="c-contents--LpMainTitle -c01 pdt1 pdt2s pdb1 pdb2s">
-              \ 様々な業界の企業に<br className="sp"/>ご利用いただいています！ /
+              \ 様々な業界の企業に
+              <br className="sp" />
+              ご利用いただいています！ /
             </h2>
           </div>
         </div>
         <LogoContents />
+
+        {/* テストコード */}
+        {/* <Link href="https://bizchanexpo.tokyo/">test</Link> */}
 
         <div className="c-contents -bg-lp02-sc03 pdt5 pdt10s pdb5 pdb10s">
           <div className="c-contents--inner">
@@ -403,7 +412,7 @@ export default function Home() {
               このような課題はありませんか？
             </h2>
             <ul className="c-flex -col1_3 -h-top -jc-sb mgb10 mgb5s">
-              <li className="flexItem pdr5s pdl5s mgb5s">
+              <li className="flexItem mgb5s">
                 <Image
                   src="/images/Lp/ver02/sc07-item01.png"
                   alt="1.「従来型福利厚生の限界」"
@@ -411,7 +420,7 @@ export default function Home() {
                   height={306}
                 />
               </li>
-              <li className="flexItem pdr5s pdl5s mgb5s">
+              <li className="flexItem mgb5s">
                 <Image
                   src="/images/Lp/ver02/sc07-item02.png"
                   alt="2.「金融不安が離職の原因に」"
@@ -419,7 +428,7 @@ export default function Home() {
                   height={306}
                 />
               </li>
-              <li className="flexItem pdr5s pdl5s ">
+              <li className="flexItem">
                 <Image
                   src="/images/Lp/ver02/sc07-item03.png"
                   alt="3.「費用対効果への懸念」"
@@ -506,7 +515,7 @@ export default function Home() {
             </h2>
             <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
               {/* 1. 金融リテラシーを向上させる福利厚生プログラムです。 */}
-              <li className={"flexItem pdr5s pdl5s mgb10s"}>
+              <li className={"flexItem mgb10s"}>
                 <Image
                   src="/images/Lp/ver02/sc08-item01.png"
                   alt="従業員の可処分所得の増加モチベーションを高める！"
@@ -515,7 +524,7 @@ export default function Home() {
                 />
               </li>
               {/* 2. 個別相談がつくことで精度の高い提案で削減事例多数 */}
-              <li className={"flexItem pdr5s pdl5s mgb10s"}>
+              <li className={"flexItem mgb10s"}>
                 <Image
                   src="/images/Lp/ver02/sc08-item02.png"
                   alt="個別相談で50%以上が税金削減・還付の対象に"
@@ -524,7 +533,7 @@ export default function Home() {
                 />
               </li>
               {/* 3. 従業員の定着率UP、採用率UPにつながります！ */}
-              <li className={"flexItem pdr5s pdl5s"}>
+              <li className={"flexItem"}>
                 <Image
                   src="/images/Lp/ver02/sc08-item03.png"
                   alt="会社員500名に金融リテラシー調査を実施、結果を基にサービスを提供"
@@ -648,7 +657,7 @@ export default function Home() {
               </div>
             </div>
             <ul className={"c-flex -col1_3 -h-top -jc-st mgb2 mgb5s"}>
-              <li className={"flexItem pdr5s pdl5s mgb5s"}>
+              <li className={"flexItem mgb5s"}>
                 <Image
                   src="/images/Lp/ver02/sc09-02-item01.png"
                   alt="1.従業員と家族の金融リテラシーの向上"
@@ -656,7 +665,7 @@ export default function Home() {
                   height={480}
                 />
               </li>
-              <li className={"flexItem pdr5s pdl5s mgb5s"}>
+              <li className={"flexItem mgb5s"}>
                 <Image
                   src="/images/Lp/ver02/sc09-02-item02.png"
                   alt="2.採用時のアピールポイントとして採用"
@@ -664,7 +673,7 @@ export default function Home() {
                   height={480}
                 />
               </li>
-              <li className={"flexItem pdr5s pdl5s"}>
+              <li className={"flexItem"}>
                 <Image
                   src="/images/Lp/ver02/sc09-02-item03.png"
                   alt="3.社員の満足度の向上、離職率低下に貢献"
@@ -688,7 +697,7 @@ export default function Home() {
             <h2 className={"c-contents--LpMainTitle -b-btm -c03 mgb10 mgb10s"}>
               申し込みから導入までの流れ
             </h2>
-            <ul className={"c-flex -h-top -jc-st mgb2 mgb5s -lp-flow"}>
+            <ul className={"c-flex -h-top -jc-cen mgb2 mgb5s -lp-flow"}>
               {/* 1. WEBサイトからお問い合わせ */}
               <li className={"flexItem pdr5s pdl5s mgb5 mgb10s"}>
                 <Image
@@ -805,6 +814,8 @@ export default function Home() {
         </div>
       </div>
       <StickyButtonWrapper />
+      {/* 離脱防止ポップアップ */}
+      <ExitIntentPopupWrapper />
     </main>
   );
 }
