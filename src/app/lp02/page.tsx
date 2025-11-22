@@ -242,15 +242,19 @@ export default function Home() {
                       <br />
                       公式LINEにて情報発信サービスも提供
                     </h3>
-                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
-                      従業員様からのニーズに基づき、関心の高いテーマで金融勉強会を実施いたします。また、公式LINEを通じて、マーケットの動向や日々の生活に役立つ時事情報などを定期的に配信。必要な情報をタイムリーにお届けし、従業員様の金融リテラシー向上をサポートいたします。
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb3 mgb3s">
+                      {/* 従業員様からのニーズに基づき、関心の高いテーマで金融勉強会を実施いたします。また、公式LINEを通じて、マーケットの動向や日々の生活に役立つ時事情報などを定期的に配信。必要な情報をタイムリーにお届けし、従業員様の金融リテラシー向上をサポートいたします。 */}
+                      義務教育で学びきれなかった実生活に直結するお金の知識を、段階的に分かりやすく解説します。例えば、年収の14％以上を払っている社会保険の仕組みと活用法・今すぐできる可処分所得（手取り）を増やす方法・さらには「今さら聞けない資産運用の始め方」まで網羅。実生活で役立つ金融リテラシーを高めることで支出の無駄を省き、「手取りを増やす」実感を得られます。金銭的不安を軽減し、期待の持てる資産構築をサポートすることで、従業員様が安心し、より集中して仕事に取り組める環境づくりを実現します。
+                    </p>
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2">
+                      また、公式LINEを通じて、日々の生活に役立つ時事情報やマーケットの動向などを定期的に配信。必要な情報をタイムリーにお届けし、従業員様の金融リテラシー向上をサポートいたします。
                     </p>
                   </li>
                 </ul>
               </div>
               {/* 2. 個別相談 */}
               <div className=" c-contents -bg-color01 pdt2 pdt5s pdb2 pdb5s pdr2 pdr5s pdl2 pdl5s mgb5 mgb10s">
-                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb"}>
+                <ul className={"c-flex -col1_2 -pc2_1 -h-top -jc-sb mgb2 mgb5s "}>
                   <li className={"flexItem mgb5s"}>
                     <div className="imgBox">
                       <Image
@@ -263,13 +267,46 @@ export default function Home() {
                   </li>
                   <li className={"flexItem"}>
                     <h3 className="c-contents--LpListTitle -t02 mgb1 mgb3s">
-                      個別相談も可能！
-                      <br />
+                      個別相談も可能！<br />
                       専属金融相談窓口の設置
                     </h3>
-                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2">
                       弊社専属のファイナンシャルプランナーが最低1人御社専属の担当となり、LINEやお電話で気軽に相談ができます。従業員様の2親等までのご親族様まで、無料で相談が可能です。
                       （ご相談は基本24時間365日対応しています。）
+                    </p>
+                  </li>
+                </ul>
+                <ul className="c-flex -col1_2 -jc-sb">
+                  <li className="flexItem mgb1 mgb1s">
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                      <span className="s-M -s16 -blue -b c-borderBtm -b-dt01">会社員の税金の適正化</span><br/>
+                      <span className="s-M -blue">
+                        「払いすぎ」を見逃していませんか？控除を正しく活用し、手取りを増やすためには専門的な知識が不可欠です。私たちと一緒に、あなたの家計にゆとりを生み出す道筋を見つけませんか？
+                      </span>
+                    </p>
+                  </li>
+                  <li className="flexItem mgb1 mgb1s">
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                      <span className="s-M -s16 -blue -b c-borderBtm -b-dt01">保険の適正化</span><br/>
+                      <span className="s-S -blue">
+                        社会保険で保障される部分を知っていますか？本来はその不足分だけを民間保険で補えば十分です。知らないから不安になり、高い保険料を払い続けていませんか？正しく理解すれば、必要な保障は守りつつ保険料を削減できます。同じ安心を、より安く得られる可能性があります。
+                      </span>
+                    </p>
+                  </li>
+                  <li className="flexItem mgb1s">
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                      <span className="s-M -s16 -blue -b c-borderBtm -b-dt01">住まいの相談</span><br/>
+                      <span className="s-S -blue">
+                        住宅は支出ですか？資産ですか？人生最大の買い物だからこそ、金利や手数料の差が何百万円もの違いを生むこともあります。購入から老後までを見据えた選択をしていますか？最も得する方法を選ぶことで、安心して暮らせる住まいと、将来に残せる資金を両立できます。
+                      </span>
+                    </p>
+                  </li>
+                  <li className="flexItem">
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                      <span className="s-M -s16 -blue -b c-borderBtm -b-dt01">運用の診断</span><br/>
+                      <span className="s-S -blue">
+                        あなたは自分の年金額を把握していますか？その金額で老後の生活は可能でしょうか。物価上昇やインフレが進む今、資産運用で金利や時間を味方につけなくてはなりません。現状を診断し、無理なく続けられる方法を選べば、リスクを抑えながら将来に期待の持てる資産づくりが実現します。
+                      </span>
                     </p>
                   </li>
                 </ul>
@@ -293,7 +330,7 @@ export default function Home() {
                       <br />
                       資産管理システムの提供
                     </h3>
-                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb1 mgb3s">
+                    <p className="s-M -blue -ls-2 -ls-1_5_s -lh-2 mgb2 mgb3s">
                       従業員様向けに、通常月額3,000円～5,000円の本格的なライフプランシミュレーションシステムを無料でご提供。収支の可視化で無駄を削減し、キャッシュフローを改善。将来のライフイベント費用や老後資金の不足額を明確にし、資産形成を強力にサポートします。
                     </p>
                   </li>

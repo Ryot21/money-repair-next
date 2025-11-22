@@ -198,6 +198,12 @@
             border-bottom: 1px dotted $main-color--gray;
         }
     }
+    &.-b-dt01 {
+        border-bottom: 1px dotted $lp-color01;
+        @include min(500){
+            border-bottom: 1px dotted $lp-color01;
+        }
+    }
 }
 
 .colorBox{
