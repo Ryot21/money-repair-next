@@ -497,7 +497,7 @@ export default function CardContactForm({ customClass }: FormProps) {
             <div className="c-form--btn">
               {/* キャンペーンテキスト */}
               <p className="s-SS -b -center -ls-2 -red">
-              \ 先着100社限定 月500円/人 /
+              先着100社限定 月額500円／人
               </p>
               <button
                 type="submit"
