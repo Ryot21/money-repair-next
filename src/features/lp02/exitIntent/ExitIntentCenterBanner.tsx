@@ -224,8 +224,8 @@ export default function ExitIntentCenterBanner() {
 
   return (
     <div className={`c-browserBackModal -center ${showBanner ? "is-visible" : ""}`}>
-      <div className="c-browserBackModal__bg" onClick={handleClose} />
-      <div className="c-browserBackModal__content">
+      <div className="c-browserBackModal__bg a-fade -tm05 -sp05" onClick={handleClose} />
+      <div className="c-browserBackModal__content a-fade -tm1 -sp05">
         <button
           type="button"
           className="c-browserBackModal__backBtn"

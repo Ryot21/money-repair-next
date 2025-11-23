@@ -210,9 +210,9 @@ export default function ExitIntentBtmBanner() {
   return (
     <div className={`c-browserBackModal -bottom ${showBanner ? "is-visible" : ""}`}>
       {/* 背景オーバーレイ */}
-      <div className="c-browserBackModal__bg" onClick={handleClose} />
+      <div className="c-browserBackModal__bg a-fade -tm05 -sp05" onClick={handleClose} />
       {/* コンテンツ */}
-      <div className="c-browserBackModal__content">
+      <div className="c-browserBackModal__content a-fade -tm1 -sp05">
         <div className="c-browserBackModal__main">
           <div className="c-browserBackModal__header">
             <span className="c-browserBackModal__icon">⚠️</span>
