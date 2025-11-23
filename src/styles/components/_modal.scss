@@ -53,3 +53,230 @@ html{
         }
     }
 }
+
+/* ブラウザバック用モーダル（c-closeModalと同じスタイル） */
+.c-browserBackModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100dvb;
+    transition: all 1s;
+    z-index: 9999;
+    // ブラウザバック時にページ下部に表示されるモーダル
+    &.-bottom {
+        .c-browserBackModal {
+            /* 背景 */
+            &__bg {
+        
+            }
+            // メイン
+            &__main {
+                flex: 1;
+            }
+            // ヘッダー
+            &__header {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 0.75rem;
+        
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin: 0;
+                    line-height: 1.2;
+                    @include max(768) {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+            // アイコン
+            &__icon {
+                font-size: 2rem;
+                line-height: 1;
+            }
+            // テキスト
+            &__text {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+                @include max(768) {
+                    font-size: 0.875rem;
+                }
+            }
+            // ハイライト
+            &__highlight {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            // ボタン
+            &__btnArea {
+                display: flex;
+                gap: 0.75rem;
+                flex-direction: column;
+                @include min(768) {
+                    flex-direction: row;
+                }
+            }
+            &__btn {
+                padding: 0.75rem 1.5rem;
+                border-radius: 0.5rem;
+                font-weight: 600;
+                font-size: 1.125rem;
+                cursor: pointer;
+                transition: all 0.2s;
+                border: none;
+                width: 100%;
+                @include max(768) {
+                    font-size: 1rem;
+                }
+            }
+            &__primary {
+                background: white;
+                color: #dc2626;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            /* コンテンツ */
+            &__content {
+                bottom: 0;
+
+                background: linear-gradient(to right, #ef4444, #f97316);
+                color: white;
+                max-width: 64rem;
+                margin: 0 auto;
+                padding: 1.5rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 1rem;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+                @include max(768) {
+                    padding: 1rem;
+                    flex-direction: column;
+                }
+            }
+        
+            /* 閉じるボタン */
+            &__close {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                padding: 0.5rem;
+                line-height: 1;
+                transition: color 0.2s;
+                flex-shrink: 0;
+                @include max(768) {
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 0.5rem;
+                }
+        
+                &:hover {
+                    color: #e5e7eb;
+                }
+            }
+            &__backLink {
+        
+            }
+        }
+    }
+
+    // ブラウザバック時にページ中央部に表示される画像
+    &.-center {
+        // ポップアップのコンテンツ
+        .c-browserBackModal__content {
+            top: 50%;
+
+            .bannerBox {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              border-radius: 10px;
+              .bannerLink {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                transition: opacity 0.3s;
+                &:hover {
+                  opacity: 0.9;
+                }
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  display: block;
+                }
+              }
+            }
+        }
+    }
+
+
+    
+    // 共通レイアウト
+    &.is-visible {//表示時のスタイル
+        display: block;
+    }
+    &__content {// ポップアップのコンテンツ
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        background: $main-color--w;
+        box-shadow: 4px 5px 0px 1px #00000024;
+        border-radius: 10px;
+        @include min(768) {
+          width: 75%;
+          max-width: 600px;
+        }
+
+    }
+    &__bg {// ポップアップの背景
+        position: absolute;
+        width: 100%;
+        height: 100dvb;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    &__backBtn {// 閉じるボタン
+        display: block;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 35px;
+        height: 35px;
+        padding: 0 !important;
+        background: $main-color--w;
+        border: 1px solid $site-color02;
+        border-radius: 50%;
+        z-index: 10000;
+        cursor: pointer;
+        @include min(768) {
+          width: 35px;
+          height: 35px;
+        }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 2px;
+          height: 20px;
+          background: $site-color02;
+          border-radius: 5px;
+          @include min(768) {
+            height: 20px;
+          }
+        }
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::after {
+          transform: translate(-50%, -50%) rotate(135deg);
+        }
+    }
+}
