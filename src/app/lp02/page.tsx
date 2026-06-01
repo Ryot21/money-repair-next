@@ -239,12 +239,10 @@ export default function Home() {
                       【勉強会参考例】<br />
                       {/* 1.NISA VS iDeCo 結論どっちがいいの？　<br className="sp" />
                       2.ふるさと納税 損する人 得する人　<br className="sp" />
-                      3.年末調整のやり方 会社員の節税方法　<br className="sp" />
-                      4.老後資金2000万って必要？ */}
+                      3.老後資金2000万って必要？ */}
                       1.NISA VS iDeCo 結論どっちがいいの？　
                       2.ふるさと納税 損する人 得する人　
-                      3.年末調整のやり方 会社員の節税方法　
-                      4.老後資金2000万って必要？
+                      3.老後資金2000万って必要？
                     </p>
                   </li>
                   <li className={"flexItem"}>

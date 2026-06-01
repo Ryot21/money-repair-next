@@ -80,7 +80,7 @@ export default function Page() {
             </thead>
             <tbody>
               <tr>
-                <td className={"s-ML -s12 -b -ls-1"}>節税に関する相談</td>
+                <td className={"s-ML -s12 -b -ls-1"}>FPに関する相談</td>
                 <td className={"s-M -s10 -b -ls-1 -lh-1_5"}>
                   税理士法人を使った
                   <br className={"tb-pc"} />
@@ -105,7 +105,7 @@ export default function Page() {
                 <td className={"s-M -s10 -b -ls-1 -lh-1_5"}>
                   有資格者による
                   <br className={"tb-pc"} />
-                  税金・不動産・保険・有価証券の
+                  不動産・保険・有価証券の
                   <br className={"tb-pc"} />
                   <span className={"s-ML -s10 -b -color03"}>
                     ワンストップ相談
@@ -113,9 +113,7 @@ export default function Page() {
                   が可能！
                 </td>
                 <td className={"s-M -s10 -b -ls-1 -lh-1_5"}>
-                  税理士法人がいないため
-                  <br className={"tb-pc"} />
-                  税金相談ができない
+                  保険の相談しかできない...
                 </td>
               </tr>
             </tbody>

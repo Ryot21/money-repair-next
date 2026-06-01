@@ -312,7 +312,7 @@ export default async function Home() {
                     <br />
                     【勉強会の一例】
                     <br />
-                    ・源泉徴収票の読み取り方、節税
+                    ・源泉徴収票の読み取り方
                     <br />
                     ・経済動向、情報の取方、ニュースの見方
                     <br />
