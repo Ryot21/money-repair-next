@@ -15,7 +15,7 @@ export default function Page() {
                     </div>
                     <div className="p-company__list">
                         <dt>所在地</dt>
-                        <dd>〒101-0032<br />東京都千代田区岩本町2-19-9　丸栄ビル5階</dd>
+                        <dd>〒101-0032<br />東京都千代田区岩本町1-3-9 高木ビル2階</dd>
                     </div>
                     <div className="p-company__list">
                         <dt>TEL / <br className="sp" />FAX</dt>
